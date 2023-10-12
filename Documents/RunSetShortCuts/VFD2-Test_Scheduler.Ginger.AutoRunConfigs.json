@@ -1,0 +1,74 @@
+{
+  "SolutionScmDetails": {
+    "SCMType": "GIT",
+    "SolutionRepositoryUrl": "",
+    "User": "N/A",
+    "Password": "N/A",
+    "PasswordEncrypted": false,
+    "UndoSolutionLocalChanges": false,
+    "Branch": "master"
+  },
+  "SolutionLocalPath": "D:\\VFD2-E2E_Flows_Viktor_Prem",
+  "EncryptionKey": "D3^hdfr7%ws4Kb56=Qt",
+  "ShowAutoRunWindow": false,
+  "VerboseLevel": "normal",
+  "Runset": {
+    "Exist": true,
+    "Name": "Test_Scheduler",
+    "ID": "f659b2ba-3be9-4098-8336-dc360fb030cb",
+    "EnvironmentName": "SIT2",
+    "EnvironmentID": "75f9e98f-b884-4f2d-b837-2c5a86dff1a8",
+    "RunAnalyzer": false,
+    "RunInParallel": true,
+    "StopRunnersOnFailure": false,
+    "Runners": [
+      {
+        "Exist": true,
+        "Name": "Runner 1",
+        "ID": "964e417d-b428-4448-8f91-90d9dbfc3efd",
+        "Active": true,
+        "OnFailureRunOption": "ContinueToRunall",
+        "RunInSimulationMode": false,
+        "RunInVisualTestingMode": true,
+        "AppAgentMappings": [
+          {
+            "ApplicationName": "MyWebApp",
+            "ApplicationID": "ff66e376-8be2-47f6-82fa-36cfa5c29f9c",
+            "AgentName": "Chrome",
+            "AgentID": "7cc89703-7143-4a8b-99be-6ff6ccf592fd"
+          },
+          {
+            "ApplicationName": "Mediation",
+            "ApplicationID": "9b10c057-dad7-4727-a19b-b44f95541004",
+            "AgentName": "Unix",
+            "AgentID": "af61aa09-f484-41f6-90e1-0ec69da34f98"
+          }
+        ],
+        "KeepAgentsOpen": false,
+        "BusinessFlows": [
+          {
+            "Exist": true,
+            "Name": "SCN01_Agent wants to search CABLE customer in Retail channel",
+            "ID": "ba2ee27a-ae4f-4ee0-98b4-f9f759e3ccce",
+            "InstanceID": "55845466-d2dd-4154-89f4-0e6de0f18d79",
+            "Active": true
+          },
+          {
+            "Exist": true,
+            "Name": "SCN02_Agent wants to search DSL customer in Retail channel",
+            "ID": "587ae3d6-52e4-408c-bff1-6194cd952c9b",
+            "InstanceID": "c093b5f3-027a-4f27-9c36-ccfaba04bfe4",
+            "Active": true
+          }
+        ]
+      }
+    ],
+    "SelfHealingConfiguration": {
+      "ReprioritizePOMLocators": true,
+      "AutoFixAnalyzerIssue": false,
+      "AutoUpdateApplicationModel": false,
+      "SaveChangesInSourceControl": false,
+      "AutoExecuteInSimulationMode": false
+    }
+  }
+}

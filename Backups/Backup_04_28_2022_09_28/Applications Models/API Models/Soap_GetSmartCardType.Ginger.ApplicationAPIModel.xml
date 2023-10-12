@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="1bb24a27-6d20-4d7d-9fa3-7f147e88d1db" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111120946" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="piyush.thakre" LastUpdate="202111120948" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEGetSmartCardTypeEG/VFDE" Guid="1bb24a27-6d20-4d7d-9fa3-7f147e88d1db" Name="Soap_GetSmartCardType" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/card/VFDEGetSmartCardType&quot; xmlns:vfd1=&quot;http://amdocs/vfde/card/VFDEGetSmartCardTypeInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:GetSmartCardTypeRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;MessageCreationTimestamp&gt;{MESSAGECREATIONTIMESTAMP}&lt;/MessageCreationTimestamp&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;DealerCode&gt;{DEALERCODE}&lt;/DealerCode&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;SalesChannel&gt;{SALESCHANNEL}&lt;/SalesChannel&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;SmartCardSerialNumber&gt;{SMARTCARDSERIALNUMBER}&lt;/SmartCardSerialNumber&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:GetSmartCardTypeRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="ac8f840c-ae54-4516-9441-daa1cfef730c" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetSmartCardTypeRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="bcf45fbe-17aa-47c0-9d21-e4b6c5f4d5d9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetSmartCardType" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="02ccc1f0-bf76-48cf-b3f0-8c26f4217627" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetSmartCardTypeRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="ada6e335-326c-4746-b8d5-558506b22cc3" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="592151c2067f3" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="327f1300-03f0-47e2-af12-584227f97e93" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetSmartCardTypeRequest[1]/vfd1:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="52bf549c-51a2-4c94-99f7-15a4f84f2afc" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Omnius" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="41d300c8-e9ec-4d26-bdea-c62edffead7e" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetSmartCardTypeRequest[1]/vfd1:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="a49d5805-3b02-4dc0-8096-e37292d32519" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="k10j95sg237odc317qcbbf199ske2tik" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="ad0a1f19-ffa3-4a01-b362-2b272c985883" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetSmartCardTypeRequest[1]/vfd1:ROOT[1]/Event[1]/MessageCreationTimestamp[1]" PlaceHolder="{MESSAGECREATIONTIMESTAMP}" TagName="MessageCreationTimestamp">
+<OptionalValuesList>
+<OptionalValue Guid="721a277b-d0c5-4871-b57f-ab1cd3a824c9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2017-05-21T08:37:22" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="f96089d0-d858-4c90-bac1-7931c1648edd" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetSmartCardTypeRequest[1]/vfd1:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="f96d040a-b58f-4047-956d-e94f68cab8fc" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="4c46ea1c-6dac-4d22-9777-8e9818f19a00" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetSmartCardTypeRequest[1]/vfd1:ROOT[1]/Event[1]/DealerCode[1]" PlaceHolder="{DEALERCODE}" TagName="DealerCode">
+<OptionalValuesList>
+<OptionalValue Guid="aaaace8a-4b42-4dd7-951c-9c43a083872e" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="34401773" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="55c5c216-7ed3-42b0-8eb9-def08ab9103f" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetSmartCardTypeRequest[1]/vfd1:ROOT[1]/Event[1]/SalesChannel[1]" PlaceHolder="{SALESCHANNEL}" TagName="SalesChannel">
+<OptionalValuesList>
+<OptionalValue Guid="ff2b96b4-f594-4867-ab58-38ef0472ac3f" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="retail" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="bc04b7cd-0db7-416b-ad18-7f2f7808685c" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetSmartCardTypeRequest[1]/vfd1:ROOT[1]/DATA[1]/SmartCardSerialNumber[1]" PlaceHolder="{SMARTCARDSERIALNUMBER}" TagName="SmartCardSerialNumber">
+<OptionalValuesList>
+<OptionalValue Guid="19a68264-975e-42f4-ba1c-3833d897b353" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="051547475969" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

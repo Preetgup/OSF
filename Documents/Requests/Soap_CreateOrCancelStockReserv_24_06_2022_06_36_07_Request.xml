@@ -1,0 +1,37 @@
+POST http://deossevr:8001/VFDECreateOrCancelStockReservation/VFDE HTTP/1.1
+Authorization: Basic T21uaXVzOk9tbml1c19TaXQ=
+Content-Type: text/xml; charset=utf-8
+Content-Length: 1543
+Host: deossevr:8001
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none" s:mustUnderstand="1">CreateOrCancelStockReservation</Action>
+  </s:Header>
+  <s:Body>
+    <ns0:CreateOrCancelStockReservationRequest xmlns:ns0="http://amdocs/vfde/stockReservation/" xmlns:ns3="http://amdocs/vfde/stockReservation/VFDECreateOrCancelStockReservationOutput" xmlns:ns1="http://amdocs/vfde/stockReservation/VFDECreateOrCancelStockReservationInput" xmlns:ns2="http://amdocs/vfde/common/VFDECommonTypes">
+      <ns1:ROOT>
+        <Event>
+          <Type>CreateOrCancelStockReservation</Type>
+          <ID>15021963725b23858bdeea00.24332190</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>85666303586a31188b771d75bb837e5a</CorrelationID>
+          <FrontendUserId>1</FrontendUserId>
+        </Event>
+        <DATA>
+          <CreateOrCancelStockReservationDetails>
+            <CreateReservationsList>
+              <CreateReservationDetails>
+                <SourceReservationID>1</SourceReservationID>
+                <ArticleNumber>00301354</ArticleNumber>
+                <Quantity>1</Quantity>
+                <UnitOfMeasure>PCE</UnitOfMeasure>
+                <OrderLineID>1</OrderLineID>
+              </CreateReservationDetails>
+            </CreateReservationsList>
+          </CreateOrCancelStockReservationDetails>
+        </DATA>
+      </ns1:ROOT>
+    </ns0:CreateOrCancelStockReservationRequest>
+  </s:Body>
+</s:Envelope>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="31436aab-159b-4090-9f32-f968ed232c6c" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111111415" GingerVersion="3.6.0.0" Version="3" LastUpdateBy="piyush.thakre" LastUpdate="202111111417" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEGetInvalidProductsEG/VFDE" Guid="31436aab-159b-4090-9f32-f968ed232c6c" Name="Soap_GetInvalidProducts" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/product/VFDEGetInvalidProducts&quot; xmlns:vfd1=&quot;http://amdocs/vfde/product/VFDEGetInvalidProductsInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:GetInvalidProductsRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;AddressId&gt;{ADDRESSID}&lt;/AddressId&gt;&#xD;&#xA;          &lt;ProductCodes&gt;{PRODUCTCODES}&lt;/ProductCodes&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:GetInvalidProductsRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="1f27c73c-7a0e-42f8-8168-3906b535ba73" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetInvalidProductsRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="6c7c7509-6c07-4bce-8900-2497787dc15e" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetProductAvailability" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="5beabef4-58e0-4b11-b1a7-ec101ad3844d" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetInvalidProductsRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="a16e608a-5ed9-4256-950b-9d605835b92f" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="saurav1234" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="4a7ffbb5-6532-4796-a1a0-a4871477740b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetInvalidProductsRequest[1]/vfd1:ROOT[1]/DATA[1]/AddressId[1]" PlaceHolder="{ADDRESSID}" TagName="AddressId">
+<OptionalValuesList>
+<OptionalValue Guid="831ed75d-1717-4f47-8153-f335620d4c94" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1591979" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c69b9550-9bb6-40f8-ae03-35c473f7fdf4" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetInvalidProductsRequest[1]/vfd1:ROOT[1]/DATA[1]/ProductCodes[1]" PlaceHolder="{PRODUCTCODES}" TagName="ProductCodes">
+<OptionalValuesList>
+<OptionalValue Guid="a7ff09ff-fb67-42f7-98da-4e06bc90fd5b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4KP" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

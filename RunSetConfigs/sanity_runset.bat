@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Amdocs\Ginger by amdocs\Ginger.exe" dynamic --filename "D:\Automation\OSF_Automation_V1\VFD2-E2E_Flows_Viktor_Prem\Documents\RunSetShortCuts\VFD2-SanityFlows.Ginger.AutoRunConfigs.json"

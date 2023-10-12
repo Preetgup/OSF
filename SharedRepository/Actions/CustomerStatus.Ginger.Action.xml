@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="66afb6dd-7760-41a2-a321-f65976324783" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202202220853" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202202220853" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="CustomerStatus" Guid="66afb6dd-7760-41a2-a321-f65976324783" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9b1ca7b9-88ef-4481-bb15-3ce42f28da3d" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='CustomerStatus'" />
+<ActInputValue Guid="c404496d-08c2-40a8-9376-f53533ee7183" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="ea1a50be-6e3c-4717-8127-659056a853ab" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="80a8d8bd-cca8-455f-b315-b360250b9149" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="315af0ce-4c4d-463e-9318-44ab1018f49e" Operator="Evaluate" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'CustomerStatus' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;CustomerStatus&quot;}" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

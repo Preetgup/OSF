@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="882119f2-6392-406e-ac39-29056b35c26c" ItemType="ActDBValidation" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302061132" GingerVersion="4.3.0.0" Version="1" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302061132" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW_19c" DBValidationType="FreeSQL" Description="Senddocument Validation" Guid="882119f2-6392-406e-ac39-29056b35c26c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="98f53868-7fe0-4656-b861-8a1f72351119" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Select * from ogw_send_document_transactions where OMNIUS_ORDER_ID='{Var Name=OrderId}'" />
+<ActInputValue Guid="28e5512e-b63a-4832-82c9-02122fc59b46" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="55ada31b-3e4d-4002-8434-2e44348dc76c" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0bc00946-67c1-4205-821e-9785d498c3e0" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a5eff927-b7e7-4df3-bb53-74ab68bf9316" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="deee73e9-6ed9-4ec0-9bd3-10cfd3de1624" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5e0aa418-acb0-4f67-9251-13e215ef36d2" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

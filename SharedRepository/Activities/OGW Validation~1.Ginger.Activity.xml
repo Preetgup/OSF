@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="8ee0d28f-55a1-427f-b8b3-06fe355372c2" ItemType="Activity" CreatedBy="Premanatha.NL" Created="202205111418" GingerVersion="5.1.0.0" Version="7" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302200657" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="OGW Validation_DSL_CABLE_STACK" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="8ee0d28f-55a1-427f-b8b3-06fe355372c2" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="Status of order" EnableRetryMechanism="True" Guid="68e75677-c018-4448-a971-fde041c9c9f9" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" Timeout="5" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c6c2bb66-f9a9-463c-824b-61c8a0f09d2d" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SELECT&#xA;    *&#xA;FROM&#xA;    (&#xA;        SELECT&#xA;            &quot;SUBSCRIBE_MESSAGE_ID&quot;,&#xA;            MESSAGE_NAME,&#xA;            SUBSTR(MESSAGE_DATA, INSTR(MESSAGE_DATA, '&lt;Status&gt;') + 8, INSTR(MESSAGE_DATA, '&lt;/Status&gt;') - INSTR(MESSAGE_DATA, '&lt;Status&gt;') - 8) STATUS,&#xA;            &quot;MESSAGE_STATUS&quot;,&#xA;            &quot;ERROR_NUMBER&quot;,&#xA;            &quot;ERROR_MESSAGE&quot;,&#xA;            &quot;SOURCE_APP&quot;,&#xA;            &quot;SOURCE_ID&quot;,&#xA;            &quot;RETRY_COUNT&quot;,&#xA;            &quot;CTCR_SOURCE_PROG_ID&quot;,&#xA;            &quot;CTCR_SOURCE_PROG_DT&quot;,&#xA;            &quot;CORRELATION_ID&quot;,&#xA;            &quot;OGW_ID&quot;&#xA;           &#xA;        FROM&#xA;            JESI_WF_AMDOCS_SUBSCRIBE T&#xA;        WHERE&#xA;            SOURCE_ID IN (&#xA;                SELECT&#xA;                    SOURCE_ID&#xA;                FROM&#xA;                    JESI_WF_AMDOCS_SUBSCRIBE&#xA;                WHERE&#xA;                    CTCR_SOURCE_PROG_ID = '{Var Name=Order id}'&#xA;            )&#xA;        ORDER BY&#xA;            SUBSCRIBE_MESSAGE_ID DESC&#xA;    )&#xA;" />
+<ActInputValue Guid="8cc5591c-4bda-4ab8-bf19-a217416a1d1c" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="a63e8077-bec1-48b8-a9c1-07211a804361" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ea3e2fb1-43ac-4f4c-9226-2ca4a0722d84" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="aac016cd-7e7d-48fb-9aea-14e359cb3161" Operator="Equals" Param="SOURCE_ID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Source_id" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="Current order status" Guid="25b65531-4f80-4cef-b512-b4f44e711515" ParentGuid="c15dfffc-f9c3-4168-ba42-a903411d9e77" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="369a0760-6436-4469-9f8f-ee9a7d66dabf" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SELECT&#xD;&#xA;    *&#xD;&#xA;FROM&#xD;&#xA;    (&#xD;&#xA;        SELECT&#xD;&#xA;            &quot;SUBSCRIBE_MESSAGE_ID&quot;,&#xD;&#xA;            MESSAGE_NAME,&#xD;&#xA;            SUBSTR(MESSAGE_DATA, INSTR(MESSAGE_DATA, '&lt;Status&gt;') + 8, INSTR(MESSAGE_DATA, '&lt;/Status&gt;') - INSTR(MESSAGE_DATA, '&lt;Status&gt;') - 8) STATUS,&#xD;&#xA;            &quot;MESSAGE_STATUS&quot;,&#xD;&#xA;            &quot;ERROR_NUMBER&quot;,&#xD;&#xA;            &quot;ERROR_MESSAGE&quot;,&#xD;&#xA;            &quot;SOURCE_APP&quot;,&#xD;&#xA;            &quot;SOURCE_ID&quot;,&#xD;&#xA;            &quot;RETRY_COUNT&quot;,&#xD;&#xA;            &quot;CTCR_SOURCE_PROG_ID&quot;,&#xD;&#xA;            &quot;CTCR_SOURCE_PROG_DT&quot;,&#xD;&#xA;            &quot;CORRELATION_ID&quot;,&#xD;&#xA;            &quot;OGW_ID&quot;,&#xD;&#xA;            RANK() OVER(&#xD;&#xA;                PARTITION BY SOURCE_ID&#xD;&#xA;                ORDER BY&#xD;&#xA;                    CTCR_SYS_UPD_DT DESC&#xD;&#xA;            ) CURRENT_STATUS&#xD;&#xA;        FROM&#xD;&#xA;            JESI_WF_AMDOCS_SUBSCRIBE T&#xD;&#xA;        WHERE&#xD;&#xA;            SOURCE_ID IN (&#xD;&#xA;                SELECT&#xD;&#xA;                    SOURCE_ID&#xD;&#xA;                FROM&#xD;&#xA;                    JESI_WF_AMDOCS_SUBSCRIBE&#xD;&#xA;                WHERE&#xD;&#xA;                    CTCR_SOURCE_PROG_ID = '{Var Name=Order id}'&#xD;&#xA;            )&#xD;&#xA;        ORDER BY&#xD;&#xA;            SUBSCRIBE_MESSAGE_ID DESC&#xD;&#xA;    )&#xD;&#xA;WHERE&#xD;&#xA;    CURRENT_STATUS = 1    &#xD;&#xA;    &#xD;&#xA;" />
+<ActInputValue Guid="0b93d0f5-c3a7-4eb3-b837-613b1aa549a1" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="0a7f757a-a5b6-44e9-9211-2b8230d898af" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8f4a807d-0417-4382-b063-1a7d8701f797" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b6f0ff48-a635-4849-8e72-68654c4acdc1" mExpected="{Var Name=Source_id}" Operator="Equals" Param="SOURCE_ID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="e3ec4268-b8a9-4912-af36-7e5d3179a20c" mExpected="1" Operator="Equals" Param="CURRENT_STATUS" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="DSL/cable" DBValidationType="FreeSQL" Description="OGW Backend validation" Guid="b3874fb5-79fc-4db4-ba38-79c09263ec7c" ParentGuid="7e003c10-58ed-4af7-b479-9d389caf6bf5" Platform="NA" RetryMechanismInterval="3" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="efe44913-48b3-4222-a1d1-447e4f0164af" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select cdm_txid,cdm_entity_txid, target_system, target_main_entity_id, status,ctcr_sys_cre_dt, ctcr_source_message_name&#xD;&#xA;from {EnvParam App=OGW Param=Casandra}.og_cdm_entity_targets where cdm_txid='{Var Name=Source_id}' and ctcr_source_message_name='cdm/updateCDM/update_cdm_entity_target.fxml' ALLOW FILTERING" />
+<ActInputValue Guid="d9d71512-85fb-45a5-b205-5a9dbb009801" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="d43e60f7-450c-4e79-a38b-745ed198b316" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="912c836a-c2f9-4daa-b721-51390cd7b1a3" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="6fdd5ec6-baa7-4d6c-a826-f7d0aede694e" mExpected="InProgress-SubmittedToBackend" Operator="Equals" Param="status" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="ef51c232-026d-46c4-aeff-e47ff2d7a2e2" mExpected="InProgress-SubmittedToBackend" Operator="Equals" Param="status" ParentGuid="00000000-0000-0000-0000-000000000000" Path="2" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="1bc7ff06-382b-4cd2-8fc5-d09bcc43ded7" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="order-id" ParentGuid="8ee0d28f-55a1-427f-b8b3-06fe355372c2" ParentName="SCN17_New Acquisition DSL with Cable\Group\OGW Validation" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="75b526e3-d507-4864-b1de-da5d6512e685" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="95f0393a-6299-4a03-b7dd-b53a109f0109" ParentName="SCN17_New Acquisition DSL with Cable" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="3b136f7c-ae30-4694-9979-d3af64849d89" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="95f0393a-6299-4a03-b7dd-b53a109f0109" ParentName="SCN17_New Acquisition DSL with Cable" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

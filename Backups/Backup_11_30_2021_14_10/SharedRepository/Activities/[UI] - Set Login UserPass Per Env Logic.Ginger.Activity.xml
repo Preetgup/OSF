@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="43f2c413-39f3-432b-ab0b-2e1db87dae0e" ItemType="Activity" CreatedBy="gourang.jiddewar" Created="202101051326" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="gourang.jiddewar" LastUpdate="202101051327" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="[CONFIG] - Set Login User/Pass Per Env Logic" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="43f2c413-39f3-432b-ab0b-2e1db87dae0e" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActValidation Active="True" Description="[Condition] - Is &quot;SIT1&quot;" Guid="1f0fb5f5-f652-48fa-8f93-b546db0a6e73" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="3424355a-1eae-4f3b-a38f-b9cc5b3d5676" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="449ded46-142f-45a2-ab9d-9be040542700#GUID_NAME#[Condition] - Is OSF-RETAIL" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="68259277-a314-44fe-ab8a-e06a29799c49" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ac3cb475-fa8c-40aa-839b-4122ace99d01#GUID_NAME#[Condition] - Is &quot;SIT2&quot;" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="a5564d50-50ce-4b26-86ad-b9102190be50" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&quot;{FD Object=Environment Field=Name}&quot;=&quot;SIT1&quot;" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="[Condition] - Is &quot;SIT2&quot;" Guid="ac3cb475-fa8c-40aa-839b-4122ace99d01" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="3424355a-1eae-4f3b-a38f-b9cc5b3d5676" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="449ded46-142f-45a2-ab9d-9be040542700#GUID_NAME#[Condition] - Is OSF-RETAIL" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="167a681c-5270-4db5-bff3-ef0ce033c5d8" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="48b2f424-3200-4dd0-9d75-5a45be30c37c#GUID_NAME#[Condition] - Is &quot;SIT3&quot;" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="a5564d50-50ce-4b26-86ad-b9102190be50" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&quot;{FD Object=Environment Field=Name}&quot;=&quot;SIT2&quot;" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="[Condition] - Is &quot;SIT3&quot;" Guid="48b2f424-3200-4dd0-9d75-5a45be30c37c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="3424355a-1eae-4f3b-a38f-b9cc5b3d5676" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="449ded46-142f-45a2-ab9d-9be040542700#GUID_NAME#[Condition] - Is OSF-RETAIL" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="d381c7f2-02c0-45c5-9abe-9e7a71434f6c" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="70d807bc-8386-4991-9e26-4fde1448e68c#GUID_NAME#[Condition] - Is &quot;SIT4&quot;" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="a5564d50-50ce-4b26-86ad-b9102190be50" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&quot;{FD Object=Environment Field=Name}&quot;=&quot;SIT3&quot;" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="[Condition] - Is &quot;SIT4&quot;" Guid="70d807bc-8386-4991-9e26-4fde1448e68c" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="3424355a-1eae-4f3b-a38f-b9cc5b3d5676" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="449ded46-142f-45a2-ab9d-9be040542700#GUID_NAME#[Condition] - Is OSF-RETAIL" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="a5564d50-50ce-4b26-86ad-b9102190be50" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&quot;{FD Object=Environment Field=Name}&quot;=&quot;SIT4&quot;" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="[Condition] - Is OSF-RETAIL" Guid="449ded46-142f-45a2-ab9d-9be040542700" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="448a1cb8-0bed-44ab-9251-d250851bd508" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4d00ba71-236a-4a53-846c-9f8781faf92d#GUID_NAME#[Variable] - Set 'User Name' RETAIL" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="f9416602-0c0e-410a-a91e-12fb38be0905" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="6904a7cd-b348-4252-a0e9-fdcea480df11#GUID_NAME#[Variable] - Set 'User Name' TELESALES" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="36a1ef8f-68f4-4750-acad-ccf2d550cd2d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=@&quot;{Var Name=GLB_SALES_CHANNEL}&quot;.Contains(@&quot;retail&quot;)}" />
+</InputValues>
+</ActValidation>
+<ActSetVariableValue Active="True" Description="[Variable] - Set 'User Name' RETAIL" Guid="4d00ba71-236a-4a53-846c-9f8781faf92d" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="GLB_LOGIN_USER" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="9dc464c6-6963-4a07-9b90-bfa45a2ea69f" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="f495b7d4-5609-4b32-8a27-27fef928dfb2#GUID_NAME#[Variable] - Set 'Password' RETAIL" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="6b79653b-ee8c-466f-8f0e-f947e6d75cb0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{EnvParam App=OSF Param=LOGIN_USER_RETAIL}" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="[Variable] - Set 'User Name' TELESALES" Guid="6904a7cd-b348-4252-a0e9-fdcea480df11" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="GLB_LOGIN_USER" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="9dc464c6-6963-4a07-9b90-bfa45a2ea69f" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="f495b7d4-5609-4b32-8a27-27fef928dfb2#GUID_NAME#[Variable] - Set 'Password' RETAIL" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="6b79653b-ee8c-466f-8f0e-f947e6d75cb0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{EnvParam App=OSF Param=LOGIN_USER_TELESALES}" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="[Variable] - Set 'Password'" Guid="f495b7d4-5609-4b32-8a27-27fef928dfb2" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="GLB_LOGIN_PASS" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6b79653b-ee8c-466f-8f0e-f947e6d75cb0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{EnvParam App=OSF Param=LOGIN_PASS}" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableString Description="telesales&#xD;&#xA;retail" Guid="abe9e259-0c75-48f1-a7af-b6164f8d2123" InitialStringValue="retail" MappedOutputType="None" Name="GLB_SALES_CHANNEL" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="6234d72b-aae3-443c-a736-a9bafcd67332" InitialStringValue="Demo-agent" MappedOutputType="None" Name="GLB_LOGIN_USER" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="6234d72b-aae3-443c-a736-a9bafcd67332" InitialStringValue="Demo-agent" MappedOutputType="None" Name="GLB_LOGIN_USER" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="5cac807f-d853-418a-b702-a9f8d1a0db59" InitialStringValue="Test1234" MappedOutputType="None" Name="GLB_LOGIN_PASS" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

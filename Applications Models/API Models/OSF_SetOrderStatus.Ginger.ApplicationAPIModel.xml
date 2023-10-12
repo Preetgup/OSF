@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="bbf16cf6-0b83-469a-8815-c03ababed9b2" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111170907" GingerVersion="3.9.0.0" Version="3" LastUpdateBy="Petros.Dimitriou" LastUpdate="202204280728" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDESetOrderStatusEG/VFDE" Guid="bbf16cf6-0b83-469a-8815-c03ababed9b2" Name="OSF_SetOrderStatus" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/order/VFDESetOrderStatus&quot; xmlns:vfd1=&quot;http://amdocs/vfde/common/VFDEAuthenticationHeader&quot; xmlns:vfd2=&quot;http://amdocs/vfde/order/VFDESetOrderStatusInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header&gt;&#xD;&#xA;    &lt;vfd:SetOrderStatusHeader&gt;&#xD;&#xA;      &lt;vfd1:VFDEAuthenticationHeader&gt;&#xD;&#xA;        &lt;Username&gt;{USERNAME}&lt;/Username&gt;&#xD;&#xA;        &lt;Password&gt;{PASSWORD}&lt;/Password&gt;&#xD;&#xA;      &lt;/vfd1:VFDEAuthenticationHeader&gt;&#xD;&#xA;    &lt;/vfd:SetOrderStatusHeader&gt;&#xD;&#xA;  &lt;/soapenv:Header&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:SetOrderStatusRequest&gt;&#xD;&#xA;      &lt;vfd2:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;OGWSubOrderId&gt;{OGWSUBORDERID}&lt;/OGWSubOrderId&gt;&#xD;&#xA;          &lt;OGWOrderLineId&gt;{OGWORDERLINEID}&lt;/OGWOrderLineId&gt;&#xD;&#xA;          &lt;Status&gt;{STATUS}&lt;/Status&gt;&#xD;&#xA;          &lt;AdditionalInfo&gt;&#xD;&#xA;            &lt;AttributeCode&gt;{ATTRIBUTECODE}&lt;/AttributeCode&gt;&#xD;&#xA;            &lt;AttributeValue&gt;{ATTRIBUTEVALUE}&lt;/AttributeValue&gt;&#xD;&#xA;          &lt;/AdditionalInfo&gt;&#xD;&#xA;          &lt;AdditionalInfo&gt;&#xD;&#xA;            &lt;AttributeCode&gt;{ATTRIBUTECODE1}&lt;/AttributeCode&gt;&#xD;&#xA;            &lt;AttributeValue&gt;{ATTRIBUTEVALUE1}&lt;/AttributeValue&gt;&#xD;&#xA;          &lt;/AdditionalInfo&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd2:ROOT&gt;&#xD;&#xA;    &lt;/vfd:SetOrderStatusRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="b89717c6-ee57-47d2-8a9c-ea90fe28407d" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Header[1]/vfd:SetOrderStatusHeader[1]/vfd1:VFDEAuthenticationHeader[1]/Username[1]" PlaceHolder="{USERNAME}" TagName="Username">
+<OptionalValuesList>
+<OptionalValue Guid="c4a76676-644a-46c6-adfa-ef45ac66cc16" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="admin" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="5d8085d3-1dc3-4c52-abd6-36c37366f4f7" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Header[1]/vfd:SetOrderStatusHeader[1]/vfd1:VFDEAuthenticationHeader[1]/Password[1]" PlaceHolder="{PASSWORD}" TagName="Password">
+<OptionalValuesList>
+<OptionalValue Guid="b291826f-d8d3-4882-b005-0cb32dd1e018" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="admin" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="9dbaf144-fdab-4981-a683-39a170b780c8" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="d83eb19c-f727-4896-8766-40be3c053c92" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetOrderStatus" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="6ad9e58e-f070-4d36-be83-14d4731fedc5" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="6a09d56f-79a2-402c-85d0-e2815e23d239" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="33492101" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="9097a677-21cc-471e-9837-0aeff706f9cd" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="3a05ec9c-b210-4b57-89ba-1ab86bfd14bf" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OGW" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="d17b7d17-27cd-464e-a8df-05fa434be944" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/DATA[1]/OGWSubOrderId[1]" PlaceHolder="{OGWSUBORDERID}" TagName="OGWSubOrderId">
+<OptionalValuesList>
+<OptionalValue Guid="60ec3628-a51f-4166-96f8-60084074b2a6" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2012066" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="7976ebb6-8f7f-452a-9718-d5d295879abd" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/DATA[1]/OGWOrderLineId[1]" PlaceHolder="{OGWORDERLINEID}" TagName="OGWOrderLineId">
+<OptionalValuesList>
+<OptionalValue Guid="992ebaf5-3f32-4ff4-bf07-d4356bd376f0" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="213092" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="09cca4d6-a660-4289-810e-091753d35257" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/DATA[1]/Status[1]" PlaceHolder="{STATUS}" TagName="Status">
+<OptionalValuesList>
+<OptionalValue Guid="b3cee377-6cbf-43a0-9780-3ea1c8f34a2b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Completed-Success" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="194ca331-cce4-4538-bc1d-f6a8e9307402" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/DATA[1]/AdditionalInfo[1]/AttributeCode[1]" PlaceHolder="{ATTRIBUTECODE}" TagName="AttributeCode">
+<OptionalValuesList>
+<OptionalValue Guid="4f9a7205-24e7-4be5-aa26-cf3ed84a8cb5" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MSISDN" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="d05f59a5-c124-475e-9fe1-2dee34157865" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/DATA[1]/AdditionalInfo[1]/AttributeValue[1]" PlaceHolder="{ATTRIBUTEVALUE}" TagName="AttributeValue">
+<OptionalValuesList>
+<OptionalValue Guid="b1c7fe15-ebf0-4085-9602-71d09bf3c5e0" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1718129087" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="9007dfbe-29da-4c35-b706-9744021aa88b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/DATA[1]/AdditionalInfo[2]/AttributeCode[1]" PlaceHolder="{ATTRIBUTECODE1}" TagName="AttributeCode">
+<OptionalValuesList>
+<OptionalValue Guid="cf78bdd5-83cb-4c26-be51-3836b30e8253" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SubscriberNumber" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="e3b20756-c5bf-47ad-aee9-4e5ca6f93d43" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SetOrderStatusRequest[1]/vfd2:ROOT[1]/DATA[1]/AdditionalInfo[2]/AttributeValue[1]" PlaceHolder="{ATTRIBUTEVALUE1}" TagName="AttributeValue">
+<OptionalValuesList>
+<OptionalValue Guid="55ff82ec-61c3-4fb4-adc6-824fcedf2986" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GSM1718129087" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

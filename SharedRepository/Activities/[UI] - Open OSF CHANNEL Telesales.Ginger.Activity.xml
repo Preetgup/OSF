@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="d78671c4-812c-4bc9-a312-0dfdf08af3eb" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302221004" GingerVersion="5.1.0.0" Version="1" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302221004" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="[UI] - Open OSF CHANNEL Telesales" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="d78671c4-812c-4bc9-a312-0dfdf08af3eb" Mandatory="True" ParentGuid="abfead8b-ae64-4648-8d3c-09337d9eb89f" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActBrowserElement Active="True" Description="[Browser] - Open 'OSF-TELESALES' Application" Guid="68a96a47-ad25-485b-9b32-a0696f172be0" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="e8da1526-3376-4320-a220-c23a43f10ffd" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" Value="3b4ee9c8-819a-4078-bcbe-4bd89966abaa#GUID_NAME#Maximize window" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="d462c5bc-21d5-489b-9c47-19b1d2db4b36" Param="ImplicitWait" ParentGuid="00000000-0000-0000-0000-000000000000" Value="60" />
+<ActInputValue Guid="0b95645d-c67a-4774-a441-8db356c6e37d" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GotoURL" />
+<ActInputValue Guid="8ae0d706-61d3-412c-b474-47516c0ef971" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{EnvParam App=OSF Param=TELESALES}" />
+<ActInputValue Guid="dd69bbdb-5315-4f84-9d21-70a4dba223c2" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1a780702-e992-4e8a-a611-d88f69b482f2" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Current" />
+<ActInputValue Guid="f2cdae6e-73ba-43bc-80e3-c713aae684ed" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Static" />
+<ActInputValue Guid="2a258f1f-40a7-4d48-b053-b372943f6d5b" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="9b930d13-ffaf-4af3-bb16-642cf7056a1e" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a0a632ac-1048-409b-8b08-c3407628660a" Param="NetworkLog" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="671cfa70-a21b-427a-b36d-775065aa2cf5" Param="NetworkUrl" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="133aa58e-277a-4060-865b-ddbe30c9a6e6" Param="eMonitorUrl" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AllUrl" />
+<ActInputValue Guid="58cf013c-14a1-4985-9543-54a0f141b408" Param="eRequestTypes" ParentGuid="00000000-0000-0000-0000-000000000000" Value="All" />
+</InputValues>
+</ActBrowserElement>
+</Acts>
+
+<Variables>
+<VariableString Guid="14b5b8d7-c2a9-4789-97ba-961959d4fb74" InitialStringValue="TELESALES" MappedOutputType="None" Name="BF_CHANNEL" ParentGuid="d78671c4-812c-4bc9-a312-0dfdf08af3eb" ParentName="SCN10_Agent wants to search CABLE customer in Telesales channel\Group\[UI] - Open OSF CHANNEL" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

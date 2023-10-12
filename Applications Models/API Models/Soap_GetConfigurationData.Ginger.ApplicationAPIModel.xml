@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="08773bd3-6666-455e-bb8f-c4ba41357dfe" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111111352" GingerVersion="3.9.0.0" Version="3" LastUpdateBy="Petros.Dimitriou" LastUpdate="202204280728" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDE_GetConfigurationDataEG/VFDE" Guid="08773bd3-6666-455e-bb8f-c4ba41357dfe" Name="Soap_GetConfigurationData" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/configuration/VFDEGetConfigurationData&quot; xmlns:vfd1=&quot;http://amdocs/vfde/configuration/VFDEGetConfigurationDataInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:VFDEGetConfigurationDataRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;Portal&gt;{PORTAL}&lt;/Portal&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:VFDEGetConfigurationDataRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="d8bbcfcc-7d51-4329-9f5c-a67d17d59fcb" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDEGetConfigurationDataRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="2fab5116-e92a-4784-bd94-6b841cdf2af0" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetProductAvailability" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="8bf2ed40-5448-4e31-abc8-6fa2359032f1" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDEGetConfigurationDataRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="2787bd87-16a0-4bd2-a8ea-5ef0300f4f82" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="saurav1234" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="9b232702-34e7-4438-9ecf-31707f731245" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDEGetConfigurationDataRequest[1]/vfd1:ROOT[1]/DATA[1]/Portal[1]" PlaceHolder="{PORTAL}" TagName="Portal">
+<OptionalValuesList>
+<OptionalValue Guid="11b5edbb-7efd-4400-afd4-44616ea86c51" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OFT" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

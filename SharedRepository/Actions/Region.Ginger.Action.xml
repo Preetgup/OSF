@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="3d2eccf3-b4fb-4faf-910e-3aab42f2edf8" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202202220954" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202202220954" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="Region" Guid="3d2eccf3-b4fb-4faf-910e-3aab42f2edf8" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="de0bb1b4-38d3-4c1e-8e9a-20f78c77a0e7" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='Region'" />
+<ActInputValue Guid="c875a7a6-e7f8-46e5-be04-8c893b4f0c53" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="bdc88d45-0077-495d-b81e-9ec12d4d298e" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="83c7826e-6569-41fe-b46f-8bafa418e0f2" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="da88914d-4e8a-4f6f-9999-8f3db4138d1b" mExpected="{CS Exp=@{Actual}.Length&gt;0}" Operator="Evaluate" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'Region' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;Region&quot;}" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

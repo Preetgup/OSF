@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="00cf41d1-8359-437f-9729-0c9ae515c1a7" ItemType="Activity" CreatedBy="Piyush.Thakre" Created="202201241331" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Piyush.Thakre" LastUpdate="202201241331" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="[Ordering] - Select Offer Type PrePaid" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="00cf41d1-8359-437f-9729-0c9ae515c1a7" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="88,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActUIElement Active="True" Description="[UI] - Click 'Show Packages' Button" EnableRetryMechanism="True" Guid="0eaf4f05-b748-4c3d-8fa5-b4cf9d77c8e0" MaxNumberOfRetries="20" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'Paket hinzufügen'" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="dd0d2fe6-94e5-4bfc-9381-983a7c2c752f" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Button" />
+<ActInputValue Guid="ed44de9a-5d58-4c32-9ae8-52c98d52db40" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
+<ActInputValue Guid="ad124207-38b4-413c-8d85-b4950f34cef1" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="f3d72168-7c40-446a-b9c1-5fa8454a39b8" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="aa67b1b0-1906-415f-a9c9-82065f42d547" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9540ab64-fec3-46d2-b678-f815e1712f63" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="show-packages" />
+<ActInputValue Guid="a59c9f8c-f547-4583-9855-38330cb486a2" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0c60c8ff-b0cc-484d-8c8a-6e0e3d580f5c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9a34bff1-6511-4b74-b778-c3b3b16bd46d" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9b90b26b-377f-4dfd-9844-435be92021f4" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b2134074-c9aa-4bb2-832a-e8b3bef309a2" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c39c53c7-95a8-4891-9185-108f6d350c2a" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="090f5152-4562-45e3-9c49-1086337ca1db" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Validate 'Offer Types' List Opened" EnableRetryMechanism="True" Guid="79101211-6fe1-406d-b9a5-9ecefcd94701" MaxNumberOfRetries="60" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="1" RunDescription="GER: 'Mobilfunk'" StatusConverter="None" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="FailActionAndStopBusinessFlow" Guid="db57d0f0-c4d7-47ba-9068-ee3fde7135e2" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="4ff0529b-29ec-4211-a7e4-78ca25d84993" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="6e2499b9-e589-43ef-a57c-acffceadf675" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="411917d5-2c9b-4491-b293-03f2912db0b4" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="24cf3449-e3be-4e29-8394-1493625c74bf" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="3e832a3e-e53b-47ce-9e4a-dd813d8675f9" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="6b1cba5a-85cf-4a8c-898f-d587e4a99836" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="package-types" />
+<ActInputValue Guid="11fdbd37-0ee7-44c3-a562-b58163845f30" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="58dcf0ff-f56b-4bd3-aeb1-6effea3e1ace" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="059a7f80-58e2-4884-b40a-1cadc439de04" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="68a810a8-5f28-40e4-a5ef-a1c7dab423f5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7e50ff2a-510b-4e1c-84f2-fdb62757be61" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2603ed4e-8e9e-4d4e-a8bc-82b3273943f3" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9962b53c-4991-4242-8b8d-035e4ec1fdf2" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="9e8a8d13-1950-46ca-9c01-8b36f9dcdc19" mExpected="True" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Select 'Prepaid' Offer" EnableRetryMechanism="True" Guid="0a07127e-fc11-4b6c-a4a9-69665e57a282" MaxNumberOfRetries="10" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'Angebote mit Vertrag'" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="4375dee8-18e0-48b5-b1f5-0d5a77d0fa5c" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="be91afc8-54b4-4997-a2f1-3fc2edd68423" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
+<ActInputValue Guid="71d505f0-1d1c-4b10-9fd0-2bf8ae4f85f3" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="5ee9aa11-c582-44aa-8aa8-7ac772430157" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="53a7a35c-7d63-4a9f-9afd-c33f8f22d9d8" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d14eb6d6-d442-4d75-a249-38d1b62fc444" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@id='package-types']//*[@data-package-creation-type-code=&quot;PREPAID&quot;]" />
+<ActInputValue Guid="c2702eda-280b-44e1-95ff-c24708a646c0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7c6cffd1-c33c-4c11-8619-eebfc0468bf3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fb6526dd-9bc9-498b-a084-bd8ef44c5c90" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="838ea036-3573-4ddf-8d32-558ec6f3ff6d" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7ab35b16-3701-4e12-bcb6-f4c7a6e4703d" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="cceba228-fb9b-4e15-bef1-dcde68990b98" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="67232681-7143-49a6-9c25-69754ef592a4" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Is SPINNER available" Guid="599d024a-6998-437c-9867-ce1987e2ba2d" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="4f3501d4-63c7-47df-99b5-1cbea8a7fb79" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="RerunAction" Guid="1ce860de-c6b7-4053-a3eb-7b145918c900" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="61ef5654-0719-4f9f-87e7-305a20df660e" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="281513ef-8282-47b5-96ad-6a95b94e6bac" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="802c1a0a-93b6-44ae-9368-bd8cb7043377" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="b2fbfbed-f270-483c-b5eb-6fc1587566c2" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="38265dca-7dfb-4f6e-970b-472fbcaf71dd" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="67c29274-4cc9-4a77-9716-499dc864fde7" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@id='spinner'][@style='display: none;']" />
+<ActInputValue Guid="64153be7-7e1a-43c3-af91-38bffad8d3fb" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="66d219e3-e93b-47ab-bd5e-b671fd4dbe83" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1c6fea79-616c-4d37-a77a-efc1db46ae6b" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c932b50f-53c1-4691-a852-8ba877086358" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="893bacbc-86cc-42af-b34c-224686305a26" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b3d46a91-c3ca-4e46-8fee-2199c7973df8" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="de048d2d-7cea-4f9f-b7be-e8cfc7a9c2a0" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Click on  Tarif" EnableRetryMechanism="True" Guid="d849606a-933c-4c77-b7d5-52bda5bd9500" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="1" StatusConverter="None" TakeScreenShot="True" Timeout="2" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7df31ae5-64dd-4921-a739-0e1349e1fb49" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="62573bf7-5a51-4529-9319-60a70f27e9c1" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MouseClick" />
+<ActInputValue Guid="469cf660-233b-424c-a976-27f8502f4d97" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="2ed06c57-6158-4091-bb1d-9de98c1bfdfe" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="1c2bcf5d-da82-4c69-a802-bbeae1a424a4" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="119765ae-2a8c-46f6-902b-588cc1e8f3e3" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@class='selected-item']/descendant::div[contains(text(),'Tarif')]" />
+<ActInputValue Guid="d59e8fb4-2441-4ba7-af8c-28b119756224" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fbdf9180-8994-44de-a706-8ab43ee72f90" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="72c4ad6e-8f2e-403f-80da-f70ed2ceec8e" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9c76d84d-c9a1-42e8-94b4-38557a36f11e" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="46a07e62-05c5-47db-ae5c-d8736b917bf3" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1f3d5a2f-bc84-4713-9ac4-8a0ba673e4d4" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d25c2432-3535-48e0-9a0b-bdbe9dda0a61" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Select 'Tariff' From List_RANDOM" EnableRetryMechanism="True" Guid="17fad7a1-b5a6-43fa-b597-b52798f07626" MaxNumberOfRetries="1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="1" StatusConverter="IgnoreFail" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="91db3e96-1b91-4242-adb8-53b8ed332b06" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="f23f8ca2-b024-47cf-ab64-a5c731d05ad8" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9f6dfdfe-e2cc-4bc2-9e00-ad1a886b701c" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
+<ActInputValue Guid="a455c246-d947-44ae-95c3-e0793747240d" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="be2ce9bb-9c6f-495d-8848-25548a701e02" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="825a432f-55c8-4bfd-9859-0dcd7cab274d" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="79cf1368-f398-4fd4-9ad9-a82795282916" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//*[@id=&quot;tariff-block&quot;]//*[@class=&quot;family-content col-md-12&quot;]//div[@style='display: block;']" />
+<ActInputValue Guid="ab04a5a9-f9f6-4482-9261-26a21e84e3ab" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1c300ae0-a050-44f6-86ea-cc90726ce90b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="18dd9016-b68d-4b0c-9578-c87d388d4e5b" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="960afbe6-7ee9-4438-b091-cc21a545399e" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4c9c8991-6cc0-4f31-96da-9d53cdffe929" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4673ae44-3d46-4fe6-9f2d-34c401a5a892" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="85716580-0b22-45dc-b0fa-3025257683ba" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Description="[UI] - Select 'Tariff' From List" EnableRetryMechanism="True" Guid="2ffd85dd-6ef4-4d9e-9e6c-f07cae01c11f" MaxNumberOfRetries="20" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="33f37ff6-34b6-4d6f-b26d-e886b18a0bb0" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="FailActionAndStopBusinessFlow" Guid="3dedb10b-d2b5-44c7-8633-9a1b9750da4f" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="35acc356-aa54-4d3b-822c-540f0ab0a471" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="53f243e9-4519-401b-abc2-496d384f7130" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MouseClick" />
+<ActInputValue Guid="52418677-22c6-4e8c-8449-6b9b78095188" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="d0da8249-c08d-40bf-b896-a865c09e036e" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="efd5e6df-cf42-4eb8-9d5d-01d87c39200b" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f8d91b2b-f559-4859-8632-6ad92e742729" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[contains(text(),'{Var Name=ACT_TARIFF}')]" />
+<ActInputValue Guid="5ec54e2b-0e4c-4a30-a3be-e546ea2ffe4a" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="02b37f4d-4332-4c1a-b80f-c05737b36e3d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="573de786-5b15-411c-9af3-7f21cc41e94e" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b246813b-cf83-46ab-8628-7f5fd7b2d593" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c2d56f4d-7a4a-4ad8-8b23-d66467fd1327" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="dab61c6c-414a-4eb4-b2fb-3dec8c804945" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="6bb2cbd5-a9f3-4909-8e45-1610c07dd88d" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActBrowserElement Active="True" Description="Close Browser Action Failed" Guid="1a06cb11-bf4c-4de1-bc2e-bdd2dbd4cd5c" ImplicitWait="60" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="FailActionAndStopBusinessFlow" Guid="5f367c4b-ce2f-42e8-bdcb-6982c81a4253" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="454a041a-bc78-431b-953c-3ab766d2b731" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CloseAll" />
+<ActInputValue Guid="3c60bcfe-3c62-4423-b252-db5dd3759a81" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a2402e60-b632-487f-b303-3b57c38b98bd" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="42b7ad87-0dd5-42da-a7fc-2b77ca82bd87" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Current" />
+<ActInputValue Guid="cf95f9eb-cde6-47ed-af9b-b805feddf2ea" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Static" />
+<ActInputValue Guid="b9b813e8-13cb-4d52-8f53-4afae08ca406" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="fb7c4847-d7fa-4098-9f85-755a72c25c87" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+</Acts>
+
+<Variables>
+<VariableString Guid="661981d6-e317-4f4c-b006-53a9e845a5e3" InitialStringValue="CallYa Allnet Flat L - Sim Only" MappedOutputType="None" Name="ACT_TARIFF" ParentGuid="00cf41d1-8359-437f-9729-0c9ae515c1a7" ParentName="SCN11_New Acquisition customer_new customer mob postpaid  with Red+ Prepaid\Group\[Ordering] - Select Offer Type PrePaid" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="8c066aa1-9f2a-465d-8229-75ec1fba31ad" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302190746" GingerVersion="5.1.0.0" Version="2" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302190746" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="JESI_WF Validation" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="8c066aa1-9f2a-465d-8229-75ec1fba31ad" ParentGuid="530c0074-4ee0-40ba-8b83-8a968c439d48" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="DataBase Action" Guid="30856136-cf87-49b9-b8d4-4582f2b0fa27" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="a8cdc678-a7df-48dc-9814-b232230b53bd" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="StopBusinessFlow" Guid="14152b2a-bb98-4585-9486-707dc4c6b26c" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="b20bcd70-ee32-4e43-8627-04f5ae52e06a" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SELECT * FROM JESI_WF_AMDOCS_SUBSCRIBE WHERE SOURCE_ID IN (SELECT SOURCE_ID FROM&#xD;&#xA;JESI_WF_AMDOCS_SUBSCRIBE WHERE CTCR_SOURCE_PROG_ID='{Var Name=Order id}') ORDER BY SUBSCRIBE_MESSAGE_ID ASC" />
+<ActInputValue Guid="144f5b59-e500-4ca6-93f9-98ecc962cf71" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="68f00769-c2a4-4fbf-b3f6-72a504f749c7" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e5ca7908-dd84-4a9d-86c0-9754dfb1a49c" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8d9cf238-7ac9-4dd4-8858-b503805a0e54" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="cd8fc5ee-3c99-425c-aaac-9192ad571626" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d169598-f2ca-43c2-ad36-0cd66c19748f" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="6dfd159a-041b-4b07-8221-fcea8405d6cc" mExpected="{Var Name=Order id}" Operator="Equals" Param="CTCR_SOURCE_PROG_ID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="8be60556-9321-44cc-a154-c0c91c9642dc" Operator="Equals" Param="SOURCE_ID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Source_id" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="6a3d83c7-ec04-413c-9730-29ac4ec1d39a" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="530c0074-4ee0-40ba-8b83-8a968c439d48" ParentName="SCN08_New Acquisition customer  Mobile Postpiad Subscriber using retail portal\Group\JESI_WF Validation" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="26c690e4-7d01-489e-8dc5-74a823134700" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="530c0074-4ee0-40ba-8b83-8a968c439d48" ParentName="SCN08_New Acquisition customer  Mobile Postpiad Subscriber using retail portal\Group\JESI_WF Validation" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

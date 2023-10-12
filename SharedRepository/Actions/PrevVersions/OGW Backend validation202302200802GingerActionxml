@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="7e003c10-58ed-4af7-b479-9d389caf6bf5" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202204121436" GingerVersion="3.9.0.0" Version="4" LastUpdateBy="Premanatha.NL" LastUpdate="202204130458" />
+<ActDBValidation Active="True" AppName="OGW" DBName="DSL/cable" DBValidationType="FreeSQL" Description="OGW Backend validation" Guid="7e003c10-58ed-4af7-b479-9d389caf6bf5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b3ac7464-af0f-4c0e-bdba-c0716233e069" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select cdm_txid,cdm_entity_txid, target_system, target_main_entity_id, status,ctcr_sys_cre_dt, ctcr_source_message_name&#xD;&#xA;from {EnvParam App=OGW Param=Casandra}.og_cdm_entity_targets where cdm_txid='6012699' and ctcr_source_message_name='cdm/updateCDM/update_cdm_entity_target.fxml' ALLOW FILTERING" />
+<ActInputValue Guid="67dc89b4-8ec4-4559-b183-cf922a21c1fd" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="58eb0917-461c-47c0-90c9-786628d6bf44" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b0413ca8-3433-43ed-81a6-eb41dcddc0ba" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="013f37e2-2d9d-4a67-b7e7-89ad85e04648" mExpected="InProgress-SubmittedToBackend" Operator="Equals" Param="status" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

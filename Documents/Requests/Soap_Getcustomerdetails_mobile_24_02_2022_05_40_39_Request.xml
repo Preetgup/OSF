@@ -1,0 +1,26 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/customer/VFDEGetCustomerDetails" xmlns:vfd1="http://amdocs/vfde/customer/VFDEGetCustomerDetailsInput">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <vfd:GetCustomerDetailsRequest>
+            <vfd1:ROOT>
+                <Event>
+                    <Type>RetrieveCustomerInfo</Type>
+                    <ID>c814427c-39eb-464c-aac1-bce6101269c1</ID>
+                    <CallerID>OSF</CallerID>
+                    <CorrelationID>007d33a6-91bc-4c08-873a-ad75cee3bddc</CorrelationID>
+                    <MessageCreationTimestamp>2022-02-23T05:41:11.257Z</MessageCreationTimestamp>
+                </Event>
+                <DATA>
+                    <GlobalID>KS_</GlobalID>
+                    <Mode>3</Mode>
+                    <BANDetails>
+                        <BAN></BAN>
+                        <MarketCode>MMC</MarketCode>
+                    </BANDetails>
+                    <SourceSystemID>OSF.TCP</SourceSystemID>
+                    <Portal>{{portal}}</Portal>
+                </DATA>
+            </vfd1:ROOT>
+        </vfd:GetCustomerDetailsRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

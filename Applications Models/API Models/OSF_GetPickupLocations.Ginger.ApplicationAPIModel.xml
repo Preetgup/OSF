@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2e3e46ca-fb13-4736-b885-322f3f772c1e" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111170829" GingerVersion="3.9.0.0" Version="3" LastUpdateBy="Petros.Dimitriou" LastUpdate="202204280728" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEGetPickupLocationsEG/VFDE" Guid="2e3e46ca-fb13-4736-b885-322f3f772c1e" Name="OSF_GetPickupLocations" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;s:Envelope xmlns:s=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xD;&#xA;  &lt;s:Header&gt;&#xD;&#xA;    &lt;Action xmlns=&quot;{XMLNS}&quot; s:mustUnderstand=&quot;1&quot;&gt;{ACTION}&lt;/Action&gt;&#xD;&#xA;  &lt;/s:Header&gt;&#xD;&#xA;  &lt;s:Body&gt;&#xD;&#xA;    &lt;ns0:GetPickupLocationsRequest xmlns:ns0=&quot;http://amdocs/vfde/pickupLocation/&quot; xmlns:ns3=&quot;http://amdocs/vfde/pickupLocation/VFDEGetPickUpLocationsInput&quot; xmlns:ns1=&quot;http://amdocs/vfde/common/VFDECommonTypes&quot; xmlns:ns2=&quot;http://amdocs/vfde/pickupLocation/VFDEGetPickUpLocationsOutput&quot;&gt;&#xD;&#xA;      &lt;ns3:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;LineOfBusiness&gt;{LINEOFBUSINESS}&lt;/LineOfBusiness&gt;&#xD;&#xA;          &lt;Zip&gt;{ZIP}&lt;/Zip&gt;&#xD;&#xA;          &lt;Radius&gt;{RADIUS}&lt;/Radius&gt;&#xD;&#xA;          &lt;ChannelID&gt;{CHANNELID}&lt;/ChannelID&gt;&#xD;&#xA;          &lt;CashOnDelivery&gt;{CASHONDELIVERY}&lt;/CashOnDelivery&gt;&#xD;&#xA;          &lt;IdentMethod&gt;{IDENTMETHOD}&lt;/IdentMethod&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/ns3:ROOT&gt;&#xD;&#xA;    &lt;/ns0:GetPickupLocationsRequest&gt;&#xD;&#xA;  &lt;/s:Body&gt;&#xD;&#xA;&lt;/s:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="3b2a3f60-62ff-407f-a971-1d27e9765d01" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{ACTION}" TagName="Action">
+<OptionalValuesList>
+<OptionalValue Guid="1d7753db-5e84-45d8-bf03-d9a0666b20a7" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetPickupLocations" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="f189318f-7135-49ec-8914-dfb1eb997e3b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{XMLNS}" TagName="xmlns">
+<OptionalValuesList>
+<OptionalValue Guid="391406f9-0146-40db-aa0b-2a1eab2f02f6" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://schemas.microsoft.com/ws/2005/05/addressing/none" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="0d3c2674-1b31-4b16-a16f-f6d832d6bae1" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="a67f104f-27f1-46b6-8c4f-bdc0c2a575b6" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetPickupLocations" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="6ae615e3-e7f0-49cb-b0e1-aaf3bda47eb0" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="28d97b0b-a6fd-468d-a975-8dfc1906fcb9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="10071297505b23dc9fdd5ae3.90603949" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="bee065fc-d5be-4ced-a097-85f56a1bc254" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="5cc408bf-62a2-4b26-85be-5877388e9c91" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="7b07019a-5ca4-40f5-a4cd-b61ccdec7f34" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="bd528b9d-ec29-4c02-bf1e-400103ad2a26" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="22de08c4af28aed83f9d9cd5feb3b71e" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="2451cbb1-f949-40ea-9f92-754595466341" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="0bf2d808-4028-41d5-8125-30e408d6a455" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="021188ca-4b15-457a-9010-827911f62c03" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/DATA[1]/LineOfBusiness[1]" PlaceHolder="{LINEOFBUSINESS}" TagName="LineOfBusiness">
+<OptionalValuesList>
+<OptionalValue Guid="3f0078c2-db9f-415d-8b8d-0b27fa274a6f" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Mobile_Postpaid" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="e7f0c257-f97f-46d8-9888-12c35ca05514" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/DATA[1]/Zip[1]" PlaceHolder="{ZIP}" TagName="Zip">
+<OptionalValuesList>
+<OptionalValue Guid="fb71d1fe-0c61-4c1c-9114-81e187c5a545" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="22307" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="3030c213-6b0f-4add-8e30-f89e5549b3ea" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/DATA[1]/Radius[1]" PlaceHolder="{RADIUS}" TagName="Radius">
+<OptionalValuesList>
+<OptionalValue Guid="6aa65f33-59ce-4eba-bcbc-b4a2bc3ffb80" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="15" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="689d8bb5-2439-43b1-a579-d499a21c2513" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/DATA[1]/ChannelID[1]" PlaceHolder="{CHANNELID}" TagName="ChannelID">
+<OptionalValuesList>
+<OptionalValue Guid="26243f19-d977-40c8-a7f6-7e15056ea715" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="244311c2-a101-46e0-89b9-23818d612500" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/DATA[1]/CashOnDelivery[1]" PlaceHolder="{CASHONDELIVERY}" TagName="CashOnDelivery">
+<OptionalValuesList>
+<OptionalValue Guid="326790b6-6a1c-41b8-a90f-b911fbeb981a" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="false" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="71b1c432-c25d-42a0-854f-c46512ebba2f" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetPickupLocationsRequest[1]/ns3:ROOT[1]/DATA[1]/IdentMethod[1]" PlaceHolder="{IDENTMETHOD}" TagName="IdentMethod">
+<OptionalValuesList>
+<OptionalValue Guid="de7cec8d-4188-4e19-985c-615cb018eb9f" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Door" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

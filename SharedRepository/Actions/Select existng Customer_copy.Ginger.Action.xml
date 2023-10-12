@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="32522c5f-fed2-4334-b9a6-7b9d5d18be4e" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202206130615" GingerVersion="4.3.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202206130615" />
+<ActDBValidation Active="True" DBValidationType="FreeSQL" Description="Select existng Customer_copy" Guid="32522c5f-fed2-4334-b9a6-7b9d5d18be4e" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7dac0f80-3434-4d65-ba32-a9962ff909bc" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select customer_id from (select customer_id from subscriber where sub_status = 'A' and customer_id in (select ban from billing_account where ACCOUNT_TYPE !='B') order by sys_creation_date desc) where rownum&lt;20" />
+<ActInputValue Guid="c55c9b86-f6aa-4d42-a861-0c6490a2640a" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="009fa398-05cb-4170-8f24-366c44f1a7c2" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d1d9dbb-20c3-488c-9f8c-4db81e797ec3" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2fbfc7ea-ef0b-4ecd-a4a9-9f42ac561e82" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="89993d00-6b9d-41c7-b0e3-e7a3806e256f" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6eaffb98-fdf8-48d3-81f0-d93a99f9c996" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="658cc4ec-e872-4728-961a-b7ef9fe04b47" Operator="Equals" Param="CUSTOMER_ID" ParentGuid="00000000-0000-0000-0000-000000000000" Path="12" StoreTo="Variable" StoreToValue="ACT_CUSTOMER_ID" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

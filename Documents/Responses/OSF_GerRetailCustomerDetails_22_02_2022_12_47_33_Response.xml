@@ -1,0 +1,24 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:GetRetailCustomerDetailsResponse xmlns:ns100="http://amdocs/vfde/voras/customer/VFDEGetRetailCustomerDetails">
+      <ROOT xmlns="http://amdocs/vfde/voras/customer/VFDEGetRetailCustomerDetailsOutput" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Event xmlns="">
+          <Type>123</Type>
+          <ID>123</ID>
+        </Event>
+        <DATA xmlns="">
+          <LegalNameAddress xsi:nil="true" />
+          <LegacyCustomersList>
+            <LegacyCustomer>
+              <LegacyCustomerID xsi:nil="true" />
+            </LegacyCustomer>
+          </LegacyCustomersList>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-7009</ErrorCode>
+          <ErrorDescription>The input password is not matching the customer's password</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:GetRetailCustomerDetailsResponse>
+  </env:Body>
+</env:Envelope>

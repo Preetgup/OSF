@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="8bc71d1d-2e12-486e-af74-f625b7dc9be4" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202203041217" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202203041217" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="DataBase Action" Guid="8bc71d1d-2e12-486e-af74-f625b7dc9be4" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="afd9b6d9-328a-4d81-9e0e-c5ea97f6a1ea" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SELECT&#xD;&#xA;    *&#xD;&#xA;FROM&#xD;&#xA;    (&#xD;&#xA;        SELECT&#xD;&#xA;            &quot;SUBSCRIBE_MESSAGE_ID&quot;,&#xD;&#xA;            MESSAGE_NAME,&#xD;&#xA;            SUBSTR(MESSAGE_DATA, INSTR(MESSAGE_DATA, '&lt;Status&gt;') + 8, INSTR(MESSAGE_DATA, '&lt;/Status&gt;') - INSTR(MESSAGE_DATA, '&lt;Status&gt;') - 8) STATUS,&#xD;&#xA;            &quot;MESSAGE_STATUS&quot;,&#xD;&#xA;            &quot;ERROR_NUMBER&quot;,&#xD;&#xA;            &quot;ERROR_MESSAGE&quot;,&#xD;&#xA;            &quot;SOURCE_APP&quot;,&#xD;&#xA;            &quot;SOURCE_ID&quot;,&#xD;&#xA;            &quot;RETRY_COUNT&quot;,&#xD;&#xA;            &quot;CTCR_SOURCE_PROG_ID&quot;,&#xD;&#xA;            &quot;CTCR_SOURCE_PROG_DT&quot;,&#xD;&#xA;            &quot;CORRELATION_ID&quot;,&#xD;&#xA;            &quot;OGW_ID&quot;&#xD;&#xA;           &#xD;&#xA;        FROM&#xD;&#xA;            JESI_WF_AMDOCS_SUBSCRIBE T&#xD;&#xA;        WHERE&#xD;&#xA;            SOURCE_ID IN (&#xD;&#xA;                SELECT&#xD;&#xA;                    SOURCE_ID&#xD;&#xA;                FROM&#xD;&#xA;                    JESI_WF_AMDOCS_SUBSCRIBE&#xD;&#xA;                WHERE&#xD;&#xA;                    CTCR_SOURCE_PROG_ID = '{Var Name=Order id}'&#xD;&#xA;            )&#xD;&#xA;        ORDER BY&#xD;&#xA;            SUBSCRIBE_MESSAGE_ID DESC&#xD;&#xA;    )" />
+<ActInputValue Guid="4eedf21a-39f9-4e9a-a979-201d04ef8862" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="48389ab6-b392-4cbc-9641-f8b4b5d10bc9" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4b495015-0b01-41ca-a4b9-38c8f54c0f54" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

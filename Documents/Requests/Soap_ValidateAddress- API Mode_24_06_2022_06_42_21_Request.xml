@@ -1,0 +1,26 @@
+POST http://deossevr:8001/VFDEValidateAddressEG/VFDE HTTP/1.1
+Authorization: Basic T21uaXVzOk9tbml1c19TaXQ=
+Content-Type: text/xml; charset=utf-8
+Content-Length: 713
+Host: deossevr:8001
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/address/VFDEValidateAddress" xmlns:vfd1="http://amdocs/vfde/address/VFDEValidateAddressInput">
+  <soapenv:Header />
+  <soapenv:Body>
+    <vfd:ValidateAddressRequest>
+      <vfd1:ROOT>
+        <Event>
+          <Type>ValidateAddress</Type>
+          <ID>Saurav12345</ID>
+        </Event>
+        <DATA>
+          <Portal>OFT</Portal>
+          <ZipCode>63936</ZipCode>
+          <City>Schneeberg</City>
+          <Street>Roscheklinge</Street>
+          <HouseNumber>12</HouseNumber>
+        </DATA>
+      </vfd1:ROOT>
+    </vfd:ValidateAddressRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

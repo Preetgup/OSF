@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="41bfa4fd-ed14-4141-9025-a93970fd6999" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202202220851" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202202220851" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="GobalID" Guid="41bfa4fd-ed14-4141-9025-a93970fd6999" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="207bda6c-c3dd-4f73-bf83-84a5b8fdce7f" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='GlobalId'" />
+<ActInputValue Guid="c4aa4c0a-a150-45aa-94d1-d6438ad10ec9" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="9dd87545-9b86-44b0-9ff7-1e333a3d6dfd" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="11f02acc-5123-4036-9c50-6a42615d00dd" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="af6fb42c-190b-4954-8e22-f8482fd8bedc" mExpected="{CS Exp=@{Actual}.Length&gt;0}" Operator="Evaluate" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'GlobalId' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;GlobalId&quot;}" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

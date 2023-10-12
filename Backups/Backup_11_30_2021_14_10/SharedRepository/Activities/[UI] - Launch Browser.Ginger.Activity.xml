@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="ecce7939-420f-4ac9-ac96-d0dd8fd5bdaa" ItemType="Activity" CreatedBy="dord" Created="202101030703" GingerVersion="3.6.0.0" Version="1" LastUpdateBy="dord" LastUpdate="202101030703" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="[UI] - Launch Browser" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ecce7939-420f-4ac9-ac96-d0dd8fd5bdaa" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MyWebApp">
+<Acts>
+<ActValidation Active="True" Description="[Condition] - Is OSF-RETAIL" Guid="9d27ea92-73c6-4f3e-a205-80dd9693230f" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="f4ef8a62-90d0-462b-8310-4bb93587d181" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="80eadf66-1f71-4b31-8d16-fe5f4361c98c#GUID_NAME#[Browser] - Open 'OSF-RETAIL' Application" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="5d09e42b-232f-45eb-998e-af2031925491" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="fc561cea-2430-4dff-a0a3-c317e1d9a849#GUID_NAME#[Browser] - Open 'OSF-TELESALE' Application" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="36a1ef8f-68f4-4750-acad-ccf2d550cd2d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=@&quot;{Var Name=GLB_SALES_CHANNEL}&quot;.Contains(@&quot;retail&quot;)}" />
+</InputValues>
+</ActValidation>
+<ActBrowserElement Active="True" Description="[Browser] - Open 'OSF-RETAIL' Application" Guid="80eadf66-1f71-4b31-8d16-fe5f4361c98c" ImplicitWait="60" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="dcc03a26-1ac3-4e8b-aafb-fbb6a5f87f51" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="dc857952-bec1-422c-8cb2-0b55a5d48167" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GotoURL" />
+<ActInputValue Guid="dfa11167-d74c-4f7e-8d00-2d3cf01e18e8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{EnvParam App=OSF Param=RETAIL}" />
+<ActInputValue Guid="36869cfa-e990-4559-aa38-006d23f4bb03" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="04d0aeea-4152-479d-8d28-a99aefe705c5" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Current" />
+<ActInputValue Guid="31eb75a2-bf35-4557-b933-135e5f52dd94" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Static" />
+<ActInputValue Guid="7b9e3401-096c-45e5-a5bc-fa6e0035e1f6" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="9cfaf200-2a1e-4f33-af9f-1b6c21f3753d" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+<ActBrowserElement Active="True" Description="[Browser] - Open 'OSF-TELESALE' Application" Guid="fc561cea-2430-4dff-a0a3-c317e1d9a849" ImplicitWait="60" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="dc857952-bec1-422c-8cb2-0b55a5d48167" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GotoURL" />
+<ActInputValue Guid="dfa11167-d74c-4f7e-8d00-2d3cf01e18e8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{EnvParam App=OSF Param=TELESALES}" />
+<ActInputValue Guid="36869cfa-e990-4559-aa38-006d23f4bb03" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="04d0aeea-4152-479d-8d28-a99aefe705c5" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Current" />
+<ActInputValue Guid="31eb75a2-bf35-4557-b933-135e5f52dd94" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Static" />
+<ActInputValue Guid="7b9e3401-096c-45e5-a5bc-fa6e0035e1f6" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="007dc295-6eea-4a42-8277-390e1c0fd659" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+</Acts>
+
+<Variables>
+<VariableString Description="telesales&#xD;&#xA;retail" Guid="abe9e259-0c75-48f1-a7af-b6164f8d2123" InitialStringValue="retail" MappedOutputType="None" Name="GLB_SALES_CHANNEL" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

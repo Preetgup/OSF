@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="06211b6f-4026-4d30-b3dd-4cd616fdcd9f" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302221016" GingerVersion="5.1.0.0" Version="2" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302221016" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Set Channel TELESALES" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="06211b6f-4026-4d30-b3dd-4cd616fdcd9f" Mandatory="True" ParentGuid="8570e7e7-f710-4197-b11a-9d56e7c6469a" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActSetVariableValue Active="True" Description="Set Channel TELESALES" Guid="6626adfa-3fa2-4c93-b71a-777cfd095d33" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="83857121-0647-499f-9f96-63f88b9541b0" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" Value="[UI] - Open OSF CHANNEL" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="682d422f-00f8-48bb-88fc-bb4b8ba8ef41" Param="SetVariableValueOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetValue" />
+<ActInputValue Guid="941c9865-d079-4972-b688-6eb6c2a6f28a" Param="VariableName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="BF_CHANNEL" />
+<ActInputValue Guid="d83118ed-9d5b-46bd-b1ba-ae3a12b336b4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TELESALES" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableString Guid="3fd339fb-2c38-4ebc-a2e7-cf25c6ad9f85" InitialStringValue="TELESALES" MappedOutputType="None" Name="BF_CHANNEL" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

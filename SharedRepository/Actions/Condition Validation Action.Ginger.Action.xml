@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="c3aa4734-af9c-423c-b5f8-258477a019db" ItemType="ActValidation" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302061525" GingerVersion="4.3.0.0" Version="1" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302061525" />
+<ActValidation Active="True" Description="Condition Validation Action" Guid="c3aa4734-af9c-423c-b5f8-258477a019db" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="1a7a39f3-776c-466e-a5e5-d4d22d7f55fd" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="8b2cc683-8f13-4543-b0c4-2d35a7406560#GUID_NAME#TARIFF" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="18b4a9ec-42a9-4a81-85d8-3b938e2848f6" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+<ActInputValue Guid="e34985ef-f3f8-4f8b-9aa6-803af588a57d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=@&quot;ACC1&quot; == @&quot;{EnvParam App=OSF Param=ENVIRONMENT}&quot;}" />
+</InputValues>
+</ActValidation></GingerRepositoryItem>

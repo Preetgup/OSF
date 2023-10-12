@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2413a43b-c254-41d3-9d23-924cd978e8f6" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111170850" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="piyush.thakre" LastUpdate="202111170854" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEGetRetailCustomerDetailsEG/VFDE" Guid="2413a43b-c254-41d3-9d23-924cd978e8f6" Name="OSF_GerRetailCustomerDetails" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/voras/customer/VFDEGetRetailCustomerDetails&quot; xmlns:vfd1=&quot;http://amdocs/vfde/voras/customer/VFDEGetRetailCustomerDetailsInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:GetRetailCustomerDetailsRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;LegacyCustomerID sourceSystem=&quot;{SOURCESYSTEM}&quot;&gt;{LEGACYCUSTOMERID}&lt;/LegacyCustomerID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;LineNumber sourceSystem=&quot;{SOURCESYSTEM1}&quot;&gt;{LINENUMBER}&lt;/LineNumber&gt;&#xD;&#xA;          &lt;CustomerPassword&gt;{CUSTOMERPASSWORD}&lt;/CustomerPassword&gt;&#xD;&#xA;          &lt;LinkedCustomer&gt;{LINKEDCUSTOMER}&lt;/LinkedCustomer&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:GetRetailCustomerDetailsRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="accac787-0f33-4a07-ba6a-ddb06eda7dfe" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetRetailCustomerDetailsRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="1ac6d299-e8da-41ae-ad71-8d27c076d6ae" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="?" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="73416fda-5c8f-451d-904b-772953f700b0" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetRetailCustomerDetailsRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="49296e88-2d61-444e-849d-2ef2f160865e" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="?" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c81d0181-c0e2-45b5-9ba2-eccc69cc3c75" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetRetailCustomerDetailsRequest[1]/vfd1:ROOT[1]/DATA[1]/LegacyCustomerID[1]" PlaceHolder="{LEGACYCUSTOMERID}" TagName="LegacyCustomerID">
+<OptionalValuesList>
+<OptionalValue Guid="3c03538a-42e7-448f-88f1-3ed17f6e4f8a" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="6dbe1880-afa6-45f3-a2e3-956ec08f47ad" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetRetailCustomerDetailsRequest[1]/vfd1:ROOT[1]/DATA[1]/LegacyCustomerID[1]" PlaceHolder="{SOURCESYSTEM}" TagName="sourceSystem">
+<OptionalValuesList>
+<OptionalValue Guid="6b6ac4a4-ab3e-49c1-bf29-a78c47dab9aa" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="KIAS" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="a5a869cb-f236-48a5-b68d-c5050a2f0e19" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetRetailCustomerDetailsRequest[1]/vfd1:ROOT[1]/DATA[1]/LineNumber[1]" PlaceHolder="{LINENUMBER}" TagName="LineNumber">
+<OptionalValuesList>
+<OptionalValue Guid="a2fd4377-1796-47f2-a34b-0fa098f214b3" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1721234567" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="b58bfc15-edea-4d95-902d-12e3fa69d346" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetRetailCustomerDetailsRequest[1]/vfd1:ROOT[1]/DATA[1]/LineNumber[1]" PlaceHolder="{SOURCESYSTEM1}" TagName="sourceSystem">
+<OptionalValuesList>
+<OptionalValue Guid="23d11a42-1f88-467e-904c-884cfbb956c3" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="KIAS" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="46947528-8163-4c8a-8a9d-a85c59eac240" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetRetailCustomerDetailsRequest[1]/vfd1:ROOT[1]/DATA[1]/CustomerPassword[1]" PlaceHolder="{CUSTOMERPASSWORD}" TagName="CustomerPassword">
+<OptionalValuesList>
+<OptionalValue Guid="2165c1eb-82ed-41cc-b3eb-59b806644f58" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4444" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="d7936b55-96af-4c6b-b52e-7cc7e36c0350" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetRetailCustomerDetailsRequest[1]/vfd1:ROOT[1]/DATA[1]/LinkedCustomer[1]" PlaceHolder="{LINKEDCUSTOMER}" TagName="LinkedCustomer">
+<OptionalValuesList>
+<OptionalValue Guid="8ca592f0-e187-49cd-b953-5d0d14bbd4e8" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="true" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

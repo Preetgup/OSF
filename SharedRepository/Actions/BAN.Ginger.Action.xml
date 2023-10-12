@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="3c25dcb1-56ac-4509-9e89-a2b0721d1800" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202202220845" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202202220845" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="BAN" Guid="3c25dcb1-56ac-4509-9e89-a2b0721d1800" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b770538c-a804-4f3a-a395-fd2ee1d2672a" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='BAN'" />
+<ActInputValue Guid="0cf38802-35b5-4d44-96e4-ed4786404abb" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="a2a998a5-ab1d-421f-979b-97a793b3d9c5" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5b56ec2a-9fb6-4a0c-9a73-c7d5e0d90ee0" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c73fd277-c83a-4127-a081-0f9afb700482" mExpected="0" Operator="GreaterThan" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'BAN' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;BAN&quot;}" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

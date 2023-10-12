@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="8c066aa1-9f2a-465d-8229-75ec1fba31ad" ItemType="Activity" CreatedBy="Shalini.Tyagi" Created="202203250954" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Shalini.Tyagi" LastUpdate="202203250954" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="JESI_WF Validation" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="8c066aa1-9f2a-465d-8229-75ec1fba31ad" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="DataBase Action" Guid="87e3abdc-8773-4d0e-a1e5-bc3071ce977a" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8b5418ec-9e20-41a2-9ca8-cc2464a76fed" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SELECT * FROM JESI_WF_AMDOCS_SUBSCRIBE WHERE SOURCE_ID IN (SELECT SOURCE_ID FROM&#xD;&#xA;JESI_WF_AMDOCS_SUBSCRIBE WHERE CTCR_SOURCE_PROG_ID='{Var Name=Order id}') ORDER BY SUBSCRIBE_MESSAGE_ID ASC" />
+<ActInputValue Guid="cb2a9f78-788d-4548-953e-80fd3a05197d" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="48f1794a-7ab6-4140-95ab-50797019e05f" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="403f6a01-7fc4-43e4-a3e4-5ff911d3f348" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="322117a5-e451-49b2-8c01-d073cddecbe7" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

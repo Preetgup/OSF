@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="aaffcaa8-6041-467b-971d-8296385fb457" ItemType="BusinessFlow" CreatedBy="gourang.jiddewar" Created="202101031522" GingerVersion="3.6.0.0" Version="37" LastUpdateBy="Akshay.Sinha" LastUpdate="202101101059" />
+<BusinessFlow Guid="aaffcaa8-6041-467b-971d-8296385fb457" Name="REPORT-LOADER" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Active">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="[Excel] - Update Excel Statistics" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="81184b89-749d-4758-b359-fda1e9dfec36" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActExcel Active="True" Description="[Excel] - Get Next Avalible Row" EnableRetryMechanism="True" ExcelActionType="ReadData" Guid="f7c34078-a805-4511-b154-788841ea9a60" MaxNumberOfRetries="10" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="85d5f035-5ec6-44a0-9f53-e541db2f973a" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7c509687-8144-485b-86aa-22579ac4b664" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\USERS\PUBLIC\AUTOMATION\STATISTICS\STATISTICS.XLSX" />
+<ActInputValue Guid="059bc4d9-4f1b-4e9f-b164-70d10bcf1f3f" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="data" />
+<ActInputValue Guid="31487b14-d997-42d0-b9ec-43df4e2692d7" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="[USED]='N'" />
+<ActInputValue Guid="cd67fb06-e81f-4f31-8d7f-833440a58929" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ID" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a6bee50c-2b8d-41d8-aa67-c7074d9ea3e6" mExpected="0" Operator="GreaterThan" Param="ID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="ROW_NUM" />
+</ReturnValues>
+</ActExcel>
+<ActExcel Active="True" Description="[Excel] - Update Last Row" EnableRetryMechanism="True" ExcelActionType="WriteData" Guid="918046bf-6629-45ab-b8d9-04422285a885" MaxNumberOfRetries="10" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="85d5f035-5ec6-44a0-9f53-e541db2f973a" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" Value="USED='Y'" />
+<ActInputValue Guid="7c509687-8144-485b-86aa-22579ac4b664" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\USERS\PUBLIC\AUTOMATION\STATISTICS\STATISTICS.XLSX" />
+<ActInputValue Guid="059bc4d9-4f1b-4e9f-b164-70d10bcf1f3f" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="data" />
+<ActInputValue Guid="31487b14-d997-42d0-b9ec-43df4e2692d7" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="[ID]={Var Name=ROW_NUM}" />
+<ActInputValue Guid="d3bccbcb-c69f-40fb-87e8-4424f0725d28" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ID" />
+<ActInputValue Guid="f30aa412-2e53-4f85-8f85-bdc6c1991438" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="[Excel] - Add Execution Statistics" EnableRetryMechanism="True" ExcelActionType="WriteData" Guid="45d42aa5-76c2-4f61-b704-3db0d78aab9e" MaxNumberOfRetries="10" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="85d5f035-5ec6-44a0-9f53-e541db2f973a" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" Value="[RUNSET]='{FD Object=Runset Field=Name}',[ENV]='{FD Object=Environment Field=Name}',[STATUS]='{Var Name=GLB_EXECUTION_STATUS}',[DURATION]='{Var Name=GLB_EXECUTION_DURATION}',[DATE]='{CS Exp=DateTime.Now}',[USER]='{CS Exp=System.Environment.UserName}',USED='N'" />
+<ActInputValue Guid="7c509687-8144-485b-86aa-22579ac4b664" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\USERS\PUBLIC\AUTOMATION\STATISTICS\STATISTICS.XLSX" />
+<ActInputValue Guid="059bc4d9-4f1b-4e9f-b164-70d10bcf1f3f" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="data" />
+<ActInputValue Guid="31487b14-d997-42d0-b9ec-43df4e2692d7" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="[ID]={CS Exp={Var Name=ROW_NUM}+1}" />
+<ActInputValue Guid="d3bccbcb-c69f-40fb-87e8-4424f0725d28" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ID" />
+<ActInputValue Guid="f30aa412-2e53-4f85-8f85-bdc6c1991438" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+</Acts>
+
+<Variables>
+<VariableString Guid="ec746891-1c30-4f83-abfd-4ea2fc0fec3e" InitialStringValue="1" MappedOutputType="None" Name="ROW_NUM" ParentGuid="81184b89-749d-4758-b359-fda1e9dfec36" ParentName="REPORT-LOADER\Group\[Excel] - Update Excel Statistics" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="6e6d95f9-6dfb-44c7-a130-b101bd348651" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Automated" ActivityGuid="81184b89-749d-4758-b359-fda1e9dfec36" ActivityName="[Excel] - Update Excel Statistics" Guid="12084dbf-31e8-4c10-b391-1269c7215d8e" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="MyWebApp" Guid="bcc37253-f792-4b01-86dd-dc8991303044" LastExecutingAgentName="Chrome Virtual" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="c5cc353a-a7f8-482d-9dcc-c9b297cc78ca" InitialStringValue="TEST" MappedOutputType="None" Name="RUNSET_NAME" ParentGuid="aaffcaa8-6041-467b-971d-8296385fb457" ParentName="REPORT-LOADER" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="e7d5dcfd-4b84-4110-a540-72f7f580fd51" MappedOutputType="None" Name="STATUS" ParentGuid="aaffcaa8-6041-467b-971d-8296385fb457" ParentName="REPORT-LOADER" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

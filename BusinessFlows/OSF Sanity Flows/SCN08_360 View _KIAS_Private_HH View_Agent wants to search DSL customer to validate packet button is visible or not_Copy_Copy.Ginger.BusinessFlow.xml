@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="1f1e095d-f0b3-4fa5-bf4e-67c33ea51671" ItemType="BusinessFlow" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202301200842" GingerVersion="5.1.0.0" Version="66" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202308020654" />
+<BusinessFlow Guid="1f1e095d-f0b3-4fa5-bf4e-67c33ea51671" Name="SCN05_Agent wants to legacy search a DSL customer in 360 view in Retail channel" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActivitiesGroupID="Group" ActivityName="Set Channel RETAIL" Guid="8e9a5c2a-a1a1-45e0-8507-e26ad67997ab" ParentGuid="4934159b-f93b-47bf-823e-1c7d1eb9e568" Type="Link" />
+<Activity ActivitiesGroupID="Group" ActivityName="[UI] - Open OSF CHANNEL Retail" Guid="12f8b0fa-41b2-4f6b-a9f6-69eaff647d99" ParentGuid="5193d864-0ff6-443c-aca5-7ca99037e5bb" Type="Link" />
+<Activity ActivitiesGroupID="Group" ActivityName="[UI] - Login Screen_Retail" Guid="7b178dcc-0314-472f-9e33-0655855373c8" ParentGuid="35524dd4-5f5c-4acc-81ef-1186cdbb3a30" Type="Link" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="DSL Search Customer Extended" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="92a250d5-1747-41cb-8a25-b4f81e5d38e0" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActUIElement Active="True" Description="[UI] - Click on 'CustomerID'" EnableRetryMechanism="True" Guid="fa5a5149-3a13-4b5b-b813-f57f78d6eb21" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'Getare ID'" StatusConverter="None" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="4610513e-8b54-4a18-88c4-b2ed8123bc17" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Not_Executed" Value="09e30c83-804c-42e5-83bd-9a53005dc6a3#GUID_NAME#[UI] - Click &quot;down arrow&quot; for logout" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="b0b71940-5d3b-42d5-bb54-5cbc9ced2e05" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="be654418-ba2c-44b9-abb1-a85fedf3239b" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MouseClick" />
+<ActInputValue Guid="7b030388-8ffd-408d-a083-efa99baf2259" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="5a7644f2-8ee4-4df6-8da6-a50abff5cb23" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="289afc44-838a-4c10-b408-b007b940bcb7" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="61c790ff-a8b8-417c-bb9f-ba99f4e64718" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//input[@id='customer']" />
+<ActInputValue Guid="d3428f66-113f-42dc-9cc9-6188c2cd610a" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bef1caa4-fa1c-4eae-80f3-254509032448" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="adf25604-77bf-4aec-8a59-ff08dcaf8c70" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bc17f6e2-3f85-49ad-b73b-87529fd8a419" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6125b6ac-106a-41e9-b409-84f9f08d7d9a" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="74a2ee72-23f2-404f-b67f-0f1a7277bcc1" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="14f290c1-43a0-4d52-963e-b385517ece3f" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActValidation Active="True" Description="Condition Validation Action" Guid="ea633a7e-7413-4680-82fc-333c63cca0bf" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="1d89b315-fe92-4ebf-9c44-aec7c1c7e909" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" Value="22a9fc02-8312-4121-b553-1fe990b2f9bf#GUID_NAME#Generate Random number ACC1" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="7b6c3c08-ef1b-4725-82f4-2d2588a9cb57" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" Value="2c8245d1-bc89-45f2-8dc9-a32f1c638ac8#GUID_NAME#Generate Random number ACC2" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="9b3dab64-4afd-4033-a327-80ae37d3c270" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+<ActInputValue Guid="77c6a8fe-9ad3-4e20-b66b-f68416c0f03c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=@&quot;SIT1&quot; == @&quot;{EnvParam App=OSF Param=ENVIRONMENT}&quot;}" />
+</InputValues>
+</ActValidation>
+<ActSetVariableValue Active="True" Description="Generate Random number ACC1" Guid="22a9fc02-8312-4121-b553-1fe990b2f9bf" ParentGuid="936ede09-ffe7-4a7e-9ca4-ed5563320ac6" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2db0c060-c7b6-4bb2-8b96-e51aad6422e4" Param="SetVariableValueOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AutoGenerateValue" />
+<ActInputValue Guid="1aa6e6bc-d398-4a76-8b07-ad4761312004" Param="VariableName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Random Number ACC1" />
+<ActInputValue Guid="9f0f3231-675b-4ecc-a9f8-16b047d0e9c4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Random Number ACC1}" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Select Row_num SIT1" Guid="4e21ad48-9854-4888-8cf0-78d8ee874b6f" ParentGuid="a81612f7-a2aa-4e3a-a679-ce3dc3350c1b" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d0deec31-95c2-487a-b397-b8d7ab07f1ff" Param="SetVariableValueOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetValue" />
+<ActInputValue Guid="900e3712-b586-4b99-a162-67c402faeab4" Param="VariableName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Row_num ACC1" />
+<ActInputValue Guid="9fe5546f-7227-464c-ba85-67ea989fc1bf" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Random Number ACC1}" />
+</InputValues>
+</ActSetVariableValue>
+<ActExcel Active="True" Description="Excel Action SIT1" Guid="94bf42bd-2fbf-40d7-85b2-13a3702e8862" ParentGuid="d6b6529d-3982-4dc2-b3cd-6ed7dbaead05" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="e3c020b4-8988-4dbf-8867-64729c6bf3f6" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" Value="cbaba959-8137-4bcd-bed4-966ceb611fd8#GUID_NAME#[UI] - Set 'CustomerID'" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="469b5ccf-3b01-4561-a22b-db6b92c54e20" Param="ExcelActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ReadData" />
+<ActInputValue Guid="56ead31a-6b72-45c0-9a2e-7c32d7ae693c" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9927efc6-4885-443d-9e53-cc0f9b3ed701" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Exceldata.xlsx" />
+<ActInputValue Guid="ac57cd46-b4d5-4d1e-af07-3fe750e16a79" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Sheet1" />
+<ActInputValue Guid="83f09cdc-90c5-4b6a-827f-e1e1252d0eab" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ID={Var Name=Row_num ACC1}" />
+<ActInputValue Guid="c5f35b10-232b-4410-92c5-e73859b36c58" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ID" />
+<ActInputValue Guid="ee32d295-6dff-4198-acaf-e5303fed0798" Param="SelectAllRows" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c5eaf900-3ce7-4a73-80d7-75927240916e" Operator="Equals" Param="Customer_value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="ACT_CUSTOMER_ID" />
+<ActReturnValue Active="True" Guid="bf4f80d1-ed26-4541-8bf0-2b40444bc218" mExpected="{Var Name=Row_num ACC1}" Operator="Equals" Param="ID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActExcel>
+<ActSetVariableValue Active="True" Description="Generate Random number SIT2" Guid="2c8245d1-bc89-45f2-8dc9-a32f1c638ac8" ParentGuid="936ede09-ffe7-4a7e-9ca4-ed5563320ac6" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="ef41a072-4ff9-404e-b9ef-dac394fbc101" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" Value="5bcc9772-187b-439e-a1cd-ef141ab430dc#GUID_NAME#Row_num_ACC2" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="78a2c2ed-d22a-4663-806d-f9a07b6ce448" Param="SetVariableValueOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AutoGenerateValue" />
+<ActInputValue Guid="c8f8c136-5fc5-4aad-bd58-36fb557f2da9" Param="VariableName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Random Number ACC2" />
+<ActInputValue Guid="871fb9d1-a7e4-4715-b442-c872b259121d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Random Number ACC2}" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="Row_num_SIT2" Guid="5bcc9772-187b-439e-a1cd-ef141ab430dc" ParentGuid="06eaee5e-2fa1-4e5f-83bf-0c8ae4dc9d48" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="d972ce9c-eb41-45b4-923c-1da5dff8047c" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" Value="3481e014-729b-4daa-a437-86847cae464b#GUID_NAME#Excel Action ACC2" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="f1db5df1-4fb3-42f4-b6bd-d7e3279479a5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Random Number ACC2}" />
+<ActInputValue Guid="5ebeaf24-249d-49ed-aa98-f4fb46e313c8" Param="VariableName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Row_num ACC2" />
+<ActInputValue Guid="efec5082-2952-4d3c-8ae5-6592683da03b" Param="SetVariableValueOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetValue" />
+</InputValues>
+</ActSetVariableValue>
+<ActExcel Active="True" Description="Excel Action SIT2" Guid="3481e014-729b-4daa-a437-86847cae464b" ParentGuid="d6b6529d-3982-4dc2-b3cd-6ed7dbaead05" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="09b3383a-a6d5-4fc4-bdb0-3fbde74e3210" Param="ExcelActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ReadData" />
+<ActInputValue Guid="240b44f8-8896-4fc1-9a8c-eecc4b8e28c5" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d47e34fb-e41a-4554-b551-bb52db8c8162" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Exceldata.xlsx" />
+<ActInputValue Guid="e34c7e4e-6520-4211-a637-bda9e5071494" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Sheet1" />
+<ActInputValue Guid="11c0a2c5-1136-4043-b176-81cef50e0fad" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ID={Var Name=Row_num ACC2}" />
+<ActInputValue Guid="eb5db2c1-ce04-4267-b52e-235a9e4a5467" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ID" />
+<ActInputValue Guid="61837e3f-d125-4ce2-a877-e0100a92a495" Param="SelectAllRows" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="605fcd42-0ca7-4a5b-9f7c-af0944f90c22" mExpected="{Var Name=Row_num ACC2}" Operator="Equals" Param="ID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="de0c1e0f-0ddd-4573-b9de-6e832e23988d" Operator="Equals" Param="Customer_value" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="ACT_CUSTOMER_ID" />
+</ReturnValues>
+</ActExcel>
+<ActUIElement Active="True" Description="[UI] - Set 'CustomerID'" EnableRetryMechanism="True" Guid="cbaba959-8137-4bcd-bed4-966ceb611fd8" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'Getare ID'" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="827763be-f93e-41b2-aca6-805fe6e827a2" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="cf647254-c870-41b9-b0da-30f8f4b9c8c6" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SendKeys" />
+<ActInputValue Guid="49fb22b5-994f-4311-bd6a-37d266dc26cc" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="607457ea-760f-4dae-8b6c-de4770f7d18a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="6be1235f-e57c-4c5b-bd02-3d769bf4f496" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="3896ed7d-09b2-4f6e-9608-986f1387d245" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//input[@id='customer']" />
+<ActInputValue Guid="70a0c570-99c9-474f-b6f5-766d01b27b14" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bc3a3172-3ee9-4393-bc07-7c6f97a0d005" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=ACT_CUSTOMER_ID}" />
+<ActInputValue Guid="7afd142c-d5f5-456d-a58f-4ed14c6948e4" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="27985e6c-c1ff-49e4-a7e5-ae5806461112" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c1d56592-e32c-4abf-9efa-d692f9a1e1d5" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1aeaf434-fdbf-4846-a21f-24368acb0e90" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="26423dd8-7a59-432f-b3c4-1237cf4a39e5" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="ScrollDown to Search" Guid="d95bd91a-5bc6-4e98-b7dd-833d6ab5bf3b" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" RunDescription="GET: ERWEITERTE BESTANDSKUNDENSUCHE" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c3cc2977-7bda-491b-aabd-257072b8bc6f" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="3739a6a2-8c85-41a0-84b7-313631403f28" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ScrollToElement" />
+<ActInputValue Guid="01314be0-5f4a-4f8d-b548-01ec4135a08a" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="8e32cacc-e8f2-464d-bbed-db14cbcd476c" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="cfd8c6cc-6783-452d-a4d3-594868cf82dc" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="52a764ec-e1aa-4ed5-b68b-8d825d79f105" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//*[contains(text(),'Bestandskundensuche')]" />
+<ActInputValue Guid="7838854b-ca92-49c7-9746-9379b61be4f7" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7ad6d8ff-b2c9-4b73-9e80-9ef8333503eb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="841f94f6-9741-46ec-b20e-c106febd2f1c" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="069e7cbe-2364-476d-b3b6-bba3a1d90572" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3e8ecf71-5a0d-4e59-93fb-4154f178d11c" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e1548057-eeb6-4d37-8582-2b8cb2ecb230" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d1e23185-e5f9-471b-aa87-25d1c69f56d1" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] click button Extended search" EnableRetryMechanism="True" Guid="83a19f2c-2634-430a-90d5-b2999146f231" MaxNumberOfRetries="20" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'ERWEITERTE BESTANDSKUNDENSUCHE'" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0f34f13e-cc01-4256-af73-389ba8b2fac7" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f88131fd-fcdc-4745-adc9-8477364f3e7b" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MouseClick" />
+<ActInputValue Guid="6e1ef927-8f70-4d11-a183-146927587d25" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="1aef2206-5430-4cec-93e1-9cfc4ac86655" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="cfccf035-3da3-449b-bcf1-2b5410aabe21" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ced78b6b-12aa-409b-9b85-5a95a76e65f6" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//*[contains(text(),'Bestandskundensuche')]" />
+<ActInputValue Guid="3edcea4d-c151-454b-97e1-993af8e76820" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1e7bea6e-3f75-43ce-802d-56d65f445d75" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9c212965-ec0c-4de1-aa5b-52b074253215" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1606e4bd-42cc-4434-9df9-597c8af14118" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="cf48c6b6-52a5-4324-8e14-745a58f27d03" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f8d56f51-9855-4d75-ba44-4120c2434ca1" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="29e55414-7d98-472f-a5c2-19ceecb56eea" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Scroll to DSL" Guid="c008cc94-54b5-4368-a318-0041e5b06b44" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c8490729-bbb8-4f2f-ba93-edc4bc5f916e" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="be26122e-1239-44b0-ab89-aacaf6154367" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ScrollToElement" />
+<ActInputValue Guid="f453f263-a777-44ce-aaf1-9dcdacce5c53" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="efc061a7-6ecd-4130-b1ae-244d714225cf" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="1be012c2-0347-477e-9a88-ad5c5c4365bb" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="eb7e5c26-bc53-4eb9-b4f2-c32fcc3e5fec" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="legacy[dsl]" />
+<ActInputValue Guid="abc71a69-44f1-40b0-bd7c-5562c5eac0f2" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="65323cd8-6076-4a5b-b38c-e5de947ec1f0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7b0c311f-4850-4d09-86ae-a0e534be6b72" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="861ef832-2180-423b-a93d-1e7b09749699" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e7c187f5-4a27-4d14-abb7-92de932d5269" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9b6a913a-2e5e-45bd-9cbf-b1c06264c3de" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="2785c07f-7d86-4ae0-aa48-3e349a0f6d2b" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Select DSL" EnableRetryMechanism="True" Guid="36607aa1-709c-471c-91ca-b7e54f67eefa" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="108e8b37-a2b5-4204-9b0b-2b150ee0ad57" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Button" />
+<ActInputValue Guid="59ec3dc0-0421-4030-96eb-34d0a4e8cef7" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
+<ActInputValue Guid="567ae069-ca87-43bc-a339-8cc1b02ffab1" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="051387ca-8042-4c2d-a211-146c3db12344" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="0c657b5d-f271-425e-86b3-21eed0ad946c" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="bb5590be-686e-4bf8-8784-c4464408f8b1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="legacy[dsl]" />
+<ActInputValue Guid="4ba21faf-f9ae-456c-ad32-d9319660237b" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8ad6dcd9-ab61-451c-bc1e-0424f963be5a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="99089ac6-c462-43da-8b2b-dc5ad536fc6e" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ceca1793-aa38-4171-afde-9f73db95cffa" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="39c70b8b-ac89-49f8-a787-e5bb57176389" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1bfa7c8f-0f01-4b0a-9959-c6dc72601948" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="4fc1bda3-3a18-4169-a781-d4f8373985f5" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Click &quot;Submit&quot; Button " EnableRetryMechanism="True" Guid="6e08417b-618f-495c-8e55-3daada6ab2a2" MaxNumberOfRetries="20" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'Schließen'" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="02808f8e-22c2-4444-a8fa-77e4b73d15c8" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Button" />
+<ActInputValue Guid="29839406-8a93-417c-82af-e47b53dbb3f2" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
+<ActInputValue Guid="4a9af890-65d0-4fe0-b1ef-2d44daaea0f5" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="00cdc0ac-7a39-40bc-b566-dc5a096f429e" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="1cd7390b-45e3-4496-95f4-fe3e0b1ec322" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="dceef78a-452b-4b1f-8287-041f00fbfdbf" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="submit-search" />
+<ActInputValue Guid="c6040cfa-6fab-484a-b59e-e62aab7b85c0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fc27f7ab-5f95-43fd-8bc2-be25806fb290" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6a4bef20-5d0f-4e34-8fd4-3f5976219dc1" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="640cb295-6e55-4fab-962f-8fd16dc5ed1f" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9da59855-a517-4044-8a22-431dbd1e0048" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="889785cd-9a79-48ee-823c-9682000e9a25" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7af77db4-6a63-4da7-b0b4-ef348d42a796" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Is search completed" EnableRetryMechanism="True" Guid="a5e71e99-a32e-4b0d-bd34-3982076ced64" MaxNumberOfRetries="3" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" Timeout="5" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="7c012ffc-aa64-474e-8146-15c8602f7daf" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="42cc7a4d-a39f-4741-a1a7-3a290df14a52" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" Value="ea7922d0-f895-4819-983c-8f3469c149d1#GUID_NAME#Close Browser Action" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="12c2384f-adf7-4893-aaac-02eed9221150" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="be3bce75-e930-4ebe-a71c-a1bad61ccb8f" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsEnabled" />
+<ActInputValue Guid="27e196e3-0db7-41bf-a23b-8b3768e4358b" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="1ef54802-470a-4181-ba21-1f307209424c" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="ce891eea-ce39-4d20-8f95-134fe65181fa" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="b9f727c6-9f3a-401c-b028-b9c4f75e0bb1" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//button[@id='submit-search']//span[@class='loading-search invisible']" />
+<ActInputValue Guid="b42733da-f1c5-4191-ac58-5128606600ee" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="867dfba6-96cd-4960-ad04-e8488b13c195" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6adc6de8-525b-4565-9d49-5efe2b8ff75d" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6a42bff2-7159-4ebc-921c-e8376c277e41" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="682fd633-49ec-4a00-a728-379340c0ff33" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="11b1d832-439b-4ddb-ad11-86e80ad06f3d" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="53d68b3f-6fe8-4d54-8ac4-5315a26dca5c" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Is customer returned" EnableRetryMechanism="True" Guid="233dac2e-d50a-4aa7-9dff-ac3d097a10fc" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="1" StatusConverter="None" TakeScreenShot="True" Timeout="5" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="061a590f-5a85-4086-94b7-a130de1c1984" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" Value="e37f50cb-5bff-47fb-b380-ed5c9a93802b#GUID_NAME#click on customer ID" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="b971c637-b825-45f0-9edc-5f527b354933" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" Value="09e30c83-804c-42e5-83bd-9a53005dc6a3#GUID_NAME#[UI] - Click &quot;down arrow&quot; for logout" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="eea55ff4-8822-41f5-85ba-fafc01bc1e9a" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ef075659-7a58-432b-a843-e2e04883867a" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsEnabled" />
+<ActInputValue Guid="920414e6-71cf-4bb3-a2d9-02412801ede7" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="57ef3416-3abb-450e-9a34-e1c581c34871" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="849a6889-e3e2-4cb5-a0df-e029ba539945" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="04a893c3-e9a9-45bd-bc80-57070b73200e" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@class='col-md-3 customer-list-tab service-result active']" />
+<ActInputValue Guid="73a13383-bb43-46f1-a6ec-db0bb0f3cba3" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="841912ee-1525-4c9c-b00d-1efc0ac343fb" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="06684a8a-d806-4dc9-9269-1b9301fac04c" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="624c40f1-d186-417f-adc7-56f2790b712e" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="27382167-9370-4bef-990e-8beb3eb5d1f7" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7671ee0a-d86c-4022-a21a-432b99feeda8" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9119f41c-80f5-4429-8496-a33a5f9159e6" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="click on DSL selected" EnableRetryMechanism="True" Guid="e37f50cb-5bff-47fb-b380-ed5c9a93802b" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="3" StatusConverter="None" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f0f62a61-e2a5-4088-843a-cf1bd57e34f8" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MouseClick" />
+<ActInputValue Guid="edf3a057-4af8-43cb-b20f-c78bf066aeb9" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="03af3148-bff3-4c26-9de6-fd769f714898" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//span[@class='type-customer-icon fixed-selected']" />
+<ActInputValue Guid="0ca3061e-84c8-4a47-8d60-42f32f316f36" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0427a386-43c0-44f2-a1c4-d13233c81636" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="31032ad9-cfa8-4d72-8f22-5ba226e8ce7e" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ee11d733-5973-47e2-a968-d304747be1b1" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4e525ab7-70b4-45ec-8d89-f74e3825f1c4" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="cf5806d5-b9de-49e8-9f54-e67baa5880e4" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="072fe273-7c11-4c29-b431-ef0437ad68e1" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="0468ae5f-1118-4a49-8f1c-427ea3df88da" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="cad55294-7881-41ed-b078-7ccb66f6464d" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="272872be-b701-492f-9b1a-aff3f6a6761a" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Is SPINNER available" Guid="abb1beb0-5da4-47e2-873f-2687462335a4" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="28bcab34-71d3-4069-ab62-1f28427096a8" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="RerunAction" Guid="0f5cb513-3099-4544-95da-a5df4209055f" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="aaa3310f-0932-4715-bc9e-6348bc147eba" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d2876aad-1038-4b1a-a103-87e4d0202f13" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="77dff39b-9c29-44c8-850f-2d8316a2dd71" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="68b1370c-80df-4de5-8392-9d75375bf574" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="6475762a-d7df-4c37-b883-8e31849c3be1" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="5858d31b-ecdc-4216-b0c0-e7144dc400f5" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@id='spinner'][@style='display: none;']" />
+<ActInputValue Guid="ff94d2bf-c629-49fa-90fe-bd0dc2bb3d4f" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d17d136e-0790-4d65-bf14-c5f5a0b7567b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b0d01397-47e5-4c46-a45d-c52d77c8348d" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5d648562-cafc-48ac-98a9-a42e21b42f7c" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9808ec23-804f-430c-9859-e3a229b8bd0d" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="62626d44-e033-454c-bd45-175dbac57b32" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="313366ed-f749-495d-9f33-1af4231b6558" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="click on Main_Products" EnableRetryMechanism="True" Guid="06959ffa-c000-43fe-8a3c-bd179a0e7975" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="3" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="e61ac772-ed9f-41b7-8853-e5a293fe3671" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Execution_Failed" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="130acb1a-06aa-4e82-b4aa-c175e9b9239d" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MouseClick" />
+<ActInputValue Guid="f41eb3e8-d136-46b8-b5b8-af0d6268849f" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="f53c4904-be3d-4950-b82d-baf9a6428716" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//a[@id='product_info_left']" />
+<ActInputValue Guid="50654f5e-8168-4a4a-8a35-b2b69da0db29" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="0ebc1ad7-b409-4148-8e87-fb7a6df2681d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ee8e1457-f498-4bb0-a248-54ff419df1e8" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7770acf6-721b-4a1f-ae62-7488ed150210" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d73638d6-a9b2-4da0-bb08-0514974c8a76" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="08e5cd35-ecb8-47b3-9e13-ec02f39d2c35" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d1e1d960-e318-4e2c-892e-20d58a0c7148" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="f0ade1cf-e812-441c-a719-1b2705a39ea3" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="defb84ad-e376-4653-a6c1-4d5f08be4ffb" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7ead574c-b9b5-43fd-b6dc-cb1a21fb26be" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Check if Products displayed" EnableRetryMechanism="True" Guid="88bef16d-abca-4871-8035-e0b7b15c975d" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="3" StatusConverter="None" TakeScreenShot="True" Timeout="10" WaitVE="20" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="0cc06b8c-2b8d-466d-ae21-da0a800c9d4e" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="1683a735-0c5e-496e-bd3b-0249a22fc0c3" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9ba6ca16-24db-41bd-ab42-9ed3ebc7b92d" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="ecceb844-05a7-424d-a2db-72729737bc3a" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="a0e957ea-5e86-4ec6-984f-ee1a35261c28" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="6e12d89a-1a07-4915-8881-45e59a5f8eb8" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="04bdf84b-8ecd-488a-836f-d42face8ded2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="customer-products-container" />
+<ActInputValue Guid="6f6de328-a5b7-4f45-8ced-c099e4cd263b" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c5a107e4-d893-4a76-b827-dcf8af3f05e8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7e4fdf3d-1144-4ba2-a4c9-3d6721be5fbc" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c542d878-4f40-476a-8697-643aacc0db6c" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="634b139b-7511-4766-b5e4-e3c08087de96" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="268623a1-1906-4d6f-a354-f0e2b003c5ae" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="b365cc43-8f9b-41be-8576-2da908eb82e4" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Click &quot;down arrow&quot; for logout" EnableRetryMechanism="True" Guid="09e30c83-804c-42e5-83bd-9a53005dc6a3" MaxNumberOfRetries="20" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'Suchen'" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d680d87e-be69-4fa4-992b-b09f5d334a55" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a338c52e-7ee4-47cf-8bb9-2149e35a0176" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="JavaScriptClick" />
+<ActInputValue Guid="5e21ba43-4da8-4489-9476-39bbb62a25f4" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="fc905cbd-129c-44d6-80e2-e35c546e1527" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="e6a65dc6-c9c2-4588-a8ff-17ad70f18b5e" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="aa4bbd96-4e92-4f43-82b5-42badf17bab2" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="down-arrow" />
+<ActInputValue Guid="e458b33b-f78d-4e7d-b12d-695e4f995a2a" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="380d8ffb-e123-45ac-80bb-a65a8b8fc5b6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="60de5d0e-81f2-4469-bc01-56d9c09db873" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2044eaba-0920-4524-be67-62d804437354" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="13ca93de-1300-42e1-8b66-0b5e8073d187" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="16f8e293-2383-4ed4-8305-e043cfef87fc" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="723f8dd9-f0cc-49e0-94d6-b40dc8afc88a" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Click &quot;Logout&quot;" EnableRetryMechanism="True" Guid="a785d23f-5107-49da-82a3-ff6bd912ed89" MaxNumberOfRetries="20" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'Suchen'" StatusConverter="None" TakeScreenShot="True" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6d2253f8-2ff0-4d6d-af8e-e6de87f14dc9" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="47d1ea4a-4fa8-41b1-8596-95ad4715844e" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="JavaScriptClick" />
+<ActInputValue Guid="4fc1f735-eb9a-45d6-a0d5-2dd34d23722a" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="5d8e4abf-ec01-47f2-a7bc-ec8beb6f726d" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="1cfcce1a-106b-442b-bf73-728b48809763" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7dce0eb4-0e7b-4fdd-b9fb-ac50bade321d" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//button[@class='tablinks pull-right signout ']" />
+<ActInputValue Guid="7c00a04d-535c-4c3f-bac8-690a829e2bb4" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="041e9294-fd03-4509-ad0e-1b0077ae7783" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f7935047-9419-49b8-a6cb-fde21f805749" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="46e1afd7-b25a-48f2-b0b4-dc2044813343" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="cad0cbcb-dbe3-4753-aca9-de38c6a8263c" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="374dbf7c-894f-41e7-a250-60c4a4d2c345" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c4e4c571-6a73-46f2-b324-25c41af0ff3a" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActBrowserElement Active="True" Description="Close Browser Action" Guid="ea7922d0-f895-4819-983c-8f3469c149d1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" TakeScreenShot="True" WaitVE="05" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="StopBusinessFlow" Guid="a54aebe2-e4f0-49f2-9cc2-216ad30eb6c7" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="32babcad-c17f-40ed-9a95-329ce87dc41c" Param="ImplicitWait" ParentGuid="00000000-0000-0000-0000-000000000000" Value="60" />
+<ActInputValue Guid="e497113d-ca84-41bc-b6bb-418183be4c92" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CloseAll" />
+<ActInputValue Guid="379147ca-12e6-4c7f-a978-df5b5a8ba9f0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="067c107c-deaa-4bb9-bacb-ad721541ce3e" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f9ecbbeb-f9e1-43a5-9784-bd4724de836a" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Current" />
+<ActInputValue Guid="87fcbe3e-2821-432f-bdc7-c620e285182a" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Static" />
+<ActInputValue Guid="c828eada-c9bf-4960-b89a-3a5f3d7f9676" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="c5552394-5672-4a48-b03b-497709cd2c35" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8dbf281d-88ff-4aa1-b0af-31f17fb49731" Param="NetworkLog" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ce4752ab-2cb0-4677-a37c-b57c9d2a9370" Param="NetworkUrl" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+</Acts>
+
+<Variables>
+<VariableString Guid="f7940ebe-6d97-48d9-90e5-f97654e400dd" InitialStringValue="Customer not found" MappedOutputType="None" Name="ACT_ERROR" ParentGuid="92a250d5-1747-41cb-8a25-b4f81e5d38e0" ParentName="SCN05_Agent wants to legacy search a DSL customer in 360 view in Retail channel\Group\DSL Search Customer Extended" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableRandomNumber Guid="cbd4f67a-cfb4-428f-bbbd-994c2ad95c95" Interval="1" IsInteger="True" MappedOutputType="None" Max="83" Min="76" Name="Random Number ACC2" ParentGuid="92a250d5-1747-41cb-8a25-b4f81e5d38e0" ParentName="SCN05_Agent wants to legacy search a DSL customer in 360 view in Retail channel\Group\DSL Search Customer Extended" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="70fc7c50-9681-4d71-8152-2c28e3b5de2b" InitialStringValue="48" MappedOutputType="None" Name="Row_num ACC2" ParentGuid="92a250d5-1747-41cb-8a25-b4f81e5d38e0" ParentName="SCN05_Agent wants to legacy search a DSL customer in 360 view in Retail channel\Group\DSL Search Customer Extended" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableRandomNumber Guid="ef0b3ed0-524d-440b-84b9-7d4aefe69fb6" Interval="1" IsInteger="True" MappedOutputType="None" Max="87" Min="84" Name="Random Number ACC1" ParentGuid="92a250d5-1747-41cb-8a25-b4f81e5d38e0" ParentName="SCN05_Agent wants to legacy search a DSL customer in 360 view in Retail channel\Group\DSL Search Customer Extended" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="a5fe21eb-d4a8-4318-ac9a-e3d2093e1a68" InitialStringValue="59" MappedOutputType="None" Name="Row_num ACC1" ParentGuid="92a250d5-1747-41cb-8a25-b4f81e5d38e0" ParentName="SCN05_Agent wants to legacy search a DSL customer in 360 view in Retail channel\Group\DSL Search Customer Extended" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="f4c5886d-517b-405b-9775-5428b8b1cbb4" InitialStringValue="20106249" MappedOutputType="None" Name="ACT_CUSTOMER_ID" ParentGuid="92a250d5-1747-41cb-8a25-b4f81e5d38e0" ParentName="SCN05_Agent wants to legacy search a DSL customer in 360 view in Retail channel\Group\DSL Search Customer Extended" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="f2b31795-6187-41a6-8cd1-61146e9e8905" InitialStringValue="GSM1727100293" MappedOutputType="None" Name="ACT_SUBSCRIBER_ID" ParentGuid="92a250d5-1747-41cb-8a25-b4f81e5d38e0" ParentName="SCN05_Agent wants to legacy search a DSL customer in 360 view in Retail channel\Group\DSL Search Customer Extended" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="2c23c67b-612d-4258-b78b-516d17abc57e" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="8e9a5c2a-a1a1-45e0-8507-e26ad67997ab" ActivityName="Set Channel RETAIL" ActivityParentGuid="4934159b-f93b-47bf-823e-1c7d1eb9e568" Guid="5db5cf19-b9bb-4b39-9aa8-e1bd4ba2c4a0" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="12f8b0fa-41b2-4f6b-a9f6-69eaff647d99" ActivityName="[UI] - Open OSF CHANNEL Retail" ActivityParentGuid="5193d864-0ff6-443c-aca5-7ca99037e5bb" Guid="cb35d8e9-dacf-4a2d-ae32-9f4fbee816eb" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="7b178dcc-0314-472f-9e33-0655855373c8" ActivityName="[UI] - Login Screen_Retail" ActivityParentGuid="35524dd4-5f5c-4acc-81ef-1186cdbb3a30" Guid="d9fabdb6-fb6c-496e-97a0-5f1790e04e61" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Automated" ActivityGuid="92a250d5-1747-41cb-8a25-b4f81e5d38e0" ActivityName="DSL Search Customer Extended" ActivityParentGuid="00000000-0000-0000-0000-000000000000" Guid="b93fd874-e762-4f30-9f96-20a837d19203" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="MyWebApp" Guid="9f0f2df0-6f4f-4b7a-bec5-a4a2e44e778c" LastExecutingAgentName="Chrome" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<TargetApplication AppName="Mediation" Guid="f872432a-b1f9-42ba-bbf7-faab954fd896" LastExecutingAgentName="Unix" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="3faccc8e-899e-47af-9911-329bba7feef6" InitialStringValue="TELESALES" MappedOutputType="None" Name="BF_CHANNEL" ParentGuid="1f1e095d-f0b3-4fa5-bf4e-67c33ea51671" ParentName="SCN05_Agent wants to legacy search a DSL customer in 360 view in Retail channel" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

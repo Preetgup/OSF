@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="dc3a29c0-9237-4ffa-a608-1562e57c5d73" ItemType="Activity" CreatedBy="Premanatha.NL" Created="202204200606" GingerVersion="4.3.0.0" Version="5" LastUpdateBy="Premanatha.NL" LastUpdate="202207120555" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="KIAS validation" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="dc3a29c0-9237-4ffa-a608-1562e57c5d73" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="KIAS" DBValidationType="FreeSQL" Description="IE Transaction" EnableRetryMechanism="True" Guid="d4f2d4e8-da84-4dda-9fe8-4cd9c9b30c32" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7ffb059c-1977-488b-94dc-906d73f7a98d" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Select * from IE_Transactions where IETRX_P2 like '{Var Name=Source_id}%'" />
+<ActInputValue Guid="4e67f3c3-2006-4ff9-b341-561b340456b1" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="0d53111a-c6e7-400e-a14a-d22db120179e" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4824473a-894a-4f33-a7b0-a78915b903fb" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="77d7700e-b507-4d84-b6ee-f9a52cfef2eb" mExpected="0" Operator="GreaterThan" Param="BAN" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="KIAS" DBValidationType="FreeSQL" Description="Customer details" EnableRetryMechanism="True" Guid="a7312f91-1571-4684-9bb8-49c2e6d396de" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" Timeout="5" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6c3004dd-9743-43ab-9528-ee5d6bbff316" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Select * from Customer where customer_Id in (Select BAN from IE_Transactions where IETRX_P2 like '{Var Name=Source_id}%')" />
+<ActInputValue Guid="21e1a6d3-6bf0-48d4-8aa0-6c0a4515cd96" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="ed2a992d-707e-44eb-89e6-774c8dd24e4d" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e123ae0b-bc84-4724-80ca-579b1b05e8fb" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="KIAS" DBValidationType="FreeSQL" Description="Subscriber status" EnableRetryMechanism="True" Guid="71bf15cd-6ea5-4969-a5a2-9f58aa8d325f" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" Timeout="10" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="dcaec046-3afd-4321-ad2e-a1282859d68d" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Select Sub_status  from SUBSCRIBER where Customer_BAN in (Select BAN from IE_Transactions where IETRX_P2 like '{Var Name=Source_id}%')" />
+<ActInputValue Guid="ed772d38-cd43-4122-9478-7b90b51f187b" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="d926e512-8b8f-4e2c-8835-f2b179910e23" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e361802c-e90b-4c60-9c3d-0638d75eec42" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="dc477cb1-bcad-4212-9186-fda2dc239aea" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

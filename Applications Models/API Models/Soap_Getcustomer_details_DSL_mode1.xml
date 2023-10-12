@@ -1,0 +1,26 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <env:Body>
+      <ns100:GetCustomerDetailsResponse xmlns:ns100="http://amdocs/vfde/customer/VFDEGetCustomerDetails">
+         <ROOT xmlns="http://amdocs/vfde/customer/VFDEGetCustomerDetailsOutput">
+            <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/customer/VFDEGetCustomerDetails" xmlns:vfd1="http://amdocs/vfde/customer/VFDEGetCustomerDetailsInput" xmlns="">
+               <Type>RetrieveCustomerInfo</Type>
+               <ID>44e771cd-eafb-4309-bd3a-1127065c0962</ID>
+               <CallerID>OSF</CallerID>
+               <CorrelationID>07c2203c-25d0-423c-aa75-ceec2b0093b4</CorrelationID>
+               <MessageCreationTimestamp>2022-02-23T05:58:58.372Z</MessageCreationTimestamp>
+            </Event>
+            <DATA xmlns="">
+               <CustomerList>
+                  <CustomerDetails>
+                     <GlobalID xsi:nil="true"/>
+                  </CustomerDetails>
+               </CustomerList>
+            </DATA>
+            <Status xmlns="">
+               <ErrorCode>JESIERR-4</ErrorCode>
+               <ErrorDescription>[HTTPAdaptor] Can not connect to HTTP Server[https://adeagikh:8443/soap], Message[java.net.ConnectException: Connection refused]</ErrorDescription>
+            </Status>
+         </ROOT>
+      </ns100:GetCustomerDetailsResponse>
+   </env:Body>
+</env:Envelope>N

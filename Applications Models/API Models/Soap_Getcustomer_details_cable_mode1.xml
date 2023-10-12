@@ -1,0 +1,44 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <env:Body>
+      <ns100:GetCustomerDetailsResponse xmlns:ns100="http://amdocs/vfde/customer/VFDEGetCustomerDetails">
+         <ROOT xmlns="http://amdocs/vfde/customer/VFDEGetCustomerDetailsOutput">
+            <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/customer/VFDEGetCustomerDetails" xmlns:vfd1="http://amdocs/vfde/customer/VFDEGetCustomerDetailsInput" xmlns="">
+               <Type>RetrieveCustomerInfo</Type>
+               <ID>4999b900-601c-4c58-83ca-6753720475de</ID>
+               <CallerID>OSF</CallerID>
+               <CorrelationID>06cf6aae-eb8c-4b8d-b325-f92c2ceefa88</CorrelationID>
+               <MessageCreationTimestamp>2022-02-23T05:42:59.419Z</MessageCreationTimestamp>
+            </Event>
+            <DATA xmlns="">
+               <CustomerList>
+                  <CustomerDetails>
+                     <GlobalID xsi:nil="true"/>
+                  </CustomerDetails>
+               </CustomerList>
+            </DATA>
+            <Status xmlns="">
+               <ErrorCode>JESIERR-4</ErrorCode>
+               <ErrorDescription><![CDATA[[HTTPAdaptor] Can not connect to HTTP Server[wss-vf-dev1b.kabeldeutschland.de:-1], Status[404], Message[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Draft//EN">
+<HTML>
+<HEAD>
+<TITLE>Error 404--Not Found</TITLE>
+</HEAD>
+<BODY bgcolor="white">
+<FONT FACE=Helvetica><BR CLEAR=all>
+<TABLE border=0 cellspacing=5><TR><TD><BR CLEAR=all>
+<FONT FACE="Helvetica" COLOR="black" SIZE="3"><H2>Error 404--Not Found</H2>
+</FONT></TD></TR>
+</TABLE>
+<TABLE border=0 width=100% cellpadding=10><TR><TD VALIGN=top WIDTH=100% BGCOLOR=white><FONT FACE="Courier New"><FONT FACE="Helvetica" SIZE="3"><H3>From RFC 2068 <i>Hypertext Transfer Protocol -- HTTP/1.1</i>:</H3>
+</FONT><FONT FACE="Helvetica" SIZE="3"><H4>10.4.5 404 Not Found</H4>
+</FONT><P><FONT FACE="Courier New">The server has not found anything matching the Request-URI. No indication is given of whether the condition is temporary or permanent.</p><p>If the server does not wish to make this information available to the client, the status code 403 (Forbidden) can be used instead. The 410 (Gone) status code SHOULD be used if the server knows, through some internally configurable mechanism, that an old resource is permanently unavailable and has no forwarding address.</FONT></P>
+</FONT></TD></TR>
+</TABLE>
+
+</BODY>
+</HTML>]]]></ErrorDescription>
+            </Status>
+         </ROOT>
+      </ns100:GetCustomerDetailsResponse>
+   </env:Body>
+</env:Envelope>

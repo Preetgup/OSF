@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2437ad48-0416-4e58-b86b-0ad0fc78eb38" ItemType="ActValidation" CreatedBy="piyush.thakre" Created="202112011331" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="piyush.thakre" LastUpdate="202112011331" />
+<ActValidation Active="True" Description="[Condition] - Is OSF-RETAIL" Guid="2437ad48-0416-4e58-b86b-0ad0fc78eb38" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="1f81f1f4-87aa-410b-a336-83fb8e048801" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="9b8d9e3d-caec-4c82-a36d-ebcaf83c9ecc#GUID_NAME#[Browser] - Open 'OSF-RETAIL' Application" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="b00d0061-26be-497a-bd16-3d78783ab8c9" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="d2d036bf-44a9-4704-a6c3-885d27c9eb80#GUID_NAME#[Browser] - Open 'OSF-TELESALE' Application" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="8600e1d2-9aa2-4f23-89b1-d22166cdbf03" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=@&quot;{Var Name=GLB_SALES_CHANNEL}&quot;.Contains(@&quot;telesales&quot;)}" />
+<ActInputValue Guid="35f58949-50ef-4518-8685-ffd609b7b937" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation></GingerRepositoryItem>

@@ -1,0 +1,22 @@
+POST http://deossevr:8001/VFDE_GetConfigurationDataEG/VFDE HTTP/1.1
+Authorization: Basic T21uaXVzOk9tbml1c19TaXQ=
+Content-Type: text/xml; charset=utf-8
+Content-Length: 600
+Host: deossevr:8001
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/configuration/VFDEGetConfigurationData" xmlns:vfd1="http://amdocs/vfde/configuration/VFDEGetConfigurationDataInput">
+  <soapenv:Header />
+  <soapenv:Body>
+    <vfd:VFDEGetConfigurationDataRequest>
+      <vfd1:ROOT>
+        <Event>
+          <Type>GetConfigurationData</Type>
+          <ID>{UUID}</ID>
+        </Event>
+        <DATA>
+          <Portal>OFT</Portal>
+        </DATA>
+      </vfd1:ROOT>
+    </vfd:VFDEGetConfigurationDataRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

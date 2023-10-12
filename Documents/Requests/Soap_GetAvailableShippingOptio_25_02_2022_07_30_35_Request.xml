@@ -1,0 +1,42 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none" s:mustUnderstand="1">GetAvailableShippingOptions</Action>
+  </s:Header>
+  <s:Body>
+    <ns0:GetAvailableShippingOptionsRequest xmlns:ns0="http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptions" xmlns:ns3="http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptionsInput" xmlns:ns1="http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptionsOutput" xmlns:ns2="http://amdocs/vfde/common/VFDECommonTypes">
+      <ns3:ROOT>
+        <Event>
+          <Type>GetAvailableShippingOptions</Type>
+          <ID>15124329065b2146946951a4.98295657</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>e3909233d301975e747899b1b73a59eb</CorrelationID>
+          <FrontendUserId>1</FrontendUserId>
+        </Event>
+        <DATA>
+          <CallingApplication>OSF</CallingApplication>
+          <IdentMethod>Door</IdentMethod>
+          <DistributionChannel>CP</DistributionChannel>
+          <ActivityType>HMK</ActivityType>
+          <PostalCode>22307</PostalCode>
+          <ShippingOptionFilterList>
+            <ShippingOptionFilterDetails>
+              <FieldName>DELADDRTYP</FieldName>
+              <Sign>I</Sign>
+              <Option>EQ</Option>
+              <Low>000</Low>
+            </ShippingOptionFilterDetails>
+          </ShippingOptionFilterList>
+          <OrderLineItemsList>
+            <OrderLineItemDetails>
+              <OrderLineID>1</OrderLineID>
+              <ArticleNumber>00301354</ArticleNumber>
+              <Quantity>1</Quantity>
+              <UnitOfMeasurement>PCE</UnitOfMeasurement>
+              <CashOnDeliveryFlag>false</CashOnDeliveryFlag>
+            </OrderLineItemDetails>
+          </OrderLineItemsList>
+        </DATA>
+      </ns3:ROOT>
+    </ns0:GetAvailableShippingOptionsRequest>
+  </s:Body>
+</s:Envelope>

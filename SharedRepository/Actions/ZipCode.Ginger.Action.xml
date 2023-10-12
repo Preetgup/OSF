@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="545beadc-8610-47bd-8a16-1665a5547625" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202202220852" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202202220852" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="ZipCode" Guid="545beadc-8610-47bd-8a16-1665a5547625" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ef2bd4e2-e498-47cd-8e63-8da4273e5adf" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='ZipCode'" />
+<ActInputValue Guid="db2ff8ba-1e15-421d-8220-0fef756b2c78" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="d16157f7-b205-4ab9-bcc5-b8b5d4a1da70" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a625b033-5faa-4d0a-976e-095614d9688e" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b9dedb36-96ac-48cf-ae81-1df5a3bdab86" mExpected="0" Operator="GreaterThan" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'ZipCode' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;ZipCode&quot;}" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

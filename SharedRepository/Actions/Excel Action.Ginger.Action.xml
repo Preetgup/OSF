@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="d6b6529d-3982-4dc2-b3cd-6ed7dbaead05" ItemType="ActExcel" CreatedBy="Premanatha.NL" Created="202208170507" GingerVersion="4.3.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202208170507" />
+<ActExcel Active="True" Description="Excel Action" Guid="d6b6529d-3982-4dc2-b3cd-6ed7dbaead05" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9a685021-7b1d-46bb-a020-964090ef371a" Param="ExcelActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ReadData" />
+<ActInputValue Guid="29107031-585a-49a6-9af3-dba6ec0f7d12" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7a9758e0-6ae7-4167-8b70-130197f170ce" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Exceldata.xlsx" />
+<ActInputValue Guid="9c1ea360-da16-42ef-aeb1-042925836e65" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Sheet1" />
+<ActInputValue Guid="6173529b-c6ae-44ee-aa20-a57abc1a0620" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ID={Var Name=Row_num}" />
+<ActInputValue Guid="9f6e7233-1a15-42e1-90ef-b30d25976b37" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ID" />
+<ActInputValue Guid="2f010ba3-9829-44e0-8887-df355fb97f31" Param="SelectAllRows" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="13133cbc-7e21-43bf-a731-236b0942d972" Operator="Equals" Param="Addresses" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Postcode" />
+<ActReturnValue Active="True" Guid="c094020e-db7b-41f1-9063-d939b59c6206" Operator="Equals" Param="Column1" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="City" />
+<ActReturnValue Active="True" Guid="a9c5eed5-5125-4ff2-b597-1687de0f2230" Operator="Equals" Param="Column2" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Street" />
+<ActReturnValue Active="True" Guid="d246d76c-7fcb-41f2-ae8e-d6dada260a19" Operator="Equals" Param="Column3" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Door number" />
+</ReturnValues>
+</ActExcel></GingerRepositoryItem>

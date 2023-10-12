@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="9f973332-a537-4563-bd5c-1ce105c6fef1" ItemType="BusinessFlow" CreatedBy="Akshay.Sinha" Created="202101111305" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="Akshay.Sinha" LastUpdate="202101111306" />
+<BusinessFlow Guid="9f973332-a537-4563-bd5c-1ce105c6fef1" Name="TEST" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Activity 1" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="662b58de-9310-4147-ab53-ea158d66d0b7" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActSetVariableValue Active="True" Description="Set Variable Action" Guid="952026c7-9f6a-4b2a-9543-804d8ef248b3" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" WindowsToCapture="OnlyActiveWindow" />
+</Acts>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="18fc853b-7346-4921-9421-13e757ade4ec" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="662b58de-9310-4147-ab53-ea158d66d0b7" ActivityName="Activity 1" Guid="22e324eb-17b4-4de9-87af-ad9bebc3ffc7" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="MyWebApp" Guid="c6daaf91-e5ed-4d71-bf95-fc5c976f8328" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="1c178a44-60a9-458c-b7ec-810fbce07354" MappedOutputType="None" Name="A" ParentGuid="00000000-0000-0000-0000-000000000000" Publish="True" />
+<VariableString Guid="a11ff0c0-15c4-4904-adc7-bf77d082e390" MappedOutputType="None" Name="B" ParentGuid="00000000-0000-0000-0000-000000000000" Publish="True" />
+<VariableString Guid="3b98b358-4dc0-47f9-be56-ef78d9501f24" MappedOutputType="None" Name="C" ParentGuid="00000000-0000-0000-0000-000000000000" Publish="True" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

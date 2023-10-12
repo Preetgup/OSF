@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="936ede09-ffe7-4a7e-9ca4-ed5563320ac6" ItemType="ActSetVariableValue" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202301231318" GingerVersion="4.3.0.0" Version="1" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202301231318" />
+<ActSetVariableValue Active="True" Description="Generate Random number ACC1" Guid="936ede09-ffe7-4a7e-9ca4-ed5563320ac6" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="{CS Exp=@&quot;ACC1&quot; == @&quot;{EnvParam App=OSF Param=ENVIRONMENT}&quot;}" FlowControlAction="GoToAction" Guid="c7f2532b-5114-4943-9caa-9dab503c313f" Operator="CSharp" ParentGuid="00000000-0000-0000-0000-000000000000" Value="6119f31c-de33-4cbb-acc8-5b89aab96cda#GUID_NAME#Select Row_num" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="d1c3e461-09ef-4dc5-9d4a-3c8db351bcc5" Param="SetVariableValueOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AutoGenerateValue" />
+<ActInputValue Guid="984f5365-1778-4a1a-a753-b0c828725310" Param="VariableName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Random Number ACC1" />
+<ActInputValue Guid="7a02b301-160e-4f82-b8e9-0d4021a85837" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Random Number ACC1}" />
+</InputValues>
+</ActSetVariableValue></GingerRepositoryItem>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="f60051d4-4040-4732-a81f-016b10f37a51" ItemType="Activity" CreatedBy="gourang.jiddewar" Created="202101040826" GingerVersion="3.6.0.0" Version="1" LastUpdateBy="gourang.jiddewar" LastUpdate="202101040826" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="[Ordering] - Open Order Alert" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="f60051d4-4040-4732-a81f-016b10f37a51" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActUIElement Active="True" Description="[UI] - Validate 'Open Orders Comments' is Visible" EnableRetryMechanism="True" Guid="710fe5b3-ac4b-4be7-80eb-e574db973317" MaxNumberOfRetries="10" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'Aufträge mit Kommentaren vorhanden'" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="babcaff2-7f0c-4c99-81c1-e431acec69e8" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="79905ea6-009a-4aa6-9616-6b64a2023a0c" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="5c5da485-fd50-4286-bd0b-79e23681a9f5" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d7654f74-b52d-4f0c-b58d-c295099b8b30" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="f1b8d330-6075-4dcb-80b0-eb17dd9644d6" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="8a735c12-dbcf-49ec-a06c-05deccefb0a7" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="0d479de0-2678-44d7-9304-535fd1fc0008" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f77dbb21-3de4-437f-9038-f059714f3593" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="open-orders-comments" />
+<ActInputValue Guid="e704b701-8c06-4287-9ee9-1188985335f0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="efb0cd5c-9fb7-4c9a-a87c-21211f74f060" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="585ead0c-6aee-4db5-a758-a629ef95533a" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c997d0d7-4a84-48f8-b1b4-baafec23d891" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ad11587b-0e95-4fc1-a97a-92e2d1ba9ef4" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="20ba0fc5-21f8-4230-bf82-4cf62664c032" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c9c07a8f-b34d-4659-90dd-e23dbeb8e8fc" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d61961ef-65b9-4f46-b48b-c345c54d8b81" mExpected="True" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Click 'Close' Button" EnableRetryMechanism="True" Guid="2bcea5e1-eb62-487f-94db-0944b235d7a8" MaxNumberOfRetries="20" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" RunDescription="GER: 'Schließen'" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="89126205-593a-426f-81c8-d73cc1e56d25" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Button" />
+<ActInputValue Guid="3e861ec6-e88e-4ea3-a7a4-2aa7b561e637" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
+<ActInputValue Guid="fa60991d-cf6a-409a-b7f7-588f6c8cf722" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="b29cb37e-cec4-428a-967e-8eaf47c69a5b" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="19bfd6a3-69a0-419f-a3ff-ac5ec802d341" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7a320f16-c7bf-45cc-add7-562a34dc1532" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//*[@id=&quot;open-orders-comments&quot;]//*[contains(text(),'Schli') and @class=&quot;btn btn-default modal-close&quot;]" />
+<ActInputValue Guid="e5a3bed3-3c81-489b-8fbc-ef7cc3c4c0d8" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ef1ad3e7-9b2d-47b7-a7fa-6f9d3b363058" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="20429bea-12df-44c7-98e8-ee996a8ac524" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4f6e4b53-91cc-4456-bf36-293f0004ed4b" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="92a1b890-5074-4d55-8fd7-b25449f963a0" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c749691f-6a53-4361-a23d-76dbc5abc459" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f70c4412-03b5-44c6-8f19-e7c75c211176" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+</Acts>
+</Activity></GingerRepositoryItem>

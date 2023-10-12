@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="846052e3-7b79-4418-94ce-54708f9d8015" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111121058" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="piyush.thakre" LastUpdate="202111121059" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDECreateOrAddLinkEG/VFDE" Guid="846052e3-7b79-4418-94ce-54708f9d8015" Name="Soap_CreateOrAddLink" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/link/VFDECreateOrAddLink&quot; xmlns:vfd1=&quot;http://amdocs/vfde/link/VFDECreateOrAddLinkInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:VFDECreateOrAddLinkRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;LinkType&gt;{LINKTYPE}&lt;/LinkType&gt;&#xD;&#xA;          &lt;LinkStatus&gt;{LINKSTATUS}&lt;/LinkStatus&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;TargetGlobalID&gt;{TARGETGLOBALID}&lt;/TargetGlobalID&gt;&#xD;&#xA;          &lt;ApprovalReferenceID&gt;{APPROVALREFERENCEID}&lt;/ApprovalReferenceID&gt;&#xD;&#xA;          &lt;SourceGlobalIDList&gt;&#xD;&#xA;            &lt;GlobalID&gt;{GLOBALID}&lt;/GlobalID&gt;&#xD;&#xA;            &lt;GlobalID&gt;{GLOBALID1}&lt;/GlobalID&gt;&#xD;&#xA;          &lt;/SourceGlobalIDList&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:VFDECreateOrAddLinkRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="96e291c5-dc7a-4cd4-ae1b-91657d7c230e" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="1e3e3f2b-6bdd-469a-899b-cf4e99226374" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OMNIUS" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="1ce37ea6-0ed7-442d-9b9a-77b9534de722" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="62736e18-288f-48c3-b58e-22b51c70920d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="48231657" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="91914ae9-5f1f-42f8-b5e0-fbddc2191ab7" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="fae7ea98-1df4-438f-961e-6847675d70d9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="0ed61bb6-64d6-4492-b764-4ea1ff766072" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="676e922d-45a8-4742-85ec-08e1eea5e7da" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="c032d40f171b681c6ed504168c65e831" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="81b2d095-efd1-4c43-ae52-965624f65f0a" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="0bb78afc-7d60-4e3c-b9d6-a2d179b2a8d1" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="d89735ce-0eaa-4127-87e8-ea5764eaa8c2" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/DATA[1]/LinkType[1]" PlaceHolder="{LINKTYPE}" TagName="LinkType">
+<OptionalValuesList>
+<OptionalValue Guid="bc9c34d6-3721-409b-9ad5-85cfb0638d2d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="LEGAL" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="0bd9c818-6fe3-49f4-b8dc-bd7528883c22" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/DATA[1]/LinkStatus[1]" PlaceHolder="{LINKSTATUS}" TagName="LinkStatus">
+<OptionalValuesList>
+<OptionalValue Guid="7107ffa4-5414-493a-86f0-f6926fe559f1" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ACTIVE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c9c3688c-e96d-417b-af7d-806ddb2c62f9" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/DATA[1]/TargetGlobalID[1]" PlaceHolder="{TARGETGLOBALID}" TagName="TargetGlobalID">
+<OptionalValuesList>
+<OptionalValue Guid="c4018cc9-e7ac-405b-96e4-1717af8ff57f" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="feed99c7-bd77-4ffb-b299-9cabcecd06e9" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/DATA[1]/ApprovalReferenceID[1]" PlaceHolder="{APPROVALREFERENCEID}" TagName="ApprovalReferenceID">
+<OptionalValuesList>
+<OptionalValue Guid="701fc264-78c5-44be-b3a6-6b49ee546199" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="saurav" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="3c8ebae3-4545-4189-a429-3103e84416eb" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/DATA[1]/SourceGlobalIDList[1]/GlobalID[1]" PlaceHolder="{GLOBALID}" TagName="GlobalID">
+<OptionalValuesList>
+<OptionalValue Guid="5f66ffd0-6640-4846-b63a-3b72f028e0f1" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FN_002883726743" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="7409d9f0-fa37-4ccd-a612-b1616369fd65" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDECreateOrAddLinkRequest[1]/vfd1:ROOT[1]/DATA[1]/SourceGlobalIDList[1]/GlobalID[2]" PlaceHolder="{GLOBALID1}" TagName="GlobalID">
+<OptionalValuesList>
+<OptionalValue Guid="f71e70cd-5562-4c86-abd3-a990947fb7e1" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="KS_20021152" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

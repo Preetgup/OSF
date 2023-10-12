@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="ddd61be1-c98d-4da7-8168-14210ca020ba" ItemType="ActDBValidation" CreatedBy="piyush.thakre" Created="202112080859" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="piyush.thakre" LastUpdate="202112080859" />
+<ActDBValidation Active="True" AppName="KIAS" DBName="KIAS" DBValidationType="FreeSQL" Description="[DB] - Get 'SIM' Number From KIAS" Guid="ddd61be1-c98d-4da7-8168-14210ca020ba" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="71ac9609-ef9e-4d1e-b3bb-45869fb0fb64" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SELECT * FROM(&#xD;&#xA;SELECT SERIAL_NUMBER FROM SERIAL_ITEM_INV S&#xD;&#xA;WHERE SIM_STATUS = 'V' &#xD;&#xA;AND DUOBILL_IND IS NULL AND NOT EXISTS&#xD;&#xA;(SELECT * FROM PHYSICAL_DEVICE WHERE EQUIPMENT_NO = S.SERIAL_NUMBER)&#xD;&#xA;AND NOT NDC_CD IS NULL AND NOT HLR_CD IS NULL ORDER BY SYS_CREATION_DATE DESC) WHERE ROWNUM &lt;= 1" />
+<ActInputValue Guid="7f2f56b5-683c-45b4-9cd5-35e0f74c5c3e" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="2f912397-aab7-448c-8bca-471690f6a2a0" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="99a93e97-d929-474a-a04a-3333e4265a9e" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="987eb6a9-2398-417d-a188-f84cb581ac3f" mExpected="0" Operator="GreaterThan" Param="SERIAL_NUMBER" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="GLB_SIM_NUM" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

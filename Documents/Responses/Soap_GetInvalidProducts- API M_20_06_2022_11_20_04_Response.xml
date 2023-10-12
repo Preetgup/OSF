@@ -1,0 +1,24 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: GetInvalidProductsRequest
+Date: Mon, 20 Jun 2022 09:20:05 GMT
+Server: JESI Server
+Content-Length: 1292
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:GetInvalidProductsResponse xmlns:ns100="http://amdocs/vfde/product/VFDEGetInvalidProducts">
+      <ROOT xmlns="http://amdocs/vfde/product/VFDEGetInvalidProductsOutput">
+        <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/product/VFDEGetInvalidProducts" xmlns:vfd1="http://amdocs/vfde/product/VFDEGetInvalidProductsInput" xmlns="">
+          <Type>GetInvalidProducts</Type>
+          <ID>saurav1234</ID>
+        </Event>
+        <DATA xmlns="" />
+        <Status xmlns="">
+          <ErrorCode>OGWERR-1500</ErrorCode>
+          <ErrorDescription>Error received from KD invalidProducts WS.Details [ ErrorCode: 500 , ErrorMessage: Could not access remote service at [https://ads-test1.kabeldeutschland.de/ads/vkd-ads/AdsAddressV2]; nested exception is com.sun.xml.ws.client.ClientTransportException: Der Server hat HTTP-Statuscode 503 gesendet: Service Unavailable , LogReference: 7c971dd2-b159-400e-b989-94c7e2d2011b ].</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:GetInvalidProductsResponse>
+  </env:Body>
+</env:Envelope>

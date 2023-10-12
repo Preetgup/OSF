@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="235a3df8-1a7c-467e-a854-2fb9abb36959" ItemType="Activity" CreatedBy="Premanatha.NL" Created="202204200605" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202204200605" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="OGW FRIDA validation" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="235a3df8-1a7c-467e-a854-2fb9abb36959" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="FRIDA database validation" Guid="66795133-852b-4c7a-91dd-dbd3323f7ded" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="32582e23-f700-4957-8f37-38d796e40047" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="64881669-80ac-4763-a8a6-d65c1f387f51" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SELECT * FROM OGW_FRIDA_SUBSCRIBER_INFO WHERE CDM_TXID IN (SELECT SOURCE_ID FROM&#xD;&#xA;&#xD;&#xA;JESI_WF_AMDOCS_SUBSCRIBE WHERE CTCR_SOURCE_PROG_ID='{Var Name=Order id}')" />
+<ActInputValue Guid="bd7eaee3-75bb-4100-8aac-7c121af583e3" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="a45907b5-54ae-4866-8b73-500878e087f8" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="66a8fbf9-1ef4-4f23-a94c-48fe91123e77" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="413aca84-e232-4299-bac3-b1cc17f2fa82" mExpected="{Var Name=Source_id}" Operator="Equals" Param="CDM_TXID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="188fc383-ee58-4ef3-968e-4f93b99d6411" mExpected="NEW" Operator="Equals" Param="SUBSCRIBER_STATUS" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="4f1bc01c-697d-40b3-8f70-d9d9ddb1adc6" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="3fe7f765-ba78-4df0-9681-47e03d580247" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

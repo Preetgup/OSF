@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="f659b2ba-3be9-4098-8336-dc360fb030cb" ItemType="RunSetConfig" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202307210610" GingerVersion="5.1.0.0" Version="5" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202307211058" />
+<RunSetConfig Guid="f659b2ba-3be9-4098-8336-dc360fb030cb" Name="Test_Scheduler" ParentGuid="00000000-0000-0000-0000-000000000000" RunWithAnalyzer="False" SealightsTestRecommendations="No">
+<CategoriesDefinitions>
+<SolutionCategoryDefinition Category="Product" Guid="4e36c259-1204-41a1-9950-7064aa263670" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedValueID="00000000-0000-0000-0000-000000000000" />
+<SolutionCategoryDefinition Category="TestType" Guid="63902e48-fcc7-43bd-9757-4d6b2d538afe" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedValueID="00000000-0000-0000-0000-000000000000" />
+<SolutionCategoryDefinition Category="Release" Guid="6103bff0-89a3-447f-8656-5778653def90" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedValueID="00000000-0000-0000-0000-000000000000" />
+<SolutionCategoryDefinition Category="Iteration" Guid="a8df0b49-bdfe-4141-a26b-1f83b901ef46" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedValueID="00000000-0000-0000-0000-000000000000" />
+<SolutionCategoryDefinition Category="UserCategory1" Guid="0b504257-7b7e-42a9-b9f9-8807d23027d2" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedValueID="00000000-0000-0000-0000-000000000000" />
+<SolutionCategoryDefinition Category="UserCategory2" Guid="4f527d91-d43e-4ad4-9c77-36c64d07279e" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedValueID="00000000-0000-0000-0000-000000000000" />
+<SolutionCategoryDefinition Category="UserCategory3" Guid="43fd6376-ae06-4fc0-9182-f5d4cea679a4" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedValueID="00000000-0000-0000-0000-000000000000" />
+</CategoriesDefinitions>
+
+<GingerRunners>
+<GingerRunner Guid="964e417d-b428-4448-8f91-90d9dbfc3efd" Name="Runner 1" ParentGuid="00000000-0000-0000-0000-000000000000" RunOption="ContinueToRunall">
+<ApplicationAgents>
+<ApplicationAgent AgentID="7cc89703-7143-4a8b-99be-6ff6ccf592fd" AgentName="Chrome" AppID="ff66e376-8be2-47f6-82fa-36cfa5c29f9c" AppName="MyWebApp" Guid="6ebac639-32f9-48c6-9125-f7c71f7004d9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ApplicationAgent AgentID="af61aa09-f484-41f6-90e1-0ec69da34f98" AgentName="Unix" AppID="9b10c057-dad7-4727-a19b-b44f95541004" AppName="Mediation" Guid="3c8f82b0-625d-48ef-9cad-dd6881515f13" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ApplicationAgents>
+
+<BusinessFlowsRunList>
+<BusinessFlowRun BusinessFlowGuid="ba2ee27a-ae4f-4ee0-98b4-f9f759e3ccce" BusinessFlowInstanceGuid="55845466-d2dd-4154-89f4-0e6de0f18d79" BusinessFlowIsActive="True" BusinessFlowName="SCN01_Agent wants to search CABLE customer in Retail channel" Guid="7d9cbde2-fe9b-4bc7-be7e-56079abef349" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<BusinessFlowRun BusinessFlowGuid="587ae3d6-52e4-408c-bff1-6194cd952c9b" BusinessFlowInstanceGuid="c093b5f3-027a-4f27-9c36-ccfaba04bfe4" BusinessFlowIsActive="True" BusinessFlowName="SCN02_Agent wants to search DSL customer in Retail channel" Guid="0fd1ec4c-8d49-4419-aa65-2266eb313f79" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</BusinessFlowsRunList>
+</GingerRunner>
+</GingerRunners>
+
+<RunSetActions>
+<RunSetActionHTMLReportSendEmail Condition="AlwaysRun" Guid="c469fa13-73ae-4bdf-9203-831eaf5806ca" HTMLReportTemplate="HTMLReport" MailFrom="noreply@vodafone.com" MailFromDisplayName="_Amdocs Ginger Automation" MailTo="preeti.gupta3@amdocs.com,Gaurav.Chauhan@amdocs.com,rohan.kumbhar@amdocs.com" Name="Send HTML Report Email" ParentGuid="00000000-0000-0000-0000-000000000000" RunAt="ExecutionEnd" Subject="Test_Scheduler">
+<Email>
+<Email EmailMethod="SMTP" EnableSSL="False" Guid="dbae2896-0b01-4096-af37-d839addce45c" ParentGuid="00000000-0000-0000-0000-000000000000" SMTPMailHost="195.232.244.209" SMTPPort="25">
+<Attachments>
+</Attachments>
+</Email>
+</Email>
+</RunSetActionHTMLReportSendEmail>
+<RunSetActionHTMLReport Condition="AlwaysRun" Guid="2890263b-034d-4df3-a5a3-a60dcfe1c4a3" Name="Produce HTML Report" ParentGuid="00000000-0000-0000-0000-000000000000" RunAt="ExecutionEnd" />
+</RunSetActions>
+
+<SelfHealingConfiguration>
+<SelfHealingConfig EnableSelfHealing="True" Guid="7f01e3c2-7655-4ea6-81bf-ff1d100e8c2e" ParentGuid="00000000-0000-0000-0000-000000000000" ReprioritizePOMLocators="True" />
+</SelfHealingConfiguration>
+</RunSetConfig></GingerRepositoryItem>

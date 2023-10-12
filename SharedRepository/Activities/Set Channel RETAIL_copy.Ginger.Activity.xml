@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="46d97595-5ce0-4137-9da7-048ac5699f46" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202301201007" GingerVersion="4.3.0.0" Version="1" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202301201007" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Set Channel RETAIL_copy" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="46d97595-5ce0-4137-9da7-048ac5699f46" Mandatory="True" ParentGuid="4934159b-f93b-47bf-823e-1c7d1eb9e568" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActSetVariableValue Active="True" Description="Set Channel RETAIL" Guid="e17129d9-3080-47e2-bbd0-5db19104c47d" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToActivityByName" Guid="a30ecee4-aec1-439c-b0f7-c267b2ec18f4" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="[UI] - Open OSF CHANNEL" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="a0309bec-a69c-46a4-be15-0057e8fdaf72" Param="SetVariableValueOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetValue" />
+<ActInputValue Guid="28ac858a-5c1e-423f-b3b2-0f494760a3a2" Param="VariableName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="BF_CHANNEL" />
+<ActInputValue Guid="c25151af-b877-4aff-943b-bdfb403827dc" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="RETAIL" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableString Guid="ccee2a45-d4c3-424e-8e14-fc649a661695" InitialStringValue="TELESALES" MappedOutputType="None" Name="BF_CHANNEL" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="d9be7a2d-8309-4592-b435-a07b92e30ed8" ItemType="RunSetConfig" CreatedBy="Akshay.Sinha" Created="202101101129" GingerVersion="3.6.0.0" Version="8" LastUpdateBy="Akshay.Sinha" LastUpdate="202101111320" />
+<RunSetConfig Guid="d9be7a2d-8309-4592-b435-a07b92e30ed8" Name="OSF-SANITY-TELESALES-CUSTOM" ParentGuid="00000000-0000-0000-0000-000000000000" RunModeParallel="False">
+<GingerRunners>
+<GingerRunner Guid="518008b6-015c-4e3d-b4a1-412823d076a9" Name="Runner 1" ParentGuid="00000000-0000-0000-0000-000000000000" RunOption="ContinueToRunall">
+<ApplicationAgents>
+<ApplicationAgent AgentID="7cc89703-7143-4a8b-99be-6ff6ccf592fd" AgentName="Chrome" AppID="ff66e376-8be2-47f6-82fa-36cfa5c29f9c" AppName="MyWebApp" Guid="0cd48cd0-9fbb-40c8-ac7c-12a1459b31ca" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ApplicationAgents>
+
+<BusinessFlowsRunList>
+<BusinessFlowRun BusinessFlowGuid="7294f3f8-bed9-4982-badc-fd4d0b80463f" BusinessFlowInstanceGuid="534ced91-c4d9-4c01-a239-ff199e3a4aa7" BusinessFlowIsActive="True" BusinessFlowIsMandatory="True" BusinessFlowName="SET-SALES-CHANNEL" Guid="749edcdf-cd91-4437-b3ad-b34fbddb47fd" ParentGuid="00000000-0000-0000-0000-000000000000">
+<BusinessFlowCustomizedRunVariables>
+<VariableString Description="##ADD UNDER RUN SETS CONFIG&#xD;&#xA;1. retail&#xD;&#xA;2. telesales" DiffrentFromOrigin="True" Guid="4bea1a22-6f06-40f0-84ea-224e32680139" InitialStringValue="telesales" MappedOutputType="None" Name="SALES_CHANNEL" ParentGuid="9bb0cb71-ba07-4caa-9268-42263c6b38c7" ParentName="SET-SALES-CHANNEL\Group\[CONFIG] - SET SALES-CHANNEL" ParentType="Activity" VarValChanged="True" />
+</BusinessFlowCustomizedRunVariables>
+</BusinessFlowRun>
+<BusinessFlowRun BusinessFlowGuid="6e8d1cef-7d78-4aa1-a375-4ecfb94c0762" BusinessFlowInstanceGuid="c411121f-8606-4e4b-9c57-dfbded266518" BusinessFlowIsActive="True" BusinessFlowIsMandatory="True" BusinessFlowName="OSF-SANITY-TELESALES-CUSTOM" Guid="773a61e3-ee8a-4720-b8a1-e9cdfec4964f" ParentGuid="00000000-0000-0000-0000-000000000000">
+<BFFlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="8f66fdd9-bb79-4fd2-a5bc-d0b9f44b8240" Operator="BusinessFlowPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="6154226b-1f36-4e46-b238-3ac2ee50060a#GUID_NAME#EXECUTION-RESULT" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="03e5236c-ee8a-4807-88f0-971b0fb921cd" Operator="BusinessFlowFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="6154226b-1f36-4e46-b238-3ac2ee50060a#GUID_NAME#EXECUTION-RESULT" />
+</BFFlowControls>
+
+<BusinessFlowCustomizedRunVariables>
+<VariableString DiffrentFromOrigin="True" Guid="b27ff9b3-b793-4e9b-b1f2-754869d801ad" InitialStringValue="Vodafone Young M mit Basic Phon" MappedOutputType="None" Name="TARIFF" ParentGuid="6e8d1cef-7d78-4aa1-a375-4ecfb94c0762" ParentName="OSF-SANITY-TELESALES-CUSTOM" ParentType="Business Flow" Publish="True" VarValChanged="True" />
+</BusinessFlowCustomizedRunVariables>
+</BusinessFlowRun>
+<BusinessFlowRun BusinessFlowGuid="2f3dc3eb-825c-41f0-bbe6-cae6a26c9f35" BusinessFlowInstanceGuid="6154226b-1f36-4e46-b238-3ac2ee50060a" BusinessFlowIsActive="True" BusinessFlowIsMandatory="True" BusinessFlowName="EXECUTION-RESULT" Guid="647a5f2a-7c67-44fc-9196-f26dd425ffda" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</BusinessFlowsRunList>
+</GingerRunner>
+<GingerRunner Guid="e57f52c7-d592-4e55-9f21-4e91fa5b5780" Name="REPORT_LOADER" ParentGuid="00000000-0000-0000-0000-000000000000" RunOption="ContinueToRunall">
+<ApplicationAgents>
+<ApplicationAgent AgentID="7cc89703-7143-4a8b-99be-6ff6ccf592fd" AgentName="Chrome" AppID="ff66e376-8be2-47f6-82fa-36cfa5c29f9c" AppName="MyWebApp" Guid="5f806c25-a26d-4219-9c0c-5d22789dc807" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ApplicationAgents>
+
+<BusinessFlowsRunList>
+<BusinessFlowRun BusinessFlowGuid="aaffcaa8-6041-467b-971d-8296385fb457" BusinessFlowInstanceGuid="e10a9eb6-9028-4068-8438-6ee8cecdcb21" BusinessFlowIsActive="True" BusinessFlowIsMandatory="True" BusinessFlowName="REPORT-LOADER" Guid="12de2d48-ccf1-4c87-b597-7ecc94c59e58" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</BusinessFlowsRunList>
+</GingerRunner>
+</GingerRunners>
+
+<RunSetActions>
+<RunSetActionHTMLReport Condition="AlwaysRun" Guid="3208e1c7-da68-4318-934c-bfda1b20b2bd" Name="Produce HTML Report" ParentGuid="00000000-0000-0000-0000-000000000000" RunAt="ExecutionEnd" />
+</RunSetActions>
+</RunSetConfig></GingerRepositoryItem>

@@ -1,0 +1,725 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="022d7e33-b282-48ca-a93a-f1f18d973adb" ItemType="BusinessFlow" CreatedBy="piyush.thakre" Created="202202021558" GingerVersion="4.3.0.0" Version="9" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202301100934" />
+<BusinessFlow Elapsed="326587" Guid="022d7e33-b282-48ca-a93a-f1f18d973adb" Name="OSF_Testing" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="SoapValidateAndConvertIBAN" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="32c081cf-640e-475d-9a04-68e8a6f28d5f" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="BankIdentifier" Guid="87cd6f1e-fcd9-4050-ad21-da4aa2db38ed" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="61472ec6-8767-4e82-94d9-d47b1dedf988" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='BANKIDENTIFIER'" />
+<ActInputValue Guid="c72d501a-9abe-4504-a6d4-6ccd6bea468a" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="d9edbf37-f696-43bc-85ea-ded59b0b0983" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="151170a9-5dff-4c0c-b596-83591a0bcc26" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0664e66a-2776-4bb0-b66f-101d42922f32" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="376294db-482a-4883-90a1-97e8f350a0ac" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="1b8eda63-2de7-4402-a4b3-30ad4525f985" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="BankIdentifier" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="ACCOUNT NUMBER" Guid="cc3c8c44-3fe1-46ef-91d7-e44b55113126" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="99f0491a-828e-45f9-adf0-743009a66f74" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='ACCOUNT NUMBER'" />
+<ActInputValue Guid="b06a0fde-4392-41f6-8d09-54ee8716939d" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="2965efb1-3e03-4135-ad82-8d7721300160" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="652c9fdb-153e-4869-b08c-2cb429b573e0" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="92f812bb-9112-4b7b-bdc5-9b39ae1e7619" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="419b850a-8e53-49cd-9c90-2abc2bb95aec" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="31132229-13c5-47b9-ba32-16e4061beb53" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Account number" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="BIC" Guid="9974675f-439b-4f95-82ce-633c17d5c7d2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c547a19a-b36c-407c-8f16-2b1900236de6" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='BIC'" />
+<ActInputValue Guid="b9fbf1e5-f808-48fc-8231-1860bdb67500" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="1e992179-e582-4a6d-a795-4d4e198aec86" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="75c472ac-a4b8-4c7f-8957-6a5ac8e311c0" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="eb574dff-93a6-4820-8c1e-aad34be09823" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8fce3529-2986-4b7e-86f6-0cfb272ef299" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="58f75a3d-62f2-4b96-8da6-729ed0f0123a" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="BIC" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="IBAN" Guid="4ddc12cb-22eb-4694-8552-edf0230c3178" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9d71731e-7cd0-4bff-b549-8db8d7342361" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='IBAN'" />
+<ActInputValue Guid="9ad9ddfc-dc14-4bcf-9622-7d99d7ab2a4f" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="e40bdeba-ca59-4529-a376-40ed7221a2b4" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1aa56b2d-3255-4f0b-a6e1-8d0b25b6b35b" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1a1dfe8f-15ea-465a-ad07-ca0be291ef97" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="34fb2c40-bb05-43a5-9795-356ad6ea64e8" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="96cf49e5-be47-4957-abd8-19b7a52edb27" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="IBAN" />
+</ReturnValues>
+</ActDBValidation>
+<ActWebAPIModel Active="True" Description="SOAP_ValidateAndConvertIBAN_VFDE_ValidateAndConvertIBANWSSoapBinding- API Model Execution" Guid="eb638f09-4e05-4591-bda8-606b73aca16d" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="7e59cc47-cdbb-440f-a9a1-1c1be1710844" Param="{TYPE}" ParamGuid="50e46ee4-0799-4ce0-b3f9-4da511571786" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SoapValidateAndConvertIBAN" />
+<EnhancedActInputValue Guid="90b8ec4a-850e-4b82-9946-6dae28b89975" Param="{ID}" ParamGuid="05720a0f-f877-4c11-b6cc-24d0e2f38f77" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+<EnhancedActInputValue Guid="7ed27859-ca20-4395-aa8c-ae9cd9dbeedb" Param="{CALLERID}" ParamGuid="40f25d02-5076-4ecd-808e-b764b4bc7fa9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="27984104-198a-4855-be7f-6dcc68e73a69" Param="{CORRELATIONID}" ParamGuid="9dadabbe-e754-4f0b-a0f9-380ae9065e29" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="d4fd6f70-55d5-4683-b158-757266027d8b" Param="{SOURCEID}" ParamGuid="39a0d5ce-7ab4-407c-9409-5ba3a6e032da" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="0a22863c-c4fc-4e78-955d-744309b597de" Param="{ORIGINALAPPL}" ParamGuid="bf130142-ce5c-4657-b30f-8f88ee9b25db" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="55b2f2af-e1cb-4d05-88bd-39a06308bb74" Param="{ORIGINALPUBID}" ParamGuid="2caf0710-607d-4a81-bd33-34d512a9ca25" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="875966be-39e8-4e75-8425-2691bd6ab64b" Param="{MESSAGECREATIONTIMESTAMP}" ParamGuid="70816726-e87a-40ec-bd88-067c74c444f9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="b3f219e5-3d9e-44e1-9163-7d38125ab0ca" Param="{FRONTENDUSERID}" ParamGuid="137a188e-623d-4bfc-96b0-55d5c6571ba5" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="12b306a4-61dc-408a-8c02-ca5d7c9bb51b" Param="{DEALERCODE}" ParamGuid="904942c2-4614-4ffc-9664-492d7b3eda72" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="8c7b53f4-0e1e-4686-b97f-e44f8948e0a4" Param="{SALESCHANNEL}" ParamGuid="09b71174-6ab0-47d0-a9fe-dfde0ba66eb9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="c2064230-bbb0-42df-aee7-edf621a67723" Param="{DEALERORGANISATION}" ParamGuid="2fef2727-d4dd-4b41-8c66-a76d2c9e33ce" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="6cba7b51-0cf2-46cc-bd74-742f82361928" Param="{SHOPID}" ParamGuid="8d81001a-2c8d-442d-961c-0e39556e3231" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="34ba1489-87c0-4c23-9aa4-266908c49948" Param="{FRONTENDAGENTROLE}" ParamGuid="ea328968-78cb-4a0b-ac59-c4aeea757088" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="bc0f817f-103a-4d4c-8d1e-1cd2f23373b9" Param="{IBAN}" ParamGuid="c65b104e-4309-4e4b-9041-e11d0712eee2" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE89370400440532013000" />
+<EnhancedActInputValue Guid="87f1748c-79cb-496c-8135-480148b2186b" Param="{BANKIDENTIFIER}" ParamGuid="70f72b9d-873f-40c7-aaf6-317f3303c6be" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="d7352ade-fb7b-4f49-94f8-2302e2af7119" Param="{ACCOUNTNUMBER}" ParamGuid="38a53d88-abe5-4741-b39e-90715d2825d9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="d92a337a-7b87-4ca2-9200-d2319363e9dc" Param="{COUNTRYCODE}" ParamGuid="f6f415f1-c098-477d-9514-9c2cbbd40e5b" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="f5438b0f-270d-437c-baeb-205882f40993" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="9df64563-a42a-4a1e-aa70-f7123a22e37a" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2511d7db-1bfe-4ba7-bfed-d2d7617feeae" mExpected="{Var Name=IBAN}" Operator="Equals" Param="IBAN" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/DATA[1]/Result[1]/IBAN[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="dc08e1e9-7475-42b0-b216-f87fadd11c36" mExpected="{Var Name=BIC}" Operator="Equals" Param="BIC" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/DATA[1]/Result[1]/BIC[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="f98f69bb-23da-4c8f-96ed-19223afa1410" mExpected="{Var Name=BankIdentifier}" Operator="Equals" Param="BankIdentifier" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/DATA[1]/Result[1]/BankIdentifier[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="77323dfe-d12e-47e6-8c90-a662af51c303" mExpected="{Var Name=Account number}" Operator="Equals" Param="AccountNumber" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/DATA[1]/Result[1]/AccountNumber[1]" StoreTo="None" />
+</ReturnValues>
+</ActWebAPIModel>
+</Acts>
+
+<Variables>
+<VariableString Guid="914673e2-00e3-4de3-a645-f467d19857c9" InitialStringValue="DE89370400440532013000" MappedOutputType="None" Name="IBAN" ParentGuid="32c081cf-640e-475d-9a04-68e8a6f28d5f" ParentName="OSF_Testing\Group\SoapValidateAndConvertIBAN" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="cf89d083-3513-445d-9ff8-5967cf15e6e5" InitialStringValue="COBADEFFXXX" MappedOutputType="None" Name="BIC" ParentGuid="32c081cf-640e-475d-9a04-68e8a6f28d5f" ParentName="OSF_Testing\Group\SoapValidateAndConvertIBAN" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="d744fb92-4661-4160-9dd2-f4bb32455cde" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="BankIdentifier" ParentGuid="32c081cf-640e-475d-9a04-68e8a6f28d5f" ParentName="OSF_Testing\Group\SoapValidateAndConvertIBAN" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="9fec0743-285e-4819-aea2-4594e030e232" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Account number" ParentGuid="32c081cf-640e-475d-9a04-68e8a6f28d5f" ParentName="OSF_Testing\Group\SoapValidateAndConvertIBAN" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="SoapGetProductAvalability" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="3da6bd37-0032-40e0-be26-5f2de2bca119" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="GetProductAvailability_VFDEGetProductAvailabilityEGSoapBinding- API Model Execution" Guid="8cddec48-dc83-46c9-b86f-fc0b49d0512e" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="7ce33bed-fb53-48a8-b972-078088d94bd3" Param="{ACTION}" ParamGuid="0a2087eb-93bd-48f9-b447-2ef0ed142eca" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SubsidizedHandsetValidation" />
+<EnhancedActInputValue Guid="879e000a-1727-4751-b48a-e1cb9890e17b" Param="{XMLNS}" ParamGuid="ccc5f9ee-723a-400e-9147-46466226080e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://schemas.microsoft.com/ws/2005/05/addressing/none" />
+<EnhancedActInputValue Guid="f701b916-20d6-4ede-90c6-a7bf437d8487" Param="{TYPE}" ParamGuid="316ee009-2503-4874-b6a3-8f9dd51dc717" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VFDEGetProductAvailability" />
+<EnhancedActInputValue Guid="2c26d6a3-9ec6-4f4c-a390-59d76dcf3b97" Param="{ID}" ParamGuid="5e739ca5-df8c-42ac-a67d-68f0248fad9c" ParentGuid="00000000-0000-0000-0000-000000000000" Value="37992519602b9aca1db9d0.02630815" />
+<EnhancedActInputValue Guid="75a09f2f-e54a-40fc-a0c8-baa41322452b" Param="{CALLERID}" ParamGuid="1ce57d24-b89c-4ddb-894f-2659d1c8a799" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+<EnhancedActInputValue Guid="e0be1c7c-dfa8-4515-9993-f671c55ce843" Param="{CORRELATIONID}" ParamGuid="799b6c2d-f91c-401c-ab96-9497e2eff412" ParentGuid="00000000-0000-0000-0000-000000000000" Value="9b61rk9vgq4srd239d8lu3fri1" />
+<EnhancedActInputValue Guid="65312598-5d0d-4ffc-b052-2700bb51d097" Param="{FRONTENDUSERID}" ParamGuid="0a1403f6-d15b-49f5-911f-bb0e2392583f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4311" />
+<EnhancedActInputValue Guid="49e477ee-bcd4-4795-8528-23231c7f0ea9" Param="{SALESCHANNEL}" ParamGuid="8b4bdf5e-a9c7-4d22-b4f0-c5549ef94568" ParentGuid="00000000-0000-0000-0000-000000000000" Value="telesales" />
+<EnhancedActInputValue Guid="4e4750c2-61fd-4b66-9b67-3eeaa3ba01ed" Param="{KDADDRESSID}" ParamGuid="1b7b2360-8a74-4331-9b55-05892d33b024" ParentGuid="00000000-0000-0000-0000-000000000000" Value="3070775" />
+<EnhancedActInputValue Guid="c2277c52-70e6-4a53-8e76-8e603b973313" Param="{PORTAL}" ParamGuid="8dc41045-e7ba-43f4-a3e6-b6e9c00fadb1" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OFT" />
+<EnhancedActInputValue Guid="44500aed-cf2f-4316-b1b4-efd9ee095d66" Param="{POSTCODE}" ParamGuid="9c76e1a4-64f6-42e1-af99-0d1583dadf5e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="13587" />
+<EnhancedActInputValue Guid="d52df61d-eb53-4453-ba3b-dc3b52ac2bf2" Param="{CITY}" ParamGuid="399d2450-5d94-42c7-b796-c9d63c0c8fd3" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Berlin" />
+<EnhancedActInputValue Guid="49affb59-53e3-4909-b79b-c273ca290847" Param="{DISTRICT}" ParamGuid="0bd42947-f3b4-44b7-8b24-9da714409372" ParentGuid="00000000-0000-0000-0000-000000000000" Value=" " />
+<EnhancedActInputValue Guid="ff45f812-3e68-4802-a115-840bc07f4da9" Param="{STREET}" ParamGuid="12e5461c-4a1d-4fea-a32e-fafc9f5cd59f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Sigmund-Bergmann-Str." />
+<EnhancedActInputValue Guid="dd2a5a15-35ae-42cb-a91c-fe8ba8e03134" Param="{HOUSENUMBER}" ParamGuid="a2b7550e-afb2-407f-a144-ff172ba70164" ParentGuid="00000000-0000-0000-0000-000000000000" Value="16" />
+<EnhancedActInputValue Guid="5047ad98-83a3-43cb-bd65-3ea36b183f7c" Param="{HOUSENUMBERADDITION}" ParamGuid="1a921785-2109-4b99-9122-2410f40620a9" ParentGuid="00000000-0000-0000-0000-000000000000" Value=" " />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="11de6616-ae58-4a95-bf1e-46868260a949" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="24cc4b9c-a980-4106-b57f-8a0222e67922" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_GetProduct" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="018a28b3-8e2c-4b9e-aa35-041b16ca0ff3" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_GetProductAvailability- API Model Execution" Guid="cedcfd64-1e6b-4172-897d-e90f93acc1fa" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="634bebc9-13eb-49c4-ace1-e72798d709d9" Param="{ACTION}" ParamGuid="0a2087eb-93bd-48f9-b447-2ef0ed142eca" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SubsidizedHandsetValidation" />
+<EnhancedActInputValue Guid="ceb04a7e-42ab-4a32-85af-acc3ee2bb98f" Param="{XMLNS}" ParamGuid="ccc5f9ee-723a-400e-9147-46466226080e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://schemas.microsoft.com/ws/2005/05/addressing/none" />
+<EnhancedActInputValue Guid="e71e91be-e2a4-4d0f-afc9-37d070c53efe" Param="{TYPE}" ParamGuid="316ee009-2503-4874-b6a3-8f9dd51dc717" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetProductAvailability_APImodelexecution" />
+<EnhancedActInputValue Guid="044449de-9e70-4148-aba5-815315aa6798" Param="{ID}" ParamGuid="5e739ca5-df8c-42ac-a67d-68f0248fad9c" ParentGuid="00000000-0000-0000-0000-000000000000" Value="37992519602b9aca1db9d0.02630815" />
+<EnhancedActInputValue Guid="1773b7e3-fb44-498e-a10c-9b0365628552" Param="{CALLERID}" ParamGuid="1ce57d24-b89c-4ddb-894f-2659d1c8a799" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+<EnhancedActInputValue Guid="46fb3fae-a1ec-4c7d-aeeb-26e68ce05702" Param="{CORRELATIONID}" ParamGuid="799b6c2d-f91c-401c-ab96-9497e2eff412" ParentGuid="00000000-0000-0000-0000-000000000000" Value="9b61rk9vgq4srd239d8lu3fri1" />
+<EnhancedActInputValue Guid="567a4126-2ceb-482c-bff8-dbcaf524d8eb" Param="{FRONTENDUSERID}" ParamGuid="0a1403f6-d15b-49f5-911f-bb0e2392583f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4311" />
+<EnhancedActInputValue Guid="2ab3ddb2-baa1-44cc-b14f-ede377e92447" Param="{SALESCHANNEL}" ParamGuid="8b4bdf5e-a9c7-4d22-b4f0-c5549ef94568" ParentGuid="00000000-0000-0000-0000-000000000000" Value="telesales" />
+<EnhancedActInputValue Guid="f7a57a05-72b7-4b65-baea-dd40ad4aee6a" Param="{KDADDRESSID}" ParamGuid="1b7b2360-8a74-4331-9b55-05892d33b024" ParentGuid="00000000-0000-0000-0000-000000000000" Value="3070775" />
+<EnhancedActInputValue Guid="a9160c83-458a-4ea1-99c1-9ca6134c0e76" Param="{PORTAL}" ParamGuid="8dc41045-e7ba-43f4-a3e6-b6e9c00fadb1" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OFT" />
+<EnhancedActInputValue Guid="6498293e-eac6-486b-a4f2-5e3539387648" Param="{POSTCODE}" ParamGuid="9c76e1a4-64f6-42e1-af99-0d1583dadf5e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="13587" />
+<EnhancedActInputValue Guid="ad7a699a-a93e-4d22-ad50-048aaf37d763" Param="{CITY}" ParamGuid="399d2450-5d94-42c7-b796-c9d63c0c8fd3" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Berlin" />
+<EnhancedActInputValue Guid="0efc22fd-3df5-41ca-8f55-2bab98c4bf06" Param="{DISTRICT}" ParamGuid="0bd42947-f3b4-44b7-8b24-9da714409372" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="04c067fc-5cca-4ea7-926e-57b8fced30be" Param="{STREET}" ParamGuid="12e5461c-4a1d-4fea-a32e-fafc9f5cd59f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Sigmund-Bergmann-Str." />
+<EnhancedActInputValue Guid="5c256353-92c3-4287-a145-512885e0f2b6" Param="{HOUSENUMBER}" ParamGuid="a2b7550e-afb2-407f-a144-ff172ba70164" ParentGuid="00000000-0000-0000-0000-000000000000" Value="16" />
+<EnhancedActInputValue Guid="e9524aa8-827d-4c1c-8e2f-59f4226a1465" Param="{HOUSENUMBERADDITION}" ParamGuid="1a921785-2109-4b99-9122-2410f40620a9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="24e0ee00-0cd2-49bd-8644-674a82889d7e" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="24cc4b9c-a980-4106-b57f-8a0222e67922" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_SubsidizedHandset" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="db92ac3f-e773-404d-a8f1-3ae1d0a2b084" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_SubsidisedHandset- API Model Execution" Guid="fa65ae79-55c2-407e-a780-106f2a26d44c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="683eb106-95b8-4c8f-8b64-3e63007111ac" Param="{TYPE}" ParamGuid="a638ee49-c3b8-4620-84e6-c4c69db676cf" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SubsidizedHandsetValidation" />
+<EnhancedActInputValue Guid="c3a588e3-059c-4d7c-9c6a-aff0aa5921dd" Param="{ID}" ParamGuid="67902077-698d-4e1c-8482-6612566371a7" ParentGuid="00000000-0000-0000-0000-000000000000" Value="58d3a581cb152" />
+<EnhancedActInputValue Guid="20832cab-5e04-42b4-8744-52ac01be2a4b" Param="{CALLERID}" ParamGuid="ba15210b-0cb6-497d-8c4e-e03cded63d43" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+<EnhancedActInputValue Guid="a2af6721-c25a-4d87-968e-afc2c95c39ad" Param="{CORRELATIONID}" ParamGuid="c069ac41-997f-4fa2-af97-2982baa608d1" ParentGuid="00000000-0000-0000-0000-000000000000" Value="a1t44ok54r095a8gjd38up7kok1b0qi7" />
+<EnhancedActInputValue Guid="83d6eb02-c29b-4a9e-af00-d11f4ff04294" Param="{FRONTENDUSERID}" ParamGuid="5a320efd-16b6-4666-9aaf-88fd68a2fa50" ParentGuid="00000000-0000-0000-0000-000000000000" Value="15" />
+<EnhancedActInputValue Guid="6cbe42b9-475a-49fc-9534-fd073b9e5e05" Param="{MARKETCODE}" ParamGuid="8598ab4a-f680-4f3b-896d-a6ef362fcb81" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MMC" />
+<EnhancedActInputValue Guid="c6043a62-f8c3-407b-a85f-36e384c7b1c9" Param="{BAN}" ParamGuid="687133c3-0aa9-48bb-9b22-1d5fa3b32797" ParentGuid="00000000-0000-0000-0000-000000000000" Value="20034902" />
+<EnhancedActInputValue Guid="1ddbdb70-a311-4bce-9c50-8d10d22c5c20" Param="{SUBSCRIBERNUMBER}" ParamGuid="d94f6789-85a4-4142-a7c5-1cf6e65364f1" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GSM1720400196" />
+<EnhancedActInputValue Guid="7f2c9b97-7bde-4b09-b8a1-3263a760f55f" Param="{DEALERCODE}" ParamGuid="b32af9ab-aa21-4ac1-a935-1087f105a48e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="34401258" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="eb948cc4-eab6-4d56-ae27-356fc6dd6058" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="d9e57565-3a67-4015-af4e-725a5e10a7c9" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="8b38c329-b027-41ad-9480-34f5f6421a89" mExpected="OGWERR-0000" Operator="Equals" Param="ErrorCode" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/SubsidizedHandsetValidationResponse[1]/ROOT[1]/Status[1]/ErrorCode[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="99f9aa44-f85c-43cd-8e1a-401f2bab2e05" mExpected="SUCCESS" Operator="Equals" Param="ErrorDescription" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/SubsidizedHandsetValidationResponse[1]/ROOT[1]/Status[1]/ErrorDescription[1]" StoreTo="None" />
+</ReturnValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_LegacySearch" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="GlobalId" Guid="6966378d-b675-48d0-a45a-0fe698049467" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a33d529c-cdce-4fef-bd0e-f6d34191fb5d" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='GlobalId'" />
+<ActInputValue Guid="424ccc56-96b4-49f5-a8c6-f0c24d5012aa" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="6fcb0868-47e8-4f79-ad82-9149b8fced7b" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9e969b5b-f5d8-48b4-906f-9f7f1af12606" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ea93ab8b-47b4-438e-94f5-f178d0039a2a" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ce1029e7-63a2-4465-b1df-5367c2eb0caf" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ae4bab68-abf0-4a3f-93ae-8e51f2dc5bbb" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="GlobalId" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="FirstName" Guid="28d13e4d-6cf6-4daf-99ea-18cca9f78dfa" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cae96c3a-a316-4a66-9ce2-b8b28f6fd7c7" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='FirstName'" />
+<ActInputValue Guid="98ce5a94-3db7-4fda-9133-17b41e5c3e1e" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="0ce92a20-6f25-492f-8143-ccf1e7175329" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c1473438-557f-48ac-80d0-50f8e8bab983" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="453c9043-5ae1-47af-a1c9-8476cd4f474d" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5035fea3-4723-4c54-8346-93a403c9fd66" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ff4766d5-c295-4309-bace-32df04a6c16b" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="FirstName" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="BirthDate" Guid="816f9e64-d463-4031-9bd3-35713152683c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b486c882-89bc-4b57-8963-77664d12abf4" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='BirthDate'" />
+<ActInputValue Guid="56f17f97-f2a3-4fe1-8b11-fb4d32c4da99" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="aad669db-ef1a-42ae-b516-c497181ed61d" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d9879bcd-89bd-40b9-8808-e27024c128a3" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c27b454e-0f86-47c3-8fc9-8ebf595a660d" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c7d7443-afb3-4b94-a17d-b5516e1589e9" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d73d4580-fd2a-48fb-9990-72d2c37e26d0" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="BirthDate" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="LastName" Guid="c03b7c7f-5928-4697-bfd6-32eba27f09e5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="608c5925-8886-4d30-981f-caf389a8b6c9" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='LastName'" />
+<ActInputValue Guid="bf2acc91-7ceb-4b3c-91b4-c12d6fa11d66" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="08ffff3d-b481-41dd-89b9-239f949e26cd" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c93e9fa6-b479-4ff6-82d0-d67c50e97174" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6e51ad2b-9216-4631-b003-a61ef03e9586" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="23a48052-ab1d-44ca-8fe4-fd51e4f8bcfc" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c3f76ef3-6bd9-4d7f-9291-e73134a0ec6d" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="LastName" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="HouseNumber" Guid="324f51b1-9319-41ed-97fc-0a211e7a6d37" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0d892ad9-193e-463b-a9c1-374f12333db7" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value=" select inputvalues from {EnvParam App=OSF Param=Table} where input='HouseNumber'" />
+<ActInputValue Guid="0935ca0c-adc0-4669-9927-ffe499fb49d0" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="44f6b899-5ac8-4d99-8f5a-d52f5383e27e" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="64ab6a95-4a62-474b-a467-dae4124f06d4" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="04de5615-21d2-4824-86fe-f347bf253eab" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="38a6b0d1-2b92-41e3-bbf3-64298b97eba4" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="6e9afe5e-d9c6-40a1-a606-a83c79e4359b" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="HouseNumber" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="Street" Guid="19bb2013-2f85-4028-a368-108a8311a93a" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="4bbc3c48-672b-4514-965f-aa6efa90f549" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value=" select inputvalues from {EnvParam App=OSF Param=Table} where input='Street'" />
+<ActInputValue Guid="851134e2-60df-493c-8c9f-ef22dc334e14" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="20b7cb63-663c-4649-8f56-8473970a84be" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9e3471f7-6fce-4a50-88be-f844f35260de" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c2d0c0db-fb5a-4a3e-8df8-041dcbba49c5" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="89c4474e-fda2-4ba5-8890-654a54da805e" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="bdcfe729-71c1-4807-a70c-c64f3657ebba" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Street" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="ZipCode" Guid="f291ae0e-0210-4932-9fe0-a78492a4f8ed" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="acb3111b-db5c-47bc-b130-b59b3227cf98" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='ZipCode'" />
+<ActInputValue Guid="733af0fb-b8cb-47e5-9b31-2e3b88e27140" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="ab3c5db9-4614-47e4-aad1-e7f6d9a8d573" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bb195a31-3580-4d14-8a65-4deea6018018" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="505e2ff3-839b-4aa0-964b-00b1b1ad4ae5" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54ab6c2a-c41b-4b18-a507-cb5c57412c61" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="382f5965-af97-4074-8cfa-95bbdcff46e4" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="ZipCode" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="City" Guid="71f5c821-1c62-4351-852a-b6f4e088609f" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cdb91562-edba-4e2b-9fd7-3d9ae3d7795b" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='City'" />
+<ActInputValue Guid="9ee2dc8c-ce42-421c-98ec-5a34f06be84f" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="c684283b-9477-40a1-a84f-c16176d7fa92" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="066c2fba-da4e-4aba-9a6b-76469c1c8ed7" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6dcd1813-328a-4427-8e6d-3506f0f56f84" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5dc5956f-7ac3-440e-9457-67a947e8ae35" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="36239a4c-1098-41b7-894b-d23376934d93" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="City" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="PhoneNumber" Guid="ed7add37-3175-45e4-b737-3c06e3396bef" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8f2c8863-b478-4af1-8bbb-bf11c98b27bd" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='PhoneNumber'" />
+<ActInputValue Guid="6f2b6cb7-c547-4fe2-aec2-fc35f03c4c8c" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="d11fb479-1e56-4a1b-be01-28f51262cba9" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9888a0fe-33c1-4ab6-b8e8-22b06a51aff8" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bb37b808-624a-4373-a6cb-a92824f78181" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d78968c1-b694-49fe-a228-e6af6b5e117c" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="35e7bc12-3df2-47f7-9973-b85d31aa2005" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="PhoneNumber" />
+</ReturnValues>
+</ActDBValidation>
+<ActWebAPIModel Active="True" Description="Soap_SearchLegacy- API Model Execution" Guid="895a0016-e200-47d7-a1f2-1cf16663662b" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="1eeb69cf-cb50-45ca-899e-fed0e5337c4e" Param="{TYPE}" ParamGuid="a8a136ff-41ef-4e1e-8cd4-37a36f25c7ad" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Soap_LegacySearch" />
+<EnhancedActInputValue Guid="e328b0ed-f333-466f-8051-1fad27414d4f" Param="{ID}" ParamGuid="1d26698c-207a-4f17-92d2-1f2fc3bf9d07" ParentGuid="00000000-0000-0000-0000-000000000000" Value="13583532125d3ec024e58d30.06123278" />
+<EnhancedActInputValue Guid="9cda1124-d38d-4b7f-aed5-18f0ff0c1671" Param="{CALLERID}" ParamGuid="745832cf-3645-4b6d-9bd2-7d462291478a" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+<EnhancedActInputValue Guid="bb9216a0-a616-4eb9-a16d-d9d5f25c71c5" Param="{CORRELATIONID}" ParamGuid="962ea201-5f38-4630-84e9-5c43cb0ef647" ParentGuid="00000000-0000-0000-0000-000000000000" Value="le1l0qgv9hbegmhdg27l3o2sl2" />
+<EnhancedActInputValue Guid="72ccd459-1a40-43e7-b100-ed4f8a8f6380" Param="{FRONTENDUSERID}" ParamGuid="8f0db1d8-e5c9-4f0d-be8e-8a3f03ecdb8f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="48bdc9b1-8d2a-4ea7-ab2e-4e4591560fd4" Param="{BACKENDIND}" ParamGuid="7e9ff790-5120-4207-83e0-91dc42161148" ParentGuid="00000000-0000-0000-0000-000000000000" Value="KD" />
+<EnhancedActInputValue Guid="ad0a8915-eb80-496c-abd2-8fa544e0488b" Param="{ID1}" ParamGuid="ddf1ce00-1ee0-42bb-807b-9e3bf77dbd05" ParentGuid="00000000-0000-0000-0000-000000000000" Value="931385163" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="d4d12e97-36a4-4d6d-a88b-c85fe1de9710" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="0d8b8be7-947b-4ebe-9a14-043998c472bc" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+
+<Variables>
+<VariableString Guid="e638e647-bdf2-48c6-996d-2794c6f13e1f" InitialStringValue="LK_754" MappedOutputType="None" Name="GlobalId" ParentGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentName="OSF_Testing\Group\Soap_LegacySearch" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="b396086f-cb02-4b3f-84cb-0c517e3ed618" InitialStringValue="Johanna" MappedOutputType="None" Name="FirstName" ParentGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentName="OSF_Testing\Group\Soap_LegacySearch" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="a124ad29-9db4-4d55-9953-a5f3fb9ffcda" InitialStringValue="Uhl" MappedOutputType="None" Name="LastName" ParentGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentName="OSF_Testing\Group\Soap_LegacySearch" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="2442a922-88cf-43d9-ae10-fec161b28bff" InitialStringValue="Bärengasse" MappedOutputType="None" Name="Street" ParentGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentName="OSF_Testing\Group\Soap_LegacySearch" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="ef765130-d6b7-4e63-8aef-11729f1a88c3" InitialStringValue="Würzburg" MappedOutputType="None" Name="City" ParentGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentName="OSF_Testing\Group\Soap_LegacySearch" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="64c4e987-5e31-4ec7-93dd-1ccf854b0e18" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="HouseNumber" ParentGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentName="OSF_Testing\Group\Soap_LegacySearch" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="5beda2c5-202a-435e-836d-01bbc4f9facb" InitialStringValue="1982-10-19" MappedOutputType="None" Name="BirthDate" ParentGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentName="OSF_Testing\Group\Soap_LegacySearch" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="97781d50-e8ae-4da9-b5aa-dc4360f7e013" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="ZipCode" ParentGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentName="OSF_Testing\Group\Soap_LegacySearch" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="ba7e8801-099c-4bb5-9766-5f8bd97a1529" InitialStringValue="(0931) 329 061 94" MappedOutputType="None" Name="PhoneNumber" ParentGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ParentName="OSF_Testing\Group\Soap_LegacySearch" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_ValidateAddress" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="7e7f2700-c88a-4d40-a6b0-5ed07159f120" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="AddressId" Guid="08abedd3-390a-4916-ae58-ed02864cfb75" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c89c86d1-d7a3-410e-87fd-ce67a40dd696" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='AddressId'" />
+<ActInputValue Guid="80483b5b-62a0-4a83-9635-8a3e9e3d5491" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="c7101fd5-6eab-4480-9f7a-f295e4db49c9" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5f8c7f24-e068-45f6-9be9-9297d934d810" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5c2042c5-6980-43b7-81ac-ed72fa12b054" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5c5a294a-1a16-4d9c-8327-4c3a43db945e" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2bed168a-dc54-4883-a997-cdf6373a39d5" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="AddressId" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="STREET" Guid="24fc9bbe-15e0-4daa-a620-95eee0afb07a" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e5daaff0-c863-4f43-8609-732a6ccbc6f9" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='STREET'" />
+<ActInputValue Guid="d0d84942-d6d4-454e-bd1b-6a2efc943325" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="561767eb-41b9-417b-aa9b-d72b3fcfb5a6" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="59f6b33a-7349-40bb-a1bb-f189786fa1bd" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="54505bed-9b09-4302-bd80-2ec31804bdd6" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bdcd6106-9008-473c-89ab-b43b1a8b9e4f" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ef09c1e8-c31d-4b83-b75c-66fbe2eebf8a" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="STREET" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="HOUSE NUMBER" Guid="d5942e16-1112-498b-b9ab-27f7ec7fd0e1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="895e8e4f-58d9-446e-a2d8-55fbe8579826" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='HOUSE NUMBER'" />
+<ActInputValue Guid="835c3808-dbcb-4806-8783-bf2a40dacfe8" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="08fee303-d30f-4e32-82a6-113ec94a2344" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="66169978-9b9e-4217-b921-112dae1c5a22" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e91e2cda-fbd1-46b9-b72b-3d7f9c03b0fc" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="02ba0c55-fc94-4890-a877-64b004a09dfa" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d996b3a3-b695-4105-b60a-5592faaea778" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="HOUSE NUMBER" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="Country" Guid="374a3207-ee34-4b79-8d9d-d45c3388be51" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="728e7108-0ca2-4ff0-80b4-c5b9ec7820d7" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='Country'" />
+<ActInputValue Guid="01f7a13a-2b6a-4b8e-9091-53f6b63ebd8a" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="70a2460d-51b9-4972-97aa-0a039bceb45b" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="23b6dcbf-2bd9-41a8-ad41-d8cd973d6bb8" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="91e186c4-15f9-4a80-9737-95de995a6393" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="05191272-f556-4702-9e70-8e95b7d692cd" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="f5ab1bbb-323c-43bf-9fcb-55ab27dea822" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Country" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="CITY" Guid="53fc738e-4799-4157-90b4-a72ed4bb51f3" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="78513585-fcaf-4c30-9567-d74799c9ec1c" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='CITY'" />
+<ActInputValue Guid="25bf9c2e-289b-4397-982e-f7eac53b6f57" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="8de4d815-c4d0-4150-8abe-2bdde0164603" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="dc322774-e1fb-4740-8d89-ad3fb73ee584" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4a483f08-780c-49f2-8791-37c92e725c34" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="71c58c50-70bc-41a2-9fbc-2a40b4c10d18" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="f78e494d-0ccd-4cbc-b679-fe2cc20cca7f" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="CITY" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="ZIPCODE" Guid="ee10f0ca-35f2-4084-8de6-b2b22e53c3d8" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f56aa9ec-0b2c-4733-84e9-604e3b9eec73" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='ZIPCODE'" />
+<ActInputValue Guid="4b9d64a7-75f1-4a05-b160-bb1a48fb0496" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="6e54bb07-f227-4132-b5b0-245fb47ae3e6" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="99dc1143-0644-4515-a4af-543d6982bd4c" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b983baf4-e11f-4178-900c-c273e6f291ea" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4c82f23b-8be3-49da-9e94-56a573567e7d" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a8408506-c937-44af-8646-895068beb548" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="ZIPCODE" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="Region" Guid="ed0b5044-823e-4d3d-a9b9-9188c35966e4" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="289035e9-23c1-4d4a-b04e-4ebefd9cc5f4" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from {EnvParam App=OSF Param=Table} where input='Region'" />
+<ActInputValue Guid="922ec8d0-a10a-4e2e-bb58-095a7c7865e8" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="9aec2636-2e8d-4a88-85ef-74b3762543a3" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="61468ed4-172c-43f8-86ad-e9ffccbab06e" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a54098cc-5b4d-4f93-887a-51ca7dacb6d4" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ada24231-6594-4b90-bc68-1565b4286875" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="4db5a514-5ce1-4a63-97f7-51964b87f199" Operator="Equals" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Region" />
+</ReturnValues>
+</ActDBValidation>
+<ActWebAPIModel Active="True" Description="Soap_ValidateAddress- API Model Execution" Guid="fee618b4-525b-4434-ac2f-0994b71e0918" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="44fd4ea8-c3f7-42c1-9acb-ec56cc1e5b9d" Param="{TYPE}" ParamGuid="bf4891a6-24bd-42cc-bb97-2e906ce6f70e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ValidateAddress" />
+<EnhancedActInputValue Guid="c0161577-391d-404e-a976-daf23542632a" Param="{ID}" ParamGuid="202e4116-e6a2-4c59-b4a9-966b0694b0ca" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Saurav12345" />
+<EnhancedActInputValue Guid="910c9cd9-a883-4441-8c60-0b9fb073bfb2" Param="{PORTAL}" ParamGuid="9f9ce337-2301-4b6d-aff5-04671a3db70b" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OFT" />
+<EnhancedActInputValue Guid="a844c4c5-cf83-448b-bcf6-5a6aeeeb8fcf" Param="{ZIPCODE}" ParamGuid="68cb6797-12d3-4af1-95bc-ff15313af63f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="63936" />
+<EnhancedActInputValue Guid="992ad7ef-1f80-4759-99b1-2a261ccdf6f4" Param="{CITY}" ParamGuid="091f3506-7b83-4aff-91df-9e73d5c2c5bb" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Schneeberg" />
+<EnhancedActInputValue Guid="ad3046e0-0e50-4414-8766-b7873ae03cda" Param="{STREET}" ParamGuid="c075fc3f-ba0e-4459-8558-db2510efec37" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Roscheklinge" />
+<EnhancedActInputValue Guid="c5bcce41-dbf0-4458-a7ae-fdb2ee48c2a5" Param="{HOUSENUMBER}" ParamGuid="f978f035-af47-4cb9-9853-511e70a4fa62" ParentGuid="00000000-0000-0000-0000-000000000000" Value="12" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="6d21b6d5-829b-4ea0-b18e-50ec553ba592" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4625a10b-d0cf-4f24-a99b-9d3e4f9a5bee" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="a89535da-d84e-4068-b072-ff7eaea6f263" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="AddressId" ParentGuid="7e7f2700-c88a-4d40-a6b0-5ed07159f120" ParentName="OSF_Testing\Group\Soap_ValidateAddress" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="80cbfca2-067a-497b-a2c1-925a177cdb80" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="HOUSE NUMBER" ParentGuid="7e7f2700-c88a-4d40-a6b0-5ed07159f120" ParentName="OSF_Testing\Group\Soap_ValidateAddress" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="74a833c8-55dd-48f9-9e24-cb9d49602813" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="ZIPCODE" ParentGuid="7e7f2700-c88a-4d40-a6b0-5ed07159f120" ParentName="OSF_Testing\Group\Soap_ValidateAddress" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="b46f6e26-5c17-48ed-9ed6-4ba48c98fe02" InitialStringValue="DEU" MappedOutputType="None" Name="Country" ParentGuid="7e7f2700-c88a-4d40-a6b0-5ed07159f120" ParentName="OSF_Testing\Group\Soap_ValidateAddress" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="1d14e891-5533-427a-81b9-4e597f2f94a1" InitialStringValue="Schneeberg" MappedOutputType="None" Name="CITY" ParentGuid="7e7f2700-c88a-4d40-a6b0-5ed07159f120" ParentName="OSF_Testing\Group\Soap_ValidateAddress" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="704c0125-8b74-4bee-bf80-0d5536e71967" InitialStringValue="Roscheklinge" MappedOutputType="None" Name="STREET" ParentGuid="7e7f2700-c88a-4d40-a6b0-5ed07159f120" ParentName="OSF_Testing\Group\Soap_ValidateAddress" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="79f64dab-970f-49dc-8a4d-31206c0f4bef" InitialStringValue="R09" MappedOutputType="None" Name="Region" ParentGuid="7e7f2700-c88a-4d40-a6b0-5ed07159f120" ParentName="OSF_Testing\Group\Soap_ValidateAddress" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="GetInvalidProducts" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="247dbd78-8327-4e5c-ada3-4dbdf055633a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_GetInvalidProducts- API Model Execution" Guid="7875fcca-d4df-4b51-b795-f7858e372950" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="2b577d77-0110-4262-990f-9fb3c4936f2a" Param="{TYPE}" ParamGuid="1f27c73c-7a0e-42f8-8168-3906b535ba73" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetInvalidProducts" />
+<EnhancedActInputValue Guid="187da27f-1964-4ec9-befd-11818e7acbae" Param="{ID}" ParamGuid="5beabef4-58e0-4b11-b1a7-ec101ad3844d" ParentGuid="00000000-0000-0000-0000-000000000000" Value="saurav1234" />
+<EnhancedActInputValue Guid="5eadd252-80b4-4c80-a3aa-f90d2790c3de" Param="{ADDRESSID}" ParamGuid="4a7ffbb5-6532-4796-a1a0-a4871477740b" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1591979" />
+<EnhancedActInputValue Guid="364b9b49-857f-495b-aa78-ffc5301377cc" Param="{PRODUCTCODES}" ParamGuid="c69b9550-9bb6-40f8-ae03-35c473f7fdf4" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4KP" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="8adfd0f5-e50a-4eab-b35f-9ec944b829fa" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="31436aab-159b-4090-9f32-f968ed232c6c" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_GetNonStandardRates" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="b2e789dc-d636-4fc4-be38-5c9d8032f597" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_GetNonStandardRates- API Model Execution" Guid="b9ba4cca-303f-4053-9205-b8b42b21be0a" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="40c0cf10-463f-4b5a-9a7d-e4e547d9884c" Param="{TYPE}" ParamGuid="a98e53db-7bd3-4056-aaf5-237fe1eea88c" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetNonStandardRates" />
+<EnhancedActInputValue Guid="283b0e7a-5fad-4cc0-ab90-9fdae4cfaee6" Param="{ID}" ParamGuid="5d31f7dc-cc59-4bca-87af-e156a53c8260" ParentGuid="00000000-0000-0000-0000-000000000000" Value="saurav1234" />
+<EnhancedActInputValue Guid="2e781930-e18c-4007-a477-a3ca75435a0d" Param="{ADDRESSID}" ParamGuid="429b4da1-0d04-419a-9fd1-4281c0cdf981" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1591979" />
+<EnhancedActInputValue Guid="d5d9538f-5c25-42ec-9e09-5598e8348c97" Param="{CONTRACTCODE}" ParamGuid="62b4422a-5c84-4651-9295-931ded7aaab2" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VVO" />
+<EnhancedActInputValue Guid="579b13db-cf5b-4475-9048-16113ef55ea8" Param="{PRODUCTCODES}" ParamGuid="5c9ed0e0-6c1e-4e80-98fb-ce77b2e86e7f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+<EnhancedActInputValue Guid="a064d885-847f-4a9a-890f-1a1729c0c7c3" Param="{CONTRACTCODE1}" ParamGuid="bd3fd391-3050-4d54-a138-334a440cae7e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VDE" />
+<EnhancedActInputValue Guid="3a5a8fc8-ec1d-4d93-b67e-f9dc9b04e624" Param="{PRODUCTCODES1}" ParamGuid="07e17fa8-05ab-440f-b776-670e92e87eae" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+<EnhancedActInputValue Guid="06e23e62-fcf2-4e6e-ad22-7157c2d78801" Param="{CONTRACTCODE2}" ParamGuid="ef17f527-f05e-43e8-b783-ddc2cbf43c4f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VVE" />
+<EnhancedActInputValue Guid="e39702f2-f2a5-4991-93ca-1544739ac60e" Param="{PRODUCTCODES2}" ParamGuid="b0afc4a6-4ecf-40aa-837f-75cf34af7969" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+<EnhancedActInputValue Guid="8e1cf91f-3c3f-4770-ad44-41c953e6eafd" Param="{CONTRACTCODE3}" ParamGuid="20526359-cc25-4cc1-a52c-49b45084f63d" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VDP" />
+<EnhancedActInputValue Guid="da5f9d72-ffd5-441d-aade-684d5652df82" Param="{PRODUCTCODES3}" ParamGuid="f9e05d94-8b7c-4982-97ae-4a92783d4736" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+<EnhancedActInputValue Guid="dcf80060-96c5-4b27-9f79-58c9ddef3ca5" Param="{CONTRACTCODE4}" ParamGuid="16b6a762-eca4-4bc4-b8b9-d12652d1d85e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VHP" />
+<EnhancedActInputValue Guid="6783bc45-8902-4255-bebc-08060fe0fb85" Param="{PRODUCTCODES4}" ParamGuid="646caf96-5e91-4327-b66a-5049acef0b69" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+<EnhancedActInputValue Guid="3134ea3e-da23-4ab9-9071-5567518c81f2" Param="{CONTRACTCODE5}" ParamGuid="7c0ace6e-7bfc-41a8-978a-bfea66833139" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VHE" />
+<EnhancedActInputValue Guid="6674dd10-5829-4e66-9501-9e9faf7f9c92" Param="{PRODUCTCODES5}" ParamGuid="35790742-54e8-437b-84b7-c3ef6378146b" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="800e05d8-b2af-499c-8e39-76a9d651c22b" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="71bc2203-eb35-4c1e-b27f-2ef532a2f092" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_GetConfigurationData" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="144eb32c-bb57-45d0-b161-82548dd8b0a5" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_GetConfigurationData- API Model Execution" Guid="7b515cf1-ceac-46f5-8fae-10e7b75e7660" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="c1d4b496-420c-43c6-a3cd-a4e7ab4b7e0b" Param="{TYPE}" ParamGuid="d8bbcfcc-7d51-4329-9f5c-a67d17d59fcb" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetConfigurationData" />
+<EnhancedActInputValue Guid="2086b499-09a4-4152-bf5d-24baadc7c253" Param="{ID}" ParamGuid="8bf2ed40-5448-4e31-abc8-6fa2359032f1" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{UUID}" />
+<EnhancedActInputValue Guid="443e61ef-7e8a-4f1d-b2e1-f0cd7565b1a1" Param="{PORTAL}" ParamGuid="9b232702-34e7-4438-9ecf-31707f731245" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OFT" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="1992a9db-e1dc-4f88-b1a9-e94a33de1870" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="08773bd3-6666-455e-bb8f-c4ba41357dfe" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_GetSmartCardType" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="b1fa22ca-433a-4be6-bf19-c869db29b5ba" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_GetSmartCardType- API Model Execution" Guid="18acef1e-0d2b-4605-9521-35eb7816776f" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="4539bb14-7c59-4f92-9cca-5af3386dd81b" Param="{TYPE}" ParamGuid="ac8f840c-ae54-4516-9441-daa1cfef730c" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetSmartCardType" />
+<EnhancedActInputValue Guid="28f969c8-bbf7-41be-8a33-a55b0b01f820" Param="{ID}" ParamGuid="02ccc1f0-bf76-48cf-b3f0-8c26f4217627" ParentGuid="00000000-0000-0000-0000-000000000000" Value="592151c2067f3" />
+<EnhancedActInputValue Guid="9e5c6629-a732-4af0-bec3-cc63c5505055" Param="{CALLERID}" ParamGuid="327f1300-03f0-47e2-af12-584227f97e93" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Omnius" />
+<EnhancedActInputValue Guid="cdada877-b304-4ca0-b331-bc8c3e439461" Param="{CORRELATIONID}" ParamGuid="41d300c8-e9ec-4d26-bdea-c62edffead7e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{UUID}" />
+<EnhancedActInputValue Guid="d71848c7-7d4d-4c3b-ad51-4bd600bb4aac" Param="{MESSAGECREATIONTIMESTAMP}" ParamGuid="ad0a1f19-ffa3-4a01-b362-2b272c985883" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2017-05-21T08:37:22" />
+<EnhancedActInputValue Guid="af1b253e-c22c-47d4-97f5-afb5674c18d5" Param="{FRONTENDUSERID}" ParamGuid="f96089d0-d858-4c90-bac1-7931c1648edd" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="051257bc-5114-4c72-b9d9-5f7b0154b094" Param="{DEALERCODE}" ParamGuid="4c46ea1c-6dac-4d22-9777-8e9818f19a00" ParentGuid="00000000-0000-0000-0000-000000000000" Value="34401773" />
+<EnhancedActInputValue Guid="53370954-eedb-4352-9ff8-6712ef039617" Param="{SALESCHANNEL}" ParamGuid="55c5c216-7ed3-42b0-8eb9-def08ab9103f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="retail" />
+<EnhancedActInputValue Guid="5cbc4b43-9d69-48b4-9da9-e995369b0e88" Param="{SMARTCARDSERIALNUMBER}" ParamGuid="bc04b7cd-0db7-416b-ad18-7f2f7808685c" ParentGuid="00000000-0000-0000-0000-000000000000" Value="051547475969" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="1ff312ce-e94d-4a2d-a957-17c14d9cbca0" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1bb24a27-6d20-4d7d-9fa3-7f147e88d1db" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_GetSmartCarsCompatability" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="268d6dbf-4c2c-414e-93ee-cfa7813088e9" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_GetSmartCardCompatability- API Model Execution" Guid="2a04f150-eed6-4106-b583-a3b793279434" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="7c8a05aa-5092-4935-a5b4-8f7ae7f3418c" Param="{TYPE}" ParamGuid="f3cc7f9c-300f-4ba7-a918-8681045e1fee" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetSmartCardCompatibility" />
+<EnhancedActInputValue Guid="0894b0c7-e72f-4d6a-8c4d-5b9ef31f9d02" Param="{ID}" ParamGuid="afdecfde-eba8-4c6e-8d65-0a0400ea50af" ParentGuid="00000000-0000-0000-0000-000000000000" Value="58b039e315c3c" />
+<EnhancedActInputValue Guid="122948f2-caf9-4fb3-9355-5dea1a3c99fd" Param="{CALLERID}" ParamGuid="70c0bc6d-14b1-4844-afaa-c39e81b6ea92" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Omnius" />
+<EnhancedActInputValue Guid="fea109eb-16bd-469c-aa38-bbb7c0fc0740" Param="{CORRELATIONID}" ParamGuid="ba409ffd-cbff-4ff2-b609-11f16568dd31" ParentGuid="00000000-0000-0000-0000-000000000000" Value="bkve45agebtnljtej4mjq5icvrnis8lt" />
+<EnhancedActInputValue Guid="9f91dc37-fd7a-494e-8f7e-e060b7481d38" Param="{MESSAGECREATIONTIMESTAMP}" ParamGuid="e0275209-d6f6-47bb-a148-924356de3a9a" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2017-02-24T13:49:23" />
+<EnhancedActInputValue Guid="d7719bb2-12f9-4b7c-9a7e-2a80f06974d4" Param="{FRONTENDUSERID}" ParamGuid="dafb2db0-ca0f-4334-8bb4-9cdec59efebc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="31c58205-d9e4-4036-a916-c008c3a5d1ca" Param="{DEALERCODE}" ParamGuid="8eddbee6-d3b8-4984-95c4-5f9ae6d25a26" ParentGuid="00000000-0000-0000-0000-000000000000" Value="34413071" />
+<EnhancedActInputValue Guid="91433bad-714c-40ce-8cb3-38e923fc8390" Param="{SALESCHANNEL}" ParamGuid="8602092b-9016-48a7-bfa2-3987b3209a4b" ParentGuid="00000000-0000-0000-0000-000000000000" Value="retail" />
+<EnhancedActInputValue Guid="3fe1cd4b-3ec2-4c53-8071-a8b65a5f6d13" Param="{SMARTCARDSERIALNUMBER}" ParamGuid="9047d63d-5fef-4634-82b7-ece01843d0dc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="051400000006" />
+<EnhancedActInputValue Guid="76a90787-9ce5-4c04-8389-d3d04c622ae1" Param="{JOBCODE}" ParamGuid="a9d09cff-51ac-4ed5-94b0-33a849c9a3ca" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CCX" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="fcd14077-4cce-4862-a71e-ed0629bbab38" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="73fce44e-14dd-4279-986f-6ebd452c924c" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_GetIpEquipmentFeatures" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="82d9d6b2-32f1-47bc-bf8f-6a7b2171a739" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_GetIPEquipmentFeatures- API Model Execution" Guid="966cc998-36db-43a4-a016-a3bcc2a419c5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="ec28cec9-9c14-4631-bfd2-a11c2bb6b83d" Param="{TYPE}" ParamGuid="d4a02632-dd53-4d0b-9514-2b6fae67a5c4" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetIpEquipmentFeatures" />
+<EnhancedActInputValue Guid="f5d77f4f-d688-4959-b83a-15263b6eb601" Param="{ID}" ParamGuid="f5cff981-f24f-4cdc-bd9f-367b3224410f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="58866e0fa724f" />
+<EnhancedActInputValue Guid="ff074732-165e-4ce4-b2be-16ad8371ca60" Param="{CALLERID}" ParamGuid="ec1ec5e5-02b6-41f3-8cad-f2810c66ce21" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Omnius" />
+<EnhancedActInputValue Guid="6fca7f8d-cfeb-4eeb-8f4a-335443bbd271" Param="{CORRELATIONID}" ParamGuid="2179a5af-dbea-47bb-972b-c2386b27d6ce" ParentGuid="00000000-0000-0000-0000-000000000000" Value="0028lab4cd3fgt9iftm9eoolqrlsnonl" />
+<EnhancedActInputValue Guid="45e3a511-3db6-43c6-a3d8-a091f1af772c" Param="{MESSAGECREATIONTIMESTAMP}" ParamGuid="bf210e5f-59c1-4e1f-a103-1920beea06fa" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2017-01-23T20:56:47" />
+<EnhancedActInputValue Guid="8000b9f9-8674-4c5e-b637-8bbf2a6b7b3c" Param="{FRONTENDUSERID}" ParamGuid="1ffe5733-b34f-49be-a46e-c7a0d8f23dba" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4" />
+<EnhancedActInputValue Guid="d9c122b6-a694-40c3-bf14-79b3fd4ccd1f" Param="{DEALERCODE}" ParamGuid="645b4d5a-5d1a-4bc8-b62f-1e3e8b5e7411" ParentGuid="00000000-0000-0000-0000-000000000000" Value="00180000" />
+<EnhancedActInputValue Guid="b034a4dc-983d-4e71-bcce-08944cb99b92" Param="{SALESCHANNEL}" ParamGuid="5f1b363e-da69-4f71-9d02-8a5392cb8366" ParentGuid="00000000-0000-0000-0000-000000000000" Value="retail" />
+<EnhancedActInputValue Guid="9d1c6c1b-b0dc-40e6-8042-32ca93ea3fa9" Param="{MANUFACTURER}" ParamGuid="d5dae9c7-43c5-4a9b-8ec0-5704e3157b5b" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MO" />
+<EnhancedActInputValue Guid="1b2b7be4-a16d-4050-9e83-467b53ea3199" Param="{CONVERTERTYPE}" ParamGuid="6f0f8c6b-a397-4f30-b247-51903ae5cecb" ParentGuid="00000000-0000-0000-0000-000000000000" Value="KM" />
+<EnhancedActInputValue Guid="7e813d6a-5ea7-4017-a22a-98f08a6320f1" Param="{MACADDRESS}" ParamGuid="705c0b1e-a637-40ae-806f-e90e9e7943dc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="0023a328fb84" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="fdcd7866-9f39-45bb-9da7-f8ca5593b094" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="96d1463f-7391-404d-bf56-774e842a5238" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_GetCablePaymentAndPayerInformation" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="f3979d83-ceaa-4d30-ab7f-1909ecba50cc" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_GetCablePaymentAndPayerInformation- API Model Execution" Guid="42052aa8-0772-4ae7-89c5-ec41ab2bb21c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="c372adac-7087-41f0-824d-3b0a1ef01b16" Param="{TYPE}" ParamGuid="cbf478e2-6676-46f6-8c81-870e41b326cf" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetPayerAndPaymentInfo" />
+<EnhancedActInputValue Guid="0f01ed4e-2f99-40fc-9404-dfef5ba3c00b" Param="{ID}" ParamGuid="fca1f82b-b928-44e8-9ef1-1056e1a927a0" ParentGuid="00000000-0000-0000-0000-000000000000" Value="591eea20ba231" />
+<EnhancedActInputValue Guid="14cbb1ee-61bc-4223-9ded-ef653faaaa9b" Param="{CALLERID}" ParamGuid="8906e797-a373-4115-9382-1f0ac6db6509" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+<EnhancedActInputValue Guid="722a3a61-e1ae-447c-8018-8da698cd19a8" Param="{CORRELATIONID}" ParamGuid="1b8a806c-ddf0-4aa3-bd16-9b3335eff7ca" ParentGuid="00000000-0000-0000-0000-000000000000" Value="a8re0i1nrp4fr0rtshdjejreseqtnosc" />
+<EnhancedActInputValue Guid="88dec6f4-97c1-43cf-b815-411f786fe59c" Param="{FRONTENDUSERID}" ParamGuid="a304810c-5485-47d7-b31c-5d2bc4ce02ca" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="6fa846c6-d16c-4cb0-aeb3-0f315cd894cf" Param="{IBAN}" ParamGuid="0ba3c576-f4bd-4f40-92e6-57c760d1e4e8" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE61100700240092822600" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="ee01878d-a436-4646-8ebe-ab88f999c209" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="3cc79985-d31f-4526-8d6e-1401d6eb042e" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_CreateOrCancelStockReservation" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="c480227a-c97e-419a-acac-9f64001a1729" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_CreateOrCancelStockReservation- API Model Execution" Guid="0ad91594-5b81-46c6-a47c-35cae77fb72a" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="f1715a42-a6f4-4902-ac75-e84d2971d106" Param="{ACTION}" ParamGuid="11e697f6-0613-47ce-a45e-639b401446a1" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CreateOrCancelStockReservation" />
+<EnhancedActInputValue Guid="d651ce21-d3d5-4be3-b7e0-3c9f6f28e9ee" Param="{XMLNS}" ParamGuid="3da49f0c-54e3-4e2f-9dac-78450d143aa7" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://schemas.microsoft.com/ws/2005/05/addressing/none" />
+<EnhancedActInputValue Guid="889aa11d-002a-49b2-84cc-014b95a4d048" Param="{TYPE}" ParamGuid="6f5d62cd-47fc-4143-8a88-803d44151be7" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CreateOrCancelStockReservation" />
+<EnhancedActInputValue Guid="4d814c4f-bfb9-47ba-89b1-bfae5e4374ca" Param="{ID}" ParamGuid="32db1045-ac5b-45e5-9261-fa13c97bc605" ParentGuid="00000000-0000-0000-0000-000000000000" Value="15021963725b23858bdeea00.24332190" />
+<EnhancedActInputValue Guid="cf427764-a792-4b44-9fec-d56f72feeeaf" Param="{CALLERID}" ParamGuid="12d859b8-78df-4c0d-948d-3c380930ad11" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+<EnhancedActInputValue Guid="5f8dca19-d77d-48ba-a16d-199817efb960" Param="{CORRELATIONID}" ParamGuid="3c7117ee-e4a4-4b3f-9f66-106453bf40d8" ParentGuid="00000000-0000-0000-0000-000000000000" Value="85666303586a31188b771d75bb837e5a" />
+<EnhancedActInputValue Guid="2c6ffe96-cc9d-4817-87a1-7eecf0605334" Param="{FRONTENDUSERID}" ParamGuid="4d7758b5-4188-4a3f-8446-99b8c65d3e18" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="d6f4739e-4965-4c26-a378-c79754f0cc02" Param="{SOURCERESERVATIONID}" ParamGuid="04753123-456f-4516-ae10-df049116bee4" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="e1b147ca-e155-412c-b74d-6f429fbd7037" Param="{ARTICLENUMBER}" ParamGuid="979fcd5d-9dbf-41f4-9638-8a01dc88ccba" ParentGuid="00000000-0000-0000-0000-000000000000" Value="00301354" />
+<EnhancedActInputValue Guid="41a520f3-60a4-43be-ba68-a5d284236588" Param="{QUANTITY}" ParamGuid="b2c4e8c9-9cc5-4212-a20e-d01ad0c72988" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="bf4051a5-1419-4e75-9d5d-ab014bc7f032" Param="{UNITOFMEASURE}" ParamGuid="c46863c3-ed3a-47b9-b137-ce1bddd50305" ParentGuid="00000000-0000-0000-0000-000000000000" Value="PCE" />
+<EnhancedActInputValue Guid="6f85c198-2a7c-4d5c-b06a-2ae5d863b481" Param="{ORDERLINEID}" ParamGuid="505c92d2-faf0-4e4a-8724-f95ac14aeee5" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="d197d66e-9bed-47a6-ab7b-b53cc5c92c98" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="5052fd82-d3f4-4a5b-b7b1-946c17de4a7f" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_CreateOrAddLink" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="c4990e41-efb0-43f0-9818-5bcdd72bd8c9" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_CreateOrAddLink- API Model Execution" Guid="351803ee-3832-4190-ba6c-4443babace2b" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="7bef8fcd-48e3-4b3d-a60e-0433c57137cd" Param="{TYPE}" ParamGuid="96e291c5-dc7a-4cd4-ae1b-91657d7c230e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CreateOrAddLink" />
+<EnhancedActInputValue Guid="3b4de93c-4787-4953-a696-790a703dcbd0" Param="{ID}" ParamGuid="1ce37ea6-0ed7-442d-9b9a-77b9534de722" ParentGuid="00000000-0000-0000-0000-000000000000" Value="48231657" />
+<EnhancedActInputValue Guid="c06097ef-1dbc-4d03-9990-85fbf30de50f" Param="{CALLERID}" ParamGuid="91914ae9-5f1f-42f8-b5e0-fbddc2191ab7" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+<EnhancedActInputValue Guid="78f4ef40-eea8-4637-a990-91cd16568221" Param="{CORRELATIONID}" ParamGuid="0ed61bb6-64d6-4492-b764-4ea1ff766072" ParentGuid="00000000-0000-0000-0000-000000000000" Value="c032d40f171b681c6ed504168c65e831" />
+<EnhancedActInputValue Guid="99b2d044-ad9e-47e2-aec4-b44f3b53f7c1" Param="{FRONTENDUSERID}" ParamGuid="81b2d095-efd1-4c43-ae52-965624f65f0a" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="4151dda7-2b08-474d-923f-6ab77979f447" Param="{LINKTYPE}" ParamGuid="d89735ce-0eaa-4127-87e8-ea5764eaa8c2" ParentGuid="00000000-0000-0000-0000-000000000000" Value="LEGAL" />
+<EnhancedActInputValue Guid="75e65c85-e07e-4bc2-88c6-ae2d6d5314bf" Param="{LINKSTATUS}" ParamGuid="0bd9c818-6fe3-49f4-b8dc-bd7528883c22" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ACTIVE" />
+<EnhancedActInputValue Guid="6f25aa23-d1d5-4608-8bed-db4167b7f9c0" Param="{TARGETGLOBALID}" ParamGuid="c9c3688c-e96d-417b-af7d-806ddb2c62f9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="3b784efa-9bfc-45c0-8646-f44c9e11f2f2" Param="{APPROVALREFERENCEID}" ParamGuid="feed99c7-bd77-4ffb-b299-9cabcecd06e9" ParentGuid="00000000-0000-0000-0000-000000000000" Value="saurav" />
+<EnhancedActInputValue Guid="db252fd0-8c73-4ea7-9f63-e9361da7bda6" Param="{GLOBALID}" ParamGuid="3c8ebae3-4545-4189-a429-3103e84416eb" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FN_002883726743" />
+<EnhancedActInputValue Guid="b1aac39d-e4aa-4fa1-9ec6-5e8b5473b0aa" Param="{GLOBALID1}" ParamGuid="7409d9f0-fa37-4ccd-a612-b1616369fd65" ParentGuid="00000000-0000-0000-0000-000000000000" Value="KS_20021152" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="4a1b33d5-734f-4cd9-83c5-bb0eb095a95f" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="846052e3-7b79-4418-94ce-54708f9d8015" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Soap_GetAvailableShippingOptions" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="c4d6086e-eb8a-4e95-9f2c-4f8ca073e57c" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="MyWebServicesApp" Type="Regular">
+<Acts>
+<ActWebAPIModel Active="True" Description="Soap_GetAvailableShippingOptions- API Model Execution" Guid="fccb8b87-0c75-4947-b26b-21b49e82b66c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="WebServices" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="e41ed8e7-9f3b-4af2-8966-def50ea499f1" Param="{ACTION}" ParamGuid="77ee84a4-30b5-4c11-990f-1b68d28aa8fd" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetAvailableShippingOptions" />
+<EnhancedActInputValue Guid="688ab5bf-718a-45fe-afbf-a27a87c96a21" Param="{XMLNS}" ParamGuid="b8b3ea2f-4aae-42be-8a61-d02069e87d94" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://schemas.microsoft.com/ws/2005/05/addressing/none" />
+<EnhancedActInputValue Guid="2476f37b-2af9-4da1-a38c-ade5f0dc12d4" Param="{TYPE}" ParamGuid="08ce3134-d640-43d6-8a11-9bc556394eaf" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetAvailableShippingOptions" />
+<EnhancedActInputValue Guid="9096e808-b9f1-4831-a6d2-f3361606b5c1" Param="{ID}" ParamGuid="84dd8cf4-7190-4e03-9532-741a4a9f1391" ParentGuid="00000000-0000-0000-0000-000000000000" Value="15124329065b2146946951a4.98295657" />
+<EnhancedActInputValue Guid="d1a65c27-2b60-40ae-8127-c1c06b08ce78" Param="{CALLERID}" ParamGuid="48fff0aa-bbe9-442e-9d65-76c63861b106" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+<EnhancedActInputValue Guid="f3fcaebd-da67-49b3-8055-fd2816b0bd12" Param="{CORRELATIONID}" ParamGuid="83720c2e-5c9d-451c-9541-ab04b25c8dcf" ParentGuid="00000000-0000-0000-0000-000000000000" Value="e3909233d301975e747899b1b73a59eb" />
+<EnhancedActInputValue Guid="04a11e03-88ac-4cc7-9551-1e6ca3ec6710" Param="{FRONTENDUSERID}" ParamGuid="2f635df6-a6da-496d-8cd4-e94d8da9abf1" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="27b7ca7f-fc2e-4a39-bf4b-b6841f7bb17d" Param="{CALLINGAPPLICATION}" ParamGuid="026f8949-02d3-482b-9304-5d50f82fa17f" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+<EnhancedActInputValue Guid="b03a8ae4-8c4e-45ab-b0a2-c8c366ea771d" Param="{IDENTMETHOD}" ParamGuid="1d6deb99-0660-4fe1-814b-80a403c3dd9e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Door" />
+<EnhancedActInputValue Guid="3132ec03-08cc-45c9-ba37-d3001d89f24c" Param="{DISTRIBUTIONCHANNEL}" ParamGuid="b2040834-ff9b-4ba4-bbb4-eff653782632" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CP" />
+<EnhancedActInputValue Guid="e3cb8337-2dac-4a74-843e-be0faea093d6" Param="{ACTIVITYTYPE}" ParamGuid="4fc8ba60-6964-48d4-ba69-6909fbc6f2ba" ParentGuid="00000000-0000-0000-0000-000000000000" Value="HMK" />
+<EnhancedActInputValue Guid="da095e61-e9f3-494e-ab25-9b30cedd11a1" Param="{POSTALCODE}" ParamGuid="e90dd4cb-3020-4029-ba5a-c4f2e83317d2" ParentGuid="00000000-0000-0000-0000-000000000000" Value="22307" />
+<EnhancedActInputValue Guid="796d19cd-07ae-4eae-aed6-fa7ad33e3452" Param="{FIELDNAME}" ParamGuid="d8c40979-e378-458e-b570-860be86170c3" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DELADDRTYP" />
+<EnhancedActInputValue Guid="ec9345b5-c9a2-4cb0-b22f-6b9632affeb5" Param="{SIGN}" ParamGuid="6359c5c9-13ed-4b75-b6b8-e37272da0019" ParentGuid="00000000-0000-0000-0000-000000000000" Value="I" />
+<EnhancedActInputValue Guid="aba954ef-6a93-4967-8188-450204aa20ad" Param="{OPTION}" ParamGuid="f2f70231-7e02-4f1c-b8bb-13a380abc339" ParentGuid="00000000-0000-0000-0000-000000000000" Value="EQ" />
+<EnhancedActInputValue Guid="3e22737d-a5b3-4032-ae5b-cc6069df673e" Param="{LOW}" ParamGuid="3520b6d8-2825-4108-836d-d6cce563dba0" ParentGuid="00000000-0000-0000-0000-000000000000" Value="000" />
+<EnhancedActInputValue Guid="e7ead5d5-77d5-4932-837a-e70702f71c8d" Param="{ORDERLINEID}" ParamGuid="edcb7cd0-16e9-4f2c-9baa-8458a60325f4" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="b67d12e2-8cd0-4ef6-94aa-486c50d420cc" Param="{ARTICLENUMBER}" ParamGuid="07c1212d-128f-42f9-9789-3b1ddc623192" ParentGuid="00000000-0000-0000-0000-000000000000" Value="00301354" />
+<EnhancedActInputValue Guid="b8da6a05-78dd-4ffa-918d-ae85d3079ec8" Param="{QUANTITY}" ParamGuid="b98f79a5-f390-4742-a2a4-06dc2475a5ba" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+<EnhancedActInputValue Guid="f2f8c6b8-f23e-4815-850b-0cfa9f78c838" Param="{UNITOFMEASUREMENT}" ParamGuid="abee6d6a-8d91-444d-b552-bf2d7fd5286e" ParentGuid="00000000-0000-0000-0000-000000000000" Value="PCE" />
+<EnhancedActInputValue Guid="88a3cec0-0e70-44d9-b95b-dd0c8d20059b" Param="{CASHONDELIVERYFLAG}" ParamGuid="ec280f4c-16a2-4d14-b723-2828ea9e5077" ParentGuid="00000000-0000-0000-0000-000000000000" Value="false" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="00777ce0-5b05-48af-85c2-ba4be1c50bba" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="0ada6072-3df2-4d01-b427-89671f24a7ed" />
+</InputValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="cd1df023-30c0-4bcd-90f6-925b42b6aeb7" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="32c081cf-640e-475d-9a04-68e8a6f28d5f" ActivityName="SoapValidateAndConvertIBAN" Guid="493c1069-e52f-4493-8e52-e9b0b0c1e34a" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="3da6bd37-0032-40e0-be26-5f2de2bca119" ActivityName="SoapGetProductAvalability" Guid="fda98486-5a6d-4cdf-b2d2-f7f581d30488" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="018a28b3-8e2c-4b9e-aa35-041b16ca0ff3" ActivityName="Soap_GetProduct" Guid="b6fa5e11-7dbe-4e4c-b0e5-a55a6f00c604" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="db92ac3f-e773-404d-a8f1-3ae1d0a2b084" ActivityName="Soap_SubsidizedHandset" Guid="8074d59b-b9c2-45a1-a413-036eae3fb6c7" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="682dbfb9-7c47-4c77-93fa-de814b8f710a" ActivityName="Soap_LegacySearch" Guid="9af9d35d-ef43-4121-845b-3b900cbde21f" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="7e7f2700-c88a-4d40-a6b0-5ed07159f120" ActivityName="Soap_ValidateAddress" Guid="c32ac115-d758-4385-91e5-f521fd210b95" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="247dbd78-8327-4e5c-ada3-4dbdf055633a" ActivityName="GetInvalidProducts" Guid="b8d327d8-b112-41d7-b39f-d2bd56022cf4" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="b2e789dc-d636-4fc4-be38-5c9d8032f597" ActivityName="Soap_GetNonStandardRates" Guid="953acbc5-eb1a-4eeb-a2d2-1b1209cdd8a6" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="144eb32c-bb57-45d0-b161-82548dd8b0a5" ActivityName="Soap_GetConfigurationData" Guid="379fdba8-a783-4cf3-ac66-92ddf91e45ed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="b1fa22ca-433a-4be6-bf19-c869db29b5ba" ActivityName="Soap_GetSmartCardType" Guid="f533578d-c11d-46c5-ad26-cde73a08f19c" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="268d6dbf-4c2c-414e-93ee-cfa7813088e9" ActivityName="Soap_GetSmartCarsCompatability" Guid="40d579c2-e96a-42e7-968b-509b60a729c3" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="82d9d6b2-32f1-47bc-bf8f-6a7b2171a739" ActivityName="Soap_GetIpEquipmentFeatures" Guid="61d094b2-6f12-4f15-8ee4-d1ba93463cfb" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="f3979d83-ceaa-4d30-ab7f-1909ecba50cc" ActivityName="Soap_GetCablePaymentAndPayerInformation" Guid="36693685-ff8a-46fe-8608-b6d44fb20eb2" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="c480227a-c97e-419a-acac-9f64001a1729" ActivityName="Soap_CreateOrCancelStockReservation" Guid="5b254dac-5fb3-4cf4-8518-aafd4ccead42" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="c4990e41-efb0-43f0-9818-5bcdd72bd8c9" ActivityName="Soap_CreateOrAddLink" Guid="18c0845d-e2f4-42d4-9388-32f79f22887c" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="c4d6086e-eb8a-4e95-9f2c-4f8ca073e57c" ActivityName="Soap_GetAvailableShippingOptions" Guid="b93ada03-d1b3-49a6-8ab6-ea063e7cc88b" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="MyWebServicesApp" Guid="2abd72e7-c659-4788-a1fe-b5379412b966" LastExecutingAgentName="API" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="775b6dbe-93e5-4bb8-ae21-0c15867f6e70" MappedOutputType="None" Name="New Variable String" ParentGuid="022d7e33-b282-48ca-a93a-f1f18d973adb" ParentName="OSF_Testing" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

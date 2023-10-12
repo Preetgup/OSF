@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="4934159b-f93b-47bf-823e-1c7d1eb9e568" ItemType="Activity" CreatedBy="Piyush.Thakre" Created="202201102022" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Piyush.Thakre" LastUpdate="202201102022" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Set Channel RETAIL" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="4934159b-f93b-47bf-823e-1c7d1eb9e568" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActSetVariableValue Active="True" Description="Set Channel RETAIL" Guid="6f37edcd-f8a1-4a57-b583-1ef906c00966" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="BF_CHANNEL" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToActivityByName" Guid="357f2048-6758-4a8b-972c-2244133b3a45" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="[UI] - Open OSF CHANNEL" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="76925c5e-16bd-4a65-aed0-fd8c6845c2b5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="RETAIL" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableString Guid="a3b056d0-5e58-45bd-8c18-cbfd0ad1f982" InitialStringValue="TELESALES" MappedOutputType="None" Name="BF_CHANNEL" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

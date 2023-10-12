@@ -1,0 +1,33 @@
+POST http://deossevr:8001/VFDECreateOrAddLinkEG/VFDE HTTP/1.1
+Authorization: Basic T21uaXVzOk9tbml1c19TaXQ=
+Content-Type: text/xml; charset=utf-8
+Content-Length: 1060
+Host: deossevr:8001
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/link/VFDECreateOrAddLink" xmlns:vfd1="http://amdocs/vfde/link/VFDECreateOrAddLinkInput">
+  <soapenv:Header />
+  <soapenv:Body>
+    <vfd:VFDECreateOrAddLinkRequest>
+      <vfd1:ROOT>
+        <Event>
+          <Type>CreateOrAddLink</Type>
+          <ID>48231657</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>c032d40f171b681c6ed504168c65e831</CorrelationID>
+          <FrontendUserId>1</FrontendUserId>
+        </Event>
+        <DATA>
+          <LinkType>LEGAL</LinkType>
+          <LinkStatus>ACTIVE</LinkStatus>
+          <!--Optional:-->
+          <TargetGlobalID></TargetGlobalID>
+          <ApprovalReferenceID>saurav</ApprovalReferenceID>
+          <SourceGlobalIDList>
+            <GlobalID>FN_002883726743</GlobalID>
+            <GlobalID>KS_20021152</GlobalID>
+          </SourceGlobalIDList>
+        </DATA>
+      </vfd1:ROOT>
+    </vfd:VFDECreateOrAddLinkRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

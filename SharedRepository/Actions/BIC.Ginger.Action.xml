@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="6e4082d5-52a6-45c0-835b-cd12a97c75d4" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202202101028" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202202101028" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="BIC" Guid="6e4082d5-52a6-45c0-835b-cd12a97c75d4" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7b8e5181-d051-4977-a1d7-01631160e495" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='BIC'" />
+<ActInputValue Guid="45fd4666-fc16-42de-9c02-86bc844d4e55" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="628ad9b9-60bb-48dc-b6be-7383003cb8ac" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="dc3cc112-a2e8-4ae8-8e3f-82426ab7ca44" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="61df3e14-560a-48fb-a8f0-2de45175dbb3" mExpected="{CS Exp=@{Actual}.Length&gt;0}" Operator="Evaluate" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'BIC' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;BIC&quot;}" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

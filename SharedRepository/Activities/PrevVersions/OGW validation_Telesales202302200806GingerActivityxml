@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="e0442773-d9e6-441e-8685-4e9b8ced9af2" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302200704" GingerVersion="5.1.0.0" Version="2" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302200705" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="OGW validation_Telesales" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e0442773-d9e6-441e-8685-4e9b8ced9af2" ParentGuid="7f831f40-60d6-4a2d-bf87-88790a02de95" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="cable/DSL" DBValidationType="FreeSQL" Description="FRIDA Approval_copy" EnableRetryMechanism="True" Guid="ca5ceb49-ef0c-4c53-8b7c-0a9db642a6a6" MaxNumberOfRetries="55" ParentGuid="ec1dda05-160f-489b-a160-c1aadded8d87" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="739a3c69-f06c-4b69-9847-3a07a8c70978" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="1dc1c8f2-9f68-4c37-a573-da08fd453429" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="161bd2f5-7b4b-4197-934f-60207dfc80a8" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select * from {EnvParam App=OGW Param=Casandra}.service_monitoring where extmtxt07='InProgress-ApprovedByRiskEditor' &#xD;&#xA;and Service_name= 'Approved By Risk Editor' and extltxt05='{Var Name=Order id}' Allow Filtering" />
+<ActInputValue Guid="101e9a56-aade-44af-a702-5038cd022044" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="92289635-6573-4bf3-a227-a850a2d62ee3" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="838e15dd-9f39-4444-a016-99609dcd1392" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="24cc83e5-d422-40db-8d52-82a1ec106141" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2f720813-733d-4563-a462-e1be357acfec" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9729292c-2ded-4515-8f3e-0dec28610ebc" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="7e339190-48d9-4694-939a-d5be8401aa16" mExpected="InProgress-ApprovedByRiskEditor" Operator="Equals" Param="extmtxt07" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="383e5279-aeb4-40aa-9773-7516535f47e7" mExpected="Approved By Risk Editor" Operator="Equals" Param="service_name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="cable/DSL" DBValidationType="FreeSQL" Description="OGW Backend validation" EnableRetryMechanism="True" Guid="539ef081-e169-4bfe-8092-df79f9071899" MaxNumberOfRetries="10" ParentGuid="7e003c10-58ed-4af7-b479-9d389caf6bf5" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="8165027f-966f-48ac-8a02-328afffe9900" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="StopBusinessFlow" Guid="c0690c3a-742a-40b6-8837-25cf23a152e2" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="bfa881ae-39dc-4edb-ae01-cf9e38d9d651" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select cdm_txid,cdm_entity_txid, target_system, target_main_entity_id, status,ctcr_sys_cre_dt, ctcr_source_message_name&#xD;&#xA;from {EnvParam App=OGW Param=Casandra}.og_cdm_entity_targets where cdm_txid='{Var Name=Source_id}' and ctcr_source_message_name='cdm/updateCDM/update_cdm_entity_target.fxml' ALLOW FILTERING" />
+<ActInputValue Guid="b6afc493-bf0c-4fb7-add7-baa1eda754b9" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="9fc27da5-2ba8-4858-91af-e05b26e6997c" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7c4cb886-0c95-4a19-82a7-9025ee915ce1" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="61f8c4db-39ab-4502-a9bb-30bc3112310e" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b598d151-a23e-44f6-932c-c91b9b5e7713" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a0c9af83-40db-44f7-aab3-d68561a523d8" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="7d291079-3ff9-4fe2-b8f7-a988ff4aef92" mExpected="InProgress-SubmittedToBackend" Operator="Equals" Param="status" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="5c6057d8-ba4f-4cf7-be16-1c0e56f4151f" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="f382928f-ee81-4334-9cae-970fe72458b9" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_ID" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

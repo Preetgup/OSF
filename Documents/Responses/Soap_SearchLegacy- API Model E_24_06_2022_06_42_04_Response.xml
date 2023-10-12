@@ -1,0 +1,44 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: LegacySearchRequest
+Keep-Alive: timeout=60
+Connection: keep-alive
+Date: Fri, 24 Jun 2022 04:42:04 GMT
+Server: JESI Server
+Content-Length: 1529
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:LegacySearchResponse xmlns:ns100="http://amdocs/vfde/customer/VFDELegacySearch">
+      <ROOT xmlns="http://amdocs/vfde/customer/VFDELegacySearchOutput">
+        <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/customer/VFDELegacySearch" xmlns:vfd1="http://amdocs/vfde/customer/VFDELegacySearchInput" xmlns="">
+          <Type>Soap_LegacySearch</Type>
+          <ID>13583532125d3ec024e58d30.06123278</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>le1l0qgv9hbegmhdg27l3o2sl2</CorrelationID>
+          <FrontendUserId>1</FrontendUserId>
+        </Event>
+        <DATA xmlns="">
+          <RowCount>1</RowCount>
+          <CustomerResult>
+            <GlobalId>LK_754</GlobalId>
+            <FirstName>Johanna</FirstName>
+            <LastName>Uhl</LastName>
+            <BirthDate>1982-10-19</BirthDate>
+            <HouseNumber>11</HouseNumber>
+            <Street>Bärengasse</Street>
+            <ZipCode>97070</ZipCode>
+            <City>Würzburg</City>
+            <PhoneNumber>(0931) 329 061 94</PhoneNumber>
+            <CustomerType>P</CustomerType>
+            <CustomerStatus>AK</CustomerStatus>
+          </CustomerResult>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-0000</ErrorCode>
+          <ErrorDescription>SUCCESS</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:LegacySearchResponse>
+  </env:Body>
+</env:Envelope>

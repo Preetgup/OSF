@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="bd6ff783-ba51-4c40-8aaf-0ae697995245" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111170826" GingerVersion="3.9.0.0" Version="3" LastUpdateBy="Petros.Dimitriou" LastUpdate="202204280728" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEGetCablePaymentAndPayerInformationEG/VFDE" Guid="bd6ff783-ba51-4c40-8aaf-0ae697995245" Name="OSF_GetCablePaymentAndPayerInformation" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/payment/VFDEGetCablePaymentAndPayerInformation&quot; xmlns:vfd1=&quot;http://amdocs/vfde/payment/VFDEGetCablePaymentAndPayerInformationInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:VFDEGetCablePaymentAndPayerInformationRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;IBAN&gt;{IBAN}&lt;/IBAN&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:VFDEGetCablePaymentAndPayerInformationRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="c7594908-9224-4c81-ae25-8537b8177b3e" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDEGetCablePaymentAndPayerInformationRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="31251569-f85c-48e5-85f1-dad307cef212" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetPayerAndPaymentInfo" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="a7263381-b795-4df7-88a8-43020420cc8f" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDEGetCablePaymentAndPayerInformationRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="ebb179d7-4eed-4206-86ea-03b5bda38feb" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="591eea20ba231" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="eddf3d02-0536-4803-ae5d-ad06eecdbc62" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDEGetCablePaymentAndPayerInformationRequest[1]/vfd1:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="ab024762-014a-4f16-b8db-36c75592d2d2" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="0b047c52-55ce-4d23-bd15-3d34e6ea2b13" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDEGetCablePaymentAndPayerInformationRequest[1]/vfd1:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="f9303610-c34e-4621-84d5-b85c7518151d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="a8re0i1nrp4fr0rtshdjejreseqtnosc" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="ccd7bf9c-a1cb-4438-851f-ba68d9d988af" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDEGetCablePaymentAndPayerInformationRequest[1]/vfd1:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="a6b46d2c-44e6-463d-9715-958bd177ac81" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="3a680b60-d4ec-448a-bda9-a27d04f48194" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:VFDEGetCablePaymentAndPayerInformationRequest[1]/vfd1:ROOT[1]/DATA[1]/IBAN[1]" PlaceHolder="{IBAN}" TagName="IBAN">
+<OptionalValuesList>
+<OptionalValue Guid="2f030580-4fef-486c-903b-5fc83b8b6d38" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE61100700240092822600" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

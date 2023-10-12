@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="37f91a1d-c5d1-47d5-a24f-8dbed03756d6" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111161132" GingerVersion="3.6.0.0" Version="33" LastUpdateBy="piyush.thakre" LastUpdate="202111190924" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossfvr.dc-ratingen.de:8001/VFDEValidateAddressEG/VFDE" Guid="37f91a1d-c5d1-47d5-a24f-8dbed03756d6" Name="OSF_ValidateAddress" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/address/VFDEValidateAddress&quot; xmlns:vfd1=&quot;http://amdocs/vfde/address/VFDEValidateAddressInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;   &lt;soapenv:Header&gt;&#xA;  &lt;wsse:Security xmlns:wsse=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&#xA;   xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xA;    &lt;wsse:UsernameToken wsu:Id=&quot;UsernameToken-{Function Fun=GetHashCode({Function Fun=GetGUID()})}&quot;&gt;&#xA;    &lt;wsse:Username&gt;{WSSECUSERNAME}&lt;/wsse:Username&gt;&#xA;    &lt;wsse:Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;{WSSECPASSWORD}&lt;/wsse:Password&gt;&#xA;    &lt;wsse:Nonce EncodingType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary&quot;&gt;{Function Fun=GenerateHashCode(&quot;{Function Fun=GetGUID()}wssecpassword&quot;)}=&lt;/wsse:Nonce&gt;&#xA;    &lt;wsu:Created&gt;{Function Fun=GetUTCTimeStamp()}&lt;/wsu:Created&gt;&#xA;   &lt;/wsse:UsernameToken&gt;&#xA;  &lt;/wsse:Security&gt;&#xA; &lt;/soapenv:Header&gt;&#xA;&lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:ValidateAddressRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;Portal&gt;{PORTAL}&lt;/Portal&gt;&#xD;&#xA;          &lt;ZipCode&gt;{ZIPCODE}&lt;/ZipCode&gt;&#xD;&#xA;          &lt;City&gt;{CITY}&lt;/City&gt;&#xD;&#xA;          &lt;Street&gt;{STREET}&lt;/Street&gt;&#xD;&#xA;          &lt;HouseNumber&gt;{HOUSENUMBER}&lt;/HouseNumber&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:ValidateAddressRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" SOAPAction="&quot;&quot;" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="c98e235f-a53d-436a-bcd4-e4d0d18165dd" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="40b3e8eb-2ecd-4358-804d-668d035d307f" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ValidateAddress" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="5b0c5676-7d80-47ed-a3b7-86d01dfd39af" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="3945f044-67fa-4fed-8520-08496a0f41ed" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Saurav12345" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="7d74abc4-f4fd-4b39-8319-0f5d21e3fa27" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/Portal[1]" PlaceHolder="{PORTAL}" TagName="Portal">
+<OptionalValuesList>
+<OptionalValue Guid="409b000c-ff39-4762-82f7-4bb7cc9993c0" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OFT" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="38747030-f79f-4038-9bdd-15a1362bf85c" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/ZipCode[1]" PlaceHolder="{ZIPCODE}" TagName="ZipCode">
+<OptionalValuesList>
+<OptionalValue Guid="d9ab568b-c14d-4e0f-bdad-b1030703f9b5" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="10179" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="64676446-3968-4715-a57d-b6b4fbaf0b19" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/City[1]" PlaceHolder="{CITY}" TagName="City">
+<OptionalValuesList>
+<OptionalValue Guid="300677f1-60ce-4344-a9d7-cfc49b6c7bdb" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Berlin" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="d822b032-f7e3-448e-9f19-1033448d0a67" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/Street[1]" PlaceHolder="{STREET}" TagName="Street">
+<OptionalValuesList>
+<OptionalValue Guid="08b5fae9-abf5-4078-b871-e7bfa2ab5299" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Singerstr." />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c0632e78-4178-42d3-bf4c-d0bc29b8a643" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/HouseNumber[1]" PlaceHolder="{HOUSENUMBER}" TagName="HouseNumber">
+<OptionalValuesList>
+<OptionalValue Guid="5649032d-be77-4090-9a48-40270db86dfc" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="109" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="2dd5e6d3-38c2-452c-894f-5608798ab76f" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="{WSSECUSERNAME}" />
+<AppModelParameter Guid="cf5dc570-206c-44f7-aa4c-e8a58ddab0ae" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="{WSSECPASSWORD}" />
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

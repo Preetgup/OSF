@@ -1,0 +1,115 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:GetProductAvailabilityResponse xmlns:ns100="http://amdocs/vfde/product/VFDEGetProductAvailability">
+      <ROOT xmlns="http://amdocs/vfde/product/VFDEGetProductAvailabilityOutput">
+        <Event xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns0="http://amdocs/vfde/product/VFDEGetProductAvailability" xmlns:ns2="http://amdocs/vfde/product/VFDEGetProductAvailabilityInput" xmlns:ns1="http://amdocs/vfde/common/VFDECommonTypes" xmlns:ns3="http://amdocs/vfde/product/VFDEGetProductAvailabilityOutput" xmlns="">
+          <Type>VFDEGetProductAvailability</Type>
+          <ID>37992519602b9aca1db9d0.02630815</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>9b61rk9vgq4srd239d8lu3fri1</CorrelationID>
+          <FrontendUserId>4311</FrontendUserId>
+          <SalesChannel>telesales</SalesChannel>
+        </Event>
+        <DATA xmlns="">
+          <KDAvailability>
+            <ServiceCategoryInfo>
+              <ServiceCategory>KAI</ServiceCategory>
+              <ProviderType>KDG</ProviderType>
+              <Marketability>C</Marketability>
+              <MarketingText>Bestellung unter Vorbehalt:&lt;br /&gt;Hohe Auslastung! Cable-Anschlussadresse mit m&amp;ouml;glichen Stabilit&amp;auml;ts- und Geschwindigkeitsschwankungen. Alternativ DSL, Glasfaser oder GigaCube anbieten. Kapazit&amp;auml;tserh&amp;ouml;hung in Vorbereitung.</MarketingText>
+              <MieterBonus>true</MieterBonus>
+            </ServiceCategoryInfo>
+            <ServiceCategoryInfo>
+              <ServiceCategory>KAD</ServiceCategory>
+              <ProviderType>KDG</ProviderType>
+              <Marketability>B</Marketability>
+              <MarketingText>Kabel Digital ist an der angegebenen Adresse verf&amp;uuml;gbar und vermarktbar.&lt;br /&gt;Sie k&amp;ouml;nnen einen Auftrag erfassen.&lt;br /&gt;&lt;br /&gt;Ein Kabelanschlussvertrag ist vorhanden.</MarketingText>
+              <MieterBonus>true</MieterBonus>
+            </ServiceCategoryInfo>
+            <ServiceCategoryInfo>
+              <ServiceCategory>KAA</ServiceCategory>
+              <ProviderType>KDG</ProviderType>
+              <Marketability>A</Marketability>
+              <MarketingText>An der angegebenen Adresse ist Kabelanschluss nicht vermarktbar.&lt;br /&gt;Der Kunde verf&amp;uuml;gt bereits &amp;uuml;ber einen aktiven Kabelanschlussvertrag.&lt;br /&gt;Sie k&amp;ouml;nnen daher derzeit keinen Vertrag erfassen.</MarketingText>
+              <MieterBonus>true</MieterBonus>
+            </ServiceCategoryInfo>
+            <ServiceCategoryInfo>
+              <ServiceCategory>KUD</ServiceCategory>
+              <ProviderType>KDG</ProviderType>
+              <Marketability>B</Marketability>
+              <MarketingText>Unabhängige Dienste sind verfügbar.</MarketingText>
+              <MieterBonus>true</MieterBonus>
+            </ServiceCategoryInfo>
+            <ObjectTags>
+              <Key>vodVermarktbarkeitsKz</Key>
+              <Value>N</Value>
+            </ObjectTags>
+            <ObjectTags>
+              <Key>vermarktbareDatentransferrate</Key>
+              <Value>1000</Value>
+            </ObjectTags>
+            <ObjectTags>
+              <Key>NE4Typ</Key>
+              <Value>EigeneNE4</Value>
+            </ObjectTags>
+            <ObjectTags>
+              <Key>satZusatzKz</Key>
+              <Value>N</Value>
+            </ObjectTags>
+            <ObjectTags>
+              <Key>selbstInstallationKz</Key>
+              <Value>N</Value>
+            </ObjectTags>
+            <ObjectTags>
+              <Key>kipAusbauStatusKz</Key>
+              <Value>TV5</Value>
+            </ObjectTags>
+            <ObjectTags>
+              <Key>docsisVersion</Key>
+              <Value>3.1</Value>
+            </ObjectTags>
+            <ObjectTags>
+              <Key>vermarktbareDatentransferrateUS</Key>
+              <Value>50</Value>
+            </ObjectTags>
+            <ObjectTags>
+              <Key>startDatum</Key>
+              <Value />
+            </ObjectTags>
+            <ObjectTags>
+              <Key>MMDAdapterVersenden</Key>
+              <Value>N</Value>
+            </ObjectTags>
+            <ObjectTags>
+              <Key>projektKennzeichen</Key>
+              <Value />
+            </ObjectTags>
+            <ObjectTags>
+              <Key>expressUpgradeKz</Key>
+              <Value>N</Value>
+            </ObjectTags>
+            <BuildingInfo>
+              <ObjectCategory>NE4-M51-D</ObjectCategory>
+              <ObjectCategoryPresentationText>MNV-Wohnung digital mit 512k</ObjectCategoryPresentationText>
+              <HasAnalogPrerequisite>true</HasAnalogPrerequisite>
+              <MaxUnits>14</MaxUnits>
+              <SoldUnits>14</SoldUnits>
+              <FreeUnits>0</FreeUnits>
+              <NdpState>7</NdpState>
+              <NdpStatePresentationText>ÜP betriebsbereit und beschaltet</NdpStatePresentationText>
+              <ObjectType>MFH</ObjectType>
+              <NvType>MNV_OBJECT_BASIC_CONTRACT</NvType>
+              <ContractType>DIGITAL</ContractType>
+            </BuildingInfo>
+          </KDAvailability>
+          <KDCallStatus>SUCCESS</KDCallStatus>
+          <FNCallStatus>OGWERR-3000-An error was encountered while invoking FN GetProductAvailibilty WS.Details [Error_Code: JESIERR-4 , Error_Message: [HTTPAdaptor] Can not connect to HTTP Server[adeagikh:8443], Status[504], Message[]  , Error_Type: technical , Error_Severity: High , Error_Information: ]</FNCallStatus>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-1505</ErrorCode>
+          <ErrorDescription>Error response received from one or more backend services.Please check each backend service call status field for further details.</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:GetProductAvailabilityResponse>
+  </env:Body>
+</env:Envelope>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2f3dc3eb-825c-41f0-bbe6-cae6a26c9f35" ItemType="BusinessFlow" CreatedBy="gourang.jiddewar" Created="202101061003" GingerVersion="3.6.0.0" Version="12" LastUpdateBy="Akshay.Sinha" LastUpdate="202101101044" />
+<BusinessFlow Guid="2f3dc3eb-825c-41f0-bbe6-cae6a26c9f35" Name="EXECUTION-RESULT" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Active">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="[REPORTING] - Get RUNNER Status" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="8de69edf-c636-4f9a-9598-807bcf526383" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActSetVariableValue Active="True" Description="[Variable] - Set STATUS" Guid="b676c8ff-ad6c-45d5-a6f7-4411cf22013a" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="STATUS" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="55c2ea48-60aa-431e-8d35-0d8d9ffa9bf5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=PreviousBusinessFlow Field=RunStatus}" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="[Variable] - Append STATUS to GLOBAL" Guid="989383fa-5270-47ef-94bd-936a4680ba0d" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="GLB_EXECUTION_STATUS" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="55c2ea48-60aa-431e-8d35-0d8d9ffa9bf5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=STATUS}" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="[REPORTING] - Get RUNNER Duration" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="2641552d-3aec-4172-9089-75d100c980db" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActSetVariableValue Active="True" Description="[Variable] - Get Duration" Guid="1e19c5e7-75c5-490c-abf1-338112eb43b1" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="TEMP" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="55c2ea48-60aa-431e-8d35-0d8d9ffa9bf5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=PreviousBusinessFlow Field=ElapsedSecs}" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="[Variable] - Alter Duration" Guid="a51aea9a-f7ee-4151-854b-c03bdc69ffd6" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="TEMP" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="55c2ea48-60aa-431e-8d35-0d8d9ffa9bf5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=@&quot;{Var Name=TEMP}&quot;.Replace(@&quot;,&quot;,@&quot;.&quot;)}" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="[Variable] - Extract Minutes" Guid="686bc384-9104-4f8a-a6a5-6cee5ae4b47e" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="ALTER" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="55c2ea48-60aa-431e-8d35-0d8d9ffa9bf5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp={Var Name=TEMP}/60.0}" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="[Variable] - Alter Final Duration" Guid="ed810ff7-af9f-4c0c-bddf-4fba618fc032" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="TIME" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="55c2ea48-60aa-431e-8d35-0d8d9ffa9bf5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=@&quot;{Var Name=ALTER}&quot;.Replace(@&quot;,&quot;,@&quot;.&quot;)}" />
+</InputValues>
+</ActSetVariableValue>
+<ActSetVariableValue Active="True" Description="[Variable] - Append DURATION to GLOBAL" Guid="7ac9ede6-9418-48f2-8cf4-c9916de60be5" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="GLB_EXECUTION_DURATION" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="55c2ea48-60aa-431e-8d35-0d8d9ffa9bf5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=TIME}" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableString Guid="9eb9459f-b48e-4e07-83e3-ada9175a3d70" MappedOutputType="None" Name="ALTER" ParentGuid="2641552d-3aec-4172-9089-75d100c980db" ParentName="EXECUTION-RESULT\Group\[REPORTING] - Get RUNNER Duration" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="4a81a89a-dddc-4d33-9db6-8fe9f4d23bc9" MappedOutputType="None" Name="TEMP" ParentGuid="2641552d-3aec-4172-9089-75d100c980db" ParentName="EXECUTION-RESULT\Group\[REPORTING] - Get RUNNER Duration" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="2cabcf6e-a392-48e4-b5d0-18338404c3e2" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="8de69edf-c636-4f9a-9598-807bcf526383" ActivityName="[REPORTING] - Get RUNNER Status" Guid="9840c34f-a335-40bf-86ac-08319e783d4e" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="2641552d-3aec-4172-9089-75d100c980db" ActivityName="[REPORTING] - Get RUNNER Duration" Guid="ef6ea586-9a38-4d72-9483-a012ad6b1ae9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="MyWebApp" Guid="dae2c9b6-e954-4ff1-a836-dbeb4134e883" LastExecutingAgentName="Chrome Virtual" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="3904e5d3-51a0-4e2f-8de9-57d078dab505" MappedOutputType="None" Name="STATUS" ParentGuid="2f3dc3eb-825c-41f0-bbe6-cae6a26c9f35" ParentName="EXECUTION-RESULT" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="31806052-cc3e-4ca5-a030-ccf0a09fb260" InitialStringValue="N/A" MappedOutputType="None" Name="TIME" ParentGuid="2f3dc3eb-825c-41f0-bbe6-cae6a26c9f35" ParentName="EXECUTION-RESULT" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

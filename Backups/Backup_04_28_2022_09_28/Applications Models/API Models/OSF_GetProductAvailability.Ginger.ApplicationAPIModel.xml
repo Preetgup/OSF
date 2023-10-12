@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="f685a65b-d922-4891-bfb9-a313f4a32eda" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111190912" GingerVersion="3.6.0.0" Version="4" LastUpdateBy="piyush.thakre" LastUpdate="202111190915" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossfvr.dc-ratingen.de:8001/VFDEGetProductAvailabilityEG/VFDE" Guid="f685a65b-d922-4891-bfb9-a313f4a32eda" Name="OSF_GetProductAvailability" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;s:Envelope xmlns:s=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xD;&#xA;  &lt;s:Header&gt;&#xD;&#xA;    &lt;Action xmlns=&quot;{XMLNS}&quot; s:mustUnderstand=&quot;1&quot;&gt;{ACTION}&lt;/Action&gt;&#xD;&#xA;  &lt;/s:Header&gt;&#xD;&#xA;  &lt;s:Body&gt;&#xD;&#xA;    &lt;ns0:GetProductAvailabilityRequest xmlns:ns0=&quot;http://amdocs/vfde/product/VFDEGetProductAvailability&quot; xmlns:ns2=&quot;http://amdocs/vfde/product/VFDEGetProductAvailabilityInput&quot; xmlns:ns3=&quot;http://amdocs/vfde/product/VFDEGetProductAvailabilityOutput&quot; xmlns:ns1=&quot;http://amdocs/vfde/common/VFDECommonTypes&quot;&gt;&#xD;&#xA;      &lt;ns2:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;          &lt;SalesChannel&gt;{SALESCHANNEL}&lt;/SalesChannel&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;KDAddressID&gt;{KDADDRESSID}&lt;/KDAddressID&gt;&#xD;&#xA;          &lt;Portal&gt;{PORTAL}&lt;/Portal&gt;&#xD;&#xA;          &lt;PostCode&gt;{POSTCODE}&lt;/PostCode&gt;&#xD;&#xA;          &lt;City&gt;{CITY}&lt;/City&gt;&#xD;&#xA;          &lt;District&gt;{DISTRICT}&lt;/District&gt;&#xD;&#xA;          &lt;Street&gt;{STREET}&lt;/Street&gt;&#xD;&#xA;          &lt;HouseNumber&gt;{HOUSENUMBER}&lt;/HouseNumber&gt;&#xD;&#xA;          &lt;HouseNumberAddition&gt;{HOUSENUMBERADDITION}&lt;/HouseNumberAddition&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/ns2:ROOT&gt;&#xD;&#xA;    &lt;/ns0:GetProductAvailabilityRequest&gt;&#xD;&#xA;  &lt;/s:Body&gt;&#xD;&#xA;&lt;/s:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" SOAPAction="&quot;&quot;" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="71ae08ca-449f-4074-b79b-e2b5878916d5" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{ACTION}" TagName="Action">
+<OptionalValuesList>
+<OptionalValue Guid="5e07af85-2ad0-484e-add9-2791ba5e0fd4" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SubsidizedHandsetValidation" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="a3cebee7-0638-466b-8672-474e527e7c8b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{XMLNS}" TagName="xmlns">
+<OptionalValuesList>
+<OptionalValue Guid="afad40aa-6f49-492a-8779-f4a52eb81b20" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://schemas.microsoft.com/ws/2005/05/addressing/none" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="71f895b1-4ae9-47d6-abfa-75cc3d924c8c" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="465cdd81-ecdf-4985-a025-1e328d065374" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetProductAvailability" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="97749425-75f9-4279-8549-c9ae9f8a7299" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="1e5c2fd6-e842-4c93-94eb-c132d1007894" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="37992519602b9aca1db9d0.02630815" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="75650de4-34d4-450d-9ae2-ae51c3b12a28" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="9117caeb-ef88-4449-8ffe-8f4f7d14e5e7" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="44c6dc2f-e85c-4536-90f0-a0aa75eb2548" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="6ee3ba85-a8e4-47c3-8525-e63990f3bff9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="9b61rk9vgq4srd239d8lu3fri1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="d905ae98-5337-46c8-a032-f9214683394b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="7e067056-9c9e-492d-9b0f-82f01dc29958" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4311" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="2569cb6e-e279-481c-a464-888b8734c6b9" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/Event[1]/SalesChannel[1]" PlaceHolder="{SALESCHANNEL}" TagName="SalesChannel">
+<OptionalValuesList>
+<OptionalValue Guid="776e9799-e20e-4b06-b6fb-7da87f4ff6de" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="telesales" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="3642c309-01e7-4bbb-8d23-24bcb7d78342" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/DATA[1]/KDAddressID[1]" PlaceHolder="{KDADDRESSID}" TagName="KDAddressID">
+<OptionalValuesList>
+<OptionalValue Guid="d714a7b8-f16e-4489-9fd7-e242435e1482" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="3070775" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="819592fb-0a1f-4a11-8d9f-176d237c23bb" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/DATA[1]/Portal[1]" PlaceHolder="{PORTAL}" TagName="Portal">
+<OptionalValuesList>
+<OptionalValue Guid="fd23e655-beb7-45f8-a23c-f45b76409081" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OFT" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="abfceba1-19ba-42bb-8698-fc23d490d936" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/DATA[1]/PostCode[1]" PlaceHolder="{POSTCODE}" TagName="PostCode">
+<OptionalValuesList>
+<OptionalValue Guid="4b883767-10b8-4be6-b37c-bc7b1b338ea5" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="13587" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="952586e0-7a80-4205-8644-a8f51e84ca31" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/DATA[1]/City[1]" PlaceHolder="{CITY}" TagName="City">
+<OptionalValuesList>
+<OptionalValue Guid="6e1bfb81-ae4d-48cf-9265-f929537c6a5d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Berlin" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="2521774a-611b-41dc-b8bf-6f028cd0a672" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/DATA[1]/District[1]" PlaceHolder="{DISTRICT}" TagName="District">
+<OptionalValuesList>
+<OptionalValue Guid="7461c8d5-b244-4ded-b697-486c6e203727" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="da58e3e3-9547-4e1e-8eb7-17d6ee0f1977" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/DATA[1]/Street[1]" PlaceHolder="{STREET}" TagName="Street">
+<OptionalValuesList>
+<OptionalValue Guid="e54fe3fe-a192-4c31-8cac-480a744e0379" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Sigmund-Bergmann-Str." />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="9adcf9d1-a8bd-4ad1-b4c2-59b927a4c1e2" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/DATA[1]/HouseNumber[1]" PlaceHolder="{HOUSENUMBER}" TagName="HouseNumber">
+<OptionalValuesList>
+<OptionalValue Guid="8bc0da7e-59e2-4ff3-a78a-996ecceed162" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="16" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="8f1433f0-3bc9-4626-a8ce-b3896760275e" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetProductAvailabilityRequest[1]/ns2:ROOT[1]/DATA[1]/HouseNumberAddition[1]" PlaceHolder="{HOUSENUMBERADDITION}" TagName="HouseNumberAddition">
+<OptionalValuesList>
+<OptionalValue Guid="031e1aa3-672c-48b4-af31-67f76645fb4a" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="b837bc0f-a42b-4c05-a4cc-0b8431a7c90c" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="{WSSECUSERNAME}" />
+<AppModelParameter Guid="93de3661-ad30-4bd1-a52a-62bb206a2cb0" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="{WSSECPASSWORD}" />
+<AppModelParameter Guid="bd4def51-704b-4c0b-be08-ee4f6beb8ff7" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<AppModelParameter Guid="a73115b5-086a-4f7b-8e6b-16d2600b26b7" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302200557" GingerVersion="5.1.0.0" Version="2" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302200557" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="OGW validation_Retail" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ParentGuid="8817760c-5cb4-4d1b-b26e-7d0a133e6fa0" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="cable/DSL" DBValidationType="FreeSQL" Description="OGW Backend validation" EnableRetryMechanism="True" Guid="4a046819-3893-48da-b1b9-d2f010059b65" MaxNumberOfRetries="10" ParentGuid="7e003c10-58ed-4af7-b479-9d389caf6bf5" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="7" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="StopBusinessFlow" Guid="e0051696-7b7a-43f6-b91a-26b2365ad027" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="ae761244-195b-4818-bbe0-17bfd521ab0a" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select cdm_txid,cdm_entity_txid, target_system, target_main_entity_id, status,ctcr_sys_cre_dt, ctcr_source_message_name&#xD;&#xA;from {EnvParam App=OGW Param=Casandra}.og_cdm_entity_targets where cdm_txid='{Var Name=Source_id}' and ctcr_source_message_name='cdm/updateCDM/update_cdm_entity_target.fxml' ALLOW FILTERING" />
+<ActInputValue Guid="a6b86789-efab-43b9-b482-8cc2af9b2ebc" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="124d8f2b-ee59-4ad6-b855-b0d3da74bcac" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4004a611-cf75-434a-8a9a-9fe468b8796a" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="27fe7f65-4ee3-4dd4-beb0-78099039735e" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1bee10d5-e4e4-47d4-a5a6-72dc53222abd" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ba7059a1-ef63-4dd4-8421-5014d076a2a7" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2ae3a3a2-a486-441b-a6e6-279f17f1a9ad" mExpected="InProgress-SubmittedToBackend" Operator="Equals" Param="status" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="df34de33-8201-4626-a758-202655c79024" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="b2120ebd-10a2-4ac7-a558-b28e76620522" ParentName="SCN08_New Acquisition customer  Mobile Postpiad Subscriber using retail portal\Group\OGW validation_Retail" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="56e99108-26c8-441a-92be-b241a540df73" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="b2120ebd-10a2-4ac7-a558-b28e76620522" ParentName="SCN08_New Acquisition customer  Mobile Postpiad Subscriber using retail portal\Group\OGW validation_Retail" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

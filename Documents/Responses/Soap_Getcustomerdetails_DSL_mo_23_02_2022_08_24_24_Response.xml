@@ -1,0 +1,28 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:GetCustomerDetailsResponse xmlns:ns100="http://amdocs/vfde/customer/VFDEGetCustomerDetails">
+      <ROOT xmlns="http://amdocs/vfde/customer/VFDEGetCustomerDetailsOutput" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/customer/VFDEGetCustomerDetails" xmlns:vfd1="http://amdocs/vfde/customer/VFDEGetCustomerDetailsInput" xmlns="">
+          <Type>RetrieveCustomerInfo</Type>
+          <ID>96c01ece-d50b-4725-800d-4d304d1748a5</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>0da34705-36ea-4847-9587-608c8ce488d8</CorrelationID>
+          <MessageCreationTimestamp>2022-02-23T06:04:48.247Z</MessageCreationTimestamp>
+        </Event>
+        <DATA xmlns="">
+          <CustomerList>
+            <CustomerDetails>
+              <GlobalID xsi:nil="true" />
+            </CustomerDetails>
+          </CustomerList>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-3000</ErrorCode>
+          <ErrorDescription>An error was encountered while invoking   WS.Details [Error_Code: EAI002337 , Error_Message: XML Schema Validation Error , Error_Type: Validation , Error_Severity: E , Error_Information: : validation error: data "OK" does not match regular expression "[0-9]{12}"   ({com.tibco.xml.validation}SIMPLE_E_REGULAR_EXPRESSION_MISMATCH) at /{http://www.vodafone.de/ESB/Service/EAI/Customer/CustomerInteraction/CustomerInteractionAbstract-003.wsdl}GetMarketingPermissionsRequest[1]/GetMarketingPermissionsRequest[1]/cus:GetMarketingPermissionsRequest[1]/cus:customerNumber[1]
+com.tibco.xml.validation.exception.ValueParseException: data "OK" does not match regular expression "[0-9]{12}"
+	]</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:GetCustomerDetailsResponse>
+  </env:Body>
+</env:Envelope>

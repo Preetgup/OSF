@@ -1,0 +1,45 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: GetSmartCardTypeRequest
+Date: Fri, 24 Jun 2022 04:46:14 GMT
+Server: JESI Server
+Content-Length: 1515
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:GetSmartCardTypeResponse xmlns:ns100="http://amdocs/vfde/card/VFDEGetSmartCardType">
+      <ROOT xmlns="http://amdocs/vfde/card/VFDEGetSmartCardTypeOutput">
+        <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/card/VFDEGetSmartCardType" xmlns:vfd1="http://amdocs/vfde/card/VFDEGetSmartCardTypeInput" xmlns="">
+          <Type>GetSmartCardType</Type>
+          <ID>592151c2067f3</ID>
+          <!--Optional:-->
+          <CallerID>Omnius</CallerID>
+          <!--Optional:-->
+          <CorrelationID>{UUID}</CorrelationID>
+          <!--Optional:-->
+          <!--Optional:-->
+          <!--Optional:-->
+          <!--Optional:-->
+          <MessageCreationTimestamp>2017-05-21T08:37:22</MessageCreationTimestamp>
+          <!--Optional:-->
+          <FrontendUserId>1</FrontendUserId>
+          <!--Optional:-->
+          <DealerCode>34401773</DealerCode>
+          <!--Optional:-->
+          <SalesChannel>retail</SalesChannel>
+          <!--Optional:-->
+          <!--Optional:-->
+        </Event>
+        <DATA xmlns="">
+          <SmartCardSerialNumber>051547475969</SmartCardSerialNumber>
+          <Type>Dv7</Type>
+          <HD>true</HD>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-0000</ErrorCode>
+          <ErrorDescription>SUCCESS</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:GetSmartCardTypeResponse>
+  </env:Body>
+</env:Envelope>

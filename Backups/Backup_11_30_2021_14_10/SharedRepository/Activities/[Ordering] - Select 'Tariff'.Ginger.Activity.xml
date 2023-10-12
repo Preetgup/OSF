@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="c5994b65-542b-446a-a42b-af840935d933" ItemType="Activity" CreatedBy="gourang.jiddewar" Created="202101030813" GingerVersion="3.6.0.0" Version="1" LastUpdateBy="gourang.jiddewar" LastUpdate="202101030813" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="[Ordering] - Select 'Tariff'" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="c5994b65-542b-446a-a42b-af840935d933" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActUIElement Active="True" Description="[UI] - Validate 'Tariff' Section Opened" EnableRetryMechanism="True" Guid="7ed7ca8d-b36c-4e9a-9149-89f6cdb09bac" MaxNumberOfRetries="30" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="98da2afb-5a53-4279-ae2b-98cc53812d46" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ed572a4c-4eec-4ca8-866f-c1c023f19b8e" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="6c4572d3-152f-48e0-a3c7-85010c2d4181" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="85f0b2dc-a0c9-4b21-86ee-ffa46c4e78bf" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="47f1f13e-a9d0-431d-8a9d-f4be9378ff53" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="43f9e19a-240c-49b7-960e-e2982630783a" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="tariff-block" />
+<ActInputValue Guid="965f9d83-fa04-41ae-a789-2235770baa90" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5640f3e0-b125-4a96-89cb-34d62ea533ef" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6a7a3eac-05db-4ca9-b311-70d07b0e601c" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5f9b8e72-fc53-480c-8a4e-13fdb3d7aabd" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b6a09dfa-9960-4bb4-8d42-f83195205b98" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="31e33a01-d5e5-4372-8095-41b890c86799" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="744a5072-ad93-43b4-9b6b-8c9a93472e17" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="6d7c7685-8d54-46f7-86e0-d2277357f728" mExpected="True" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Select 'Tariff' From List" EnableRetryMechanism="True" Guid="0e3ac366-7557-42eb-be35-0a999d047c9e" MaxNumberOfRetries="20" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c6900a2b-4041-4174-8d31-a6f9d7082658" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="b7f0c65f-a3fd-49f2-8a28-aba62628718f" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
+<ActInputValue Guid="b2b984de-d6e7-4950-ac25-291e79f963f9" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="49a3515f-a25a-4e34-92fd-ab2a55a4e859" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="f204a459-06e5-4d3f-a19b-c137402f9c71" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7c149690-9ff4-474c-b8a5-fa44233f0d07" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="(//*[@id=&quot;tariff-block&quot;]//*[@class=&quot;family-content col-md-12&quot;]//*[contains(@id,'item')])[2]" />
+<ActInputValue Guid="36a511d9-2795-4118-bb7a-bef2726c4206" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0202f31e-5417-4f64-aeaf-fcd07757efce" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e9941fbc-47ad-4947-bcce-70acdee39b6f" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="430f5980-1826-4187-a402-47bc4bd22a9c" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3052da04-e640-44c4-96fb-8c7cb3430c00" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a5c26adf-7f15-4789-bf7b-1ee70cd11763" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="77f26cf5-28ee-40f3-95e8-d7e3d98f6cc3" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+</Acts>
+</Activity></GingerRepositoryItem>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="7294f3f8-bed9-4982-badc-fd4d0b80463f" ItemType="BusinessFlow" CreatedBy="dord" Created="202012311256" GingerVersion="3.9.0.0" Version="5" LastUpdateBy="Petros.Dimitriou" LastUpdate="202204280728" />
+<BusinessFlow Elapsed="157" Guid="7294f3f8-bed9-4982-badc-fd4d0b80463f" Name="SET-SALES-CHANNEL" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Active">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="[CONFIG] - SET SALES-CHANNEL" AutomationStatus="Automated" Description="RETAIL / TELESALES" ErrorHandlerMappingType="AllAvailableHandlers" Guid="9bb0cb71-ba07-4caa-9268-42263c6b38c7" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActSetVariableValue Active="True" Description="[Variable] - SET SALES CHANNEL TO GLOBAL" Guid="ed560102-1fb8-4d1f-872c-3276092a1efb" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="GLB_SALES_CHANNEL" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5beb5154-2232-436b-bf8f-b1d74b26ab13" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=SALES_CHANNEL}" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableString Description="##ADD UNDER RUN SETS CONFIG&#xD;&#xA;1. retail&#xD;&#xA;2. telesales" Guid="4bea1a22-6f06-40f0-84ea-224e32680139" InitialStringValue="retail" MappedOutputType="None" Name="SALES_CHANNEL" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</Variables>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="0d3a1358-0534-43a2-9568-5d270ac23ad6" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Automated" ActivityDescription="RETAIL / TELESALES" ActivityGuid="9bb0cb71-ba07-4caa-9268-42263c6b38c7" ActivityName="[CONFIG] - SET SALES-CHANNEL" Guid="7cb95ead-1965-41a5-8428-5b4ef3e421f9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="MyWebApp" Guid="538838b8-ca9d-485b-b23a-a8f43f695c83" LastExecutingAgentName="MyWebApp - Agent 1" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+</BusinessFlow></GingerRepositoryItem>

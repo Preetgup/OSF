@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="9c2d0ad4-ef33-4bfa-949f-29bd2a717e10" ItemType="Activity" CreatedBy="Piyush.Thakre" Created="202201102022" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Piyush.Thakre" LastUpdate="202201102022" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Switch Channel" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="9c2d0ad4-ef33-4bfa-949f-29bd2a717e10" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActBrowserElement Active="True" Description="Close Browser" Guid="ad3a1b7f-717d-49d3-b5bc-1a38f5244e1f" ImplicitWait="60" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7872903c-ffe2-4881-ad23-b4020bb17f2a" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Close" />
+<ActInputValue Guid="2565d27f-71fd-446b-acb4-fa26cf2e0335" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a357499d-f935-4623-ad1e-b6fb393f85f4" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="741c218f-cb47-40e7-858d-582b0b712673" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Current" />
+<ActInputValue Guid="e4226a6d-c0e1-49c9-8ca1-93a63e678bd6" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Static" />
+<ActInputValue Guid="80a10110-6c82-4412-9c62-23f7b5248feb" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="1c458375-7dbe-4e71-85d6-9d4a1b456def" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+<ActSetVariableValue Active="True" Description="Set Channel RETAIL" Guid="cc0c8ec5-8a33-494e-9257-0cd66355b12d" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="BF_CHANNEL" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToActivityByName" Guid="f0de47d0-7dd8-4184-970a-c7c43dda313e" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="[UI] - Open OSF CHANNEL" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="6d33346a-ae4f-4413-8b0c-f10f69ba53b0" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="RETAIL" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableString Guid="a3b056d0-5e58-45bd-8c18-cbfd0ad1f982" InitialStringValue="TELESALES" MappedOutputType="None" Name="BF_CHANNEL" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="ffcf3858-ad9b-43db-9e4f-d65dad91f4ed" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202205111419" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202205111419" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="Status of order" EnableRetryMechanism="True" Guid="ffcf3858-ad9b-43db-9e4f-d65dad91f4ed" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" Timeout="5" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="72b8d792-0cf6-4756-9228-41e947fb0d3e" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SELECT&#xA;    *&#xA;FROM&#xA;    (&#xA;        SELECT&#xA;            &quot;SUBSCRIBE_MESSAGE_ID&quot;,&#xA;            MESSAGE_NAME,&#xA;            SUBSTR(MESSAGE_DATA, INSTR(MESSAGE_DATA, '&lt;Status&gt;') + 8, INSTR(MESSAGE_DATA, '&lt;/Status&gt;') - INSTR(MESSAGE_DATA, '&lt;Status&gt;') - 8) STATUS,&#xA;            &quot;MESSAGE_STATUS&quot;,&#xA;            &quot;ERROR_NUMBER&quot;,&#xA;            &quot;ERROR_MESSAGE&quot;,&#xA;            &quot;SOURCE_APP&quot;,&#xA;            &quot;SOURCE_ID&quot;,&#xA;            &quot;RETRY_COUNT&quot;,&#xA;            &quot;CTCR_SOURCE_PROG_ID&quot;,&#xA;            &quot;CTCR_SOURCE_PROG_DT&quot;,&#xA;            &quot;CORRELATION_ID&quot;,&#xA;            &quot;OGW_ID&quot;&#xA;           &#xA;        FROM&#xA;            JESI_WF_AMDOCS_SUBSCRIBE T&#xA;        WHERE&#xA;            SOURCE_ID IN (&#xA;                SELECT&#xA;                    SOURCE_ID&#xA;                FROM&#xA;                    JESI_WF_AMDOCS_SUBSCRIBE&#xA;                WHERE&#xA;                    CTCR_SOURCE_PROG_ID = '{Var Name=Order id}'&#xA;            )&#xA;        ORDER BY&#xA;            SUBSCRIBE_MESSAGE_ID DESC&#xA;    )&#xA;" />
+<ActInputValue Guid="26cbee82-2922-4a84-ae4e-2fc21b591121" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="ecb025b6-139d-4114-872f-3f46255acb33" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="77037adb-ce36-4d9f-a11f-d76ddb37df9e" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a40193f3-46c8-4958-bc97-377639211282" Operator="Equals" Param="SOURCE_ID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="Source_id" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

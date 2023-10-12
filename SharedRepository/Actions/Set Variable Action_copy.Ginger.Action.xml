@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="72e65250-1895-44c9-9c46-e446768c76c9" ItemType="ActSetVariableValue" CreatedBy="Premanatha.NL" Created="202203230815" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202203230815" />
+<ActSetVariableValue Active="True" Description="Set Variable Action_copy" Guid="72e65250-1895-44c9-9c46-e446768c76c9" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="Row_num" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="{Var Name=Row_num}&lt;&gt;10" FlowControlAction="GoToAction" Guid="50b153fc-9ef3-4113-9e02-74b1fbcfbe10" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="d6b6529d-3982-4dc2-b3cd-6ed7dbaead05#GUID_NAME#Excel Action" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="{Var Name=Row_num}=10" FlowControlAction="GoToAction" Guid="2575abba-83f4-48bc-b25e-df817b5be872" Operator="Legacy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="cd90a892-5322-4b01-bb7b-cbb8cc9ad89a#GUID_NAME#ScrollDown to Search" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="9667c39d-615c-4dfe-93ef-ec24ea0f67ff" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp={Var Name=Row_num}+1}" />
+</InputValues>
+</ActSetVariableValue></GingerRepositoryItem>

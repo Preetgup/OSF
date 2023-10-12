@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="dc3a29c0-9237-4ffa-a608-1562e57c5d73" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302190747" GingerVersion="5.1.0.0" Version="2" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302190747" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="KIAS validation" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="dc3a29c0-9237-4ffa-a608-1562e57c5d73" ParentGuid="46f16801-f0ec-443d-994f-e23c79b8eafa" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="KIAS" DBValidationType="FreeSQL" Description="IE Transaction" EnableRetryMechanism="True" Guid="ce6b313c-5adf-469b-8cf8-7789052ead02" MaxNumberOfRetries="10" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="StopBusinessFlow" Guid="5e65819d-09fd-492e-8a83-c1b5ae7a2b8a" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="d0d988a9-fb66-45cb-a20b-40ba49bc6732" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Select * from IE_Transactions where IETRX_P2 like '{Var Name=Source_id}%'" />
+<ActInputValue Guid="1f80437e-bdbf-419c-90c0-bf7321153cbe" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="7c940e58-0d8e-4dd6-8a46-db68ef6384f0" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="83464403-8458-4bb3-b9f7-85bae737b7ce" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="12f821e6-f3d9-416f-9301-1aaa0f50b769" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a46626c5-7197-4478-939e-78ba54b33950" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="671f279b-4767-4c1c-bdfe-bc62c76c5f92" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b4adb4b8-5fe6-4106-914a-7962aec8bb79" mExpected="0" Operator="NotEquals" Param="BAN" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="0f5e6fb0-544a-4272-b15f-470bbe6fc23b" mExpected="0" Operator="NotEquals" Param="SUBSCRIBER_NO" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="KIAS" DBValidationType="FreeSQL" Description="Customer details" EnableRetryMechanism="True" Guid="7d9fcb9a-4d8c-47dc-ba2f-fc7389aa17cc" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="2" StatusConverter="None" Timeout="5" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="69ec335c-eacc-4968-97ed-8d521bda122a" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Select * from Customer where customer_Id in (Select BAN from IE_Transactions where IETRX_P2 like '{Var Name=Source_id}%')" />
+<ActInputValue Guid="c5b79e19-04f8-4c4a-8640-e025f57e6946" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="0d106b8f-1152-499f-97ba-bf46e3d4c24c" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fdbaa6ff-f126-4083-8292-09c91afc35fb" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e2d6af3f-b7e9-4700-a4e7-cb3b7b6159a0" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d600cc07-b3e0-478f-8bff-261eb6f77cc3" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d703e773-c7e6-4895-adff-630c61c62636" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="29b6b0ad-ba9f-4e0b-b3c1-6b91b92de644" mExpected="0" Operator="NotEquals" Param="CUSTOMER_ID" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="KIAS" DBValidationType="FreeSQL" Description="Subscriber status" EnableRetryMechanism="True" Guid="9c67309c-9534-4477-918a-419aebea2752" MaxNumberOfRetries="5" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="395af4d0-00a8-491d-b4a4-16a1848e7ddd" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Select Sub_status  from SUBSCRIBER where Customer_BAN in (Select BAN from IE_Transactions where IETRX_P2 like '{Var Name=Source_id}%')" />
+<ActInputValue Guid="85f92bb3-4016-4cf1-833d-1c26f9b7be8c" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="0cfdede4-871f-4bf0-a01e-fdd7a5e3e7d2" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5528fa08-7b0c-440e-a5a6-a0ce8ec4d7a9" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c6e5a028-0a49-4ccc-868a-335738e1d8e6" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bde18203-030c-4706-b593-bf73daacf863" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4564fe74-3e17-404d-b068-49eb5a9c4563" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d38f51a5-7032-4600-a6f6-e99811e693ab" mExpected="A" Operator="Equals" Param="SUB_STATUS" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="8eb183df-a028-4d7a-b297-256cea244270" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="46f16801-f0ec-443d-994f-e23c79b8eafa" ParentName="SCN08_New Acquisition customer  Mobile Postpiad Subscriber using retail portal\Group\KIAS validation" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="4625a10b-d0cf-4f24-a99b-9d3e4f9a5bee" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111111300" GingerVersion="3.6.0.0" Version="3" LastUpdateBy="piyush.thakre" LastUpdate="202111111306" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEValidateAddressEG/VFDE" Guid="4625a10b-d0cf-4f24-a99b-9d3e4f9a5bee" Name="Soap_ValidateAddress" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/address/VFDEValidateAddress&quot; xmlns:vfd1=&quot;http://amdocs/vfde/address/VFDEValidateAddressInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:ValidateAddressRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;Portal&gt;{PORTAL}&lt;/Portal&gt;&#xD;&#xA;          &lt;ZipCode&gt;{ZIPCODE}&lt;/ZipCode&gt;&#xD;&#xA;          &lt;City&gt;{CITY}&lt;/City&gt;&#xD;&#xA;          &lt;Street&gt;{STREET}&lt;/Street&gt;&#xD;&#xA;          &lt;HouseNumber&gt;{HOUSENUMBER}&lt;/HouseNumber&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:ValidateAddressRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="bf4891a6-24bd-42cc-bb97-2e906ce6f70e" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="c4cd0680-f403-46bc-9739-96ff51b8dcd6" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ValidateAddress" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="202e4116-e6a2-4c59-b4a9-966b0694b0ca" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="58e1fc48-0f7e-46dc-b521-42ca2fdf7358" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Saurav12345" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="9f9ce337-2301-4b6d-aff5-04671a3db70b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/Portal[1]" PlaceHolder="{PORTAL}" TagName="Portal">
+<OptionalValuesList>
+<OptionalValue Guid="eead008d-fe26-476c-9620-8dd7ae7f4409" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OFT" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="68cb6797-12d3-4af1-95bc-ff15313af63f" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/ZipCode[1]" PlaceHolder="{ZIPCODE}" TagName="ZipCode">
+<OptionalValuesList>
+<OptionalValue Guid="f16db80b-8101-4e14-87ed-5ce35bde58a1" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="63936" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="091f3506-7b83-4aff-91df-9e73d5c2c5bb" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/City[1]" PlaceHolder="{CITY}" TagName="City">
+<OptionalValuesList>
+<OptionalValue Guid="fc96cd04-f3ba-4fed-80c2-4eec2eeed8b8" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Schneeberg" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c075fc3f-ba0e-4459-8558-db2510efec37" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/Street[1]" PlaceHolder="{STREET}" TagName="Street">
+<OptionalValuesList>
+<OptionalValue Guid="fc36c14a-416a-48d1-8cfb-7fc327cdc263" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Roscheklinge" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="f978f035-af47-4cb9-9853-511e70a4fa62" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:ValidateAddressRequest[1]/vfd1:ROOT[1]/DATA[1]/HouseNumber[1]" PlaceHolder="{HOUSENUMBER}" TagName="HouseNumber">
+<OptionalValuesList>
+<OptionalValue Guid="46c54dac-f92d-447d-b7c6-2085820b8b6c" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="12" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

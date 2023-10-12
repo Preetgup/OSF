@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="d80dce21-e22c-4b37-b480-d61dc8616fc6" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302271221" GingerVersion="5.1.0.0" Version="2" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302271221" />
+<Activity ActionRunOption="ContinueActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="[Ordering] - Select Offer DSL" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="d80dce21-e22c-4b37-b480-d61dc8616fc6" ParentGuid="331bc4eb-078b-438c-9030-32092a57e97a" PercentAutomated="88,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActUIElement Active="True" Description="Is SPINNER available" Guid="99e3f1e3-00b4-4c00-a529-337e49721705" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="a54fb42b-e717-4702-96e6-40c5ef523343" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="RerunAction" Guid="49fd6969-bef4-40b6-99ff-2c48e33ee21d" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="3b79a955-3aa6-4130-be79-f59d47aeca76" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="fa2937ad-a3d1-4446-9c95-0597edd7527b" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="66808d80-7998-429c-ba99-9490e4a705e7" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="118628f5-fd84-4b41-abc4-d529fd749322" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="e15b28fd-7c93-446f-8e5b-c524ada0b47a" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c6b10779-887a-4005-9277-139a6d242eac" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@id='spinner'][@style='display: none;']" />
+<ActInputValue Guid="389d66d3-2a68-4944-a0e1-af1a85052c3d" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="51f21f9e-e4c8-426b-944b-9536928941b1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5eb6a3a4-e838-4fb9-a29a-4a662193de3b" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9a792fbc-d2c5-411c-b8a2-f47efefe36b5" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2a5fcb74-fffd-4bd7-92a1-3fa66190462c" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="40c27f2b-2091-4361-83f4-d6b57b5af2d0" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="45d4c94c-9b08-464e-acae-20a905e48ade" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Is DSL available" Guid="9bf81da2-81dc-43dc-828b-99a8bc9e19e1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="0f4c0d19-643e-4dd3-b1eb-a06a66353b32" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Not_Executed" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="d16f3ba0-cdeb-4c26-97a5-346e42acb398" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="035b2100-7e46-4fdd-b72a-d6604f296bdd" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8bb946c1-e325-4097-9b9f-bcdcbc6ce909" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="16eda63c-bc5f-45f7-852b-d0eaab76482f" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
+<ActInputValue Guid="14bf0491-ed2e-44b5-9fc6-6dcc7e1fde3e" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="7d9c1faf-7dfb-4e0e-a0de-355d907041bf" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="f7f0cbdc-c11c-41d7-a7ee-6412fd11db72" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5c92496f-bc74-4327-a4cf-2b31a6c82c95" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="b01606aa-228b-4746-8621-fcb1bc7a8219" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ea9962d1-34b2-473a-8aaf-1bd90837622a" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@id='package-types']//*[contains(text(),'DSL &amp; Glasfaser Prod')]" />
+<ActInputValue Guid="b8f6de4e-9a57-4b33-a9e2-5c661d4aa6bc" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="4bc31d4a-8994-4bb8-b0d6-29b79312e81b" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7c62b27b-e874-45a1-9072-fc81af831b7e" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2ffa9076-17ea-4157-9d66-069ed2bd556a" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a5e04ee3-91b8-4037-a769-d965be007836" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Click on show package" EnableRetryMechanism="True" Guid="ec25bcd8-03c9-44ae-b168-47e61ea8341b" MaxNumberOfRetries="1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="1" StatusConverter="None" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2c3e9c21-17ec-4699-b0c0-7c20178e7fdc" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="f04bccc8-c365-47ed-a35a-8f932b898487" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="651bf8ce-96a0-4479-a962-f855b4b6fa5d" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0af3cef4-abea-4fee-b346-b9e2897db5a7" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="JavaScriptClick" />
+<ActInputValue Guid="8b5655e2-a7ab-47e4-b7fe-bead715cba04" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="6afad210-70b3-4ed5-80fa-2308f3f984d5" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Button" />
+<ActInputValue Guid="28f35ade-1017-411f-a969-e796092f2716" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ebaaa4f1-f99d-44f5-a030-0f2cb0ace4e6" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="9172e3cc-37c0-40c2-bddf-937bcc3a2edd" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="d9df18b8-17b0-4dd4-95e0-6948d1d8c46e" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="show-packages" />
+<ActInputValue Guid="68aeac3d-1f2e-410a-b4af-72ddc86ff435" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="fa7c0397-883f-4f0c-ad42-07cc1c702142" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Scroll down to DSL" EnableRetryMechanism="True" Guid="9de18b6c-ca0b-481f-ae8a-3ef506427741" MaxNumberOfRetries="1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="1" StatusConverter="None" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="1201525f-8cc2-454a-870d-8fe4e8568f03" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="03e38215-3b81-452e-8fb4-bc3201076ae2" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2e9a1ca6-ff48-47a1-a4a6-ec412fe46fec" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="061c56f3-93c9-4e2e-a934-ffe8d995abdf" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ScrollToElement" />
+<ActInputValue Guid="e1d24d26-b4ea-453c-9567-c5411eaf0b84" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="1b836fef-3c71-4604-9d51-e3dd94ef430c" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ScrollBar" />
+<ActInputValue Guid="ea12cb52-ce90-401f-bada-b4a7a93fa60b" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b8cdd7fa-e663-4f00-9f39-af1cd7c5ceb0" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="57899120-12d5-45ad-9f6a-99c52f176401" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="cee290a5-f1fe-486a-b7a5-fbdf8a1281ac" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@id='package-types']//*[contains(text(),'DSL &amp; Glasfaser Prod')]" />
+<ActInputValue Guid="432bb287-8414-4353-9937-6f1b2c588d07" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="7083939e-a497-448e-b585-dd394dc4c513" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="63367b8d-6cdd-40d5-ac06-f63909ffc531" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="baba0d20-2fab-4943-b06d-3dc71597ffa0" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8e2366b8-0f73-464c-aa96-241775ce84e7" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Click on DSL" EnableRetryMechanism="True" Guid="2cdd73a4-2fe6-4ae3-9434-13842c202112" MaxNumberOfRetries="1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="1" StatusConverter="None" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="FailActionAndStopBusinessFlow" Guid="e1813dbe-40e8-423b-8c2f-c50f6d3ba2f0" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Not_Executed" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="28ca557f-dc14-4b6f-804c-23092e82b180" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="bbf77410-ff48-4256-9cbe-09454acafe08" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e50b5142-570e-4df5-a923-b1eaa7ca867c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="75a41cb9-74c4-4095-802a-b6d72b7ced63" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="JavaScriptClick" />
+<ActInputValue Guid="6c604cf5-d96e-4a1f-97b8-5aed4761507a" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="37eee083-8dbe-4206-8a1b-6a4af2732e79" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Button" />
+<ActInputValue Guid="de55a4fc-4894-4267-9d75-4bf47f750f05" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ae462a37-664a-4f59-b6ee-bd9916d85ba9" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="1978ae86-0ea8-4832-89f9-b77372b0f02e" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c5076de7-0c35-48b4-8452-fa37d734351d" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@id='package-types']//*[contains(text(),'DSL &amp; Glasfaser Prod')]" />
+<ActInputValue Guid="cd469341-0949-4640-aedc-455ac88e01ce" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="efa8ec7b-8457-41bb-9e48-4a3dd3bc8694" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="73a581dd-5f80-4273-bbe4-3fb4b0a24cf9" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f1ae6908-7165-4482-8d0e-1dfab6ddaa54" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e8fdbb16-93ca-46d5-8059-937194c26c12" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="Is SPINNER available_Copy" Guid="43e95487-4bc5-4eda-ba5a-1a98024b23ce" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="453a7027-fd55-4d7f-abe4-20732504f6eb" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="RerunAction" Guid="dd3b69ed-c411-4856-8fc1-2627fd9b7a89" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="13ac3d0c-49de-4335-9262-51338d75fa8c" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="9b6b9985-361d-43ab-8113-a7a708d02ba7" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="1f3a2e10-a942-4e8e-b31e-ddfdefc34683" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="eb59e42f-99ac-47c1-b5d4-8e802bfb8494" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="b6588968-02fa-4652-aa81-64a3c98650f6" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="31d06248-1586-43c7-ba55-af2ef8acfa95" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@id='spinner'][@style='display: none;']" />
+<ActInputValue Guid="fa8b75b6-35bd-4d69-a762-285421569cd0" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="6cb4d3cd-0482-4984-9507-f781e612cbd8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="48a7a0a7-5ee0-4073-b5d9-e81d318cdbb5" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e0147a4d-12ea-4fa3-aace-b4ea0155113e" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5455eaee-9e1b-4c00-8bce-1230d91b34ff" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="151326d5-af31-4579-81ff-71df0793f964" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="c3816773-a893-4f2d-b48b-9216357c1741" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Select 'Tariff' From List" EnableRetryMechanism="True" Guid="c52f2bba-bb86-4e12-a87a-ad577089f4ab" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" StatusConverter="None" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="95502d2c-9983-42bc-aaa3-6d01cc3e5a00" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Not_Executed" />
+<FlowControl BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="c24cb4ba-6e06-437d-95e7-c40363bce4b4" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Skipped" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="904995eb-1922-464c-9ea3-d3f809efd2c6" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="3eff3add-6349-417b-b314-8af1e04cd00b" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MouseClick" />
+<ActInputValue Guid="b873e75f-4727-4b9c-b9b7-96b9e0c463b0" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="6bf8eca8-aea1-4d23-b341-1476d7f13c5d" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="c680ff82-7da9-4bdf-8625-95184f9b9884" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="5a92a505-60f0-49ff-840b-8816c94202d4" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@class='selection-block box-opened']/descendant::{EnvParam App=OSF Param=Env}[contains(text(),'{Var Name=ACT_TARIFF}')]" />
+<ActInputValue Guid="2d19bd73-bbf8-4f8b-a0c7-32634f90bd71" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="df95b611-9b15-4cf6-a209-74b595d42e80" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="dfcd185b-3df0-4598-a344-f19b699bff59" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a0a7140a-c8bc-4bcb-9098-1c726e5ffb02" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fe124434-8893-4dea-abfb-e298b1439a29" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="426539ef-ebc8-4055-b4d6-b60e5e30f55c" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="3f68692b-4d0d-47bd-a885-61c2db731370" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActBrowserElement Description="Close Browser Failed" Guid="59e59caa-1d06-47a4-bfba-1e85e5cc2679" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="FailActionAndStopBusinessFlow" Guid="1e5e8f94-f2fe-4b27-8b9a-b80950d890e1" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="35e3c935-1a97-4b2c-b0f5-690f0d325db4" Param="ImplicitWait" ParentGuid="00000000-0000-0000-0000-000000000000" Value="60" />
+<ActInputValue Guid="b29b2314-5b5c-4890-9181-cde3c2d4f72f" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CloseAll" />
+<ActInputValue Guid="f234638f-e312-4bc3-9d29-716261e60259" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="432c36d5-92d3-4c50-a7fb-d0e55cb26885" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="dba2fd8c-4995-40a7-9b25-ee3ba4c5aad1" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Current" />
+<ActInputValue Guid="0201afaf-9e0b-4c77-82f2-564d8f24f68f" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Static" />
+<ActInputValue Guid="b2f739a0-c871-4134-9012-6aaae155800e" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="f55419a2-fbc4-448b-bc5e-073069918c62" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3d784aef-1905-4ee5-9358-4e6169fce4c0" Param="NetworkLog" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="de4b25cf-d19b-4cc6-87f3-94da1350c496" Param="NetworkUrl" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActBrowserElement>
+</Acts>
+
+<Variables>
+<VariableString Guid="88f49f6c-8d6d-428c-ac1e-29ecddf14287" InitialStringValue="GigaZuhause 16 DSL" MappedOutputType="None" Name="ACT_TARIFF" ParentGuid="331bc4eb-078b-438c-9030-32092a57e97a" ParentName="SCN37_New Acquisition customer ordering  DSL &amp; mob postpaid (GigaKombi)_Copy\Group\[Ordering] - Select Offer DSL" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

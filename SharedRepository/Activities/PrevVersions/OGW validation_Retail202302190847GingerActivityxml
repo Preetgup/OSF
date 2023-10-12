@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302171041" GingerVersion="5.1.0.0" Version="2" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302171041" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="OGW validation_Retail" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ParentGuid="b86f4ff6-589e-48d5-a046-eece66f32ccb" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="cable/DSL" DBValidationType="FreeSQL" Description="OGW Backend validation" EnableRetryMechanism="True" Guid="156dd124-1d6e-4a36-bdd8-f0df83de0d69" MaxNumberOfRetries="10" ParentGuid="7e003c10-58ed-4af7-b479-9d389caf6bf5" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="7" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5cf141f5-6202-418c-b480-607327ac7d57" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select cdm_txid,cdm_entity_txid, target_system, target_main_entity_id, status,ctcr_sys_cre_dt, ctcr_source_message_name&#xD;&#xA;from {EnvParam App=OGW Param=Casandra}.og_cdm_entity_targets where cdm_txid='{Var Name=Source_id}' and ctcr_source_message_name='cdm/updateCDM/update_cdm_entity_target.fxml' ALLOW FILTERING" />
+<ActInputValue Guid="f42994c0-7c1c-4faa-91e8-24cec20f2b94" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="190e6c75-0e70-4047-aa8c-6bc57a0beacf" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="25981c38-2738-446b-b3a1-b43879d8a849" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4afec55e-3697-4e6b-8a15-6856ffca0373" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c6701f1e-b6c9-4101-b848-193da9a533e4" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="48d82a63-6643-44eb-8e6c-0a1b719cc1f5" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="f589a127-95f2-4b5e-b8e5-908996615bee" mExpected="InProgress-SubmittedToBackend" Operator="Equals" Param="status" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="5e5b7cbf-f27a-4193-9836-0b1e2629fa13" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="b86f4ff6-589e-48d5-a046-eece66f32ccb" ParentName="SCN36_ILS_ mobile_Copy\Group\OGW validation_Retail" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="7a440f51-edbe-432b-90be-b6fba9b917d2" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="b86f4ff6-589e-48d5-a046-eece66f32ccb" ParentName="SCN36_ILS_ mobile_Copy\Group\OGW validation_Retail" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

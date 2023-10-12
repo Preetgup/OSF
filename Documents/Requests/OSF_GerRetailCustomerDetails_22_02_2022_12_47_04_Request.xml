@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/voras/customer/VFDEGetRetailCustomerDetails" xmlns:vfd1="http://amdocs/vfde/voras/customer/VFDEGetRetailCustomerDetailsInput">
+  <soapenv:Header />
+  <soapenv:Body>
+    <vfd:GetRetailCustomerDetailsRequest>
+      <vfd1:ROOT>
+        <Event>
+          <Type>?</Type>
+          <ID>?</ID>
+        </Event>
+        <DATA>
+          <!--Optional:-->
+          <LegacyCustomerID sourceSystem="KIAS">string</LegacyCustomerID>
+          <!--Optional:-->
+          <LineNumber sourceSystem="KIAS">1721234567</LineNumber>
+          <CustomerPassword>4444</CustomerPassword>
+          <LinkedCustomer>true</LinkedCustomer>
+        </DATA>
+      </vfd1:ROOT>
+    </vfd:GetRetailCustomerDetailsRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

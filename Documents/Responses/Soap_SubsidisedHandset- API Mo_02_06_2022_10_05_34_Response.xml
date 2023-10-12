@@ -1,0 +1,44 @@
+<soapenv:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd1="http://amdocs/vfde/subscriber/handset/VFDESubsidizedHandsetValidationOutput" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/subscriber/handset/VFDESubsidizedHandsetValidation">
+  <soapenv:Header />
+  <soapenv:Body>
+    <vfd:SubsidizedHandsetValidationResponse>
+      <vfd1:ROOT>
+        <Event>
+          <Type>SubsidizedHandsetValidation</Type>
+          <ID>58d3a581cb152</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>a1t44ok54r095a8gjd38up7kok1b0qi7</CorrelationID>
+          <FrontendUserId>15</FrontendUserId>
+        </Event>
+        <DATA>
+          <SubsidizedHandsetValidationResultList>
+            <SubsidizedHandsetValidationResult>
+              <BAN>20034902</BAN>
+              <SubscriberNumber>1720400196</SubscriberNumber>
+              <SubsidyProlongationOptionDetailsList>
+                <SubsidyProlongationOptionDetail>
+                  <Index>1</Index>
+                  <ProlongationType>STD</ProlongationType>
+                  <ProlongationName>VVL mit Tarifwechsel</ProlongationName>
+                  <RemainingWeeks>0</RemainingWeeks>
+                  <Eligibility>T</Eligibility>
+                  <EligibilityType>O</EligibilityType>
+                  <EuCharge>0.0</EuCharge>
+                  <EuGrossAmount>0.0</EuGrossAmount>
+                  <NextSubsidyDate>2022-05-11</NextSubsidyDate>
+                  <ContractEndDate>2022-06-16</ContractEndDate>
+                  <ProlongationMethod>N</ProlongationMethod>
+                  <InlifeNEY_SOC_EndDate>2022-06-16</InlifeNEY_SOC_EndDate>
+                </SubsidyProlongationOptionDetail>
+              </SubsidyProlongationOptionDetailsList>
+            </SubsidizedHandsetValidationResult>
+          </SubsidizedHandsetValidationResultList>
+        </DATA>
+        <Status>
+          <ErrorCode>OGWERR-0000</ErrorCode>
+          <ErrorDescription>SUCCESS</ErrorDescription>
+        </Status>
+      </vfd1:ROOT>
+    </vfd:SubsidizedHandsetValidationResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

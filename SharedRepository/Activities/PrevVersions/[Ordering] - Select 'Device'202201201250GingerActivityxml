@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="996ee628-c33c-4bcf-b6dc-f27e0f3a100a" ItemType="Activity" CreatedBy="Piyush.Thakre" Created="202201191245" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Piyush.Thakre" LastUpdate="202201191245" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="[Ordering] - Select 'Device'" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="996ee628-c33c-4bcf-b6dc-f27e0f3a100a" Mandatory="True" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActUIElement Active="True" Description="Is SPINNER available" Guid="dc9a1005-016d-40d1-aec3-0cf9d0dfa311" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="2" WaitVE="1" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="1e962170-1d7f-412b-a879-65d57556dbe9" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="RerunAction" Guid="ec41be0e-b354-4fea-95ca-d1b6d491b03e" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="c92b4400-a635-432f-9614-6e35ed41a207" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="bfe33398-f786-45c0-89e7-ec01c400b4cb" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="6a8df3b9-4deb-416d-96e3-2185034c4e31" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="02a76f25-0a89-414c-84f2-b25cc2643ff9" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="5fa21180-e570-4bfa-ad02-e99723689716" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="68ef73d7-096a-413b-9ff4-4cfc8e138c2c" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//div[@id='spinner'][@style='display: none;']" />
+<ActInputValue Guid="faa97a52-01dd-474a-8114-27e1825a20d9" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ff29f18b-74fb-47b8-942a-80cdd9bd4848" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d8a86bbd-eb63-4e5b-9fa2-09b3aa9d8deb" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="cfb72319-917d-4f02-a286-287ae9ae7ba0" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9ec65572-cccb-4fb7-ae26-cff31ee95d8a" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="12da8f08-f33e-4bc7-807a-c3560a184b64" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="ee0c3584-408f-46c0-bb7a-fe3801ff7d9c" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Validate 'Hardware' Section Opened" EnableRetryMechanism="True" Guid="6d5d4746-d6f6-4bdf-82db-c2a36dc5cc5f" MaxNumberOfRetries="30" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="FailActionAndStopBusinessFlow" Guid="605b665f-e1f3-42b0-8f57-4dce791af2b7" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="2ed3312b-546d-40ac-9d1e-27e3e7b75549" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="e6cfda7d-734e-4f32-aaf0-e3543083309e" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="IsVisible" />
+<ActInputValue Guid="0ea7882f-5acf-43c9-ac1c-0ec3138960d6" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByID" />
+<ActInputValue Guid="b405aa13-6be7-41ea-96bb-4001efbe98a3" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="10b99d1d-51fd-454a-b324-c7cc99debee3" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="18bee4e7-3416-40d7-b646-13fdd0c7cc58" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="device-block" />
+<ActInputValue Guid="1cb01da2-234d-44e1-9194-ae2f8f3e635d" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="84fd3414-fe4e-4db5-91cb-15d4b433e3fa" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ae5932a5-5891-433d-af68-cb91005396dc" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e2fee0c8-5da0-40c8-8da2-9ef87016365a" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7c0ef65d-4622-4212-a83c-cb34dcfd9076" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bd06b8cd-7b25-450a-a45f-690a432a5f89" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="406c0b0a-bc45-42bf-9621-cf33d0ec0b29" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="45ed447f-6d77-4055-819d-408d71658520" mExpected="True" Operator="Equals" Param="Actual" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActUIElement>
+<ActUIElement Active="True" Description="[UI] - Select 'Device' From List" EnableRetryMechanism="True" Guid="ae01d964-9f67-4fa8-80a3-e4e2881726a9" MaxNumberOfRetries="20" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="2" StatusConverter="None" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="bf8f2d22-1334-4e5d-850d-75740ec9193b" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="FailActionAndStopBusinessFlow" Guid="82276ac1-1bcc-4eac-83b1-9c78ea3e5de3" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="73cba5b5-4d03-4869-aee1-3a6550e5f4cd" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="a11c62bf-1010-4f15-b879-48345ffd31b0" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Click" />
+<ActInputValue Guid="de6d0458-a97b-4261-8b86-f61858884c20" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ByXPath" />
+<ActInputValue Guid="0e9b4247-db3d-4b0f-95e7-a39cc9b5e47a" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="0180652a-19f0-437a-96f6-9fae3761bdca" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="09bdf7ea-1f5a-48f9-a501-fa44397db66b" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="//*[@id=&quot;device-block&quot;]//*[@class=&quot;family-content col-md-12&quot; or @class=&quot;product-table col-md-12&quot;]//*[contains(@id,'item')][1]" />
+<ActInputValue Guid="8671b483-3b15-49a7-a89f-5bdad48d5e89" Param="XCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e267674d-0f21-45d0-8afe-988ff46ec4b7" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ce2cb37a-189b-42ee-8ae3-e019f6e0a817" Param="ValueToSelect" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1c5ac7f9-1605-45b9-8894-8d34c11dcf26" Param="YCoordinate" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2cfa7466-fd7d-4dd7-a295-e7eded5bc4e4" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b6ebfcdb-05ba-4b31-8a14-d633091f21d3" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="e5e3541d-d2eb-443f-a61e-acad645280fd" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement>
+</Acts>
+</Activity></GingerRepositoryItem>

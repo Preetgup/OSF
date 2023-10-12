@@ -1,0 +1,35 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: CreateOrCancelStockReservationRequest
+Date: Fri, 24 Jun 2022 04:47:05 GMT
+Server: JESI Server
+Content-Length: 1527
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:CreateOrCancelStockReservationResponse xmlns:ns100="http://amdocs/vfde/stockReservation/">
+      <ROOT xmlns="http://amdocs/vfde/stockReservation/VFDECreateOrCancelStockReservationOutput">
+        <Event xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns0="http://amdocs/vfde/stockReservation/" xmlns:ns2="http://amdocs/vfde/common/VFDECommonTypes" xmlns:ns1="http://amdocs/vfde/stockReservation/VFDECreateOrCancelStockReservationInput" xmlns:ns3="http://amdocs/vfde/stockReservation/VFDECreateOrCancelStockReservationOutput" xmlns="">
+          <Type>CreateOrCancelStockReservation</Type>
+          <ID>15021963725b23858bdeea00.24332190</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>85666303586a31188b771d75bb837e5a</CorrelationID>
+          <FrontendUserId>1</FrontendUserId>
+        </Event>
+        <DATA xmlns="">
+          <ReservationsList>
+            <ReservationsDetails>
+              <SourceReservationID>1</SourceReservationID>
+              <OrderLineID>1</OrderLineID>
+              <ReservationID>0000000000</ReservationID>
+            </ReservationsDetails>
+          </ReservationsList>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-0000</ErrorCode>
+          <ErrorDescription>SUCCESS</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:CreateOrCancelStockReservationResponse>
+  </env:Body>
+</env:Envelope>

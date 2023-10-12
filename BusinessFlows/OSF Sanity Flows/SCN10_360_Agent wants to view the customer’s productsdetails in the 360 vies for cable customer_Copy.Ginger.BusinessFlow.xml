@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="b6c5d84d-144d-4da1-83ef-59c405a5e14b" ItemType="BusinessFlow" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302031221" GingerVersion="5.1.0.0" Version="30" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202307200716" />
+<BusinessFlow Guid="b6c5d84d-144d-4da1-83ef-59c405a5e14b" Name="SCN10_Agent wants to search CABLE customer in Telesales channel" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Set Channel TELESALES" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e5fd6f36-f466-4c40-933c-1f6a1af8df48" Mandatory="True" ParentGuid="06211b6f-4026-4d30-b3dd-4cd616fdcd9f" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActSetVariableValue Active="True" Description="Set Channel TELESALES" Guid="4c970616-cede-45c1-85a6-2d23ebd4fb7f" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="3be1bd3b-cbf1-48a6-81db-b5ebefa410eb" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Action_Executed" Value="[UI] - Open OSF CHANNEL" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="cac0e363-3a00-43c4-8b5d-6f0d8b19517c" Param="SetVariableValueOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetValue" />
+<ActInputValue Guid="f36026a7-9cc4-48d0-908e-7e0314eb8c1f" Param="VariableName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="BF_CHANNEL" />
+<ActInputValue Guid="0465d3d0-1498-486c-9598-74139914f041" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TELESALES" />
+</InputValues>
+</ActSetVariableValue>
+</Acts>
+
+<Variables>
+<VariableString Guid="6462ba89-7a57-47f4-8a2f-06b4a026a489" InitialStringValue="TELESALES" MappedOutputType="None" Name="BF_CHANNEL" ParentGuid="e5fd6f36-f466-4c40-933c-1f6a1af8df48" ParentName="SCN10_Agent wants to search CABLE customer in Telesales channel\Group\Set Channel TELESALES" ParentType="Activity" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity>
+<Activity ActivitiesGroupID="Group" ActivityName="[UI] - Open OSF CHANNEL Telesales" Guid="d78671c4-812c-4bc9-a312-0dfdf08af3eb" ParentGuid="d78671c4-812c-4bc9-a312-0dfdf08af3eb" Type="Link" />
+<Activity ActivitiesGroupID="Group" ActivityName="[UI] - Login Screen Telesales" Guid="e0e9d747-6bf9-4bab-a56b-a8341fbe64ec" ParentGuid="e0e9d747-6bf9-4bab-a56b-a8341fbe64ec" Type="Link" />
+<Activity ActivitiesGroupID="Group" ActivityName="Cable Search Customer" Guid="28e82e6f-fda4-4317-9f65-195a8ae56329" ParentGuid="5c24ae6c-ef2d-4329-b21d-933b5e41f208" Type="Link" />
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="9b68e04d-a20f-4c80-a820-af3027ba4305" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Automated" ActivityGuid="e5fd6f36-f466-4c40-933c-1f6a1af8df48" ActivityName="Set Channel TELESALES" ActivityParentGuid="06211b6f-4026-4d30-b3dd-4cd616fdcd9f" Guid="85906c6e-d542-4cf4-81d2-301b932bcf17" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="d78671c4-812c-4bc9-a312-0dfdf08af3eb" ActivityName="[UI] - Open OSF CHANNEL Telesales" ActivityParentGuid="d78671c4-812c-4bc9-a312-0dfdf08af3eb" Guid="1b3c0fc9-2348-486a-9a7a-bd84876cf755" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="e0e9d747-6bf9-4bab-a56b-a8341fbe64ec" ActivityName="[UI] - Login Screen Telesales" ActivityParentGuid="e0e9d747-6bf9-4bab-a56b-a8341fbe64ec" Guid="ae89bd1f-9c24-4be7-b22d-2e268953bf67" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="28e82e6f-fda4-4317-9f65-195a8ae56329" ActivityName="Cable Search Customer" ActivityParentGuid="5c24ae6c-ef2d-4329-b21d-933b5e41f208" Guid="cfab7fc0-e614-46a3-8893-d5c38be28d97" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="MyWebApp" Guid="9f0f2df0-6f4f-4b7a-bec5-a4a2e44e778c" LastExecutingAgentName="Chrome Virtual" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<TargetApplication AppName="Mediation" Guid="954c66ce-c643-4cac-9cca-c833eba54ff7" LastExecutingAgentName="Unix Virtual" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="0be8f57d-7a1b-47bb-8d1e-1cde1f8c2187" InitialStringValue="TELESALES" MappedOutputType="None" Name="BF_CHANNEL" ParentGuid="b6c5d84d-144d-4da1-83ef-59c405a5e14b" ParentName="SCN10_Agent wants to search CABLE customer in Telesales channel" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

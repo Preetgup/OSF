@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="dc3a29c0-9237-4ffa-a608-1562e57c5d73" ItemType="Activity" CreatedBy="Shalini.Tyagi" Created="202203080925" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Shalini.Tyagi" LastUpdate="202203080925" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="KIAS validation" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="dc3a29c0-9237-4ffa-a608-1562e57c5d73" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="KIAS" DBValidationType="FreeSQL" Description="Activation order" Guid="0dfb023e-d5b7-43d7-9476-a8e3903f12dd" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="34514478-cd41-44a3-94d4-762c11479049" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Select * from Activation_order where EXT_REQ_ID like '{Var Name=Source_id}'" />
+<ActInputValue Guid="6550a4ac-3209-4f2d-91db-777af83d61eb" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="18dad1a0-6fd0-449c-a585-ef30b02bfb4c" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b46e947d-4c36-42ce-89cf-6558c07de66a" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="KIAS" DBValidationType="FreeSQL" Description="IE Transaction" Guid="029d0321-9eb3-415b-b19a-caa35fadce56" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cdbe261e-1b72-4f09-9989-36518970dea3" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Select * from IE_Transactions where IETRX_P2 like '{Var Name=Source_id}'" />
+<ActInputValue Guid="00dbaae7-0d38-4bd7-a97f-bb972c556523" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="46f13318-4046-402f-9871-2e89e8273c9a" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="39ca6f36-aa54-4ed6-9209-b0ecd45eaac1" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="448edc1e-8dae-4e8b-af73-e526c0b0bd14" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

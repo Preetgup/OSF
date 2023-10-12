@@ -1,0 +1,45 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:GetAvailableShippingOptionsResponse xmlns:ns100="http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptions">
+      <ROOT xmlns="http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptionsOutput">
+        <Event xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns0="http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptions" xmlns:ns2="http://amdocs/vfde/common/VFDECommonTypes" xmlns:ns1="http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptionsOutput" xmlns:ns3="http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptionsInput" xmlns="">
+          <Type>GetAvailableShippingOptions</Type>
+          <ID>15124329065b2146946951a4.98295657</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>e3909233d301975e747899b1b73a59eb</CorrelationID>
+          <FrontendUserId>1</FrontendUserId>
+        </Event>
+        <DATA xmlns="">
+          <AvailableShippingOptionsList>
+            <AvailableShippingOptionsDetails>
+              <OrderLineID>1</OrderLineID>
+              <ArticleNumber>00301354</ArticleNumber>
+              <DeliveryServiceID>GLSSTDIDEN</DeliveryServiceID>
+              <StandardDeliveryIndicator>true</StandardDeliveryIndicator>
+              <DeliveryServiceDescription>GLS Standard Ident</DeliveryServiceDescription>
+              <ShippingCondition>9X</ShippingCondition>
+              <ShippingConditionDescription>GLS FULLIDENT</ShippingConditionDescription>
+              <CarrierID>05</CarrierID>
+              <DeliveryAddressType>000</DeliveryAddressType>
+              <Currency>EUR</Currency>
+              <DeliveryDatesList>
+                <DeliveryDate>20220225</DeliveryDate>
+              </DeliveryDatesList>
+              <DeliveryTimesList>
+                <DeliveryTimeDetails>
+                  <TimeFrameID>0</TimeFrameID>
+                  <Description />
+                  <IdentMethod>Door</IdentMethod>
+                </DeliveryTimeDetails>
+              </DeliveryTimesList>
+            </AvailableShippingOptionsDetails>
+          </AvailableShippingOptionsList>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-0000</ErrorCode>
+          <ErrorDescription>SUCCESS</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:GetAvailableShippingOptionsResponse>
+  </env:Body>
+</env:Envelope>

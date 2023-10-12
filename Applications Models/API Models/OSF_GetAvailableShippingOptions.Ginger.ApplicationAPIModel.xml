@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="b8fdbbe5-01bd-40ce-847d-817219f04b17" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111170828" GingerVersion="3.9.0.0" Version="3" LastUpdateBy="Petros.Dimitriou" LastUpdate="202204280728" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEGetAvailableShippingOptions/VFDE" Guid="b8fdbbe5-01bd-40ce-847d-817219f04b17" Name="OSF_GetAvailableShippingOptions" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;s:Envelope xmlns:s=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xD;&#xA;  &lt;s:Header&gt;&#xD;&#xA;    &lt;Action xmlns=&quot;{XMLNS}&quot; s:mustUnderstand=&quot;1&quot;&gt;{ACTION}&lt;/Action&gt;&#xD;&#xA;  &lt;/s:Header&gt;&#xD;&#xA;  &lt;s:Body&gt;&#xD;&#xA;    &lt;ns0:GetAvailableShippingOptionsRequest xmlns:ns0=&quot;http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptions&quot; xmlns:ns3=&quot;http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptionsInput&quot; xmlns:ns1=&quot;http://amdocs/vfde/shippingOptions/VFDEGetAvailableShippingOptionsOutput&quot; xmlns:ns2=&quot;http://amdocs/vfde/common/VFDECommonTypes&quot;&gt;&#xD;&#xA;      &lt;ns3:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;CallingApplication&gt;{CALLINGAPPLICATION}&lt;/CallingApplication&gt;&#xD;&#xA;          &lt;IdentMethod&gt;{IDENTMETHOD}&lt;/IdentMethod&gt;&#xD;&#xA;          &lt;DistributionChannel&gt;{DISTRIBUTIONCHANNEL}&lt;/DistributionChannel&gt;&#xD;&#xA;          &lt;ActivityType&gt;{ACTIVITYTYPE}&lt;/ActivityType&gt;&#xD;&#xA;          &lt;PostalCode&gt;{POSTALCODE}&lt;/PostalCode&gt;&#xD;&#xA;          &lt;ShippingOptionFilterList&gt;&#xD;&#xA;            &lt;ShippingOptionFilterDetails&gt;&#xD;&#xA;              &lt;FieldName&gt;{FIELDNAME}&lt;/FieldName&gt;&#xD;&#xA;              &lt;Sign&gt;{SIGN}&lt;/Sign&gt;&#xD;&#xA;              &lt;Option&gt;{OPTION}&lt;/Option&gt;&#xD;&#xA;              &lt;Low&gt;{LOW}&lt;/Low&gt;&#xD;&#xA;            &lt;/ShippingOptionFilterDetails&gt;&#xD;&#xA;          &lt;/ShippingOptionFilterList&gt;&#xD;&#xA;          &lt;OrderLineItemsList&gt;&#xD;&#xA;            &lt;OrderLineItemDetails&gt;&#xD;&#xA;              &lt;OrderLineID&gt;{ORDERLINEID}&lt;/OrderLineID&gt;&#xD;&#xA;              &lt;ArticleNumber&gt;{ARTICLENUMBER}&lt;/ArticleNumber&gt;&#xD;&#xA;              &lt;Quantity&gt;{QUANTITY}&lt;/Quantity&gt;&#xD;&#xA;              &lt;UnitOfMeasurement&gt;{UNITOFMEASUREMENT}&lt;/UnitOfMeasurement&gt;&#xD;&#xA;              &lt;CashOnDeliveryFlag&gt;{CASHONDELIVERYFLAG}&lt;/CashOnDeliveryFlag&gt;&#xD;&#xA;            &lt;/OrderLineItemDetails&gt;&#xD;&#xA;          &lt;/OrderLineItemsList&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/ns3:ROOT&gt;&#xD;&#xA;    &lt;/ns0:GetAvailableShippingOptionsRequest&gt;&#xD;&#xA;  &lt;/s:Body&gt;&#xD;&#xA;&lt;/s:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="22ce8fec-3593-45e0-84cf-09b669b5fce1" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{ACTION}" TagName="Action">
+<OptionalValuesList>
+<OptionalValue Guid="86c9b8fd-9cd3-4e87-a7ae-a8e66da4646c" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetAvailableShippingOptions" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="7aff4e25-e582-47c1-a8de-44bf0f86998e" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{XMLNS}" TagName="xmlns">
+<OptionalValuesList>
+<OptionalValue Guid="358fb140-e8f3-4b08-8f56-777f88c24aa5" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://schemas.microsoft.com/ws/2005/05/addressing/none" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c692a2d3-7920-4a8e-a0ac-ce11a9932669" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="ff382788-f805-467f-b6a4-49e85810d1e9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetAvailableShippingOptions" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="59b4dc20-5ee4-4f17-832b-c3c67a9141df" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="50055e63-c10c-40c7-a7bb-c0951e6e93c8" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="15124329065b2146946951a4.98295657" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="e6bcb091-4146-4e4e-86eb-7a26be7adc35" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="985f65a2-d162-4cdb-9f87-4903c75c2ed7" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="a1f5c1df-ca24-4056-abb7-208a935128d1" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="4a27b34a-2d07-4d5c-909e-ead45a907eca" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="e3909233d301975e747899b1b73a59eb" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="05c630bc-8eed-4be2-863d-39701aea9fff" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="25a06b8d-bd42-4b44-949c-87159ba12e08" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="b0742fef-7fad-4154-9687-3879d4354a93" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/CallingApplication[1]" PlaceHolder="{CALLINGAPPLICATION}" TagName="CallingApplication">
+<OptionalValuesList>
+<OptionalValue Guid="7bf2c05c-16e8-43c9-bfad-9eef56c9223e" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="f8a6853b-a307-49c7-b43a-ed73419eb044" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/IdentMethod[1]" PlaceHolder="{IDENTMETHOD}" TagName="IdentMethod">
+<OptionalValuesList>
+<OptionalValue Guid="6310c235-2b38-489d-83e8-3a06b7e1f116" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Door" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="da41417a-2e38-403b-8d0b-bebf6881f8fb" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/DistributionChannel[1]" PlaceHolder="{DISTRIBUTIONCHANNEL}" TagName="DistributionChannel">
+<OptionalValuesList>
+<OptionalValue Guid="005c8301-0ea6-49b4-9d8d-5f114179f8e9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CP" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="4e31ebeb-35c4-434d-9454-c38800198340" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/ActivityType[1]" PlaceHolder="{ACTIVITYTYPE}" TagName="ActivityType">
+<OptionalValuesList>
+<OptionalValue Guid="1d0f2248-1e52-4d6a-a2f3-bc64afe61b7d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="HMK" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c7ef4a6f-fa29-4dee-93b3-e388323d6ac9" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/PostalCode[1]" PlaceHolder="{POSTALCODE}" TagName="PostalCode">
+<OptionalValuesList>
+<OptionalValue Guid="fda1ddd3-b400-4163-9d25-04f73207a8a5" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="22307" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="a6cee7f5-a83f-4088-90fa-37dd66c12156" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/ShippingOptionFilterList[1]/ShippingOptionFilterDetails[1]/FieldName[1]" PlaceHolder="{FIELDNAME}" TagName="FieldName">
+<OptionalValuesList>
+<OptionalValue Guid="a1b63cea-c5bd-4ebd-8326-21c899c0c0c7" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DELADDRTYP" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="22db4e39-3908-466c-aa6f-4d1b7236cda6" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/ShippingOptionFilterList[1]/ShippingOptionFilterDetails[1]/Sign[1]" PlaceHolder="{SIGN}" TagName="Sign">
+<OptionalValuesList>
+<OptionalValue Guid="b500107e-9446-4667-be60-71752fa66947" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="I" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c50407f6-5783-4fa4-83c4-80d4fb37fb3d" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/ShippingOptionFilterList[1]/ShippingOptionFilterDetails[1]/Option[1]" PlaceHolder="{OPTION}" TagName="Option">
+<OptionalValuesList>
+<OptionalValue Guid="4ef0a4db-2e8f-4a3f-a60f-52d0c8631e17" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="EQ" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="1e8c471a-3ec4-4027-98eb-98e35e559959" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/ShippingOptionFilterList[1]/ShippingOptionFilterDetails[1]/Low[1]" PlaceHolder="{LOW}" TagName="Low">
+<OptionalValuesList>
+<OptionalValue Guid="24a013e1-70a7-4023-b636-53b1e781b417" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="000" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="52ada9b1-25b6-46d1-a141-41b4402516ba" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/OrderLineItemsList[1]/OrderLineItemDetails[1]/OrderLineID[1]" PlaceHolder="{ORDERLINEID}" TagName="OrderLineID">
+<OptionalValuesList>
+<OptionalValue Guid="a641e6c7-5f37-4001-8ecb-b3a703d48025" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="6f3535ee-cf39-4fe2-a42e-1fa8744136be" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/OrderLineItemsList[1]/OrderLineItemDetails[1]/ArticleNumber[1]" PlaceHolder="{ARTICLENUMBER}" TagName="ArticleNumber">
+<OptionalValuesList>
+<OptionalValue Guid="2aedd566-30db-4c75-a16e-2983f32b7cce" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="00301354" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="1247bb3b-165c-4ac3-a444-47ae18017d29" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/OrderLineItemsList[1]/OrderLineItemDetails[1]/Quantity[1]" PlaceHolder="{QUANTITY}" TagName="Quantity">
+<OptionalValuesList>
+<OptionalValue Guid="699871e3-9717-41dd-bf5f-c4ce6f18367d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="77fc98e3-938b-4b5c-99b0-5760db57b4f5" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/OrderLineItemsList[1]/OrderLineItemDetails[1]/UnitOfMeasurement[1]" PlaceHolder="{UNITOFMEASUREMENT}" TagName="UnitOfMeasurement">
+<OptionalValuesList>
+<OptionalValue Guid="d9137bb0-d634-4686-b71f-13ce42aa64f4" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="PCE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="04cdc455-2230-4bf7-b061-d50476093943" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetAvailableShippingOptionsRequest[1]/ns3:ROOT[1]/DATA[1]/OrderLineItemsList[1]/OrderLineItemDetails[1]/CashOnDeliveryFlag[1]" PlaceHolder="{CASHONDELIVERYFLAG}" TagName="CashOnDeliveryFlag">
+<OptionalValuesList>
+<OptionalValue Guid="c80bc0bf-eb9e-461f-b1b1-cd5db1f74d77" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="false" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ItemType="Activity" CreatedBy="Premanatha.NL" Created="202204200605" GingerVersion="4.3.0.0" Version="10" LastUpdateBy="Premanatha.NL" LastUpdate="202207200620" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="OGW validation_copy" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="DSL/cable" DBValidationType="FreeSQL" Description="FRIDA Approval" Guid="b7eac29f-e5a2-400b-8c43-2fb3dfe0fc32" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a9445987-0d67-4e45-a4e6-a6d36a13d66f" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select * from jesi_sit1.service_monitoring where extmtxt07='InProgress-ApprovedByRiskEditor' &#xD;&#xA;and Service_name= 'Approved By Risk Editor' and extltxt05='{Var Name=Order id}' Allow Filtering" />
+<ActInputValue Guid="a030c4ec-80ba-4573-b5e2-b4c667290a97" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="26047c20-d75d-464e-ae6d-e68ae7229fe1" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c291287f-fcc5-4cfc-a99f-5401103b87ac" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ddb296bb-b013-4090-952c-4a9722052e97" mExpected="InProgress-ApprovedByRiskEditor" Operator="Equals" Param="extmtxt07" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="0abf5c94-f8d6-4e66-af08-f535b59a0e53" mExpected="Approved By Risk Editor" Operator="Equals" Param="service_name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="DSL/cable" DBValidationType="FreeSQL" Description="OGW Backend validation" Guid="f2fc8626-9286-4a69-bf5e-2e2fa8d4bec8" ParentGuid="7e003c10-58ed-4af7-b479-9d389caf6bf5" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="7" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="9d07e365-c055-45a5-82c9-45143695bcdd" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="a9c132dc-55b7-48ae-bfc1-b8e697a9c7e3" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select cdm_txid,cdm_entity_txid, target_system, target_main_entity_id, status,ctcr_sys_cre_dt, ctcr_source_message_name&#xD;&#xA;from {EnvParam App=OGW Param=Casandra}.og_cdm_entity_targets where cdm_txid='{Var Name=Source_id}' and ctcr_source_message_name='cdm/updateCDM/update_cdm_entity_target.fxml' ALLOW FILTERING" />
+<ActInputValue Guid="384779bf-cfc7-4f97-a652-6df5d04399b0" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="20d633ee-7318-4791-99e2-6b87588d823d" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d6c39407-c0b9-4da7-8d52-02709006a695" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="95f4c76a-34c2-4159-96a0-7efea4dd419d" mExpected="InProgress-SubmittedToBackend" Operator="Equals" Param="status" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="8d2cf584-b992-44ee-87eb-a93495fbcc16" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="3fe7f765-ba78-4df0-9681-47e03d580247" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

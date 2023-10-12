@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="235a3df8-1a7c-467e-a854-2fb9abb36959" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302190915" GingerVersion="5.1.0.0" Version="3" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302200705" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="OGW FRIDA validation" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="235a3df8-1a7c-467e-a854-2fb9abb36959" ParentGuid="7e1dc2fe-fd5c-41a3-b0ef-69846d132318" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="DataBase Action" EnableRetryMechanism="True" Guid="82e8b99e-7924-4004-8bde-ba0acbd8f1de" MaxNumberOfRetries="10" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="95224e08-ad40-4e01-9cd3-0a138df963ef" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="StopBusinessFlow" Guid="435a3e25-ad18-4a24-8412-969995cc8044" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="7c89469c-1464-44cb-bdf4-12390a056673" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SELECT * FROM OGW_FRIDA_SUBSCRIBER_INFO WHERE CDM_TXID IN (SELECT SOURCE_ID FROM&#xD;&#xA;&#xD;&#xA;JESI_WF_AMDOCS_SUBSCRIBE WHERE CTCR_SOURCE_PROG_ID='{Var Name=Order id}')" />
+<ActInputValue Guid="58a687e8-5dfb-44b8-922a-8ca644416220" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="269ba7dd-a27b-44c3-8390-b3852ef2a863" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="dd9e5bd7-c0cf-451d-b60c-fbc658bf0ef2" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d6b3f358-d57b-45e5-8aba-d564225a7c4b" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="add3a79d-fa4a-4a87-8952-386adcb7cb7a" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="16e6c18b-6169-4058-9138-3c1e8fa69526" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="fc972139-0b93-42c1-ac38-1be63589bc1b" mExpected="HANDLED" Operator="Equals" Param="SUBSCRIBER_STATUS" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="b94ad7d1-bb85-446c-8b6d-75817879b32b" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

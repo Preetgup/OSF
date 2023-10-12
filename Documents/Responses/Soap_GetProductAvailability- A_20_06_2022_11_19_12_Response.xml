@@ -1,0 +1,31 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: GetProductAvailabilityRequest
+Date: Mon, 20 Jun 2022 09:19:12 GMT
+Server: JESI Server
+Content-Length: 2197
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:GetProductAvailabilityResponse xmlns:ns100="http://amdocs/vfde/product/VFDEGetProductAvailability">
+      <ROOT xmlns="http://amdocs/vfde/product/VFDEGetProductAvailabilityOutput">
+        <Event xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns0="http://amdocs/vfde/product/VFDEGetProductAvailability" xmlns:ns2="http://amdocs/vfde/product/VFDEGetProductAvailabilityInput" xmlns:ns1="http://amdocs/vfde/common/VFDECommonTypes" xmlns:ns3="http://amdocs/vfde/product/VFDEGetProductAvailabilityOutput" xmlns="">
+          <Type>GetProductAvailability_APImodelexecution</Type>
+          <ID>37992519602b9aca1db9d0.02630815</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>9b61rk9vgq4srd239d8lu3fri1</CorrelationID>
+          <FrontendUserId>4311</FrontendUserId>
+          <SalesChannel>telesales</SalesChannel>
+        </Event>
+        <DATA xmlns="">
+          <KDCallStatus>OGWERR-1500-Error received from KD buildingInfo WS.Details [ ErrorCode: 500 , ErrorMessage: Could not access remote service at [https://ads-test1.kabeldeutschland.de/ads/vkd-ads/AdsAddressV2]; nested exception is com.sun.xml.ws.client.ClientTransportException: Der Server hat HTTP-Statuscode 503 gesendet: Service Unavailable , LogReference: 9b4d876e-84d4-4549-8716-dd4b67f7d972 ].</KDCallStatus>
+          <FNCallStatus>OGWERR-3000-An error was encountered while invoking FN GetProductAvailibilty WS.Details [Error_Code: JESIERR-4 , Error_Message: [HTTPAdaptor] Can not connect to HTTP Server[https://adeagikh:8443/soap], Message[java.net.ConnectException: Connection refused]  , Error_Type: technical , Error_Severity: High , Error_Information: ]</FNCallStatus>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-1505</ErrorCode>
+          <ErrorDescription>Error response received from one or more backend services.Please check each backend service call status field for further details.</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:GetProductAvailabilityResponse>
+  </env:Body>
+</env:Envelope>

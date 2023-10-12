@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="4c414ec2-ee2b-43ec-9f75-e4b5168dc3c8" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111170907" GingerVersion="3.6.0.0" Version="4" LastUpdateBy="piyush.thakre" LastUpdate="202111190841" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossfvr:8001/VFDEGetOrderListEG/VFDE" Guid="4c414ec2-ee2b-43ec-9f75-e4b5168dc3c8" Name="OSF_GetOrderList" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/voras/order/getOrder/VFDEGetOrderList&quot; xmlns:vfd1=&quot;http://amdocs/vfde/voras/order/getOrderList/VFDEGetOrderListInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  	&lt;soapenv:Header&gt;&#xA;		&lt;wsse:Security xmlns:wsse=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&#xA;		 xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xA;				&lt;wsse:UsernameToken wsu:Id=&quot;UsernameToken-{Function Fun=GetHashCode({Function Fun=GetGUID()})}&quot;&gt;&#xA;				&lt;wsse:Username&gt;{WSSECUSERNAME}&lt;/wsse:Username&gt;&#xA;				&lt;wsse:Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;{WSSECPASSWORD}&lt;/wsse:Password&gt;&#xA;				&lt;wsse:Nonce EncodingType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary&quot;&gt;{Function Fun=GenerateHashCode(&quot;{Function Fun=GetGUID()}wssecpassword&quot;)}=&lt;/wsse:Nonce&gt;&#xA;				&lt;wsu:Created&gt;{Function Fun=GetUTCTimeStamp()}&lt;/wsu:Created&gt;&#xA;			&lt;/wsse:UsernameToken&gt;&#xA;		&lt;/wsse:Security&gt;&#xA;	&lt;/soapenv:Header&gt;&#xA;&lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:GetOrderListRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;ShopID&gt;{SHOPID}&lt;/ShopID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;DebtorID&gt;{DEBTORID}&lt;/DebtorID&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:GetOrderListRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="2ce3ee38-99b3-4b62-8d32-4d7fe074cd8d" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetOrderListRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="48cfb619-fdb4-4541-9a6d-aa6b01d4969c" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetOrderListRequest" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="0ad33e99-1611-46cc-aea5-4ebddd3c4593" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetOrderListRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="6fb6a632-6307-4c1f-ba65-52bdeb885e4d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="123445" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="2b95b591-0b6d-4f72-b6e4-a51039ef4803" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetOrderListRequest[1]/vfd1:ROOT[1]/Event[1]/ShopID[1]" PlaceHolder="{SHOPID}" TagName="ShopID">
+<OptionalValuesList>
+<OptionalValue Guid="7b2f998e-193f-419a-a563-f6a9a9b08604" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="0000884687" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="e2f8274b-0a51-43e0-ac5a-b4a4d7398a22" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetOrderListRequest[1]/vfd1:ROOT[1]/DATA[1]/DebtorID[1]" PlaceHolder="{DEBTORID}" TagName="DebtorID">
+<OptionalValuesList>
+<OptionalValue Guid="0af6f45f-5912-4140-8050-e72e3e7bc648" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="0000884687" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="6a12197e-cfe1-49dd-9b10-9d11964f3f6f" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="{WSSECUSERNAME}" />
+<AppModelParameter Guid="88f500fc-e078-4263-8693-371992397e54" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="{WSSECPASSWORD}" />
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

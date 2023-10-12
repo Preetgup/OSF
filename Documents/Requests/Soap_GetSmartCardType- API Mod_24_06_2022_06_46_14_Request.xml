@@ -1,0 +1,39 @@
+POST http://deossevr:8001/VFDEGetSmartCardTypeEG/VFDE HTTP/1.1
+Authorization: Basic T21uaXVzOk9tbml1c19TaXQ=
+Content-Type: text/xml; charset=utf-8
+Content-Length: 1218
+Host: deossevr:8001
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/card/VFDEGetSmartCardType" xmlns:vfd1="http://amdocs/vfde/card/VFDEGetSmartCardTypeInput">
+  <soapenv:Header />
+  <soapenv:Body>
+    <vfd:GetSmartCardTypeRequest>
+      <vfd1:ROOT>
+        <Event>
+          <Type>GetSmartCardType</Type>
+          <ID>592151c2067f3</ID>
+          <!--Optional:-->
+          <CallerID>Omnius</CallerID>
+          <!--Optional:-->
+          <CorrelationID>{UUID}</CorrelationID>
+          <!--Optional:-->
+          <!--Optional:-->
+          <!--Optional:-->
+          <!--Optional:-->
+          <MessageCreationTimestamp>2017-05-21T08:37:22</MessageCreationTimestamp>
+          <!--Optional:-->
+          <FrontendUserId>1</FrontendUserId>
+          <!--Optional:-->
+          <DealerCode>34401773</DealerCode>
+          <!--Optional:-->
+          <SalesChannel>retail</SalesChannel>
+          <!--Optional:-->
+          <!--Optional:-->
+        </Event>
+        <DATA>
+          <SmartCardSerialNumber>051547475969</SmartCardSerialNumber>
+        </DATA>
+      </vfd1:ROOT>
+    </vfd:GetSmartCardTypeRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

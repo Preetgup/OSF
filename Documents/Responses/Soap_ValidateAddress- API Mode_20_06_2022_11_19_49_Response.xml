@@ -1,0 +1,24 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: ValidateAddressRequest
+Date: Mon, 20 Jun 2022 09:19:50 GMT
+Server: JESI Server
+Content-Length: 1273
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:ValidateAddressResponse xmlns:ns100="http://amdocs/vfde/address/VFDEValidateAddress">
+      <ROOT xmlns="http://amdocs/vfde/address/VFDEValidateAddressOutput">
+        <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/address/VFDEValidateAddress" xmlns:vfd1="http://amdocs/vfde/address/VFDEValidateAddressInput" xmlns="">
+          <Type>ValidateAddress</Type>
+          <ID>Saurav12345</ID>
+        </Event>
+        <DATA xmlns="" />
+        <Status xmlns="">
+          <ErrorCode>OGWERR-1500</ErrorCode>
+          <ErrorDescription>Error received from KD addressValidator WS.Details [ ErrorCode: 500 , ErrorMessage: Could not access remote service at [https://ads-test1.kabeldeutschland.de/ads/vkd-ads/AdsAddressV2]; nested exception is com.sun.xml.ws.client.ClientTransportException: Der Server hat HTTP-Statuscode 503 gesendet: Service Unavailable , LogReference: 956abf45-3ce0-4a80-9395-0a5b9e4f1af6 ].</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:ValidateAddressResponse>
+  </env:Body>
+</env:Envelope>

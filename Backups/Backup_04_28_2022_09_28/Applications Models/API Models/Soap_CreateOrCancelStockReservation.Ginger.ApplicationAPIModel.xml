@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="5052fd82-d3f4-4a5b-b7b1-946c17de4a7f" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111121113" GingerVersion="3.6.0.0" Version="3" LastUpdateBy="piyush.thakre" LastUpdate="202111121115" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDECreateOrCancelStockReservation/VFDE" Guid="5052fd82-d3f4-4a5b-b7b1-946c17de4a7f" Name="Soap_CreateOrCancelStockReservation" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;s:Envelope xmlns:s=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xD;&#xA;  &lt;s:Header&gt;&#xD;&#xA;    &lt;Action xmlns=&quot;{XMLNS}&quot; s:mustUnderstand=&quot;1&quot;&gt;{ACTION}&lt;/Action&gt;&#xD;&#xA;  &lt;/s:Header&gt;&#xD;&#xA;  &lt;s:Body&gt;&#xD;&#xA;    &lt;ns0:CreateOrCancelStockReservationRequest xmlns:ns0=&quot;http://amdocs/vfde/stockReservation/&quot; xmlns:ns3=&quot;http://amdocs/vfde/stockReservation/VFDECreateOrCancelStockReservationOutput&quot; xmlns:ns1=&quot;http://amdocs/vfde/stockReservation/VFDECreateOrCancelStockReservationInput&quot; xmlns:ns2=&quot;http://amdocs/vfde/common/VFDECommonTypes&quot;&gt;&#xD;&#xA;      &lt;ns1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;CreateOrCancelStockReservationDetails&gt;&#xD;&#xA;            &lt;CreateReservationsList&gt;&#xD;&#xA;              &lt;CreateReservationDetails&gt;&#xD;&#xA;                &lt;SourceReservationID&gt;{SOURCERESERVATIONID}&lt;/SourceReservationID&gt;&#xD;&#xA;                &lt;ArticleNumber&gt;{ARTICLENUMBER}&lt;/ArticleNumber&gt;&#xD;&#xA;                &lt;Quantity&gt;{QUANTITY}&lt;/Quantity&gt;&#xD;&#xA;                &lt;UnitOfMeasure&gt;{UNITOFMEASURE}&lt;/UnitOfMeasure&gt;&#xD;&#xA;                &lt;OrderLineID&gt;{ORDERLINEID}&lt;/OrderLineID&gt;&#xD;&#xA;              &lt;/CreateReservationDetails&gt;&#xD;&#xA;            &lt;/CreateReservationsList&gt;&#xD;&#xA;          &lt;/CreateOrCancelStockReservationDetails&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/ns1:ROOT&gt;&#xD;&#xA;    &lt;/ns0:CreateOrCancelStockReservationRequest&gt;&#xD;&#xA;  &lt;/s:Body&gt;&#xD;&#xA;&lt;/s:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="11e697f6-0613-47ce-a45e-639b401446a1" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{ACTION}" TagName="Action">
+<OptionalValuesList>
+<OptionalValue Guid="810e5805-27ca-47e0-83cf-38f98f2d2d5c" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CreateOrCancelStockReservation" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="3da49f0c-54e3-4e2f-9dac-78450d143aa7" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{XMLNS}" TagName="xmlns">
+<OptionalValuesList>
+<OptionalValue Guid="6c654e30-1f58-49c7-b195-d449ab254639" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://schemas.microsoft.com/ws/2005/05/addressing/none" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="6f5d62cd-47fc-4143-8a88-803d44151be7" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="c6a364aa-b619-4c1a-a0db-ad06da17dba1" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CreateOrCancelStockReservation" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="32db1045-ac5b-45e5-9261-fa13c97bc605" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="deb9f2fa-f016-4b9e-95bb-6f8fdf3a4763" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="15021963725b23858bdeea00.24332190" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="12d859b8-78df-4c0d-948d-3c380930ad11" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="f182ca92-235c-4b88-98c4-4c37ac6c7f8b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="3c7117ee-e4a4-4b3f-9f66-106453bf40d8" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="79012eae-0383-4fcc-891f-7dc1f528c49f" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="85666303586a31188b771d75bb837e5a" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="4d7758b5-4188-4a3f-8446-99b8c65d3e18" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="1c7238cc-f301-4660-862f-79ee80be06b7" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="04753123-456f-4516-ae10-df049116bee4" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/DATA[1]/CreateOrCancelStockReservationDetails[1]/CreateReservationsList[1]/CreateReservationDetails[1]/SourceReservationID[1]" PlaceHolder="{SOURCERESERVATIONID}" TagName="SourceReservationID">
+<OptionalValuesList>
+<OptionalValue Guid="53817fe5-1432-45b8-a983-5c0cb7e9ee54" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="979fcd5d-9dbf-41f4-9638-8a01dc88ccba" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/DATA[1]/CreateOrCancelStockReservationDetails[1]/CreateReservationsList[1]/CreateReservationDetails[1]/ArticleNumber[1]" PlaceHolder="{ARTICLENUMBER}" TagName="ArticleNumber">
+<OptionalValuesList>
+<OptionalValue Guid="ac552771-32cb-4740-a02a-31b0d67da0f4" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="00301354" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="b2c4e8c9-9cc5-4212-a20e-d01ad0c72988" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/DATA[1]/CreateOrCancelStockReservationDetails[1]/CreateReservationsList[1]/CreateReservationDetails[1]/Quantity[1]" PlaceHolder="{QUANTITY}" TagName="Quantity">
+<OptionalValuesList>
+<OptionalValue Guid="86c93098-1c41-4c3e-beaa-e470827adc67" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c46863c3-ed3a-47b9-b137-ce1bddd50305" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/DATA[1]/CreateOrCancelStockReservationDetails[1]/CreateReservationsList[1]/CreateReservationDetails[1]/UnitOfMeasure[1]" PlaceHolder="{UNITOFMEASURE}" TagName="UnitOfMeasure">
+<OptionalValuesList>
+<OptionalValue Guid="2cc7a535-630d-44f0-b503-812e5cb20be5" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="PCE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="505c92d2-faf0-4e4a-8724-f95ac14aeee5" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:CreateOrCancelStockReservationRequest[1]/ns1:ROOT[1]/DATA[1]/CreateOrCancelStockReservationDetails[1]/CreateReservationsList[1]/CreateReservationDetails[1]/OrderLineID[1]" PlaceHolder="{ORDERLINEID}" TagName="OrderLineID">
+<OptionalValuesList>
+<OptionalValue Guid="39d5d7ee-5062-4813-9fba-4f52d5e41d61" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="b726e76a-b138-48cb-8598-71ddfce915ce" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202205250927" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202205250927" />
+<ActDBValidation Active="True" AppName="OSF" DBName="MOBILE" DBValidationType="FreeSQL" Description="Select existng Customer" Guid="b726e76a-b138-48cb-8598-71ddfce915ce" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9f652791-f855-4e5b-a190-dca2a83c2ba9" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select customer_id from subscriber where sub_status ='A' and rownum &lt;150 and sys_creation_date &gt;sysdate-180" />
+<ActInputValue Guid="55ce9c64-6785-4826-a935-c299dc68aa2a" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="833c2bb9-d6d5-4002-be59-883ad04e73a8" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a642f3d3-4daa-4434-9315-cae9c940a0ea" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="bd2979fd-2656-454b-9308-72df7348f464" Operator="Equals" Param="CUSTOMER_ID" ParentGuid="00000000-0000-0000-0000-000000000000" Path="56" StoreTo="Variable" StoreToValue="ACT_CUSTOMER_ID" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

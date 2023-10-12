@@ -1,0 +1,25 @@
+POST http://deossevr:8001/VFDEGetCablePaymentAndPayerInformationEG/VFDE HTTP/1.1
+Authorization: Basic T21uaXVzOk9tbml1c19TaXQ=
+Content-Type: text/xml; charset=utf-8
+Content-Length: 825
+Host: deossevr:8001
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/payment/VFDEGetCablePaymentAndPayerInformation" xmlns:vfd1="http://amdocs/vfde/payment/VFDEGetCablePaymentAndPayerInformationInput">
+  <soapenv:Header />
+  <soapenv:Body>
+    <vfd:VFDEGetCablePaymentAndPayerInformationRequest>
+      <vfd1:ROOT>
+        <Event>
+          <Type>GetPayerAndPaymentInfo</Type>
+          <ID>591eea20ba231</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>a8re0i1nrp4fr0rtshdjejreseqtnosc</CorrelationID>
+          <FrontendUserId>1</FrontendUserId>
+        </Event>
+        <DATA>
+          <IBAN>DE61100700240092822600</IBAN>
+        </DATA>
+      </vfd1:ROOT>
+    </vfd:VFDEGetCablePaymentAndPayerInformationRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

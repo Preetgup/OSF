@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2b178170-fb83-4572-880b-f99d240ba34c" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111170825" GingerVersion="3.6.0.0" Version="3" LastUpdateBy="piyush.thakre" LastUpdate="202111182025" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr.dc-ratingen.de:8001/VFDESubmitOrderEG/VFDE" Guid="2b178170-fb83-4572-880b-f99d240ba34c" Name="OSF_ConvertAndValidateIBANS" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:tns=&quot;http://amdocs/vfde/iban/ValidateAndConvertIBAN&quot; xmlns:wsr=&quot;http://www.openuri.org/2002/10/soap/reliability/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soap12enc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:conv=&quot;http://www.openuri.org/2002/04/wsdl/conversation/&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:s=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;val:ValidateAndConvertIBANRequest xmlns:val=&quot;http://amdocs/vfde/iban/ValidateAndConvertIBAN&quot; xmlns:vfd=&quot;http://amdocs/vfde/iban/VFDEValidateAndConvertIBANInput&quot;&gt;&#xD;&#xA;      &lt;vfd:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;SourceID&gt;{SOURCEID}&lt;/SourceID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;OriginalAppl&gt;{ORIGINALAPPL}&lt;/OriginalAppl&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;OriginalPubID&gt;{ORIGINALPUBID}&lt;/OriginalPubID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;MessageCreationTimestamp&gt;{MESSAGECREATIONTIMESTAMP}&lt;/MessageCreationTimestamp&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;DealerCode&gt;{DEALERCODE}&lt;/DealerCode&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;SalesChannel&gt;{SALESCHANNEL}&lt;/SalesChannel&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;DealerOrganisation&gt;{DEALERORGANISATION}&lt;/DealerOrganisation&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;ShopID&gt;{SHOPID}&lt;/ShopID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;!--You have a CHOICE of the next 2 items at this level--&gt;&#xD;&#xA;          &lt;!--&lt;bankIdentifier&gt;7867655667&lt;/bankIdentifier&gt;&#xD;&#xA;                    &lt;accountNumber&gt;34566778889&lt;/accountNumber&gt;--&gt;&#xD;&#xA;          &lt;IBAN&gt;{IBAN}&lt;/IBAN&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd:ROOT&gt;&#xD;&#xA;    &lt;/val:ValidateAndConvertIBANRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="8987b3a6-8562-4b02-8866-eb93569eb402" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="33723ddf-59c9-43b7-a188-e99740a33c13" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="aaf62462-4402-47a6-a2c1-4ad551f78826" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="9ea47d59-e753-4a6b-b55b-a28bc526246a" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="a39c4782-86e4-476b-98f3-a87d47fd56c5" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="1cfcfa03-65f1-4271-a124-a18237b8befb" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="5be9a1d0-a689-458f-af8e-e9cb0d7462e8" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="518857a7-f1f8-4f83-8976-1e4d4fdf82d2" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="37bb4f30-e201-488d-85c6-7f07bc75a17a" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/SourceID[1]" PlaceHolder="{SOURCEID}" TagName="SourceID">
+<OptionalValuesList>
+<OptionalValue Guid="d855acea-8bc8-4a4c-bfcc-ecef698be8d6" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="eaaa9677-e9e1-4c7c-a452-22c85bea8395" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/OriginalAppl[1]" PlaceHolder="{ORIGINALAPPL}" TagName="OriginalAppl">
+<OptionalValuesList>
+<OptionalValue Guid="9300b7b4-6ddd-485c-a901-22866e035085" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="62f5579a-a229-4364-ae0d-85d62d5be990" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/OriginalPubID[1]" PlaceHolder="{ORIGINALPUBID}" TagName="OriginalPubID">
+<OptionalValuesList>
+<OptionalValue Guid="65f46793-d546-44e8-b583-4d946c3e902e" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="504f516d-47a6-4c36-8b19-2e257387ce14" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/MessageCreationTimestamp[1]" PlaceHolder="{MESSAGECREATIONTIMESTAMP}" TagName="MessageCreationTimestamp">
+<OptionalValuesList>
+<OptionalValue Guid="b589aaf7-f058-4449-9ce8-c6cdad614328" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2008-09-29T04:49:45" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="e25077bf-6dd9-4945-bc4f-aa350293f809" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="433f203b-1d69-4d03-86d6-e49a7f2027a0" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="44663153-c409-45d5-a201-47a71bf149cb" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/DealerCode[1]" PlaceHolder="{DEALERCODE}" TagName="DealerCode">
+<OptionalValuesList>
+<OptionalValue Guid="55b3bb05-ba6e-45aa-a06d-204768c5fe90" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="1907540e-d718-448a-b00d-24cb0ee50172" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/SalesChannel[1]" PlaceHolder="{SALESCHANNEL}" TagName="SalesChannel">
+<OptionalValuesList>
+<OptionalValue Guid="89592306-4b0f-49c2-ad73-4fd3bf47cd35" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="3098ec4f-3eaf-4f3b-acdf-61cfca73c4ec" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/DealerOrganisation[1]" PlaceHolder="{DEALERORGANISATION}" TagName="DealerOrganisation">
+<OptionalValuesList>
+<OptionalValue Guid="22a34888-31a0-45b6-aeff-2f10eb6821fd" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="339eedcf-1360-4dc5-83ad-4f4904ca0b78" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/Event[1]/ShopID[1]" PlaceHolder="{SHOPID}" TagName="ShopID">
+<OptionalValuesList>
+<OptionalValue Guid="c49b3942-4812-4384-bc87-7051e2d7fa64" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="fa976f94-d9fe-4039-828c-464e26cec5d1" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/val:ValidateAndConvertIBANRequest[1]/vfd:ROOT[1]/DATA[1]/IBAN[1]" PlaceHolder="{IBAN}" TagName="IBAN">
+<OptionalValuesList>
+<OptionalValue Guid="4a65d909-8edf-4d9f-9328-02336b37594c" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE89370400440532013000" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

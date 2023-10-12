@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="0d8b8be7-947b-4ebe-9a14-043998c472bc" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111111158" GingerVersion="3.9.0.0" Version="4" LastUpdateBy="Petros.Dimitriou" LastUpdate="202204280728" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDELegacySearchEG/VFDE" Guid="0d8b8be7-947b-4ebe-9a14-043998c472bc" Name="Soap_SearchLegacy" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/customer/VFDELegacySearch&quot; xmlns:vfd1=&quot;http://amdocs/vfde/customer/VFDELegacySearchInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:LegacySearchRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;BackendInd&gt;{BACKENDIND}&lt;/BackendInd&gt;&#xD;&#xA;          &lt;KDSearchInput&gt;&#xD;&#xA;            &lt;Id&gt;{ID1}&lt;/Id&gt;&#xD;&#xA;          &lt;/KDSearchInput&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:LegacySearchRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="a8a136ff-41ef-4e1e-8cd4-37a36f25c7ad" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:LegacySearchRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="b1303260-07a7-4eb1-83a2-c85deb9329da" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SearchCustomerFromLegacy" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="1d26698c-207a-4f17-92d2-1f2fc3bf9d07" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:LegacySearchRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="abb2ed3c-1a04-4b4e-818f-7c494529de29" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="13583532125d3ec024e58d30.06123278" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="745832cf-3645-4b6d-9bd2-7d462291478a" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:LegacySearchRequest[1]/vfd1:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="1d2d6191-3701-41b6-8c61-2201eab14f04" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="962ea201-5f38-4630-84e9-5c43cb0ef647" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:LegacySearchRequest[1]/vfd1:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="fac95f6b-adda-4431-bc7d-b6faa9a69b7e" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="le1l0qgv9hbegmhdg27l3o2sl2" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="8f0db1d8-e5c9-4f0d-be8e-8a3f03ecdb8f" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:LegacySearchRequest[1]/vfd1:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="c19e08dd-6f08-4592-9847-8b2ea47813c9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="7e9ff790-5120-4207-83e0-91dc42161148" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:LegacySearchRequest[1]/vfd1:ROOT[1]/DATA[1]/BackendInd[1]" PlaceHolder="{BACKENDIND}" TagName="BackendInd">
+<OptionalValuesList>
+<OptionalValue Guid="3edb7190-c449-411e-8358-ce590110b8d5" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="KD" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="ddf1ce00-1ee0-42bb-807b-9e3bf77dbd05" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:LegacySearchRequest[1]/vfd1:ROOT[1]/DATA[1]/KDSearchInput[1]/Id[1]" PlaceHolder="{ID1}" TagName="Id">
+<OptionalValuesList>
+<OptionalValue Guid="fde06ef8-f3d0-44ff-ab3c-e16d1b065a47" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="931385163" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

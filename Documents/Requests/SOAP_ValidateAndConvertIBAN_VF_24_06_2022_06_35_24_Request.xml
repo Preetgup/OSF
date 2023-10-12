@@ -1,0 +1,47 @@
+POST http://deossevr:8001/VFDE_ValidateAndConvertIBANWS/VFDE HTTP/1.1
+Authorization: Basic T21uaXVzOk9tbml1c19TaXQ=
+Content-Type: text/xml; charset=utf-8
+Content-Length: 2554
+Host: deossevr:8001
+
+<soapenv:Envelope xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'  xmlns:tns="http://amdocs/vfde/iban/ValidateAndConvertIBAN" xmlns:wsr="http://www.openuri.org/2002/10/soap/reliability/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12enc="http://www.w3.org/2003/05/soap-encoding" xmlns:conv="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <val:ValidateAndConvertIBANRequest xmlns:val="http://amdocs/vfde/iban/ValidateAndConvertIBAN" xmlns:vfd="http://amdocs/vfde/iban/VFDEValidateAndConvertIBANInput">
+            <vfd:ROOT>
+                <Event>
+                    <Type>string</Type>
+                    <ID>string</ID>
+                    <!--Optional:-->
+                    <CallerID>string</CallerID>
+                    <!--Optional:-->
+                    <CorrelationID>string</CorrelationID>
+                    <!--Optional:-->
+                    <SourceID>string</SourceID>
+                    <!--Optional:-->
+                    <OriginalAppl>string</OriginalAppl>
+                    <!--Optional:-->
+                    <OriginalPubID>string</OriginalPubID>
+                    <!--Optional:-->
+                    <MessageCreationTimestamp>2008-09-29T04:49:45</MessageCreationTimestamp>
+                    <!--Optional:-->
+                    <FrontendUserId>string</FrontendUserId>
+                    <!--Optional:-->
+                    <DealerCode>string</DealerCode>
+                    <!--Optional:-->
+                    <SalesChannel>string</SalesChannel>
+                    <!--Optional:-->
+                    <DealerOrganisation>string</DealerOrganisation>
+                    <!--Optional:-->
+                    <ShopID>string</ShopID>
+                </Event>
+                <DATA>
+                    <!--You have a CHOICE of the next 2 items at this level-->
+                    <!--<bankIdentifier>7867655667</bankIdentifier>
+                    <accountNumber>34566778889</accountNumber>-->
+                    <IBAN>DE89370400440532013000</IBAN>
+                </DATA>
+            </vfd:ROOT>
+        </val:ValidateAndConvertIBANRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,32 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: GetNonStandardRatesRequest
+Date: Fri, 24 Jun 2022 04:36:04 GMT
+Server: JESI Server
+Content-Length: 1191
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:GetNonStandardRatesResponse xmlns:ns100="http://amdocs/vfde/rates/VFDEGetNonStandardRate">
+      <ROOT xmlns="http://amdocs/vfde/rates/VFDENonStandardRatesOutput">
+        <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/rates/VFDEGetNonStandardRate" xmlns:vfd1="http://amdocs/vfde/rates/VFDENonStandardRatesInput" xmlns="">
+          <Type>GetNonStandardRates</Type>
+          <ID>saurav1234</ID>
+        </Event>
+        <DATA xmlns="">
+          <NonStandardRates>
+            <AddressId>1591979</AddressId>
+            <ContractCode>VDP</ContractCode>
+            <ProductCode>4KE</ProductCode>
+            <NonStandardRate>6.5</NonStandardRate>
+            <NonStandardInstallRate>0.0</NonStandardInstallRate>
+          </NonStandardRates>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-0000</ErrorCode>
+          <ErrorDescription>SUCCESS</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:GetNonStandardRatesResponse>
+  </env:Body>
+</env:Envelope>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="d9e57565-3a67-4015-af4e-725a5e10a7c9" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111111133" GingerVersion="3.6.0.0" Version="3" LastUpdateBy="piyush.thakre" LastUpdate="202111111200" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDESubsidizedHandsetValidationEG/VFDE" Guid="d9e57565-3a67-4015-af4e-725a5e10a7c9" Name="Soap_SubsidisedHandset" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/subscriber/handset/VFDESubsidizedHandsetValidation&quot; xmlns:vfd1=&quot;http://amdocs/vfde/subscriber/handset/VFDESubsidizedHandsetValidationInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:SubsidizedHandsetValidationRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;MarketCode&gt;{MARKETCODE}&lt;/MarketCode&gt;&#xD;&#xA;          &lt;SubscriberDetailsList&gt;&#xD;&#xA;            &lt;SubscriberDetails&gt;&#xD;&#xA;              &lt;BAN&gt;{BAN}&lt;/BAN&gt;&#xD;&#xA;              &lt;SubscriberNumbers&gt;&#xD;&#xA;                &lt;SubscriberNumber&gt;{SUBSCRIBERNUMBER}&lt;/SubscriberNumber&gt;&#xD;&#xA;              &lt;/SubscriberNumbers&gt;&#xD;&#xA;            &lt;/SubscriberDetails&gt;&#xD;&#xA;          &lt;/SubscriberDetailsList&gt;&#xD;&#xA;          &lt;DealerCode&gt;{DEALERCODE}&lt;/DealerCode&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:SubsidizedHandsetValidationRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="a638ee49-c3b8-4620-84e6-c4c69db676cf" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SubsidizedHandsetValidationRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="020d974f-dc35-408a-872a-58cab2e255f5" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SubsidizedHandsetValidation" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="67902077-698d-4e1c-8482-6612566371a7" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SubsidizedHandsetValidationRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="252c8ca0-b593-41ec-a835-902d8d68f6d5" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="58d3a581cb152" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="ba15210b-0cb6-497d-8c4e-e03cded63d43" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SubsidizedHandsetValidationRequest[1]/vfd1:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="b74b0c27-d9b7-45ad-94e6-080d987b893b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c069ac41-997f-4fa2-af97-2982baa608d1" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SubsidizedHandsetValidationRequest[1]/vfd1:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="7e7a22d0-ccf2-4182-bb8a-63aa9b7b87f9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="a1t44ok54r095a8gjd38up7kok1b0qi7" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="5a320efd-16b6-4666-9aaf-88fd68a2fa50" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SubsidizedHandsetValidationRequest[1]/vfd1:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="d4711d13-89f8-4779-9f09-1849116a8f1b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="15" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="8598ab4a-f680-4f3b-896d-a6ef362fcb81" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SubsidizedHandsetValidationRequest[1]/vfd1:ROOT[1]/DATA[1]/MarketCode[1]" PlaceHolder="{MARKETCODE}" TagName="MarketCode">
+<OptionalValuesList>
+<OptionalValue Guid="c455ddf7-2ba7-4fe6-a2fd-55df226bf511" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MMC" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="687133c3-0aa9-48bb-9b22-1d5fa3b32797" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SubsidizedHandsetValidationRequest[1]/vfd1:ROOT[1]/DATA[1]/SubscriberDetailsList[1]/SubscriberDetails[1]/BAN[1]" PlaceHolder="{BAN}" TagName="BAN">
+<OptionalValuesList>
+<OptionalValue Guid="6539a4c7-abaa-412b-a9e0-eecb08344209" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="20034902" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="d94f6789-85a4-4142-a7c5-1cf6e65364f1" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SubsidizedHandsetValidationRequest[1]/vfd1:ROOT[1]/DATA[1]/SubscriberDetailsList[1]/SubscriberDetails[1]/SubscriberNumbers[1]/SubscriberNumber[1]" PlaceHolder="{SUBSCRIBERNUMBER}" TagName="SubscriberNumber">
+<OptionalValuesList>
+<OptionalValue Guid="1f0c1f92-ceb7-4005-b8f1-4518a02f633b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GSM1720400196" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="b32af9ab-aa21-4ac1-a935-1087f105a48e" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:SubsidizedHandsetValidationRequest[1]/vfd1:ROOT[1]/DATA[1]/DealerCode[1]" PlaceHolder="{DEALERCODE}" TagName="DealerCode">
+<OptionalValuesList>
+<OptionalValue Guid="5bf982b2-4826-4bb3-88b0-a415282671b1" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="34401258" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

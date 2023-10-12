@@ -1,0 +1,40 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: ValidateAddressRequest
+Keep-Alive: timeout=60
+Connection: keep-alive
+Date: Fri, 24 Jun 2022 04:45:31 GMT
+Server: JESI Server
+Content-Length: 1310
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:ValidateAddressResponse xmlns:ns100="http://amdocs/vfde/address/VFDEValidateAddress">
+      <ROOT xmlns="http://amdocs/vfde/address/VFDEValidateAddressOutput">
+        <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/address/VFDEValidateAddress" xmlns:vfd1="http://amdocs/vfde/address/VFDEValidateAddressInput" xmlns="">
+          <Type>ValidateAddress</Type>
+          <ID>Saurav12345</ID>
+        </Event>
+        <DATA xmlns="">
+          <Addresses>
+            <Confirmation>true</Confirmation>
+            <AddressId>1966064</AddressId>
+            <Service>true</Service>
+            <Street>Roscheklinge</Street>
+            <HouseNumber>12</HouseNumber>
+            <Country>DEU</Country>
+            <City>Schneeberg</City>
+            <District>Schneeberg</District>
+            <ZipCode>63936</ZipCode>
+            <ZipKind>6</ZipKind>
+            <Region>R09</Region>
+          </Addresses>
+        </DATA>
+        <Status xmlns="">
+          <ErrorCode>OGWERR-0000</ErrorCode>
+          <ErrorDescription>SUCCESS</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:ValidateAddressResponse>
+  </env:Body>
+</env:Envelope>

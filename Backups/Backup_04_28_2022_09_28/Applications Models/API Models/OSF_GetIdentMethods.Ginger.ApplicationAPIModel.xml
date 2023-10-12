@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="ebae2d84-1cc1-4f33-97f8-d6932a7e67c8" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111170828" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="piyush.thakre" LastUpdate="202111170837" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEGetIdentMethodsEG/VFDE" Guid="ebae2d84-1cc1-4f33-97f8-d6932a7e67c8" Name="OSF_GetIdentMethods" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;s:Envelope xmlns:s=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xD;&#xA;  &lt;s:Header&gt;&#xD;&#xA;    &lt;Action xmlns=&quot;{XMLNS}&quot; s:mustUnderstand=&quot;1&quot;&gt;{ACTION}&lt;/Action&gt;&#xD;&#xA;  &lt;/s:Header&gt;&#xD;&#xA;  &lt;s:Body&gt;&#xD;&#xA;    &lt;ns0:GetIdentMethodsRequest xmlns:ns0=&quot;http://amdocs/vfde/ident/VFDEGetIdentMethods&quot; xmlns:ns2=&quot;http://amdocs/vfde/ident/VFDEGetIdentMethodsInput&quot; xmlns:ns3=&quot;http://amdocs/vfde/ident/VFDEGetIdentMethodsOutput&quot; xmlns:ns1=&quot;http://amdocs/vfde/common/VFDECommonTypes&quot;&gt;&#xD;&#xA;      &lt;ns2:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;NameData&gt;&#xD;&#xA;            &lt;Salutation&gt;{SALUTATION}&lt;/Salutation&gt;&#xD;&#xA;            &lt;FirstName&gt;{FIRSTNAME}&lt;/FirstName&gt;&#xD;&#xA;            &lt;LastName&gt;{LASTNAME}&lt;/LastName&gt;&#xD;&#xA;          &lt;/NameData&gt;&#xD;&#xA;          &lt;AddressData&gt;&#xD;&#xA;            &lt;Street&gt;{STREET}&lt;/Street&gt;&#xD;&#xA;            &lt;HouseNumber&gt;{HOUSENUMBER}&lt;/HouseNumber&gt;&#xD;&#xA;            &lt;HouseNumberAddition&gt;{HOUSENUMBERADDITION}&lt;/HouseNumberAddition&gt;&#xD;&#xA;            &lt;Zip&gt;{ZIP}&lt;/Zip&gt;&#xD;&#xA;            &lt;City&gt;{CITY}&lt;/City&gt;&#xD;&#xA;            &lt;Country&gt;{COUNTRY}&lt;/Country&gt;&#xD;&#xA;          &lt;/AddressData&gt;&#xD;&#xA;          &lt;Nationality&gt;{NATIONALITY}&lt;/Nationality&gt;&#xD;&#xA;          &lt;NoIdentFlag&gt;{NOIDENTFLAG}&lt;/NoIdentFlag&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/ns2:ROOT&gt;&#xD;&#xA;    &lt;/ns0:GetIdentMethodsRequest&gt;&#xD;&#xA;  &lt;/s:Body&gt;&#xD;&#xA;&lt;/s:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="31b81eda-46e2-4835-9754-c2585dede34a" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{ACTION}" TagName="Action">
+<OptionalValuesList>
+<OptionalValue Guid="e2b13d5e-4e73-4758-8e95-6862728d74fa" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetIdentMethods" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="ca071b1f-f7b1-43d0-9a56-57b52ed8d2b6" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Header[1]/Action[1]" PlaceHolder="{XMLNS}" TagName="xmlns">
+<OptionalValuesList>
+<OptionalValue Guid="623ccaf5-cff3-4f13-bdc8-83312a48d349" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="http://schemas.microsoft.com/ws/2005/05/addressing/none" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="67baa4ff-c1a5-4fd9-a4a1-33e9fffeff77" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="3daab064-f535-4517-a275-4cca999dcf2b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetIdentMethods" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="340db5e2-9ce8-4c88-a579-e4cb9bba25dc" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="d06bff25-f60c-4b3f-9639-ea0c4060ef8d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="16225825675b21039a9bfc28.61696777" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="7ae84587-9dda-47c0-99c7-90e7966a7052" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="818728d3-eb4d-473f-9ba3-9226087e49f6" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="OSF" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="2e67bceb-4c5f-41c7-82ca-f865d353dd7a" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="1666fdb7-c3e3-47aa-96db-6622f0b9d7ca" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="0fe4e692fedd98ed26169a7fe44e096d" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="9d59c261-cbd5-4ffb-980e-4b6312740876" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="1a6d6b3b-c51a-437f-b84d-87614a9b04be" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="dca59bac-b71d-4926-a348-297b2dd91c5b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/NameData[1]/Salutation[1]" PlaceHolder="{SALUTATION}" TagName="Salutation">
+<OptionalValuesList>
+<OptionalValue Guid="d0d44dd0-e5ca-45a8-a68f-166a4e65448a" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="461c1ce3-0d29-450f-bd08-72d159d7c884" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/NameData[1]/FirstName[1]" PlaceHolder="{FIRSTNAME}" TagName="FirstName">
+<OptionalValuesList>
+<OptionalValue Guid="743e1853-89a1-4c0f-bff2-b88a06e98fb9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="fdgdfg" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="bba489d0-0da4-41f4-b1b9-cd94cdf36acc" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/NameData[1]/LastName[1]" PlaceHolder="{LASTNAME}" TagName="LastName">
+<OptionalValuesList>
+<OptionalValue Guid="c3c3cc9b-bd8a-4ea3-9d98-ba4d5f70ec0b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="dfgdfg" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="43d7068f-99a0-4415-ac3a-b822407e5750" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/AddressData[1]/Street[1]" PlaceHolder="{STREET}" TagName="Street">
+<OptionalValuesList>
+<OptionalValue Guid="ff94f823-35b7-40ee-a694-2fb5ef6f115d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Wittenkamp" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="88482f22-3513-4047-b0e4-4954dac51fb0" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/AddressData[1]/HouseNumber[1]" PlaceHolder="{HOUSENUMBER}" TagName="HouseNumber">
+<OptionalValuesList>
+<OptionalValue Guid="cb1b25c6-03ff-4dbb-9566-ab516f1c8277" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="111" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="c03761c3-3001-4060-92bf-effc8649d8a4" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/AddressData[1]/HouseNumberAddition[1]" PlaceHolder="{HOUSENUMBERADDITION}" TagName="HouseNumberAddition">
+<OptionalValuesList>
+<OptionalValue Guid="d4f01611-f0f7-41ed-92ae-34d79744fbe8" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="aed04850-36b9-4786-ae16-5a3d72596d22" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/AddressData[1]/Zip[1]" PlaceHolder="{ZIP}" TagName="Zip">
+<OptionalValuesList>
+<OptionalValue Guid="c97c1674-94cd-45c7-aa75-9f7cad3d69ea" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="22307" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="fdce02d2-a170-4502-995b-054cb50fe28b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/AddressData[1]/City[1]" PlaceHolder="{CITY}" TagName="City">
+<OptionalValuesList>
+<OptionalValue Guid="ec7591a1-08b1-4b24-823d-8625d6afef0e" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Hamburg" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="0530b171-95f1-47fa-80ec-c51171f42c34" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/AddressData[1]/Country[1]" PlaceHolder="{COUNTRY}" TagName="Country">
+<OptionalValuesList>
+<OptionalValue Guid="031df1a6-63da-4037-9282-a1f467344687" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Deutschland" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="a04363ff-7e75-4cdc-9188-7a2c8c3a5819" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/Nationality[1]" PlaceHolder="{NATIONALITY}" TagName="Nationality">
+<OptionalValuesList>
+<OptionalValue Guid="743e349c-c9bb-4936-8ae5-dab952b5dc35" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="4132ea33-fef7-40b5-ba16-0067aa0eb3a0" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='s:Envelope']/s:Body[1]/ns0:GetIdentMethodsRequest[1]/ns2:ROOT[1]/DATA[1]/NoIdentFlag[1]" PlaceHolder="{NOIDENTFLAG}" TagName="NoIdentFlag">
+<OptionalValuesList>
+<OptionalValue Guid="394c32fd-0295-4f52-82c0-067be6ef546b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Y" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

@@ -1,0 +1,27 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: LegacySearchRequest
+Date: Mon, 20 Jun 2022 09:19:31 GMT
+Server: JESI Server
+Content-Length: 3041
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:LegacySearchResponse xmlns:ns100="http://amdocs/vfde/customer/VFDELegacySearch">
+      <ROOT xmlns="http://amdocs/vfde/customer/VFDELegacySearchOutput">
+        <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/customer/VFDELegacySearch" xmlns:vfd1="http://amdocs/vfde/customer/VFDELegacySearchInput" xmlns="">
+          <Type>Soap_LegacySearch</Type>
+          <ID>13583532125d3ec024e58d30.06123278</ID>
+          <CallerID>OSF</CallerID>
+          <CorrelationID>le1l0qgv9hbegmhdg27l3o2sl2</CorrelationID>
+          <FrontendUserId>1</FrontendUserId>
+        </Event>
+        <DATA xmlns="" />
+        <Status xmlns="">
+          <ErrorCode>JESIERR-1</ErrorCode>
+          <ErrorDescription>amdocs.ecommerce.common.exceptions.SystemException:[HTTPAdaptor] Error processing request: Status[500], Message[{"httpCode":500,"messageIdentifier":"UNKNOWN_INTERNAL_ERROR","message":"Search by Some Id failed","logReference":"fcf46f95-5dfd-49ad-aaea-4572ad782d4e","technicalInformation":[{"type":"STACKTRACE","message":"full stacktrace: com.vodafone.cable.vkdgateway.VkdGatewayException: Search by Some Id failed\n\tat com.vodafone.cable.vkdgateway.impl.someidsearch.CustomerBySomeIdSearcher.createSearchException(CustomerBySomeIdSearcher.java:98)\n\tat com.vodafone.cable.vkdgateway.impl.someidsearch.CustomerBySomeIdSearcher.getShortCustomerDataBySomeId(CustomerBySomeIdSearcher.java:54)\n\tat com.vodafone.cable.vkdgateway.impl.someidsearch.SomeIdSearcher.searchBySomeId(SomeIdSearcher.java:40)\n\tat com.vodafone.cable.vkdgateway.impl.CustomerServiceImpl.searchBySomeId(CustomerServiceImpl.java:119)\n\tat com.vodafone.cable.vkdgateway.controller.CustomerSearchController.searchCustomer(CustomerSearchController.java:44)\n\tat com.vodafone.cable.vkdgateway.controller.CustomerSearchController$$FastClassBySpringCGLIB$$dbe18e17.invoke(&lt;generated&gt;)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:LegacySearchResponse>
+  </env:Body>
+</env:Envelope>

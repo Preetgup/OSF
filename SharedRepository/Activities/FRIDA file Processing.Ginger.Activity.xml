@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="454d3144-7c1e-4c87-b8a6-1afc9c3e0abd" ItemType="Activity" CreatedBy="Premanatha.NL" Created="202204200605" GingerVersion="5.1.0.0" Version="3" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202308180951" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="FRIDA file Processing" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="454d3144-7c1e-4c87-b8a6-1afc9c3e0abd" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00 %%" TargetApplication="Mediation" Type="Regular">
+<Acts>
+<ActConsoleCommand Active="True" ConsoleCommand="FreeCommand" Description="Console Command Action" Guid="26136795-edb3-46fa-8cbc-c1a2f3a883f2" ParentGuid="36bf9f98-c29c-467f-b99d-c9483dc53f53" Platform="Unix" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextActivity" Guid="79833922-3963-4347-8dd7-b48d699f8839" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="f7b1242f-5343-4b87-b3a3-068c9cf2c735" Param="Free Command" ParentGuid="00000000-0000-0000-0000-000000000000" Value="./F1.sh {Var Name=Order id} 35 preeti.gupta3@@amdocs.com" />
+</InputValues>
+</ActConsoleCommand>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="5c821e7e-900c-44c2-8362-486186c59402" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order_id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableNumber Guid="8d2cf584-b992-44ee-87eb-a93495fbcc16" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Order id" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

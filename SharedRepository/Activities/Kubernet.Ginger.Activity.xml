@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202306201346" GingerVersion="5.1.0.0" Version="1" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202306201346" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="Kubernet" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ParentGuid="a594e053-d6e8-47e0-8854-047fd8540d13" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="cable/DSL" DBValidationType="FreeSQL" Description="Kubernet validation" EnableRetryMechanism="True" Guid="f0817b6b-daec-4338-ad10-31911e995843" MaxNumberOfRetries="10" ParentGuid="7e003c10-58ed-4af7-b479-9d389caf6bf5" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e1fb2b31-d3ad-4a1d-8f8e-c3ea6fddced1" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select * from jesi_sit1.service_monitoring where tw in('2022-11-03')&#xD;&#xA;and rng in (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63)&#xD;&#xA;and request_timestamp &gt; '2022-11-02 00:00:10.000' and  request_timestamp &lt; '2022-11-04 23:59:20.000' and extstxt03='{Var Name=Source_id}' allow filtering&#xD;&#xA;" />
+<ActInputValue Guid="21132b62-1091-4db3-b86d-824f9bab1537" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="5ad461a8-8fdd-4881-be2a-4970957f8974" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d595564b-20c5-4d4d-b139-0fbfddeeea0f" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="465bafea-7241-4adb-81ca-3aaf4198b2f4" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="92184067-611d-475f-9844-081e0e42c3e1" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a90a500c-1870-46bd-b024-7ec751754f38" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="06e4644b-2e32-4bed-99cd-9bff45ac8c73" mExpected="InProgress-SubmittedToBackend" Operator="Equals" Param="status" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+
+<Variables>
+<VariableNumber Guid="9a7425af-d3e2-4a6d-87ef-a8ace031fb56" InitialNumberValue="0" MappedOutputType="None" MaxValue="2147483647" MinValue="-2147483648" Name="Source_id" ParentGuid="343dfb04-cf2e-4626-99b9-47d69bec1a3f" ParentName="SCN09_New Acquisition MOBILE customer in Retail channel" ParentType="Business Flow" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Activity></GingerRepositoryItem>

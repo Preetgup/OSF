@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="c908334c-49c4-4034-bf11-3cbcdbe19a32" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202202220839" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202202220839" />
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="ACCOUNT NUMBER" Guid="c908334c-49c4-4034-bf11-3cbcdbe19a32" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="03058895-f690-4e29-84fd-664e2ae906fa" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table2 where input='ACCOUNT NUMBER'" />
+<ActInputValue Guid="84e9a30d-faff-412b-b193-b94952604ade" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="babde41e-25b7-4b5c-86e4-71514bd598b1" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3f1d051b-2d96-49a2-88b5-1f4acd4d63dc" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="3ad7756f-4135-4d7a-90cd-1e5c8c473bbf" mExpected="0" Operator="GreaterThan" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'ACCOUNT NUMBER' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;ACCOUNT NUMBER&quot;}" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

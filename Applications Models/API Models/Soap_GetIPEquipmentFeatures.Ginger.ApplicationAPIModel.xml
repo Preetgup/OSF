@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="96d1463f-7391-404d-bf56-774e842a5238" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111121021" GingerVersion="3.9.0.0" Version="3" LastUpdateBy="Petros.Dimitriou" LastUpdate="202204280728" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEGetIpEquipmentFeaturesEG/VFDE" Guid="96d1463f-7391-404d-bf56-774e842a5238" Name="Soap_GetIPEquipmentFeatures" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/equipment/VFDEGetIpEquipmentFeatures&quot; xmlns:vfd1=&quot;http://amdocs/vfde/equipment/VFDEGetIpEquipmentFeaturesInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:GetIpEquipmentFeaturesRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;CallerID&gt;{CALLERID}&lt;/CallerID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;CorrelationID&gt;{CORRELATIONID}&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;MessageCreationTimestamp&gt;{MESSAGECREATIONTIMESTAMP}&lt;/MessageCreationTimestamp&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;{FRONTENDUSERID}&lt;/FrontendUserId&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;DealerCode&gt;{DEALERCODE}&lt;/DealerCode&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;SalesChannel&gt;{SALESCHANNEL}&lt;/SalesChannel&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;!--You have a CHOICE of the next 2 items at this level--&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;Manufacturer&gt;{MANUFACTURER}&lt;/Manufacturer&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;ConverterType&gt;{CONVERTERTYPE}&lt;/ConverterType&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;MacAddress&gt;{MACADDRESS}&lt;/MacAddress&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:GetIpEquipmentFeaturesRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="d4a02632-dd53-4d0b-9514-2b6fae67a5c4" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="e444ae39-1ab4-4f93-a322-3e5c7db7cfaa" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetIpEquipmentFeatures" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="f5cff981-f24f-4cdc-bd9f-367b3224410f" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="3c4bf72e-069c-4ffc-8d2a-5457acf1ed3b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="58866e0fa724f" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="ec1ec5e5-02b6-41f3-8cad-f2810c66ce21" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/Event[1]/CallerID[1]" PlaceHolder="{CALLERID}" TagName="CallerID">
+<OptionalValuesList>
+<OptionalValue Guid="f521705c-dc79-47e1-b732-9535be51fc2a" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Omnius" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="2179a5af-dbea-47bb-972b-c2386b27d6ce" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/Event[1]/CorrelationID[1]" PlaceHolder="{CORRELATIONID}" TagName="CorrelationID">
+<OptionalValuesList>
+<OptionalValue Guid="48472b73-e780-47d2-bb05-06020fd02d17" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="0028lab4cd3fgt9iftm9eoolqrlsnonl" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="bf210e5f-59c1-4e1f-a103-1920beea06fa" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/Event[1]/MessageCreationTimestamp[1]" PlaceHolder="{MESSAGECREATIONTIMESTAMP}" TagName="MessageCreationTimestamp">
+<OptionalValuesList>
+<OptionalValue Guid="d7dcba05-360b-4b25-818d-000da4c5bfa2" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2017-01-23T20:56:47" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="1ffe5733-b34f-49be-a46e-c7a0d8f23dba" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/Event[1]/FrontendUserId[1]" PlaceHolder="{FRONTENDUSERID}" TagName="FrontendUserId">
+<OptionalValuesList>
+<OptionalValue Guid="ddb5e02d-b02c-4521-84fd-c7776b4e62a9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="645b4d5a-5d1a-4bc8-b62f-1e3e8b5e7411" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/Event[1]/DealerCode[1]" PlaceHolder="{DEALERCODE}" TagName="DealerCode">
+<OptionalValuesList>
+<OptionalValue Guid="bd3db70c-c9ba-43ae-b778-58961d316e71" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="00180000" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="5f1b363e-da69-4f71-9d02-8a5392cb8366" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/Event[1]/SalesChannel[1]" PlaceHolder="{SALESCHANNEL}" TagName="SalesChannel">
+<OptionalValuesList>
+<OptionalValue Guid="b735f4bd-09f2-43a5-ad61-62b95a998489" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="retail" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="d5dae9c7-43c5-4a9b-8ec0-5704e3157b5b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/DATA[1]/Manufacturer[1]" PlaceHolder="{MANUFACTURER}" TagName="Manufacturer">
+<OptionalValuesList>
+<OptionalValue Guid="3c9c810c-3127-4099-b8f3-5713a16d6fc4" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="MO" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="6f0f8c6b-a397-4f30-b247-51903ae5cecb" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/DATA[1]/ConverterType[1]" PlaceHolder="{CONVERTERTYPE}" TagName="ConverterType">
+<OptionalValuesList>
+<OptionalValue Guid="029c5b45-2e9b-46c8-a032-b37b669f3e52" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="KM" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="705c0b1e-a637-40ae-806f-e90e9e7943dc" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetIpEquipmentFeaturesRequest[1]/vfd1:ROOT[1]/DATA[1]/MacAddress[1]" PlaceHolder="{MACADDRESS}" TagName="MacAddress">
+<OptionalValuesList>
+<OptionalValue Guid="7d1ca2b7-77da-4b1e-ae52-842efde84335" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="0023a328fb84" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

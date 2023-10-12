@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="ec1dda05-160f-489b-a160-c1aadded8d87" ItemType="ActDBValidation" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302200702" GingerVersion="5.1.0.0" Version="1" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302200702" />
+<ActDBValidation Active="True" AppName="OGW" DBName="cable/DSL" DBValidationType="FreeSQL" Description="FRIDA Approval_copy" EnableRetryMechanism="True" Guid="ec1dda05-160f-489b-a160-c1aadded8d87" MaxNumberOfRetries="55" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="9f8b94b4-57a4-4fb4-9362-4de581168dc1" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="858c2f1d-14a0-4774-ba3c-5c4484f1c888" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Status="Pending" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="4c0a86c8-3b51-49f4-8e3c-9dd1d8950ec6" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select * from {EnvParam App=OGW Param=Casandra}.service_monitoring where extmtxt07='InProgress-ApprovedByRiskEditor' &#xD;&#xA;and Service_name= 'Approved By Risk Editor' and extltxt05='{Var Name=Order id}' Allow Filtering" />
+<ActInputValue Guid="1fe5963f-ed88-49d0-ac18-cfb8c832268f" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="99be89ba-04d7-4e4f-923d-8988fddadd29" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="18ff41cd-2f48-4dc6-8f1b-18a539ca59f6" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="0ed7d02c-fd9d-48a6-9b1a-4e2f04dd7f8d" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d91f2d8d-c63c-45fe-b01f-4ffc7674c0ad" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="714752aa-1f66-4f23-a6e2-cbdd3476b5f9" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="37b8dbb1-c166-4786-a6ea-021c85c5c533" mExpected="InProgress-ApprovedByRiskEditor" Operator="Equals" Param="extmtxt07" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="86ba3958-b155-409d-8601-313346712e09" mExpected="Approved By Risk Editor" Operator="Equals" Param="service_name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

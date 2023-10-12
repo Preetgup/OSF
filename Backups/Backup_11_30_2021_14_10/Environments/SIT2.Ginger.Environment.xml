@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="75f9e98f-b884-4f2d-b837-2c5a86dff1a8" ItemType="ProjEnvironment" CreatedBy="dord" Created="202012311245" GingerVersion="3.6.0.0" Version="10" LastUpdateBy="gourang.jiddewar" LastUpdate="202101051320" />
+<ProjEnvironment Guid="75f9e98f-b884-4f2d-b837-2c5a86dff1a8" Name="SIT2" ParentGuid="00000000-0000-0000-0000-000000000000">
+<Applications>
+<EnvApplication Active="True" Guid="fdc3fd70-9165-49cd-9abc-cd4da125c5fb" Name="OSF" ParentGuid="00000000-0000-0000-0000-000000000000">
+<GeneralParams>
+<GeneralParam Guid="b0df292d-162f-4381-a4cd-ce0ed4a5c74f" Name="TELESALES" ParentGuid="00000000-0000-0000-0000-000000000000" Value="https://osf-telesales-sit2.vodafone.de/" />
+<GeneralParam Guid="15cbec9a-0fe1-436d-83c8-3874bfa9b548" Name="RETAIL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="https://osf-retail-sit2.vodafone.de/" />
+<GeneralParam Guid="735c4a25-7dde-4872-a6f2-30f66cc67675" Name="LOGIN_USER_RETAIL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Demo-agent" />
+<GeneralParam Guid="05852981-c7bd-4cef-a29f-ae5af13a4f46" Name="LOGIN_USER_TELESALES" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Demo-agent" />
+<GeneralParam Guid="f9a05135-d478-4fa4-8db5-2c04670af8fa" Name="LOGIN_PASS" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Test1234" />
+</GeneralParams>
+</EnvApplication>
+<EnvApplication Active="True" Guid="2c327402-58cc-4be3-b6cd-aff935bf9752" Name="KIAS" ParentGuid="00000000-0000-0000-0000-000000000000">
+<Dbs>
+<Database ConnectionString="Data Source=(description=(address=(protocol=tcp)(host={EnvParam App=KIAS Param=DB_HOST})(port={EnvParam App=KIAS Param=DB_PORT}))(connect_data=(service_name={EnvParam App=KIAS Param=DB_SID})));User Id={EnvParam App=KIAS Param=DB_USER};Password={EnvParam App=KIAS Param=DB_PASS};" DBType="Oracle" Guid="7ea0806c-34fa-4124-bf84-3de903a23951" Name="KIAS" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</Dbs>
+
+<GeneralParams>
+<GeneralParam Guid="ad8dc3ed-4183-468a-8fb4-06b2d0936a52" Name="DB_HOST" ParentGuid="00000000-0000-0000-0000-000000000000" Value="195.233.85.108" />
+<GeneralParam Guid="1ede28b3-d35d-49eb-a02e-04c88985b168" Name="DB_SID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TKDSX4" />
+<GeneralParam Guid="ebf5f75c-3087-42c6-8a62-c3471ef8e1ce" Name="DB_USER" ParentGuid="00000000-0000-0000-0000-000000000000" Value="EDAPP197" />
+<GeneralParam Guid="2e01d327-ecfe-4ac2-8447-44b3b137b4c1" Name="DB_PASS" ParentGuid="00000000-0000-0000-0000-000000000000" Value="EDAPP197" />
+<GeneralParam Guid="ee534d72-9742-4d3d-a5d1-42cba08fec12" Name="DB_PORT" ParentGuid="00000000-0000-0000-0000-000000000000" Value="7005" />
+</GeneralParams>
+</EnvApplication>
+<EnvApplication Active="True" Guid="78598240-d841-4b59-bede-ebfad8d2a8ef" Name="OGW" ParentGuid="00000000-0000-0000-0000-000000000000">
+<Dbs>
+<Database ConnectionString="Data Source=(DESCRIPTION =(ADDRESS=(PROTOCOL = TCP)(HOST={EnvParam App=OGW Param=DB_HOST})(PORT = {EnvParam App=OGW Param=DB_PORT}))(CONNECT_DATA =(SERVER=DEDICATED)(SERVICE_NAME = {EnvParam App=OGW Param=DB_SID})));User Id={EnvParam App=OGW Param=DB_USER};Password={EnvParam App=OGW Param=DB_PASS}" DBType="Oracle" Guid="38cee2cc-f48e-44ed-9be4-7170831c3f36" Name="OGW" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</Dbs>
+
+<GeneralParams>
+<GeneralParam Guid="1547bf4b-1aa5-4aec-896f-4750d5a1fa9d" Name="DB_HOST" ParentGuid="00000000-0000-0000-0000-000000000000" Value="voppd05hr-vip.dc-ratingen.de" />
+<GeneralParam Guid="09ad8458-8045-4539-8269-0a85e1b7bf56" Name="DB_SID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DEOSSOG1_TAF.test.de" />
+<GeneralParam Guid="99c10f6a-04d5-441b-b2a5-77ad0e1153a3" Name="DB_USER" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ogw2" />
+<GeneralParam Guid="427ba582-d3ce-4ce5-88ef-9c9ac08a1769" Name="DB_PASS" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ogw2" />
+<GeneralParam Guid="9169ef50-2866-4253-8df2-2eabf0e9dd2a" Name="DB_PORT" ParentGuid="00000000-0000-0000-0000-000000000000" Value="33014" />
+</GeneralParams>
+</EnvApplication>
+</Applications>
+</ProjEnvironment></GingerRepositoryItem>

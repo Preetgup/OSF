@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="32c081cf-640e-475d-9a04-68e8a6f28d5f" ItemType="Activity" CreatedBy="Premanatha.NL" Created="202202231156" GingerVersion="3.9.0.0" Version="1" LastUpdateBy="Premanatha.NL" LastUpdate="202202231156" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivityName="SoapValidateAndConvertIBAN" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="32c081cf-640e-475d-9a04-68e8a6f28d5f" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100,00%%" TargetApplication="MyWebServicesApp">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="IBAN number" Guid="1745b535-829c-44f3-bb3a-408186cefb61" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="2" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="3de646c2-1cde-437e-97ba-2d96bfb5939b" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="7a97dce5-c9dd-499d-aeb1-00623ae4c821#GUID_NAME#Bank identifier" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="cf420227-2168-46fb-a161-9e5a41e6c410" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="eb59667c-5eb2-47f9-ba91-799dfef06d12" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='IBAN'" />
+<ActInputValue Guid="143e23a7-39d0-48a0-8073-498978b8b046" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="8e8cf06f-ac7c-479b-bb39-7f70dd784387" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="45070efd-4055-41a9-b9d9-d47a273c98a3" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b3d01172-5905-4abf-8cca-26db0a90ff1b" mExpected="{CS Exp=@{Actual}.Length&gt;0}" Operator="Evaluate" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'IBAN' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;IBAN&quot;}" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="IBAN number copy" Guid="b8e3efa8-f872-46c4-a162-31db0aba12fa" ParentGuid="1745b535-829c-44f3-bb3a-408186cefb61" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="07870501-3252-4473-8fbb-b47020d1fe88" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table2 where input='IBAN'" />
+<ActInputValue Guid="76f4803f-2835-4ca4-a911-2fe7b2e4a82a" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="134f7956-f116-408f-bb4e-754574e10372" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b0a77e17-0a41-41d6-ad3a-052b697592ba" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="ec58fc18-5a06-4f46-9c92-cbcf1b021306" mExpected="{CS Exp=@{Actual}.Length&gt;0}" Operator="Evaluate" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'IBAN' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;IBAN&quot;}" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="Bank identifier" Guid="7a97dce5-c9dd-499d-aeb1-00623ae4c821" ParentGuid="4953aa1d-fcd9-42ca-a28a-a5cb83f0d7ad" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="1046557a-0c9d-4984-8134-01ca81cb68c1" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="08030c4e-1775-4b5a-afd9-516e8e5f38aa" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2c3a7425-d788-41bb-9ff0-994f08dc6d5d#GUID_NAME#ACCOUNT NUMBER" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="4e976628-8653-4d00-851a-4e2deba85b5d" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='BANKIDENTIFIER'" />
+<ActInputValue Guid="38db6f8d-0362-4880-aebd-07b5bc13baa3" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="dc9df598-b768-4ab9-9b1e-527ba7d46a0e" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ca0315ca-ff00-4b02-80ca-41524fa3aec3" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="96c2df8a-237b-4cf8-a186-98ad43d4d675" mExpected="0" Operator="GreaterThan" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'BANKIDENTIFIER' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;BANKIDENTIFIER&quot;}" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="Bank identifier copy" Guid="4953aa1d-fcd9-42ca-a28a-a5cb83f0d7ad" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ed110c60-a461-4770-8ecb-ddb2cd5d86d3" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table2 where input='BANKIDENTIFIER'" />
+<ActInputValue Guid="3a368e7f-b2ac-4c59-ad8b-c74a48a18604" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="260593b4-c0e5-4932-8261-3e26ebbdd1b7" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="99ef3524-f712-45bb-86a0-5ab357b801c7" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="a710c5dc-b57e-4ecf-acae-a9eac24090f1" mExpected="0" Operator="GreaterThan" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'BANKIDENTIFIER' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;BANKIDENTIFIER&quot;}" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="ACCOUNT NUMBER" Guid="2c3a7425-d788-41bb-9ff0-994f08dc6d5d" ParentGuid="c908334c-49c4-4034-bf11-3cbcdbe19a32" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="5f36d0be-9b6f-412f-8f67-35551a4ce1a0" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="164e4a74-8dd6-4ab8-8397-2407c22e64b6" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2295a741-3d2c-40e1-af20-5e27c4317127#GUID_NAME#BIC" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="3d7056d6-d4ea-4026-a4f7-d4358b1cc9ba" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='ACCOUNT NUMBER'" />
+<ActInputValue Guid="461e0a72-66ed-45b3-bbc2-0ae3cbb34e5f" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="9274e59b-5f32-423f-8b0b-ee0aab271b7a" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3c335394-443e-462a-8a3b-74b44e66b65a" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="4bcce1dc-e542-4921-8f70-65268ec96758" mExpected="0" Operator="GreaterThan" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'ACCOUNT NUMBER' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;ACCOUNT NUMBER&quot;}" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="ACCOUNT NUMBER copy" Guid="c908334c-49c4-4034-bf11-3cbcdbe19a32" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="03058895-f690-4e29-84fd-664e2ae906fa" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table2 where input='ACCOUNT NUMBER'" />
+<ActInputValue Guid="84e9a30d-faff-412b-b193-b94952604ade" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="babde41e-25b7-4b5c-86e4-71514bd598b1" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3f1d051b-2d96-49a2-88b5-1f4acd4d63dc" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="3ad7756f-4135-4d7a-90cd-1e5c8c473bbf" mExpected="0" Operator="GreaterThan" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'ACCOUNT NUMBER' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;ACCOUNT NUMBER&quot;}" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="BIC" Guid="2295a741-3d2c-40e1-af20-5e27c4317127" ParentGuid="6e4082d5-52a6-45c0-835b-cd12a97c75d4" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToNextAction" Guid="b7fe4957-92d5-4573-9f0b-f494965bbc70" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="396efd46-7e89-4bd2-9380-f0c20284f0a4" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="eb638f09-4e05-4591-bda8-606b73aca16d#GUID_NAME#SOAP_ValidateAndConvertIBAN_VFDE_ValidateAndConvertIBANWSSoapBinding- API Model Execution" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="56dfea88-3796-4cb8-aab2-5ba2f2448659" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table1 where input='BIC'" />
+<ActInputValue Guid="25ebd2e4-4156-40b8-b31a-6ab42706bd26" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="2f9ad780-92f6-42af-a6b7-4b7883172152" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4d0068b9-7afb-4f50-b179-9bdece73c4b1" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="677bd55d-5eaa-4920-9b14-e244c5b8dd3e" mExpected="{CS Exp=@{Actual}.Length&gt;0}" Operator="Evaluate" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'BIC' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;BIC&quot;}" />
+</ReturnValues>
+</ActDBValidation>
+<ActDBValidation Active="True" AppName="OGW" DBName="OGW" DBValidationType="FreeSQL" Description="BIC copy" Guid="6e4082d5-52a6-45c0-835b-cd12a97c75d4" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7b8e5181-d051-4977-a1d7-01631160e495" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select inputvalues from table2 where input='BIC'" />
+<ActInputValue Guid="45fd4666-fc16-42de-9c02-86bc844d4e55" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="628ad9b9-60bb-48dc-b6be-7383003cb8ac" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="dc3cc112-a2e8-4ae8-8e3f-82426ab7ca44" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="61df3e14-560a-48fb-a8f0-2de45175dbb3" mExpected="{CS Exp=@{Actual}.Length&gt;0}" Operator="Evaluate" Param="INPUTVALUES" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="DataSource" StoreToValue="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'BIC' Query QUERY=db.OGW.update PARAM_VALUE = &quot;&quot; where  PARAM = &quot;BIC&quot;}" />
+</ReturnValues>
+</ActDBValidation>
+<ActWebAPIModel Active="True" Description="SOAP_ValidateAndConvertIBAN_VFDE_ValidateAndConvertIBANWSSoapBinding- API Model Execution" Guid="eb638f09-4e05-4591-bda8-606b73aca16d" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="7e59cc47-cdbb-440f-a9a1-1c1be1710844" Param="{TYPE}" ParamGuid="50e46ee4-0799-4ce0-b3f9-4da511571786" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SoapValidateAndConvertIBAN" />
+<EnhancedActInputValue Guid="90b8ec4a-850e-4b82-9946-6dae28b89975" Param="{ID}" ParamGuid="05720a0f-f877-4c11-b6cc-24d0e2f38f77" ParentGuid="00000000-0000-0000-0000-000000000000" Value="string" />
+<EnhancedActInputValue Guid="7ed27859-ca20-4395-aa8c-ae9cd9dbeedb" Param="{CALLERID}" ParamGuid="40f25d02-5076-4ecd-808e-b764b4bc7fa9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="27984104-198a-4855-be7f-6dcc68e73a69" Param="{CORRELATIONID}" ParamGuid="9dadabbe-e754-4f0b-a0f9-380ae9065e29" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="d4fd6f70-55d5-4683-b158-757266027d8b" Param="{SOURCEID}" ParamGuid="39a0d5ce-7ab4-407c-9409-5ba3a6e032da" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="0a22863c-c4fc-4e78-955d-744309b597de" Param="{ORIGINALAPPL}" ParamGuid="bf130142-ce5c-4657-b30f-8f88ee9b25db" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="55b2f2af-e1cb-4d05-88bd-39a06308bb74" Param="{ORIGINALPUBID}" ParamGuid="2caf0710-607d-4a81-bd33-34d512a9ca25" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="875966be-39e8-4e75-8425-2691bd6ab64b" Param="{MESSAGECREATIONTIMESTAMP}" ParamGuid="70816726-e87a-40ec-bd88-067c74c444f9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="b3f219e5-3d9e-44e1-9163-7d38125ab0ca" Param="{FRONTENDUSERID}" ParamGuid="137a188e-623d-4bfc-96b0-55d5c6571ba5" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="12b306a4-61dc-408a-8c02-ca5d7c9bb51b" Param="{DEALERCODE}" ParamGuid="904942c2-4614-4ffc-9664-492d7b3eda72" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="8c7b53f4-0e1e-4686-b97f-e44f8948e0a4" Param="{SALESCHANNEL}" ParamGuid="09b71174-6ab0-47d0-a9fe-dfde0ba66eb9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="c2064230-bbb0-42df-aee7-edf621a67723" Param="{DEALERORGANISATION}" ParamGuid="2fef2727-d4dd-4b41-8c66-a76d2c9e33ce" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="6cba7b51-0cf2-46cc-bd74-742f82361928" Param="{SHOPID}" ParamGuid="8d81001a-2c8d-442d-961c-0e39556e3231" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="34ba1489-87c0-4c23-9aa4-266908c49948" Param="{FRONTENDAGENTROLE}" ParamGuid="ea328968-78cb-4a0b-ac59-c4aeea757088" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="bc0f817f-103a-4d4c-8d1e-1cd2f23373b9" Param="{IBAN}" ParamGuid="c65b104e-4309-4e4b-9041-e11d0712eee2" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE89370400440532013000" />
+<EnhancedActInputValue Guid="87f1748c-79cb-496c-8135-480148b2186b" Param="{BANKIDENTIFIER}" ParamGuid="70f72b9d-873f-40c7-aaf6-317f3303c6be" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="d7352ade-fb7b-4f49-94f8-2302e2af7119" Param="{ACCOUNTNUMBER}" ParamGuid="38a53d88-abe5-4741-b39e-90715d2825d9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<EnhancedActInputValue Guid="d92a337a-7b87-4ca2-9200-d2319363e9dc" Param="{COUNTRYCODE}" ParamGuid="f6f415f1-c098-477d-9514-9c2cbbd40e5b" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="f5438b0f-270d-437c-baeb-205882f40993" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="9df64563-a42a-4a1e-aa70-f7123a22e37a" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="6d23b3e9-0c78-4709-b582-ec341b5da319" mExpected="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'IBAN' Query QUERY=db.OGW.select $ where   PARAM = &quot;IBAN&quot;}" Operator="Equals" Param="IBAN" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/DATA[1]/Result[1]/IBAN[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="7a50618e-34d1-4d35-ba0c-536f67ae0ca2" mExpected="OK" Operator="Equals" Param="Header: Status Code " ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="2581477c-d1b9-41f2-9036-f708c7f2d5f3" mExpected="&lt;env:Envelope xmlns:env=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;env:Body&gt;&#xD;&#xA;    &lt;ns100:ValidateAndConvertIBANResponse xmlns:ns100=&quot;http://amdocs/vfde/iban/ValidateAndConvertIBAN&quot;&gt;&#xD;&#xA;      &lt;ROOT xmlns=&quot;http://amdocs/vfde/iban/VFDEValidateAndConvertIBANOutput&quot;&gt;&#xD;&#xA;        &lt;Event xmlns:val=&quot;http://amdocs/vfde/iban/ValidateAndConvertIBAN&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:soap12enc=&quot;http://www.w3.org/2003/05/soap-encoding&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:s=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:vfd=&quot;http://amdocs/vfde/iban/VFDEValidateAndConvertIBANInput&quot; xmlns:wsr=&quot;http://www.openuri.org/2002/10/soap/reliability/&quot; xmlns:tns=&quot;http://amdocs/vfde/iban/ValidateAndConvertIBAN&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:conv=&quot;http://www.openuri.org/2002/04/wsdl/conversation/&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns=&quot;&quot;&gt;&#xD;&#xA;          &lt;Type&gt;string&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;string&lt;/ID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;CallerID&gt;string&lt;/CallerID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;CorrelationID&gt;string&lt;/CorrelationID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;SourceID&gt;string&lt;/SourceID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;OriginalAppl&gt;string&lt;/OriginalAppl&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;OriginalPubID&gt;string&lt;/OriginalPubID&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;MessageCreationTimestamp&gt;2008-09-29T04:49:45&lt;/MessageCreationTimestamp&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;FrontendUserId&gt;string&lt;/FrontendUserId&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;DealerCode&gt;string&lt;/DealerCode&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;SalesChannel&gt;string&lt;/SalesChannel&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;DealerOrganisation&gt;string&lt;/DealerOrganisation&gt;&#xD;&#xA;          &lt;!--Optional:--&gt;&#xD;&#xA;          &lt;ShopID&gt;string&lt;/ShopID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA xmlns=&quot;&quot;&gt;&#xD;&#xA;          &lt;Result&gt;&#xD;&#xA;            &lt;IBAN&gt;DE89370400440532013000&lt;/IBAN&gt;&#xD;&#xA;            &lt;BIC&gt;COBADEFFXXX&lt;/BIC&gt;&#xD;&#xA;            &lt;BankIdentifier&gt;37040044&lt;/BankIdentifier&gt;&#xD;&#xA;            &lt;AccountNumber&gt;0532013000&lt;/AccountNumber&gt;&#xD;&#xA;            &lt;BankName&gt;Commerzbank Köln&lt;/BankName&gt;&#xD;&#xA;            &lt;ConversionResult&gt;&#xD;&#xA;              &lt;StatusCode&gt;0&lt;/StatusCode&gt;&#xD;&#xA;              &lt;Success&gt;true&lt;/Success&gt;&#xD;&#xA;              &lt;Text&gt;Conversion successful.&lt;/Text&gt;&#xD;&#xA;            &lt;/ConversionResult&gt;&#xD;&#xA;          &lt;/Result&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;        &lt;Status xmlns=&quot;&quot;&gt;&#xD;&#xA;          &lt;ErrorCode&gt;OGWERR-0000&lt;/ErrorCode&gt;&#xD;&#xA;          &lt;ErrorDescription&gt;SUCCESS&lt;/ErrorDescription&gt;&#xD;&#xA;        &lt;/Status&gt;&#xD;&#xA;      &lt;/ROOT&gt;&#xD;&#xA;    &lt;/ns100:ValidateAndConvertIBANResponse&gt;&#xD;&#xA;  &lt;/env:Body&gt;&#xD;&#xA;&lt;/env:Envelope&gt;" Operator="Equals" Param="Response:" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="01c4f94e-4e0d-4924-aa6a-2f68941faa72" mExpected="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'BIC' Query QUERY=db.OGW.select $ where   PARAM = &quot;BIC&quot;}" Operator="Equals" Param="BIC" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/DATA[1]/Result[1]/BIC[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="c0487c43-204f-489f-b8ce-611440ab9d25" mExpected="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'BANKIDENTIFIER' Query QUERY=db.OGW.select $ where   PARAM = &quot;BANKIDENTIFIER&quot;}" Operator="Equals" Param="BankIdentifier" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/DATA[1]/Result[1]/BankIdentifier[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="b3aa495f-dc14-401e-a862-a3f7fae6ad6c" mExpected="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'ACCOUNT NUMBER' Query QUERY=db.OGW.select $ where   PARAM = &quot;ACCOUNT NUMBER&quot;}" Operator="Equals" Param="AccountNumber" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/DATA[1]/Result[1]/AccountNumber[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="39aaa279-ebe7-4f04-9b93-b76f638bfc1a" mExpected="{DS Name=DefaultDataSource DST=OGW MASD=N IDEN=Cust ICOLVAL=PARAM_VALUE IROW=Where COND=  [PARAM] = 'BANK NAME' Query QUERY=db.OGW.select $ where   PARAM = &quot;BANK NAME&quot;}" Operator="Equals" Param="BankName" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/DATA[1]/Result[1]/BankName[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="a6a4638a-50df-49d2-bb0c-0f882c3d8fb3" mExpected="OGWERR-0000" Operator="Equals" Param="ErrorCode" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/Status[1]/ErrorCode[1]" StoreTo="None" />
+<ActReturnValue Active="True" Guid="3650437a-071b-4daa-934c-c942e28735f2" mExpected="SUCCESS" Operator="Equals" Param="ErrorDescription" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[local-name()='Envelope']/Body[1]/ValidateAndConvertIBANResponse[1]/ROOT[1]/Status[1]/ErrorDescription[1]" StoreTo="None" />
+</ReturnValues>
+</ActWebAPIModel>
+</Acts>
+</Activity></GingerRepositoryItem>

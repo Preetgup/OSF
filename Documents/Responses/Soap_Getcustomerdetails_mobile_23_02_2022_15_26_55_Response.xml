@@ -1,0 +1,12 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <env:Fault>
+      <faultcode>env:Server</faultcode>
+      <faultstring>&lt;WebServiceUALException&gt;&lt;n:ROOT xmlns:n='http://amdocs/iam/api/GeneralResponse' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'&gt;&lt;Event/&gt;&lt;Error&gt;&lt;Number&gt;JESIERR-3&lt;/Number&gt;&lt;Description&gt;[error: cvc-minLength-valid.1.1: string length (0) is less than minLength facet (1) for type of BAN element in VFDEBANDetailsType in namespace http://amdocs/vfde/customer/VFDEGetCustomerDetailsInput]&lt;/Description&gt;&lt;/Error&gt;&lt;/n:ROOT&gt;&lt;/WebServiceUALException&gt;</faultstring>
+      <faultactor>VFDEGetCustomerDetailsEG</faultactor>
+      <detail>
+        <ual:WebServiceUALException xmlns:ual="http://amdocs/vfde/customer/VFDEGetCustomerDetails" xsi:type="xsd:string">Code=JESIERR-3:Description=[error: cvc-minLength-valid.1.1: string length (0) is less than minLength facet (1) for type of BAN element in VFDEBANDetailsType in namespace http://amdocs/vfde/customer/VFDEGetCustomerDetailsInput]</ual:WebServiceUALException>
+      </detail>
+    </env:Fault>
+  </env:Body>
+</env:Envelope>

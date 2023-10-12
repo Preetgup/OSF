@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="d0784652-bfd5-4817-98bd-b2600d2f94b5" ItemType="RunSetConfig" CreatedBy="gourang.jiddewar" Created="202101061649" GingerVersion="3.6.0.0" Version="4" LastUpdateBy="gourang.jiddewar" LastUpdate="202101061653" />
+<RunSetConfig Guid="d0784652-bfd5-4817-98bd-b2600d2f94b5" Name="OSF-LOGIN-RETAIL" ParentGuid="00000000-0000-0000-0000-000000000000" RunModeParallel="False">
+<GingerRunners>
+<GingerRunner Guid="518008b6-015c-4e3d-b4a1-412823d076a9" Name="Runner 1" ParentGuid="00000000-0000-0000-0000-000000000000" RunOption="ContinueToRunall">
+<ApplicationAgents>
+<ApplicationAgent AgentID="7cc89703-7143-4a8b-99be-6ff6ccf592fd" AgentName="Chrome" AppID="ff66e376-8be2-47f6-82fa-36cfa5c29f9c" AppName="MyWebApp" Guid="0cd48cd0-9fbb-40c8-ac7c-12a1459b31ca" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ApplicationAgents>
+
+<BusinessFlowsRunList>
+<BusinessFlowRun BusinessFlowGuid="7294f3f8-bed9-4982-badc-fd4d0b80463f" BusinessFlowInstanceGuid="534ced91-c4d9-4c01-a239-ff199e3a4aa7" BusinessFlowIsActive="True" BusinessFlowIsMandatory="True" BusinessFlowName="SET-SALES-CHANNEL" Guid="b13a2648-3419-406f-ae08-8459803c7225" ParentGuid="00000000-0000-0000-0000-000000000000">
+<BusinessFlowCustomizedRunVariables>
+<VariableString Description="##ADD UNDER RUN SETS CONFIG&#xD;&#xA;1. retail&#xD;&#xA;2. telesales" DiffrentFromOrigin="True" Guid="4bea1a22-6f06-40f0-84ea-224e32680139" InitialStringValue="retail" MappedOutputType="None" Name="SALES_CHANNEL" ParentGuid="9bb0cb71-ba07-4caa-9268-42263c6b38c7" ParentName="SET-SALES-CHANNEL\Group\[CONFIG] - SET SALES-CHANNEL" ParentType="Activity" VarValChanged="True" />
+</BusinessFlowCustomizedRunVariables>
+</BusinessFlowRun>
+<BusinessFlowRun BusinessFlowGuid="57ab21fe-1107-4aff-96bd-6babda80dfeb" BusinessFlowInstanceGuid="7f91923c-914f-4e42-a11a-5caed66d72e7" BusinessFlowIsActive="True" BusinessFlowIsMandatory="True" BusinessFlowName="OSF-LOGIN-LOGOUT" Guid="4d6f838d-6696-46be-9df5-f37a3cf2ea99" ParentGuid="00000000-0000-0000-0000-000000000000">
+<BFFlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="56de632c-77cb-4d3e-88aa-a37210513580" Operator="BusinessFlowPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="6154226b-1f36-4e46-b238-3ac2ee50060a#GUID_NAME#EXECUTION-RESULT" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="5b058136-c3c3-46b3-b38d-5a5a76f1729e" Operator="BusinessFlowFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="6154226b-1f36-4e46-b238-3ac2ee50060a#GUID_NAME#EXECUTION-RESULT" />
+</BFFlowControls>
+</BusinessFlowRun>
+<BusinessFlowRun BusinessFlowGuid="2f3dc3eb-825c-41f0-bbe6-cae6a26c9f35" BusinessFlowInstanceGuid="6154226b-1f36-4e46-b238-3ac2ee50060a" BusinessFlowIsActive="True" BusinessFlowIsMandatory="True" BusinessFlowName="EXECUTION-RESULT" Guid="009b754a-ae53-4fc0-af0b-2c5af0e216fb" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</BusinessFlowsRunList>
+</GingerRunner>
+<GingerRunner Guid="e57f52c7-d592-4e55-9f21-4e91fa5b5780" Name="REPORT_LOADER" ParentGuid="00000000-0000-0000-0000-000000000000" RunOption="ContinueToRunall">
+<ApplicationAgents>
+<ApplicationAgent AgentID="7cc89703-7143-4a8b-99be-6ff6ccf592fd" AgentName="Chrome" AppID="ff66e376-8be2-47f6-82fa-36cfa5c29f9c" AppName="MyWebApp" Guid="5f806c25-a26d-4219-9c0c-5d22789dc807" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ApplicationAgents>
+
+<BusinessFlowsRunList>
+<BusinessFlowRun BusinessFlowGuid="aaffcaa8-6041-467b-971d-8296385fb457" BusinessFlowInstanceGuid="e10a9eb6-9028-4068-8438-6ee8cecdcb21" BusinessFlowIsActive="True" BusinessFlowIsMandatory="True" BusinessFlowName="REPORT-LOADER" Guid="12130d58-fabe-421e-8806-ba66136663ef" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</BusinessFlowsRunList>
+</GingerRunner>
+</GingerRunners>
+
+<RunSetActions>
+<RunSetActionHTMLReport Condition="AlwaysRun" Guid="70561224-5560-4e0f-aab2-3df83a0a0356" Name="Produce HTML Report" ParentGuid="00000000-0000-0000-0000-000000000000" RunAt="ExecutionEnd" />
+</RunSetActions>
+</RunSetConfig></GingerRepositoryItem>

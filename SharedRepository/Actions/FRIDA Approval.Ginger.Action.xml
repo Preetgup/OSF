@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="3e3b7d9d-bb8b-46b9-a743-cc3da0b2bb46" ItemType="ActDBValidation" CreatedBy="Premanatha.NL" Created="202209120453" GingerVersion="5.1.0.0" Version="4" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302190917" />
+<ActDBValidation AppName="OGW" DBName="cable/DSL" DBValidationType="FreeSQL" Description="FRIDA Approval" EnableRetryMechanism="True" Guid="3e3b7d9d-bb8b-46b9-a743-cc3da0b2bb46" MaxNumberOfRetries="40" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f7b394ef-a90a-4093-943e-f17e9b8bed99" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select * from {EnvParam App=OGW Param=Casandra}.service_monitoring where extmtxt07='InProgress-ApprovedByRiskEditor' &#xD;&#xA;and Service_name= 'Approved By Risk Editor' and extltxt05='{Var Name=Order_id}' Allow Filtering" />
+<ActInputValue Guid="600ccc71-fc68-4128-a33f-c3de7e23a924" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="727259be-09af-49de-9a56-0c02ac0f28de" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="60e570dd-049a-4513-a505-31b14730ecf8" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="21b8b54e-43ad-49d5-8a11-5f72e0baaa18" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="097b29e9-16e0-4e68-b83f-0ff35de6a8b6" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ad86be63-eed0-461e-b967-ca7d22e4c0c0" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="84f4bf00-b8fd-47b6-b11b-1bb2c11146de" mExpected="InProgress-ApprovedByRiskEditor" Operator="Equals" Param="extmtxt07" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="7321044e-c7df-404c-b341-fde59b8a7648" mExpected="Approved By Risk Editor" Operator="Equals" Param="service_name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation></GingerRepositoryItem>

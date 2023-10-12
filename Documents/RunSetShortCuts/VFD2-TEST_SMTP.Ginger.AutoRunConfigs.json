@@ -1,0 +1,92 @@
+{
+  "SolutionScmDetails": {
+    "SCMType": "GIT",
+    "SolutionRepositoryUrl": "",
+    "User": "N/A",
+    "Password": "N/A",
+    "PasswordEncrypted": false,
+    "UndoSolutionLocalChanges": false,
+    "Branch": "master"
+  },
+  "SolutionLocalPath": "D:\\VFD2-E2E_Flows_Viktor_Prem",
+  "EncryptionKey": "D3^hdfr7%ws4Kb56=Qt",
+  "ShowAutoRunWindow": false,
+  "VerboseLevel": "normal",
+  "Runset": {
+    "Exist": true,
+    "Name": "TEST_SMTP",
+    "ID": "bc6e8ce5-0684-4c04-9ca7-f186ab2777fa",
+    "EnvironmentName": "SIT2",
+    "EnvironmentID": "75f9e98f-b884-4f2d-b837-2c5a86dff1a8",
+    "RunAnalyzer": false,
+    "RunInParallel": true,
+    "StopRunnersOnFailure": false,
+    "Runners": [
+      {
+        "Exist": true,
+        "Name": "Runner 1",
+        "ID": "449b6cd2-be38-4fca-b9a8-dc54a90289e1",
+        "Active": true,
+        "OnFailureRunOption": "ContinueToRunall",
+        "RunInSimulationMode": false,
+        "RunInVisualTestingMode": true,
+        "AppAgentMappings": [
+          {
+            "ApplicationName": "MyWebApp",
+            "ApplicationID": "ff66e376-8be2-47f6-82fa-36cfa5c29f9c",
+            "AgentName": "Chrome",
+            "AgentID": "7cc89703-7143-4a8b-99be-6ff6ccf592fd"
+          },
+          {
+            "ApplicationName": "Mediation",
+            "ApplicationID": "9b10c057-dad7-4727-a19b-b44f95541004",
+            "AgentName": "Unix",
+            "AgentID": "af61aa09-f484-41f6-90e1-0ec69da34f98"
+          }
+        ],
+        "KeepAgentsOpen": false,
+        "BusinessFlows": [
+          {
+            "Exist": true,
+            "Name": "SCN01_Agent wants to search CABLE customer in Retail channel",
+            "ID": "ba2ee27a-ae4f-4ee0-98b4-f9f759e3ccce",
+            "InstanceID": "961a14ca-e16e-4a6f-878d-01d42a7d5e7d",
+            "Active": true
+          }
+        ]
+      }
+    ],
+    "Operations": [
+      {
+        "$type": "RunsetOperations.MailReportOperationExecConfig, Ginger.ExecuterService.Contracts",
+        "MailSettings": {
+          "EmailMethod": "SMTP",
+          "SmtpDetails": {
+            "Server": "195.232.244.209",
+            "Port": "25",
+            "EnableSSL": true
+          },
+          "MailFrom": "noreply@vodafone.com",
+          "MailFromDisplayName": "_Amdocs Ginger Automation",
+          "MailTo": "Preeti.Gupta@vodafone.com;Preeti.Gupta@Vodafone.com",
+          "Subject": "Test"
+        },
+        "BodyContentType": "HTMLReport",
+        "BodyReportTemplateID": 0,
+        "IncludeAttachmentReport": false,
+        "Name": "Send HTML Report Email",
+        "ID": "c0ecfd46-9dfe-4858-a452-f372a248cc11",
+        "Active": true,
+        "Condition": "AlwaysRun",
+        "RunAt": "ExecutionEnd"
+      }
+    ],
+    "SelfHealingConfiguration": {
+      "ReprioritizePOMLocators": true,
+      "AutoFixAnalyzerIssue": false,
+      "AutoUpdateApplicationModel": false,
+      "SaveChangesInSourceControl": false,
+      "AutoExecuteInSimulationMode": false
+    }
+  }
+}

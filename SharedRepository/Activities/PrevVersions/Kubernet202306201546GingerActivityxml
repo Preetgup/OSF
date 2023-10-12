@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ItemType="Activity" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202303161244" GingerVersion="5.1.0.0" Version="2" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202303161244" />
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Kubernet" AutomationStatus="Automated" ErrorHandlerMappingType="AllAvailableHandlers" Guid="2f249b5b-c54b-4131-9915-62fc4c527cf7" ParentGuid="a594e053-d6e8-47e0-8854-047fd8540d13" PercentAutomated="100,00 %%" TargetApplication="MyWebApp" Type="Regular">
+<Acts>
+<ActDBValidation Active="True" AppName="OGW" DBName="cable/DSL" DBValidationType="FreeSQL" Description="Kubernet validation" EnableRetryMechanism="True" Guid="78d9defc-0d97-4442-b8fa-7736c8b97a55" MaxNumberOfRetries="10" ParentGuid="7e003c10-58ed-4af7-b479-9d389caf6bf5" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" Timeout="10" WaitVE="5" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="71ddca95-8a24-4744-831b-9c541a9e5d49" Param="SQL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="select * from jesi_sit1.service_monitoring where tw in('2022-11-03')&#xD;&#xA;and rng in (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63)&#xD;&#xA;and request_timestamp &gt; '2022-11-02 00:00:10.000' and  request_timestamp &lt; '2022-11-04 23:59:20.000' and extstxt03='{Var Name=Source_id}' allow filtering&#xD;&#xA;" />
+<ActInputValue Guid="a78f18c5-e635-454d-bb82-f6be87eb83e6" Param="QueryTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeSQL" />
+<ActInputValue Guid="d418be47-a207-4ec7-a880-ef3a0b9c6686" Param="QueryFile" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="04c8af59-7021-46b0-9de2-ea6eaf4bb147" Param="CommitDB" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c383d533-c217-48c3-912d-d89bd59c66cc" Param="InsertJson" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ba0ebab8-0c14-4cf6-a9f3-d518374bf62e" Param="PrimaryKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fb758de1-f290-44b3-8616-f2bb0c400370" Param="PartitionKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b98ffec6-5e59-44ff-b809-c08f4b5d057f" mExpected="InProgress-SubmittedToBackend" Operator="Equals" Param="status" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActDBValidation>
+</Acts>
+</Activity></GingerRepositoryItem>

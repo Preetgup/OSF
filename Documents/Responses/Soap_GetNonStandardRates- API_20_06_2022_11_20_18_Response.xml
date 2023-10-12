@@ -1,0 +1,24 @@
+HTTP/1.1 
+jesi.ws.server.OperationName: GetNonStandardRatesRequest
+Date: Mon, 20 Jun 2022 09:20:19 GMT
+Server: JESI Server
+Content-Length: 1284
+Content-Type: text/xml; charset=UTF-8
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:GetNonStandardRatesResponse xmlns:ns100="http://amdocs/vfde/rates/VFDEGetNonStandardRate">
+      <ROOT xmlns="http://amdocs/vfde/rates/VFDENonStandardRatesOutput">
+        <Event xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vfd="http://amdocs/vfde/rates/VFDEGetNonStandardRate" xmlns:vfd1="http://amdocs/vfde/rates/VFDENonStandardRatesInput" xmlns="">
+          <Type>GetNonStandardRates</Type>
+          <ID>saurav1234</ID>
+        </Event>
+        <DATA xmlns="" />
+        <Status xmlns="">
+          <ErrorCode>OGWERR-1500</ErrorCode>
+          <ErrorDescription>Error received from KD nonStandardRates WS.Details [ ErrorCode: 500 , ErrorMessage: Could not access remote service at [https://ads-test1.kabeldeutschland.de/ads/vkd-ads/AdsAddressV2]; nested exception is com.sun.xml.ws.client.ClientTransportException: Der Server hat HTTP-Statuscode 503 gesendet: Service Unavailable , LogReference: 9db56904-ae46-4fca-a24b-feba0d049e73 ].</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:GetNonStandardRatesResponse>
+  </env:Body>
+</env:Envelope>

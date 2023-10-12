@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="4579610e-1e5c-4b4d-89d0-57c0a0be1d0a" ItemType="ActBrowserElement" CreatedBy="DESVC-OSF_TEM_Ginger" Created="202302031257" GingerVersion="4.3.0.0" Version="1" LastUpdateBy="DESVC-OSF_TEM_Ginger" LastUpdate="202302031257" />
+<ActBrowserElement Active="True" Description="[Condition] - Is OSF-TELESALES" Guid="4579610e-1e5c-4b4d-89d0-57c0a0be1d0a" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="c18310ae-e98d-4106-b260-0dc52069ded1" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="26d75d05-bd6f-4ddd-84f0-5050998e4d23#GUID_NAME#[UI] - Set 'User Name' Telesales" />
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToAction" Guid="bcdd720a-e582-4b7a-afc4-567a447fe6e3" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="4b0c0be5-54c9-49d0-9c57-96ddf7b71db4#GUID_NAME#[UI] - Set 'User Name' Retail" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="b8cc2ec2-b05e-4469-b486-ae492cc3f444" Param="ImplicitWait" ParentGuid="00000000-0000-0000-0000-000000000000" Value="60" />
+<ActInputValue Guid="00745354-381c-4e2e-b6fe-4d450fc2b28b" Param="ControlAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetPageURL" />
+<ActInputValue Guid="e497b4da-15e7-4351-8313-e5ccbe47060a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="cd6d0318-f1ad-4463-9cd1-dfbaf53b31e8" Param="LocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="59028fc6-c1ae-49dc-bbd9-e1e710671c50" Param="GotoURLType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Current" />
+<ActInputValue Guid="5e38fa7b-1846-4385-98b3-6e599789d8b7" Param="URLSrc" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Static" />
+<ActInputValue Guid="48bd78bc-4836-4ab1-8358-03624e2108e2" Param="LocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="5ee0e5b6-df1c-46d6-a62e-98e483e2cc93" Param="PomGUID" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="b144ffa7-b92a-424d-8135-0b0e753dcb09" mExpected="https://osf-telesales-int-acc2.vodafone.de/agent/account/login/" Operator="Equals" Param="PageURL" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActBrowserElement></GingerRepositoryItem>

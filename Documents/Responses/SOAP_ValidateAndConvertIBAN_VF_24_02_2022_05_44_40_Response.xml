@@ -1,0 +1,39 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <env:Body>
+    <ns100:ValidateAndConvertIBANResponse xmlns:ns100="http://amdocs/vfde/iban/ValidateAndConvertIBAN">
+      <ROOT xmlns="http://amdocs/vfde/iban/VFDEValidateAndConvertIBANOutput">
+        <Event xmlns:val="http://amdocs/vfde/iban/ValidateAndConvertIBAN" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12enc="http://www.w3.org/2003/05/soap-encoding" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:vfd="http://amdocs/vfde/iban/VFDEValidateAndConvertIBANInput" xmlns:wsr="http://www.openuri.org/2002/10/soap/reliability/" xmlns:tns="http://amdocs/vfde/iban/ValidateAndConvertIBAN" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:conv="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="">
+          <Type>string</Type>
+          <ID>string</ID>
+          <!--Optional:-->
+          <CallerID>string</CallerID>
+          <!--Optional:-->
+          <CorrelationID>string</CorrelationID>
+          <!--Optional:-->
+          <SourceID>string</SourceID>
+          <!--Optional:-->
+          <OriginalAppl>string</OriginalAppl>
+          <!--Optional:-->
+          <OriginalPubID>string</OriginalPubID>
+          <!--Optional:-->
+          <MessageCreationTimestamp>2008-09-29T04:49:45</MessageCreationTimestamp>
+          <!--Optional:-->
+          <FrontendUserId>string</FrontendUserId>
+          <!--Optional:-->
+          <DealerCode>string</DealerCode>
+          <!--Optional:-->
+          <SalesChannel>string</SalesChannel>
+          <!--Optional:-->
+          <DealerOrganisation>string</DealerOrganisation>
+          <!--Optional:-->
+          <ShopID>string</ShopID>
+        </Event>
+        <DATA xmlns="" />
+        <Status xmlns="">
+          <ErrorCode>OGWERR-3000</ErrorCode>
+          <ErrorDescription>An error was encountered while invoking KIAS ValidateAndConvert WS.Details [Error_Code: EAI001119 , Error_Message: TuxedoAdapter Error. , Error_Type: Infrastructure , Error_Severity: E , Error_Information: AETUX-940009: Request Response error. Request Response service failed due to target application invocation error TPENOENT - no entry found  for Tuxedo service: eaiCalcIbanBk00,Communication Type: Sync on application call tpcall.Tracking Id: #PPHWTNpE8UiXhUWftxWuyPmkAvM#BW.SEPA-ESB-Process_Archive-1.Processes/BankAccountUtility/Operations/ValidateAndConvert/Interface/ValidateAndConvert_SOAP.process.Job-12072#;Request Response error. Request Response service failed due to target application invocation error TPENOENT - no entry found  for Tuxedo service: eaiCalcIbanBk00,Communication Type: Sync on application call tpcall.Tracking Id: #PPHWTNpE8UiXhUWftxWuyPmkAvM#BW.SEPA-ESB-Process_Archive-1.Processes/BankAccountUtility/Operations/ValidateAndConvert/Interface/ValidateAndConvert_SOAP.process.Job-12072#]</ErrorDescription>
+        </Status>
+      </ROOT>
+    </ns100:ValidateAndConvertIBANResponse>
+  </env:Body>
+</env:Envelope>

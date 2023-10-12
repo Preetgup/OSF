@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="71bc2203-eb35-4c1e-b27f-2ef532a2f092" ItemType="ApplicationAPIModel" CreatedBy="piyush.thakre" Created="202111111546" GingerVersion="3.6.0.0" Version="5" LastUpdateBy="piyush.thakre" LastUpdate="202111120926" />
+<ApplicationAPIModel APIType="SOAP" AuthorizationType="BasicAuthentication" AuthPassword="Omnius_Sit" AuthUsername="Omnius" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="http://deossevr:8001/VFDEGetNonStandardRateEG/VFDE" Guid="71bc2203-eb35-4c1e-b27f-2ef532a2f092" Name="Soap_GetNonStandardRates" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:vfd=&quot;http://amdocs/vfde/rates/VFDEGetNonStandardRate&quot; xmlns:vfd1=&quot;http://amdocs/vfde/rates/VFDENonStandardRatesInput&quot;&gt;&#xD;&#xA;  &lt;soapenv:Header /&gt;&#xD;&#xA;  &lt;soapenv:Body&gt;&#xD;&#xA;    &lt;vfd:GetNonStandardRatesRequest&gt;&#xD;&#xA;      &lt;vfd1:ROOT&gt;&#xD;&#xA;        &lt;Event&gt;&#xD;&#xA;          &lt;Type&gt;{TYPE}&lt;/Type&gt;&#xD;&#xA;          &lt;ID&gt;{ID}&lt;/ID&gt;&#xD;&#xA;        &lt;/Event&gt;&#xD;&#xA;        &lt;DATA&gt;&#xD;&#xA;          &lt;AddressId&gt;{ADDRESSID}&lt;/AddressId&gt;&#xD;&#xA;          &lt;Filters&gt;&#xD;&#xA;            &lt;ContractCode&gt;{CONTRACTCODE}&lt;/ContractCode&gt;&#xD;&#xA;            &lt;ProductCodes&gt;{PRODUCTCODES}&lt;/ProductCodes&gt;&#xD;&#xA;          &lt;/Filters&gt;&#xD;&#xA;          &lt;Filters&gt;&#xD;&#xA;            &lt;ContractCode&gt;{CONTRACTCODE1}&lt;/ContractCode&gt;&#xD;&#xA;            &lt;ProductCodes&gt;{PRODUCTCODES1}&lt;/ProductCodes&gt;&#xD;&#xA;          &lt;/Filters&gt;&#xD;&#xA;          &lt;Filters&gt;&#xD;&#xA;            &lt;ContractCode&gt;{CONTRACTCODE2}&lt;/ContractCode&gt;&#xD;&#xA;            &lt;ProductCodes&gt;{PRODUCTCODES2}&lt;/ProductCodes&gt;&#xD;&#xA;          &lt;/Filters&gt;&#xD;&#xA;          &lt;Filters&gt;&#xD;&#xA;            &lt;ContractCode&gt;{CONTRACTCODE3}&lt;/ContractCode&gt;&#xD;&#xA;            &lt;ProductCodes&gt;{PRODUCTCODES3}&lt;/ProductCodes&gt;&#xD;&#xA;          &lt;/Filters&gt;&#xD;&#xA;          &lt;Filters&gt;&#xD;&#xA;            &lt;ContractCode&gt;{CONTRACTCODE4}&lt;/ContractCode&gt;&#xD;&#xA;            &lt;ProductCodes&gt;{PRODUCTCODES4}&lt;/ProductCodes&gt;&#xD;&#xA;          &lt;/Filters&gt;&#xD;&#xA;          &lt;Filters&gt;&#xD;&#xA;            &lt;ContractCode&gt;{CONTRACTCODE5}&lt;/ContractCode&gt;&#xD;&#xA;            &lt;ProductCodes&gt;{PRODUCTCODES5}&lt;/ProductCodes&gt;&#xD;&#xA;          &lt;/Filters&gt;&#xD;&#xA;        &lt;/DATA&gt;&#xD;&#xA;      &lt;/vfd1:ROOT&gt;&#xD;&#xA;    &lt;/vfd:GetNonStandardRatesRequest&gt;&#xD;&#xA;  &lt;/soapenv:Body&gt;&#xD;&#xA;&lt;/soapenv:Envelope&gt;" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~bcf8dab1-abb8-4ab3-802d-5cf947d2df75">
+<AppModelParameters>
+<AppModelParameter Guid="a98e53db-7bd3-4056-aaf5-237fe1eea88c" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/Event[1]/Type[1]" PlaceHolder="{TYPE}" TagName="Type">
+<OptionalValuesList>
+<OptionalValue Guid="cf53c9ab-cc63-4f19-b0ed-52ebd1e29949" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="GetProductAvailability" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="5d31f7dc-cc59-4bca-87af-e156a53c8260" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/Event[1]/ID[1]" PlaceHolder="{ID}" TagName="ID">
+<OptionalValuesList>
+<OptionalValue Guid="0fb3050c-b191-4113-9048-18508653481c" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="saurav1234" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="429b4da1-0d04-419a-9fd1-4281c0cdf981" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/AddressId[1]" PlaceHolder="{ADDRESSID}" TagName="AddressId">
+<OptionalValuesList>
+<OptionalValue Guid="c8aa265d-a20b-4602-a4c4-776357c3093a" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="1591979" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="62b4422a-5c84-4651-9295-931ded7aaab2" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[1]/ContractCode[1]" PlaceHolder="{CONTRACTCODE}" TagName="ContractCode">
+<OptionalValuesList>
+<OptionalValue Guid="365c8ee9-4b1a-44dc-8135-4c8ab1085bf9" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VVO" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="5c9ed0e0-6c1e-4e80-98fb-ce77b2e86e7f" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[1]/ProductCodes[1]" PlaceHolder="{PRODUCTCODES}" TagName="ProductCodes">
+<OptionalValuesList>
+<OptionalValue Guid="a0f6f98d-d176-480e-b624-08081d825dad" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="bd3fd391-3050-4d54-a138-334a440cae7e" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[2]/ContractCode[1]" PlaceHolder="{CONTRACTCODE1}" TagName="ContractCode">
+<OptionalValuesList>
+<OptionalValue Guid="d8e77e4b-5327-4aa4-a6a6-e1c71ce411ed" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VDE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="07e17fa8-05ab-440f-b776-670e92e87eae" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[2]/ProductCodes[1]" PlaceHolder="{PRODUCTCODES1}" TagName="ProductCodes">
+<OptionalValuesList>
+<OptionalValue Guid="9a7b6295-8320-4096-8baa-fca69cb3d346" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="ef17f527-f05e-43e8-b783-ddc2cbf43c4f" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[3]/ContractCode[1]" PlaceHolder="{CONTRACTCODE2}" TagName="ContractCode">
+<OptionalValuesList>
+<OptionalValue Guid="37d64572-4db0-40b1-82cc-df64f276a6c0" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VVE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="b0afc4a6-4ecf-40aa-837f-75cf34af7969" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[3]/ProductCodes[1]" PlaceHolder="{PRODUCTCODES2}" TagName="ProductCodes">
+<OptionalValuesList>
+<OptionalValue Guid="e7af2174-e96e-4868-80f3-3a1234d65d9c" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="20526359-cc25-4cc1-a52c-49b45084f63d" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[4]/ContractCode[1]" PlaceHolder="{CONTRACTCODE3}" TagName="ContractCode">
+<OptionalValuesList>
+<OptionalValue Guid="fc2650eb-8432-492d-b40a-167fd4ebc74c" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VDP" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="f9e05d94-8b7c-4982-97ae-4a92783d4736" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[4]/ProductCodes[1]" PlaceHolder="{PRODUCTCODES3}" TagName="ProductCodes">
+<OptionalValuesList>
+<OptionalValue Guid="db1915cc-ef29-4fc6-b7ab-e7918ca92b99" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="16b6a762-eca4-4bc4-b8b9-d12652d1d85e" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[5]/ContractCode[1]" PlaceHolder="{CONTRACTCODE4}" TagName="ContractCode">
+<OptionalValuesList>
+<OptionalValue Guid="ce3c25c2-f131-45d5-b3d0-9457406ec11d" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VHP" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="646caf96-5e91-4327-b66a-5049acef0b69" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[5]/ProductCodes[1]" PlaceHolder="{PRODUCTCODES4}" TagName="ProductCodes">
+<OptionalValuesList>
+<OptionalValue Guid="aec940b0-9f6f-4930-ae0c-f66020a6cc2b" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="7c0ace6e-7bfc-41a8-978a-bfea66833139" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[6]/ContractCode[1]" PlaceHolder="{CONTRACTCODE5}" TagName="ContractCode">
+<OptionalValuesList>
+<OptionalValue Guid="674f56ba-9824-407f-a858-6fe6e010aa55" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VHE" />
+</OptionalValuesList>
+</AppModelParameter>
+<AppModelParameter Guid="35790742-54e8-437b-84b7-c3ef6378146b" ParentGuid="00000000-0000-0000-0000-000000000000" Path="//*[name()='soapenv:Envelope']/soapenv:Body[1]/vfd:GetNonStandardRatesRequest[1]/vfd1:ROOT[1]/DATA[1]/Filters[6]/ProductCodes[1]" PlaceHolder="{PRODUCTCODES5}" TagName="ProductCodes">
+<OptionalValuesList>
+<OptionalValue Guid="92374e3a-a566-4f2d-88ae-57b005b86d39" IsDefault="True" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VOL, 4KE" />
+</OptionalValuesList>
+</AppModelParameter>
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>
